@@ -1,0 +1,10 @@
+_site
+_posts
+assets
+tag
+vendor
+.sass-cache
+.jekyll-cache
+.jekyll-metadata
+.lastbuild
+_config.yml

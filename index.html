@@ -1,0 +1,94 @@
+---
+layout: default
+title: Posts
+pagination: 
+  enabled: true
+---
+
+<div class="home">
+  {%- if paginator.posts.size > 0 -%}
+    <h1 class="post-list-heading">
+      {{ page.list_title | default: "Posts" }}
+    </h1>
+    <ul class="post-list">
+      {% for post in paginator.posts %}
+      <li>
+        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+        <span class="post-meta">{{ post.date | date: date_format }}</span>
+        {% if post.offset %}
+          {% assign offset = post.offset %}
+        {% else %}
+          {% assign offset = '-11%' %}
+        {% endif %}
+        {%- if post.thumbnail -%}
+          <a class="post-link" href="{{ post.url | relative_url }}">
+            <div class="thumbnail-image">
+              <img
+                src="{{ post.thumbnail }}"
+                style="margin-top: {{ offset }};"
+              >
+            </div>
+          </a>
+        {%- endif -%}
+        <h3>
+          <a class="post-link" href="{{ post.url | relative_url }}">
+            {{ post.title | escape }}
+          </a>
+        </h3>
+        {%- if site.show_excerpts -%}
+          {{ post.excerpt }}
+        {%- endif -%}
+        {%- if post.summary -%}
+          <p class="post-summary">
+            {{ post.summary }} &ndash;
+            {{ post.content
+               | strip_html
+               | strip_newlines
+               | split: " "
+               | size
+               | round: -2
+            }}-ish words
+          </p>
+        {%- endif -%}
+      </li>
+      {% endfor %}
+    </ul>
+
+    <!-- Pagination links -->
+    <div class="pagination">
+      {% if paginator.previous_page %}
+        <a
+          href="/blog{{ paginator.previous_page_path }}"
+          class="previous"
+        >
+          <i class="fas fa-angle-double-left"></i>
+          Previous
+        </a>
+      {% else %}
+        <span class="previous"></span>
+      {% endif %}
+      |
+      <span class="page_number ">
+        Page: {{ paginator.page }} of {{ paginator.total_pages }}
+      </span>
+      |
+      {% if paginator.next_page %}
+        <a
+          href="/blog{{ paginator.next_page_path }}"
+          class="next"
+        >
+          Next
+          <i class="fas fa-angle-double-right"></i>
+        </a>
+      {% else %}
+        <span class="next "></span>
+      {% endif %}
+    </div>
+
+    <p class="rss-subscribe"><a href="{{ "/feed.xml" | relative_url }}"><i class="fas fa-rss"></i> Subscribe via RSS</a></p>
+  {%- endif -%}
+</div>
+
+{% for post in paginator.posts %}
+{% endfor %}
+

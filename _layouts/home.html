@@ -1,0 +1,54 @@
+---
+layout: default
+---
+
+<div class="home">
+  {%- if page.title -%}
+    <h1 class="page-heading">{{ page.title }}</h1>
+  {%- endif -%}
+
+  {{ content }}
+
+  {%- if site.posts.size > 0 -%}
+    <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2>
+    <ul class="post-list">
+      {%- for post in site.posts -%}
+      <li>
+        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+        <span class="post-meta">{{ post.date | date: date_format }}</span>
+        {% if post.offset %}
+          {% assign offset = post.offset %}
+        {% else %}
+          {% assign offset = '-11%' %}
+        {% endif %}
+        {%- if post.thumbnail -%}
+          <a class="post-link" href="{{ post.url | relative_url }}">
+            <div class="thumbnail-image">
+              <img
+                src="{{ post.thumbnail }}"
+                style="margin-top: {{ offset }};"
+              >
+            </div>
+          </a>
+        {%- endif -%}
+        <h3>
+          <a class="post-link" href="{{ post.url | relative_url }}">
+            {{ post.title | escape }}
+          </a>
+        </h3>
+        {%- if site.show_excerpts -%}
+          {{ post.excerpt }}
+        {%- endif -%}
+        {%- if post.summary -%}
+          <p class="post-summary">
+            {{ post.summary }}
+          </p>
+        {%- endif -%}
+      </li>
+      {%- endfor -%}
+    </ul>
+
+    <p class="rss-subscribe"><a href="{{ "/feed.xml" | relative_url }}"><i class="fas fa-rss"></i> Subscribe via RSS</a></p>
+  {%- endif -%}
+
+</div>

@@ -1,0 +1,77 @@
+<footer class="site-footer h-card">
+  <data class="u-url" href="{{ "/" | relative_url }}"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">{{ site.title | escape }}</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">
+            {%- if site.author -%}
+              {{ site.author | escape }}
+            {%- else -%}
+              {{ site.title | escape }}
+            {%- endif -%}
+            </li>
+            {%- if site.email -%}
+            <li><a class="u-email" href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+            {%- endif -%}
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        {%- include social.html -%}
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>{{- site.description | escape -}}</p>
+      </div>
+    </div>
+    <div style="text-align: justify;">
+      Except where otherwise specified, the contents of this
+      site are copyright John Colagioia and made available under
+      a <a
+        rel="license noreferrer noopener"
+        href="http://creativecommons.org/licenses/by-sa/4.0/"
+      >
+        Creative Commons Attribution-Share Alike 4.0
+        International License
+      </a>.
+      &nbsp;
+      <a
+        href="http://creativecommons.org/licenses/by-sa/4.0/"
+        rel="license noreferrer noopener"
+        target="_blank"
+      >
+        <img
+          alt="Creative Commons (Attribution, Share Alike) License"
+          style="borderWidth: 0; display: 'inline'; padding: 0;"
+          src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"
+        />
+      </a>
+    </div>
+    <div>
+      This blog uses cookies from a local installation of
+      <a href="https://matomo.org/">Matomo</a>
+      to collect anonymized information to understand where
+      to focus attention.
+    </div>
+    <div style="text-align: center;">
+      <a href="/">
+        <img
+          alt="Back to the home page"
+          class="home-button"
+          src="/blog/assets/jc.svg"
+          title="Back to the home page"
+        />
+        <img
+          src="https://colagioia.net/pa/matomo.php?idsite=15&amp;rec=1"
+          style="border:0;height:0;"
+          alt=""
+        />
+      </a>
+    </div>
+  </div>
+</footer>

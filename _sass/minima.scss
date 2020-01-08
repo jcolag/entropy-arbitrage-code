@@ -1,0 +1,286 @@
+@charset "utf-8";
+@import '/blog/assets/fa/css/all.css';
+
+// Define defaults for each variable.
+
+@font-face {
+  font-family: 'Exo 2';
+  src: url('/blog/assets/Exo2-Light.ttf');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Vollkorn';
+  src: url('/blog/assets/Vollkorn-Bold.ttf');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Noto Color Emoji';
+  src: url('/blog/assets/NotoColorEmoji.ttf');
+  font-weight: 300;
+  font-style: normal;
+}
+
+$base-font-family: 'Exo 2', "Noto Color Emoji" !default;
+$header-font-family: Vollkorn, 'Noto Color Emoji';
+$base-font-size:   16px !default;
+$base-font-weight: 400 !default;
+$small-font-size:  $base-font-size * 0.875 !default;
+$base-line-height: 1.5 !default;
+
+$spacing-unit:     30px !default;
+
+$text-color:       #244151 !default;
+$background-color: #dccea1 !default;
+$light-bg:         #eae1c6 !default;
+$light-bg-x:       #eae1c680 !default;
+$brand-color:      #49281b !default;
+$light-brand-color: #6e3c29 !default;
+
+$grey-color:       #828282 !default;
+$grey-color-light: lighten($grey-color, 40%) !default;
+$grey-color-dark:  darken($grey-color, 25%) !default;
+
+$table-text-align: left !default;
+
+// Width of the content area
+$content-width:    800px !default;
+
+$on-palm:          600px !default;
+$on-laptop:        800px !default;
+
+// Use media queries like this:
+// @include media-query($on-palm) {
+//   .wrapper {
+//     padding-right: $spacing-unit / 2;
+//     padding-left: $spacing-unit / 2;
+//   }
+// }
+@mixin media-query($device) {
+  @media screen and (max-width: $device) {
+    @content;
+  }
+}
+
+@mixin relative-font-size($ratio) {
+  font-size: $base-font-size * $ratio;
+}
+
+// Import partials.
+@import
+  "minima/base",
+  "minima/layout",
+  "minima/syntax-highlighting"
+;
+
+body {
+  background-image: url('/blog/assets/square_bg.png');
+  color: $text-color;
+}
+
+h1, h2, h3, h4, h5, h6, header, .site-title, .site-title:visited, .page-link, .page-link:visited {
+  color: $brand-color !important;
+  font-family: $header-font-family;
+  text-align: center;
+  -moz-transition: color 2s;
+  -webkit-transition: color 2s;
+  -o-transition: color 2s;
+  -ms-transition: color 2s;
+  -transition: color 2s;
+}
+
+h1:hover,h2:hover,h3:hover,h4:hover,h5:hover,header:hover,.site-title:hover,.page-link:hover {
+  color: $light-brand-color;
+}
+
+.site-nav .page-link:not(:last-child) {
+  color: white;
+  margin-right: 1em;
+}
+
+.site-nav a i {
+  color: $brand-color;
+  -moz-transition: color 2s;
+  -webkit-transition: color 2s;
+  -o-transition: color 2s;
+  -ms-transition: color 2s;
+  -transition: color 2s;
+}
+
+.site-nav a i:hover {
+  color: $light-brand-color;
+}
+
+h6 {
+  text-align: right;
+}
+
+blockquote {
+  border-left: 5px solid $brand-color;
+  border-right: 5px solid $brand-color;
+}
+
+blockquote blockquote {
+  border-left: 0.25em solid $brand-color;
+  border-right: 0;
+  color: $brand-color;
+  float: right;
+  font-family: $header-font-family;
+  font-size: x-large;
+  font-weight: bold;
+  margin-left: 0.25em;
+  padding-bottom: 0.25em;
+  padding-left: 0.25em;
+  padding-top: 0.25em;
+  text-align: right;
+  width: 35%;
+}
+
+time {
+  color: $light-brand-color;
+}
+
+code {
+  background-color: $light-bg-x;
+}
+
+:not(pre) > code[class*="language-"], pre[class*="language-"] {
+  background-color: $light-bg-x !important;
+}
+
+pre code {
+  background-color: transparent;
+}
+
+iframe {
+  width: 100%;
+}
+
+a {
+  text-decoration: underline dotted;
+}
+
+.post-content img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.site-header {
+  border-bottom: 1px solid $light-brand-color;
+  border-top: 5px solid $brand-color;
+}
+
+.site-header a {
+  text-decoration: none;
+}
+
+.site-footer {
+  border-top: 1px solid $light-brand-color;
+}
+
+.site-footer a {
+  text-decoration: none;
+}
+
+.post-meta, .p-name, .footer-col-wrapper {
+  color: $text-color;
+}
+
+.post-meta {
+  display: inline-block;
+  font-size: x-small;
+  text-align: center;
+  width: 100%;
+}
+
+.post-summary {
+  border-bottom: 1px dotted $light-brand-color;
+  font-style: italic;
+  text-align: center;
+}
+
+.rss-subscribe {
+  text-align: center;
+  width: 100%;
+}
+
+.thumbnail-image {
+  height: 3em;
+  left: auto;
+  overflow: hidden;
+  position: absolute;
+  right: auto;
+}
+
+.thumbnail-image img {
+  display: inline;
+  opacity: 0.075;
+  width: calc(800px - (30px * 2));
+  z-index: -1;
+  -moz-transition: opacity 2s;
+  -webkit-transition: opacity 2s;
+  -o-transition: opacity 2s;
+  -ms-transition: opacity 2s;
+  -transition: opacity 2s;
+}
+
+.thumbnail-image img:hover {
+  opacity: 0.5;
+}
+
+.page-content {
+  background-attachment: fixed;
+  background-image: url('/blog/assets/jc-bg.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 15%;
+}
+
+.highlighter-rouge .highlight {
+  background: $light-bg-x;
+}
+
+.home-button {
+  height: 1.5em;
+  transition: all 1s ease-in-out;
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  -ms-transition: all 1s ease-in-out;
+}
+
+.home-button:hover {
+  transform: rotate(-15deg);
+  -webkit-transform: rotate(-15deg);
+  -moz-transform: rotate(-15deg);
+  -o-transform: rotate(-15deg);
+  -ms-transform: rotate(-15deg);
+}
+
+.tag-grid {
+  display: grid;
+  grid-gap: 1em;
+  grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+  grid-auto-flow: row dense;
+}
+
+.tag-grid div {
+  width: 200px;
+}
+
+.pagination {
+  text-align: center;
+  width: 100%;
+}
+
+#search-container {
+  font-size: x-large;
+}
+
+#search-container input {
+  font-size: x-large;
+}
