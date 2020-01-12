@@ -2,12 +2,13 @@
 
 This is a repository for the Jekyll side of the posts found in [entropy-arbitrage](https://github.com/jcolag/entropy-arbitrage).
 
-For reference, this is mostly for transparency and I don't recommend using this directly, since it's deliberately built around my website's design.  The `about.md` and header/footer also refer rather directly to me, of course, in addition to configuration and the like.
+For reference, this is mostly for transparency and I don't recommend using this directly *at all*, since it's deliberately built around my website's design.  The `about.md` and header/footer also refer rather directly to me, of course, in addition to configuration and the like.
 
 ## Assets
 
 Because it's a lot, I've opted not to include the `assets` folder, which includes not just the images used in the blog (originals linked to in the posts), but also fonts, JavaScript, and CSS bits.  Here's the layout, minus images:
 
+```
 ├── Exo2-Light.ttf
 ├── fa
 │   ├── css
@@ -47,5 +48,6 @@ Because it's a lot, I've opted not to include the `assets` folder, which include
 ├── prism.css
 ├── prism.js
 └── Vollkorn-Bold.ttf
+```
 
 It would probably be smart to separate the two different kinds of assets, at some point.

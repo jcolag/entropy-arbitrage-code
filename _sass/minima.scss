@@ -25,7 +25,7 @@
 }
 
 $base-font-family: 'Exo 2', "Noto Color Emoji" !default;
-$header-font-family: Vollkorn, 'Noto Color Emoji';
+$header-font-family: Vollkorn, 'Noto Color Emoji' !default;
 $base-font-size:   16px !default;
 $base-font-weight: 400 !default;
 $small-font-size:  $base-font-size * 0.875 !default;

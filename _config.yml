@@ -18,15 +18,20 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Blog Title
-email: who@where.invalid
+title: Entropy Arbitrage
+email: jcolag@colagioia.net
 description: >- # this means to ignore newlines until "baseurl:"
+  John has thoughts. Some of those thoughts make it here. Some of those
+  thoughts might even be worth reading.
 baseurl: "/blog" # the subpath of your site, e.g. /blog
-url: "https://url.invalid" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://john.colagioia.net" # the base hostname & protocol for your site, e.g. http://example.com
 
-twitter_username: a
-github_username:  a
-linkedin_username: a
+twitter_username: jcolag
+github_username:  jcolag
+linkedin_username: jcolag
+mastodon:
+  - username: jcolag
+  - instance: mastodon.social
 
 pagination:
   enabled: true
@@ -74,4 +79,10 @@ exclude:
 #   - vendor/gems/
 #   - vendor/ruby/
 
-
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      author: "John"
+      thumbnail: /blog/assets/hand-man-suit-meeting-sign-finger-1187260-pxhere.com.jpg

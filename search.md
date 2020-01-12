@@ -9,7 +9,7 @@ permalink: /search/
 </div>
 
 <script
-  src="/blog/js/simple-jekyll-search.min.js"
+  src="/blog/js/simple-jekyll-search.js"
   type="text/javascript"
 >
 </script>

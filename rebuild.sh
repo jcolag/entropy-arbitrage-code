@@ -1,5 +1,6 @@
 #!/bin/bash
-target=/remote/path
+target=jcolag@colagioia.net:www/blog
+maxwd=740
 JEKYLL_ENV="production"
 now=$(date '+%s')
 files=
@@ -46,8 +47,13 @@ EOF
 done
 
 # Rebuild and push files
+## Resize all images to the blog width
+mogrify -resize $maxwd\> assets/*.jpg
+mogrify -resize $maxwd\> assets/*.png
+## Rebuild the blog
 bundle exec jekyll clean
 bundle exec jekyll build
+## Push to the server
 rsync --itemize-changes --recursive --compress --times --delete-delay \
     _site/ "$target"
 JEKYLL_ENV=
@@ -82,7 +88,7 @@ done
 ## If we have posts, announce them
 if [ ! -z "$titles" ]
 then
-  toot "Just posted to my blog:${titles}"
+  /home/john/.npm-packages/bin/toot "Just posted to my blog:${titles}"
   ## I can't get diclish to work, so Diaspora will be manual for now
   echo "Post this to Diaspora:"
   echo "Posted to my blog:${links}"
