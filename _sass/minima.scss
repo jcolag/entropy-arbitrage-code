@@ -39,6 +39,7 @@ $light-bg:         #eae1c6 !default;
 $light-bg-x:       #eae1c680 !default;
 $brand-color:      #49281b !default;
 $light-brand-color: #6e3c29 !default;
+$xp-brand-color:   #49281b40 !default;
 
 $grey-color:       #828282 !default;
 $grey-color-light: lighten($grey-color, 40%) !default;
@@ -114,6 +115,26 @@ h1:hover,h2:hover,h3:hover,h4:hover,h5:hover,header:hover,.site-title:hover,.pag
   color: $light-brand-color;
 }
 
+h1 {
+  font-size: 2em !important;
+}
+
+h2 {
+  font-size: 1.5em !important;
+}
+
+h3 {
+  font-size: 1.33em !important;
+}
+
+h4 {
+  font-size: 1.25em !important;
+}
+
+h5 {
+  font-size: 1.17em !important;
+}
+
 h6 {
   text-align: right;
 }
@@ -163,6 +184,10 @@ a {
   text-decoration: underline dotted;
 }
 
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+  text-decoration: underline dotted $xp-brand-color 0.5px;
+}
+
 .post-content img {
   display: block;
   margin-left: auto;
@@ -198,7 +223,6 @@ a {
 }
 
 .post-summary {
-  border-bottom: 1px dotted $light-brand-color;
   font-style: italic;
   text-align: center;
 }
@@ -209,7 +233,9 @@ a {
 }
 
 .thumbnail-image {
-  height: 3em;
+  border: 1px solid $brand-color;
+  border-radius: 1.5em;
+  height: 3.25em;
   left: auto;
   overflow: hidden;
   position: absolute;
