@@ -1,5 +1,5 @@
 #!/bin/bash
-target=jcolag@colagioia.net:www/blog
+target=/path/to/blog
 maxwd=740
 JEKYLL_ENV="production"
 now=$(date '+%s')
@@ -88,7 +88,7 @@ done
 ## If we have posts, announce them
 if [ ! -z "$titles" ]
 then
-  /home/john/.npm-packages/bin/toot "Just posted to my blog:${titles}"
+  toot "Just posted to my blog:${titles}"
   ## I can't get diclish to work, so Diaspora will be manual for now
   echo "Post this to Diaspora:"
   echo "Posted to my blog:${links}"
