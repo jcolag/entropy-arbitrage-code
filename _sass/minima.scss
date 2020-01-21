@@ -223,7 +223,6 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 }
 
 .post-summary {
-  font-style: italic;
   text-align: center;
 }
 
@@ -234,7 +233,7 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 
 .thumbnail-image {
   border: 1px solid $brand-color;
-  border-radius: 1.5em;
+  border-radius: 1.625em;
   height: 3.25em;
   left: auto;
   overflow: hidden;
@@ -246,7 +245,6 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   display: inline;
   opacity: 0.075;
   width: calc(800px - (30px * 2));
-  z-index: -1;
   -moz-transition: opacity 2s;
   -webkit-transition: opacity 2s;
   -o-transition: opacity 2s;
@@ -255,7 +253,7 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 }
 
 .thumbnail-image img:hover {
-  opacity: 0.5;
+  opacity: 0.33;
 }
 
 .page-content {
@@ -268,6 +266,7 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 
 .highlighter-rouge .highlight {
   background: $light-bg-x;
+  border-radius: 1em;
 }
 
 .home-button {
