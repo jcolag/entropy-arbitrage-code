@@ -1,5 +1,9 @@
 #!/bin/bash
-target=/path/to/blog
+blog="Entropy Arbitrage"
+target=jcolag@colagioia.net:www/blog
+toot="/home/john/.npm-packages/bin/toot"
+twtxt="/usr/local/bin/twtxt"
+diclish="diclish"
 maxwd=740
 JEKYLL_ENV="production"
 now=$(date '+%s')
@@ -80,6 +84,7 @@ baseurl=$(grep "^baseurl:" _config.yml | cut -f2 -d'"')
 for file in ${todayfiles}
 do
   title=$(grep "^title:" ${file} | cut -f2- -d' ')
+  tags=$(grep "^tags:" ${file} | cut -f2 -d'[' | cut -f1 -d']' | tr -d ',' | sed 's/\([a-z]*\)/#\1/g')
   path=$(basename ${file} .md | sed 's/-/\//g;s/\//-/g4')
   url="${host}${baseurl}/${path}.html"
   titles="${titles} ${title} ${url}"
@@ -88,14 +93,18 @@ done
 ## If we have posts, announce them
 if [ ! -z "$titles" ]
 then
-  toot "Just posted to my blog:${titles}"
-  ## I can't get diclish to work, so Diaspora will be manual for now
+  ### Mastodon
+  ${toot} "Posted to ${blog}:${titles} ${tags}"
+  ### twtxt
+  ${twtxt} tweet "Posted to ${blog}:${titles} ${tags}"
+  ### I can't get diclish to work, so Diaspora will be manual for now
   echo "Post this to Diaspora:"
-  echo "Posted to my blog:${links}"
+  echo "Posted to ${blog}: ${links} ${tags}"
 fi
 
 # Update timestamp
 rm -f .lastbuild
+
 date '+%F %T' > .lastbuild
 
 # Kick off the local server

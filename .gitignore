@@ -8,3 +8,4 @@ vendor
 .jekyll-metadata
 .lastbuild
 _config.yml
+google*.html

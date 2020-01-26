@@ -37,6 +37,7 @@ $text-color:       #244151 !default;
 $background-color: #dccea1 !default;
 $light-bg:         #eae1c6 !default;
 $light-bg-x:       #eae1c680 !default;
+$dark-bg:          #c7b169 !default;
 $brand-color:      #49281b !default;
 $light-brand-color: #6e3c29 !default;
 $xp-brand-color:   #49281b40 !default;
@@ -83,7 +84,6 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6, header, .site-title, .site-title:visited, .page-link, .page-link:visited {
-  color: $brand-color !important;
   font-family: $header-font-family;
   text-align: center;
   -moz-transition: color 2s;
@@ -95,6 +95,18 @@ h1, h2, h3, h4, h5, h6, header, .site-title, .site-title:visited, .page-link, .p
 
 h1:hover,h2:hover,h3:hover,h4:hover,h5:hover,header:hover,.site-title:hover,.page-link:hover {
   color: $light-brand-color;
+}
+
+h1, h3, h5, .wrapper a {
+  color: $brand-color !important;
+}
+
+h2, h4, h6 {
+  color: $light-brand-color !important;
+}
+
+.wrapper a:visited {
+  color: $light-brand-color !important;
 }
 
 .site-nav .page-link:not(:last-child) {
@@ -189,6 +201,7 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 }
 
 .post-content img {
+  box-shadow: 5px 5px 5px $dark-bg;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -264,9 +277,25 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   background-size: 15%;
 }
 
+div.highlighter-rouge {
+  margin-left: 7.5%;
+  margin-right: 7.5%;
+}
+
+pre[class*="language-"] {
+  margin-left: 7.5% !important;
+  margin-right: 7.5% !important;
+}
+
+div.highlighter-rouge pre[class*="language-"] {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
 .highlighter-rouge .highlight {
   background: $light-bg-x;
   border-radius: 1em;
+  box-shadow: 5px 5px 5px $dark-bg;
 }
 
 .home-button {
@@ -300,6 +329,10 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 .pagination {
   text-align: center;
   width: 100%;
+}
+
+.site-nav a {
+  color: $brand-color !important;
 }
 
 #search-container {
