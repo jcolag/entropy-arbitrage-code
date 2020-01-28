@@ -90,19 +90,21 @@ h1, h2, h3, h4, h5, h6, header, .site-title, .site-title:visited, .page-link, .p
   -webkit-transition: color 2s;
   -o-transition: color 2s;
   -ms-transition: color 2s;
-  -transition: color 2s;
+  transition: color 2s;
 }
 
 h1:hover,h2:hover,h3:hover,h4:hover,h5:hover,header:hover,.site-title:hover,.page-link:hover {
-  color: $light-brand-color;
-}
-
-h1, h3, h5, .wrapper a {
-  color: $brand-color !important;
-}
-
-h2, h4, h6 {
   color: $light-brand-color !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.wrapper a {
+  color: $brand-color !important;
 }
 
 .wrapper a:visited {
