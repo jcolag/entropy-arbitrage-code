@@ -202,11 +202,28 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   text-decoration: underline dotted $xp-brand-color 0.5px;
 }
 
+th {
+  background-color: $light-brand-color !important;
+  color: $dark-bg;
+}
+
+tr:nth-child(odd) {
+  background-color: $background-color !important;
+}
+
+tr:nth-child(even) {
+  background-color: $dark-bg !important;
+}
+
 .post-content img {
   box-shadow: 5px 5px 5px $dark-bg;
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+a.site-title:visited, a.page-link:visited {
+  color: $brand-color !important;
 }
 
 .site-header {
