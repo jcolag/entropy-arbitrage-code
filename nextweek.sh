@@ -16,6 +16,13 @@ IFS=' ' read -r -a linkmins <<< "$linkmins"
 IFS=' ' read -r -a quotemins <<< "$quotemins"
 
 filename="_posts/$pubdate-week.md"
+offh=$(rand -M 4)
+hh=$((14 + $offh))
+HH=$(printf "%02d" $hh)
+mm=$(rand -M 60)
+MM=$(printf "%02d" $mm)
+ss=$(rand -M 60)
+SS=$(printf "%02d" $ss)
 
 rm -f $filename
 
@@ -23,7 +30,7 @@ cat > ${filename} <<HERE
 ---
 layout: post
 title: Tweets from ${mondate} to ${fridate}
-date: ${pubdate} 16:11:12-0500
+date: ${pubdate} ${HH}:${MM}:${SS}-0500
 categories: media
 tags: [twitter, week, socialmedia, linkdump]
 summary: Tweets for the Week of ${longmon}
