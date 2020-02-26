@@ -34,12 +34,14 @@ date: ${pubdate} ${HH}:${MM}:${SS}-0500
 categories: media
 tags: [twitter, week, socialmedia, linkdump]
 summary: Tweets for the Week of ${longmon}
-thumbnail: /blog/assets/CLM_14456_71r_detail.jpg
+thumbnail: /blog/assets/CLM_14456_71r_detail.png
 ---
 
-As [promised (or threatened)]({% post_url 2019-12-31-new-year %}), this is the weekly Twitter roundup.  Note that tweets of articles generally include header images from the articles, which are not included here unless they *happen* to be available under a free license.  Most are not.
+As [discussed previously]({% post_url 2019-12-31-new-year %}), this is my weekly Twitter roundup.  Note that tweets of articles generally include header images from the articles, which are not included here unless they *happen* to be available under a free license.  Most are not.
 
-![diagrams showing the division of the day and of the week](/blog/assets/CLM_14456_71r_detail.jpg "diagrams showing the division of the day and of the week")
+![diagrams showing the division of the day and of the week](/blog/assets/CLM_14456_71r_detail.png "diagrams showing the division of the day and of the week")
+
+I also don't generally attach pictures to posts with quotations.
 
 HERE
 #> "$filename"
@@ -51,17 +53,17 @@ do
   cat >> ${filename} <<HERE
 ## 9:0${linkmins[$i]} -- ${dd}
 
-[<i class="fab fa-twitter-square"></i>]() []() from 
+[<i class="fab fa-twitter-square"></i>]() []() from
 
- > 
+ >
 
 ## 12:0${quotemins[$i]} -- ${dd}
 
 [<i class="fab fa-twitter"></i>]()
 
- > 
+ >
 
-###### 
+######
 
 HERE
 done
@@ -73,5 +75,5 @@ cat >> ${filename} <<HERE
 **Credits**:  Header image is [Circular diagrams showing the division of the day and of the week](https://en.wikipedia.org/wiki/Week#/media/File:CLM_14456_71r_detail.jpg) from a manuscript drafted during the Carolingian Dynasty.
 HERE
 
-gedit ${filename}
+pluma ${filename}
 
