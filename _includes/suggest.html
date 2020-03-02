@@ -1,0 +1,28 @@
+<div class="tray-panel">
+  <h2 class="tray-pull"><i class="fas fa-chevron-right"></i></h2>
+  <h2 class="tray-header">Recommended&nbsp;Posts</h2>
+  <div class="tray-contents">
+    It can be difficult to get a sense of what a blog is all about,
+    so here&apos;s a small sample of staring points.  You might
+    also want to scan the
+    <a href="/blog/tags/">
+      <i class="fas fa-tags"></i>
+      tags
+    </a>
+    for topics of interest.
+    <ul>
+      {% for post in site.posts %}
+        {% if post.recommend %}
+          <li>
+            <a href={{ post.url | prepend: "/blog" }}>
+              {{ post.title }}
+            </a>
+            <i>
+              {{ post.recommend }}
+            </i>
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
+</div>

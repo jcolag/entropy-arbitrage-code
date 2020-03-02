@@ -33,16 +33,17 @@ $base-line-height: 1.5 !default;
 
 $spacing-unit:     30px !default;
 
-$text-color:       #244151 !default;
 $background-color: #dccea1 !default;
-$light-bg:         #eae1c6 !default;
-$light-bg-x:       #eae1c680 !default;
-$dark-bg:          #c7b169 !default;
+$text-color:       #244151 !default;
 $brand-color:      #49281b !default;
-$light-brand-color: #6e3c29 !default;
-$xp-brand-color:   #49281b40 !default;
-
 $grey-color:       #828282 !default;
+
+$light-bg:         lighten($background-color, 10%) !default;
+$light-bg-x:       $light-bg !default;
+$dark-bg:          darken($background-color, 15%) !default;
+$light-text:       lighten($text-color, 15%) !default;
+$light-brand-color: lighten($brand-color, 10%) !default;
+$xp-brand-color:   $brand-color !default;
 $grey-color-light: lighten($grey-color, 40%) !default;
 $grey-color-dark:  darken($grey-color, 25%) !default;
 
@@ -202,6 +203,10 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   text-decoration: underline dotted $xp-brand-color 0.5px;
 }
 
+table {
+  border-color: $light-text !important;
+}
+
 th {
   background-color: $light-brand-color !important;
   color: $dark-bg;
@@ -213,6 +218,11 @@ tr:nth-child(odd) {
 
 tr:nth-child(even) {
   background-color: $dark-bg !important;
+}
+
+td {
+  border-color: $light-text !important;
+  color: $light-text !important;
 }
 
 .post-content img {
@@ -352,6 +362,93 @@ div.highlighter-rouge pre[class*="language-"] {
 
 .site-nav a {
   color: $brand-color !important;
+}
+
+.page-link {
+  -moz-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.page-link:hover {
+  font-size: 1.2em;
+  margin-right: 0.75em !important;
+}
+
+a .page-link:hover {
+  left: 0.1em;
+  margin-right: -0.05em !important;
+}
+
+.tag {
+  background-color: $dark-bg;
+  border: 1px solid $brand-color;
+  border-radius: 0.75em;
+  color: $light-brand-color;
+  font-weight: bold;
+  padding: 0.25em;
+  text-decoration: none;
+}
+
+.tray-panel {
+  background-color: $dark-bg;
+  border: 5px solid $brand-color;
+  border-left: 0;
+  border-top-right-radius: 2em;
+  border-bottom-right-radius: 2em;
+  height: 40vh;
+  left: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: fixed;
+  top: calc(50% - 20vh);
+  transition: all 1s;
+  width: 50px;
+}
+
+.tray-panel .tray-header {
+  display: none;
+  transform: rotate(90deg) translate(1em);
+  transition: all 1s;
+}
+
+.tray-panel .tray-pull {
+  display: block;
+  margin-top: calc(20vh - 0.5em);
+}
+
+.tray-panel .tray-contents {
+  display: none;
+  padding-left: 2em;
+  padding-right: 2em;
+  transition: all 1s;
+}
+
+.tray-panel:hover {
+  width: 33vw;
+}
+
+.tray-panel:hover .tray-header {
+  animation: fadein 0.5s;
+  display: block;
+  transform: rotate(0);
+}
+
+.tray-panel:hover .tray-pull {
+  animation: fadeout 3s;
+  display: none;
+}
+
+.tray-panel:hover .tray-contents {
+  animation: fadein 2s;
+  display: block;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
 }
 
 #search-container {

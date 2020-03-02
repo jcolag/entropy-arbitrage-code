@@ -9,7 +9,7 @@
       "tags"     : "{{ post.tags | join: ', ' }}",
       "date"     : "{{ post.date }}",
       "summary"  : "{{ post.summary | strip_html | escape }}",
-      "content"  : "{{ post.content | strip_html | strip_newlines | replace: "	", " " | escape }}"
+      "content"  : "{{ post.content | strip_html | strip_newlines | replace: "	", " " | replace: "\", "\\\\" | escape }}"
     } {% unless forloop.last %},{% endunless %}
   {% endfor %}
 ]

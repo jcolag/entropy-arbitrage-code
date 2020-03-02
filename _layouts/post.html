@@ -29,7 +29,7 @@ layout: default
   </div>
 
   <hr>
-  
+
   <p class="hashover-title hashover-main-title hashover-dashed-title">
     By commenting, you agree to follow the blog's
     <a href="/blog/coc">Code of Conduct</a>
@@ -48,10 +48,14 @@ layout: default
     type="text/javascript"
   ></script>
 
-  <span>Tags: 
+  <span>Tags:
     {% for tag in page.tags %}
       {% capture tag_name %}{{ tag }}{% endcapture %}
-      <a href="/blog/tag/{{ tag_name }}/"><code class="highligher-rouge"><nobr>{{ tag_name }}</nobr></code>&nbsp;</a>
+      &nbsp;
+      <a
+        class="tag"
+        href="/blog/tag/{{ tag_name }}/"
+      >{{ tag_name | strip }}</a>
     {% endfor %}
   </span>
 
