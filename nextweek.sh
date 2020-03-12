@@ -11,6 +11,7 @@ mondate=$(date +%m/%d -d "$first")
 longmon=$(date +"%B %dth, %Y" -d "$first")
 fridate=$(date +%m/%d -d "$last")
 pubdate=$(date +%F -d "$last")
+TZ=$(date +%z -d "$last")
 
 IFS=' ' read -r -a linkmins <<< "$linkmins"
 IFS=' ' read -r -a quotemins <<< "$quotemins"
@@ -30,7 +31,7 @@ cat > ${filename} <<HERE
 ---
 layout: post
 title: Tweets from ${mondate} to ${fridate}
-date: ${pubdate} ${HH}:${MM}:${SS}-0500
+date: ${pubdate} ${HH}:${MM}:${SS}${TZ}
 categories: media
 tags: [twitter, week, socialmedia, linkdump]
 summary: Tweets for the Week of ${longmon}
@@ -69,6 +70,11 @@ HERE
 done
 
 cat >> ${filename} <<HERE
+## Bonus
+
+Because it accidentally became a tradition early on in the life of the blog, here's a sixth article that didn't fit into the week, but too weird to not mention.
+
+<i class="fas fa-square"></i> []() from
 
 * * *
 
