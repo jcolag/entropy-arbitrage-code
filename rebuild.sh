@@ -85,8 +85,13 @@ for file in ${todayfiles}
 do
   title=$(grep "^title:" ${file} | cut -f2- -d' ')
   tags=$(grep "^tags:" ${file} | cut -f2 -d'[' | cut -f1 -d']' | tr -d ',' | sed 's/\([a-z]*\)/#\1/g')
+  cat=$(grep '^categories:' ${file} | cut -f2 -d':' | tr -d ' ')
+  if [ ! -z $cat ]
+  then
+    cat="/${cat}"
+  fi
   path=$(basename ${file} .md | sed 's/-/\//g;s/\//-/g4')
-  url="${host}${baseurl}/${path}.html"
+  url="${host}${baseurl}${cat}/${path}.html"
   titles="${titles} ${title} ${url}"
   links="${links} [${title}](${url})"
 done
