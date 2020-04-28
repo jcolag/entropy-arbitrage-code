@@ -25,7 +25,10 @@ MM=$(printf "%02d" $mm)
 ss=$(rand -M 60)
 SS=$(printf "%02d" $ss)
 
-rm -f $filename
+if [ -f ${filename} ]
+then
+  exit
+fi
 
 cat > ${filename} <<HERE
 ---
@@ -38,7 +41,7 @@ summary: Tweets for the Week of ${longmon}
 thumbnail: /blog/assets/CLM_14456_71r_detail.png
 ---
 
-As [discussed previously]({% post_url 2019-12-31-new-year %}), this is my weekly Twitter roundup.  Note that tweets of articles generally include header images from the articles, which are not included here unless they *happen* to be available under a free license.  Most are not.
+As [discussed previously]({% post_url 2019-12-31-new-year %}), this is my weekly Twitter roundup.  Note that tweets of articles generally include header images from the articles, which are not included here unless they *happen* to be available under a free license.  Most are not.  But I now add most of my commentary here, where I'm not restricted by the message length.
 
 ![diagrams showing the division of the day and of the week](/blog/assets/CLM_14456_71r_detail.png "diagrams showing the division of the day and of the week")
 
@@ -75,6 +78,8 @@ cat >> ${filename} <<HERE
 Because it accidentally became a tradition early on in the life of the blog, here's a sixth article that didn't fit into the week, but too weird to not mention.
 
 <i class="fas fa-square"></i> []() from
+
+ >
 
 * * *
 
