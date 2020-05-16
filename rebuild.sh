@@ -101,7 +101,7 @@ then
   ### Mastodon
   ${toot} "Posted to ${blog}:${titles} ${tags}"
   ### twtxt
-  ${twtxt} tweet "Posted to ${blog}:${titles} ${tags}"
+  ${twtxt} tweet "On the blog:${titles} ${tags}"
   ### I can't get diclish to work, so Diaspora will be manual for now
   echo "Post this to Diaspora:"
   echo "Posted to ${blog}: ${links} ${tags}"
