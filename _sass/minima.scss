@@ -155,6 +155,11 @@ h6 {
 }
 
 blockquote {
+  background: linear-gradient(
+    to bottom right,
+    rgba($background-color, 0.0),
+    rgba($light-brand-color, 0.075)
+  );
   border-left: 5px solid $brand-color;
   border-right: 5px solid $brand-color;
 }
