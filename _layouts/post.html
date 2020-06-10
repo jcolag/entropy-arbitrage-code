@@ -38,6 +38,51 @@ layout: default
       {%- endif -%}</p>
   </header>
 
+  {% assign pagename = page.path | split: '/' | last %}
+  {% assign related = "" %}
+  {% for post in site.posts %}
+    {% for update in post.update %}
+      {% assign name = update | split: '/' | last %}
+      {% if name == pagename %}
+        {% assign dest = post.title %}
+        {% assign dest = dest | append: "," %}
+        {% assign dest = dest | append: post.url %}
+        {% assign dest = dest | append: "," %}
+        {% assign dest = dest | append: post.date %}
+        {% assign dest = dest | append: ";" %}
+        {% assign related = related | append: dest %}
+      {% endif %}
+    {% endfor %}
+  {% endfor %}
+  {% assign related = related | split: ";" %}
+  {% if related.size > 0 %}
+    <div class="post-content">
+      <b>Hi!</b>
+      It looks like this post has since been rethought in various
+      ways, so you may want to look at
+      {% if related.size == 1 %}
+        this
+      {% else %}
+        these
+      {% endif %}
+      after you're done reading here.
+      <ul>
+        {% for r in related %}
+          {% assign rel = r | split: "," %}
+          {% if rel.size > 1 %}
+            <li>
+              <a href="{{ rel[1] }}">
+                {{ rel[0] }}
+              </a>
+              from
+              {{ rel[2] | date: date_format }}
+            </li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
+  {% endif %}
+
   <div class="post-content e-content" itemprop="articleBody">
     {{ content }}
   </div>
