@@ -45,16 +45,16 @@ layout: default
       {% assign name = update | split: '/' | last %}
       {% if name == pagename %}
         {% assign dest = post.title %}
-        {% assign dest = dest | append: "," %}
-        {% assign dest = dest | append: post.url %}
-        {% assign dest = dest | append: "," %}
-        {% assign dest = dest | append: post.date %}
         {% assign dest = dest | append: ";" %}
+        {% assign dest = dest | append: post.url %}
+        {% assign dest = dest | append: ";" %}
+        {% assign dest = dest | append: post.date %}
+        {% assign dest = dest | append: "|" %}
         {% assign related = related | append: dest %}
       {% endif %}
     {% endfor %}
   {% endfor %}
-  {% assign related = related | split: ";" %}
+  {% assign related = related | split: "|" %}
   {% if related.size > 0 %}
     <div class="post-content">
       <b>Hi!</b>
@@ -68,7 +68,7 @@ layout: default
       after you're done reading here.
       <ul>
         {% for r in related %}
-          {% assign rel = r | split: "," %}
+          {% assign rel = r | split: ";" %}
           {% if rel.size > 1 %}
             <li>
               <a href="{{ rel[1] }}">
