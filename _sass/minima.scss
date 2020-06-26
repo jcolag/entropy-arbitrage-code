@@ -405,8 +405,8 @@ a.tag-name:visited {
   background-color: $dark-bg;
   border: 5px solid $brand-color;
   border-left: 0;
-  border-top-right-radius: 2em;
   border-bottom-right-radius: 2em;
+  border-top-right-radius: 2em;
   height: 40vh;
   left: 0;
   overflow-x: hidden;
@@ -415,6 +415,17 @@ a.tag-name:visited {
   top: calc(50% - 20vh);
   transition: all 1s;
   width: 2em;
+}
+
+.tray-panel-right {
+  border: 5px solid $brand-color;
+  border-right: 0;
+  border-bottom-left-radius: 2em;
+  border-bottom-right-radius: 0;
+  border-top-left-radius: 2em;
+  border-top-right-radius: 0;
+  left: auto;
+  right: 0;
 }
 
 .tray-panel .tray-header {
@@ -455,9 +466,17 @@ a.tag-name:visited {
   display: block;
 }
 
+.tray-panel input[type=submit] {
+  background-color: $brand-color;
+  border-radius: 0.5em;
+  color: $background-color;
+  font-family: 'Vollkorn';
+  font-size: 1.5em;
+}
+
 @keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }
 
 #search-container {
