@@ -6,22 +6,25 @@
 @font-face {
   font-family: 'Exo 2';
   src: url('/blog/assets/Exo2-Light.ttf');
-  font-weight: 300;
+  font-display: swap;
   font-style: normal;
+  font-weight: 300;
 }
 
 @font-face {
   font-family: 'Vollkorn';
   src: url('/blog/assets/Vollkorn-Bold.ttf');
-  font-weight: 700;
+  font-display: swap;
   font-style: normal;
+  font-weight: 700;
 }
 
 @font-face {
   font-family: 'Noto Color Emoji';
   src: url('/blog/assets/NotoColorEmoji.ttf');
-  font-weight: 300;
+  font-display: swap;
   font-style: normal;
+  font-weight: 300;
 }
 
 $base-font-family: 'Exo 2', "Noto Color Emoji" !default;
@@ -382,6 +385,19 @@ div.highlighter-rouge pre[class*="language-"] {
   margin-right: 0.75em !important;
 }
 
+.post-update {
+  background: linear-gradient(
+    to bottom right,
+    rgba($background-color, 0.0),
+    rgba($light-brand-color, 0.075)
+  );
+  border: 5px solid $brand-color;
+  border-radius: 1em;
+  margin-left: 10%;
+  padding: 0.5em;
+  width: 80%;
+}
+
 a .page-link:hover {
   left: 0.1em;
   margin-right: -0.05em !important;
@@ -472,6 +488,11 @@ a.tag-name:visited {
   color: $background-color;
   font-family: 'Vollkorn';
   font-size: 1.5em;
+}
+
+.kbd {
+  border: 1px solid $text-color;
+  border-radius: 0.1em;
 }
 
 @keyframes fadein {
