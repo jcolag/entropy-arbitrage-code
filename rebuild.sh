@@ -25,11 +25,11 @@ do
 done
 
 # Commit any changes in released posts
-cd _posts
+cd _posts || exit
 for file in $files
 do
-  ff=$(echo $file | cut -f2 -d'/')
-  git add $ff
+  ff=$(echo "$file" | cut -f2 -d'/')
+  git add "$ff"
 done
 git commit -m "Automated updates: $(date '+%Y-%m-%d')"
 git push
@@ -38,14 +38,17 @@ cd ..
 # Generate tags from released posts
 #  NB: $files is unquoted, because it's a list to be split
 # shellcheck disable=SC2086
-for tag in $(grep '^tags:' $files | cut -f2- -d'[' | cut -f1 -d']' | tr -d ' ' | tr ',' '\n' | sort -u)
+for tag in $(grep '^tags:' $files | cut -f2- -d'[' | cut -f1 -d']' | tr -d ' ' | tr ',' '\n' | sort | uniq -c | tr -s ' ' | tr ' ' ':')
 do
-  cat > "tag/${tag}.md" <<EOF
+  tagname=$(echo "${tag}" | cut -f3 -d':')
+  tagcount=$(echo "${tag}" | cut -f2 -d':')
+  cat > "tag/${tagname}.md" <<EOF
 ---
 layout: tagpage
-permalink: /tag/${tag}/
-tag: ${tag}
-title: "Tag: ${tag}"
+permalink: /tag/${tagname}/
+tag: ${tagname}
+title: "Tag: ${tagname}"
+count: "${tagcount}"
 ---
 EOF
 done
@@ -83,20 +86,20 @@ host=$(grep "^url:" _config.yml | cut -f2 -d'"')
 baseurl=$(grep "^baseurl:" _config.yml | cut -f2 -d'"')
 for file in ${todayfiles}
 do
-  title=$(grep "^title:" ${file} | cut -f2- -d' ')
-  tags=$(grep "^tags:" ${file} | cut -f2 -d'[' | cut -f1 -d']' | tr -d ',' | sed 's/\([a-z]*\)/#\1/g')
-  cat=$(grep '^categories:' ${file} | cut -f2 -d':' | tr -d ' ')
-  if [ ! -z $cat ]
+  title=$(grep "^title:" "${file}" | cut -f2- -d' ')
+  tags=$(grep "^tags:" "${file}" | cut -f2 -d'[' | cut -f1 -d']' | tr -d ',' | sed 's/\([a-z]*\)/#\1/g')
+  cat=$(grep '^categories:' "${file}" | cut -f2 -d':' | tr -d ' ')
+  if [ -n "$cat" ]
   then
     cat="/${cat}"
   fi
-  path=$(basename ${file} .md | sed 's/-/\//g;s/\//-/g4')
+  path=$(basename "${file}" .md | sed 's/-/\//g;s/\//-/g4')
   url="${host}${baseurl}${cat}/${path}.html"
   titles="${titles} ${title} ${url}"
   links="${links} [${title}](${url})"
 done
 ## If we have posts, announce them
-if [ ! -z "$titles" ]
+if [ -n "$titles" ]
 then
   ### Mastodon
   ${toot} "Posted to ${blog}:${titles} ${tags}"
@@ -111,6 +114,14 @@ fi
 rm -f .lastbuild
 
 date '+%F %T' > .lastbuild
+
+echo Current count of published posts:
+now=$(date +%s)
+for i in $(grep '^date: ' _posts/2* | cut -f3- -d':' | cut -c2- | sed 's/ /T/g')
+do
+  published=$(date --date="${i}" +%s)
+  echo $((published - now))
+done | grep -c '-'
 
 # Kick off the local server
 bundle exec jekyll serve --future --drafts --unpublished
