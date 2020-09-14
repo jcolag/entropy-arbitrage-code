@@ -4,7 +4,12 @@ permalink: /search/
 ---
 
 <div id="search-container">
-  <input type="text" id="search-input" placeholder="🔍 Search...">
+  <input
+    autofocus
+    id="search-input"
+    placeholder="🔍 Search..."
+    type="text"
+  >
   <ul id="results-container"></ul>
 </div>
 
@@ -14,7 +19,7 @@ permalink: /search/
 >
 </script>
 
-<script>
+<script type="text/javascript">
 SimpleJekyllSearch({
   searchInput: document.getElementById('search-input'),
   resultsContainer: document.getElementById('results-container'),
