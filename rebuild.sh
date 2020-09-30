@@ -57,6 +57,8 @@ done
 ## Resize all images to the blog width
 mogrify -resize $maxwd\> assets/*.jpg
 mogrify -resize $maxwd\> assets/*.png
+## Clean out the unneeded backup files
+rm assets/*~
 ## Rebuild the blog
 bundle exec jekyll clean
 bundle exec jekyll build
