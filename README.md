@@ -50,4 +50,6 @@ Because it's a lot, I've opted not to include the `assets` folder, which include
 └── Vollkorn-Bold.ttf
 ```
 
-It would probably be smart to separate the two different kinds of assets, at some point.
+The `fa` material is, of course, [Font Awesome 5](https://fontawesome.com/).  The files named `prism.*` are from [Prism.js](https://prismjs.com/index.html), used for syntax highlighting of code snippets.  The fonts are widely available.
+
+It would probably be smart to separate the two different kinds of assets---images and utility content---at some point.
