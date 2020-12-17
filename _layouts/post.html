@@ -71,7 +71,7 @@ layout: default
           {% assign rel = r | split: ";" %}
           {% if rel.size > 1 %}
             <li>
-              <a href="{{ rel[1] }}">
+              <a href="{{ site.baseurl }}{{ rel[1] }}">
                 {{ rel[0] }}
               </a>
               from
