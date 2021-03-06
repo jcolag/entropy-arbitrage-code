@@ -62,6 +62,8 @@ do
 
  >
 
+
+
 ## 12:0${quotemins[$i]} -- ${dd}
 
 [<i class="fab fa-twitter"></i>]()
@@ -76,11 +78,13 @@ done
 cat >> ${filename} <<HERE
 ## Bonus
 
-Because it accidentally became a tradition early on in the life of the blog, here's a sixth article that didn't fit into the week, but too weird to not mention.
+Because it accidentally became a tradition early on in the life of the blog, here are any additional articles that didn't fit into the week, but too weird or important to not mention.
 
 <i class="fas fa-square"></i> []() from
 
  >
+
+
 
 * * *
 
