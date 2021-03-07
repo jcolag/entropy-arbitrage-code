@@ -104,7 +104,8 @@ done
 if [ -n "$titles" ]
 then
   ### Mastodon
-  ${toot} "Posted to ${blog}:${titles} ${tags}"
+  ${toot} login_cli
+  ${toot} post "Posted to ${blog}:${titles} ${tags}"
   ### twtxt
   ${twtxt} tweet "On the blog:${titles} ${tags}"
   ### I can't get diclish to work, so Diaspora will be manual for now
