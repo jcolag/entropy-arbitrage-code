@@ -6,7 +6,7 @@ For reference, this is mostly for transparency and I don't recommend using this 
 
 ## Assets
 
-Because it's a lot, I've opted not to include the `assets` folder, which includes not just the images used in the blog (originals linked to in the posts), but also fonts, JavaScript, and CSS bits.  Here's the layout, minus images:
+Because it's a lot, I've opted not to include the `assets` folder---which includes not just the images used in the blog, originals linked to in the posts---but also fonts, JavaScript, and CSS bits.  Here's the layout, minus images:
 
 ```
 ├── Exo2-Light.ttf
@@ -53,3 +53,6 @@ Because it's a lot, I've opted not to include the `assets` folder, which include
 The `fa` material is, of course, [Font Awesome 5](https://fontawesome.com/).  The files named `prism.*` are from [Prism.js](https://prismjs.com/index.html), used for syntax highlighting of code snippets.  The fonts are widely available.
 
 It would probably be smart to separate the two different kinds of assets---images and utility content---at some point.
+
+For my own convenience, though, and usable to anybody who needs it, I created [a repository for the assets](https://gitlab.com/jcolag/entropy-arbitrage-assets), which will probably be updated weekly or so.
+
