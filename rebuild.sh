@@ -1,7 +1,7 @@
 #!/bin/bash
 blog="Entropy Arbitrage"
 target=jcolag@colagioia.net:www/blog
-toot="/home/john/.npm-packages/bin/toot"
+toot="toot"
 twtxt="/usr/local/bin/twtxt"
 diclish="diclish"
 maxwd=740
