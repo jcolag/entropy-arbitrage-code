@@ -13,7 +13,7 @@ do
   if [ ! -z $file ]
   then
     pluma $file
-    sleep 1
+    sleep 0.5
   fi
   day=$((day + 1))
 done
