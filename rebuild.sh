@@ -104,7 +104,12 @@ done
 if [ -n "$titles" ]
 then
   ### Mastodon
-  ${toot} login_cli
+  if ${toot} auth | grep -q ACTIVE
+  then
+    echo Already logged in to Mastodon.
+  else
+    ${toot} login_cli
+  fi
   ${toot} post "Posted to ${blog}:${titles} ${tags}"
   ### twtxt
   ${twtxt} tweet "On the blog:${titles} ${tags}"
