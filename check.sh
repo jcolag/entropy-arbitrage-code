@@ -2,7 +2,7 @@
 
 # Get the date or other prefix
 day=$(date +'%Y-%m-%d')
-files="${HOME}/code/entropy-arbitrage-code/_posts/${day}*.md"
+files=$(ls -1 "${HOME}"/code/entropy-arbitrage-code/_posts/"${day}"*.md)
 if [ ".$1." != ".." ]
 then
   files=$*
