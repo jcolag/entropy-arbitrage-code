@@ -54,5 +54,5 @@ The `fa` material is, of course, [Font Awesome 5](https://fontawesome.com/).  Th
 
 It would probably be smart to separate the two different kinds of assets---images and utility content---at some point.
 
-For my own convenience, though, and usable to anybody who needs it, I created [a repository for the assets](https://gitlab.com/jcolag/entropy-arbitrage-assets), which will probably be updated weekly or so.
+For my own convenience, though, and usable to anybody who needs it, I finally created [a repository for the assets](https://gitlab.com/jcolag/entropy-arbitrage-assets), which will probably be updated weekly or so, probably Tuesday nights.
 
