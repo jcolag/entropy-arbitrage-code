@@ -4,9 +4,9 @@ maxidx=$((${#days[@]} - 1))
 first="next ${days[0]}"
 last="next ${days[$maxidx]}"
 now=$(date +%N)
-linkmins=$(rand -s $now -N 5 -M 5 -u | xargs -n 1 expr 1 + | paste -sd' ')
-now=$(echo $now | sed 's/^0*//g')
-now=$(($now * 7 - 3))
+linkmins=$(rand -s "$now" -N 5 -M 5 -u | xargs -n 1 expr 1 + | paste -sd' ')
+now="${now/#*(0)/}"
+now=$((now * 7 - 3))
 quotemins=$(rand -s $now -N 5 -M 5 -u | xargs -n 1 expr 1 + | paste -sd' ')
 mondate=$(date +%m/%d -d "$first")
 longmon=$(date +"%B %dth, %Y" -d "$first")
@@ -19,19 +19,19 @@ IFS=' ' read -r -a quotemins <<< "$quotemins"
 
 filename="_posts/$pubdate-week.md"
 offh=$(rand -M 4)
-hh=$((14 + $offh))
-HH=$(printf "%02d" $hh)
+hh=$((14 + offh))
+HH=$(printf "%02d" "$hh")
 mm=$(rand -M 60)
-MM=$(printf "%02d" $mm)
+MM=$(printf "%02d" "$mm")
 ss=$(rand -M 60)
-SS=$(printf "%02d" $ss)
+SS=$(printf "%02d" "$ss")
 
-if [ -f ${filename} ]
+if [ -f "${filename}" ]
 then
   exit
 fi
 
-cat > ${filename} <<HERE
+cat > "${filename}" <<HERE
 ---
 layout: post
 title: Tweets from ${mondate} to ${fridate}
@@ -55,7 +55,7 @@ for i in $(seq 0 $maxidx)
 do
   day="next ${days[$i]}"
   dd=$(date +"%a %d %B %Y" -d "$day")
-  cat >> ${filename} <<HERE
+  cat >> "${filename}" <<HERE
 ## 9:0${linkmins[$i]} -- ${dd}
 
 [<i class="fab fa-twitter-square"></i>]() []() from
@@ -75,7 +75,7 @@ do
 HERE
 done
 
-cat >> ${filename} <<HERE
+cat >> "${filename}" <<HERE
 ## Bonus
 
 Because it accidentally became a tradition early on in the life of the blog, here are any additional articles that didn't fit into the week, but too weird or important to not mention.
@@ -91,5 +91,5 @@ Because it accidentally became a tradition early on in the life of the blog, her
 **Credits**:  Header image is [Circular diagrams showing the division of the day and of the week](https://en.wikipedia.org/wiki/Week#/media/File:CLM_14456_71r_detail.jpg) from a manuscript drafted during the Carolingian Dynasty.
 HERE
 
-pluma ${filename}
+pluma "${filename}"
 
