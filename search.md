@@ -24,5 +24,9 @@ SimpleJekyllSearch({
   searchInput: document.getElementById('search-input'),
   resultsContainer: document.getElementById('results-container'),
   json: '/blog/search.json'
-})
+});
+var search = document.getElementById('search-input');
+var string = window.location.href.split('?');
+search.value = string.length > 1 ? decodeURI(string[1]) : '';
+search.focus();
 </script>
