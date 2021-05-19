@@ -5,6 +5,7 @@ if [ $# -ge 1 ]
 then
   max=$1
 fi
+date -d "+${max} days"
 pluma _sass/minima.scss
 while [ "$day" -le "$max" ]
 do
