@@ -115,12 +115,13 @@ then
   ${twtxt} tweet "On the blog:${titles} ${tags}"
   ### I can't get diclish to work, so Diaspora will be manual for now
   echo "Post this to Diaspora:"
+  ntfy send "Post to Diaspora..."
   echo "Posted to ${blog}: ${links} ${tags}"
+  echo "Posted to ${blog}: ${links} ${tags}" | xsel --clipboard
 fi
 
 # Update timestamp
 rm -f .lastbuild
-
 date '+%F %T' > .lastbuild
 
 echo Current count of published posts:
