@@ -69,6 +69,7 @@ exclude:
   - .jekyll-cache/
   - .git/
   - node_modules/
+  - _plugins
 
 feed:
   posts_limit: 30
