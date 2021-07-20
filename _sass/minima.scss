@@ -163,22 +163,53 @@ blockquote {
     rgba($background-color, 0.0),
     rgba($light-brand-color, 0.075)
   );
-  border-left: 5px solid $brand-color;
-  border-right: 5px solid $brand-color;
+  border: none;
+  border-radius: 1em;
+  box-shadow: 5px 5px 15px $brand-color;
+  color: $text-color;
+  padding: 1em;
 }
 
-blockquote blockquote {
-  border-left: 0.25em solid $brand-color;
-  border-right: 0;
-  color: $brand-color;
+.image-right {
   float: right;
+  text-align: right;
+  margin-right: 1em !important;
+  width: 35%;
+}
+
+.pull-quote {
+  border-radius: 0.5em;
+  color: $brand-color;
   font-family: $header-font-family;
   font-size: x-large;
   font-weight: bold;
+  padding: 0.25em;
+}
+
+.pull-quote-left {
+  background: linear-gradient(
+    to bottom left,
+    rgba($background-color, 0.0),
+    rgba($light-brand-color, 0.075)
+  );
+  border-left: 0;
+  border-right: 0.25em solid $brand-color;
+  float: left;
+  margin-right: calc(2% + 0.25em);
+  text-align: left;
+  width: 33%;
+}
+
+.pull-quote-right {
+  background: linear-gradient(
+    to bottom right,
+    rgba($background-color, 0.0),
+    rgba($light-brand-color, 0.075)
+  );
+  border-left: 0.25em solid $brand-color;
+  border-right: 0;
+  float: right;
   margin-left: 0.25em;
-  padding-bottom: 0.25em;
-  padding-left: 0.25em;
-  padding-top: 0.25em;
   text-align: right;
   width: 35%;
 }
@@ -209,6 +240,19 @@ a {
 
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   text-decoration: underline dotted $xp-brand-color 0.5px;
+}
+
+b, em, i, strong {
+  color: $light-text;
+}
+
+h1 b, h1 em, h1 i, h1 strong,
+h2 b, h2 em, h2 i, h2 strong,
+h3 b, h3 em, h3 i, h3 strong,
+h4 b, h4 em, h4 i, h4 strong,
+h5 b, h5 em, h5 i, h5 strong,
+h6 b, h6 em, h6 i, h6 strong, {
+  color: $light-brand-color;
 }
 
 table {
