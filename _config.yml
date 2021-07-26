@@ -59,7 +59,12 @@ jekyll-minifier:
 # their entries' file path in the `include:` list.
 #
 exclude:
+  - archive.sh
+  - check.sh
+  - nextweek.sh
+  - open.sh
   - rebuild.sh
+  - makeroom.js
   - README.md
   - LICENSE.md
   - Gemfile

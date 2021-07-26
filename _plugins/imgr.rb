@@ -12,7 +12,7 @@ class ImgrInlineTag < Liquid::Tag
 
   def params(input)
     parts = input.split '|'
-    return parts[0].strip, parts[1].strip, parts[2].strip
+    return parts[0].strip, parts[1].strip, parts.length > 2 ? parts[2].strip : parts[0].strip
   end
 end
 Liquid::Template.register_tag('imgr', ImgrInlineTag)
