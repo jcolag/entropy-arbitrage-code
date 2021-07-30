@@ -92,12 +92,10 @@ h1, h2, h3, h4, h5, h6, header, .site-title, .site-title:visited, .page-link, .p
   text-align: center;
   -moz-transition: color 2s;
   -webkit-transition: color 2s;
-  -o-transition: color 2s;
-  -ms-transition: color 2s;
   transition: color 2s;
 }
 
-h1:hover,h2:hover,h3:hover,h4:hover,h5:hover,header:hover,.site-title:hover,.page-link:hover {
+h1:hover,h2:hover,h3:hover,h4:hover,h5:hover,header:hover,.site-title:hover,.page-link:hover,.quote-author:hover {
   color: $light-brand-color !important;
 }
 
@@ -161,19 +159,33 @@ blockquote {
   background: linear-gradient(
     to bottom right,
     rgba($background-color, 0.0),
-    rgba($light-brand-color, 0.075)
+    rgba($light-brand-color, 0.1)
   );
   border: none;
   border-radius: 1em;
   box-shadow: 5px 5px 15px $brand-color;
-  color: $text-color;
+  color: $brand-color;
   padding: 1em;
+}
+
+.quote-author {
+  color: $brand-color;
+  font-family: $header-font-family;
+  font-size: 0.8em;
+  -moz-transition: color 2s;
+  -webkit-transition: color 2s;
+  text-align: right;
+  transition: color 2s;
+}
+
+.quote-author cite {
+  font-style: normal;
 }
 
 .image-right {
   float: right;
   text-align: right;
-  margin-right: 1em !important;
+  margin-left: 1em !important;
   width: 35%;
 }
 
@@ -193,7 +205,7 @@ blockquote {
     rgba($light-brand-color, 0.075)
   );
   border-left: 0;
-  border-right: 0.25em solid $brand-color;
+  border-right: 0.125em solid $brand-color;
   float: left;
   margin-right: calc(2% + 0.25em);
   text-align: left;
@@ -206,7 +218,7 @@ blockquote {
     rgba($background-color, 0.0),
     rgba($light-brand-color, 0.075)
   );
-  border-left: 0.25em solid $brand-color;
+  border-left: 0.125em solid $brand-color;
   border-right: 0;
   float: right;
   margin-left: 0.25em;
