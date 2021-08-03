@@ -9,7 +9,7 @@ now="${now/#*(0)/}"
 now=$((now * 7 - 3))
 quotemins=$(rand -s $now -N 5 -M 5 -u | xargs -n 1 expr 1 + | paste -sd' ')
 mondate=$(date +%m/%d -d "$first")
-longmon=$(date +"%B %dth, %Y" -d "$first")
+longmon=$(date +"%B %dXX, %Y" -d "$first" | sed -e 's/1\([0-9]\)XX/1\1th/' -e 's/1XX/1st/' -e 's/2XX/2nd/' -e 's/3XX/3rd/' -e 's/\([0,4-9]\)XX/\1th/')
 fridate=$(date +%m/%d -d "$last")
 pubdate=$(date +%F -d "$last")
 TZ=$(date +%z -d "$last")
@@ -66,11 +66,11 @@ do
 
 ## 12:0${quotemins[$i]} -- ${dd}
 
-[<i class="fab fa-twitter"></i>]()
+[<i class="fab fa-twitter-square"></i>]()
 
  >
 
-######
+{% cite  %}
 
 HERE
 done
@@ -88,7 +88,7 @@ Because it accidentally became a tradition early on in the life of the blog, her
 
 * * *
 
-**Credits**:  Header image is [Circular diagrams showing the division of the day and of the week](https://en.wikipedia.org/wiki/Week#/media/File:CLM_14456_71r_detail.jpg) from a manuscript drafted during the Carolingian Dynasty.
+**Credits**:  Header image is [Circular diagrams showing the division of the day and of the week](https://commons.wikimedia.org/wiki/File:CLM_14456_71r_detail.jpg) from a manuscript drafted during the Carolingian Dynasty.
 HERE
 
 pluma "${filename}"
