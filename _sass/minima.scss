@@ -500,6 +500,16 @@ a.tag-name:visited {
   right: 0;
 }
 
+.tray-panel-right table, .tray-panel-right td {
+  border: none;
+}
+
+.tray-panel-right table {
+  border-collapse: collapse;
+  border-radius: 1em;
+  overflow: hidden;
+}
+
 .tray-panel .tray-header {
   display: none;
   transform: rotate(90deg) translate(1em);
@@ -509,6 +519,16 @@ a.tag-name:visited {
 .tray-panel .tray-pull {
   display: block;
   margin-top: calc(20vh - 0.5em);
+}
+
+.tray-pull-right {
+  transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+}
+
+.tray-pull-right h2 i {
+  margin-left: 0.5em;
 }
 
 .tray-panel .tray-contents {
@@ -548,7 +568,10 @@ a.tag-name:visited {
 
 .kbd {
   border: 1px solid $text-color;
-  border-radius: 0.1em;
+  border-radius: 0.25em;
+  font-weight: bold;
+  margin-right: 0.25em;
+  padding-left: 0.25em;
 }
 
 @keyframes fadein {
