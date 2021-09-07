@@ -124,13 +124,14 @@ fi
 rm -f .lastbuild
 date '+%F %T' > .lastbuild
 
-echo Current count of published posts:
 now=$(date +%s)
-for i in $(grep '^date: ' _posts/2* | cut -f3- -d':' | cut -c2- | sed 's/ /T/g')
+count=$(for i in $(grep '^date: ' _posts/2* | cut -f3- -d':' | cut -c2- | sed 's/ /T/g')
 do
   published=$(date --date="${i}" +%s)
   echo $((published - now))
-done | grep -c '-'
+done | grep -c '-')
+echo "Current count of published posts: ${count}"
+ntfy send "Current count of published posts: ${count}"
 
 # Kick off the local server
 bundle exec jekyll serve --future --drafts --unpublished
