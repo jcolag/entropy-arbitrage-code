@@ -61,7 +61,7 @@ mogrify -resize $maxwd\> assets/*.png
 rm assets/*~
 ## Rebuild the blog
 bundle exec jekyll clean
-bundle exec jekyll build
+JEKYLL_ENV=production bundle exec jekyll build
 ## Push to the server
 rsync --itemize-changes --recursive --compress --times --delete-delay \
     _site/ "$target"

@@ -11,6 +11,10 @@ layout: default
       class="post-title p-name"
       itemprop="name headline"
     >
+      {% if jekyll.environment == "development" and page.proofed != true %}
+        {% assign devClass = "draft-mode" %}
+        DRAFT:
+      {% endif %}
       {{ page.title | escape }}
     </h1>
     <p class="post-meta">
@@ -83,7 +87,7 @@ layout: default
     </div>
   {% endif %}
 
-  <div class="post-content e-content" itemprop="articleBody">
+  <div class="post-content e-content {{ devClass }}" itemprop="articleBody">
     {{ content }}
   </div>
 
@@ -98,10 +102,14 @@ layout: default
     </a>
     as the rest of the blog.
   </p>
-  <script
-    type="text/javascript"
-    src="/hashover-next/comments.php"
-  ></script>
+  {% if jekyll.environment == "production" %}
+    <script
+      type="text/javascript"
+      src="/hashover-next/comments.php"
+    ></script>
+  {% else %}
+    <div>No comments available under a development build!</div>
+  {% endif %}
   <script
     src="/blog/assets/prism.js"
     type="text/javascript"
