@@ -593,4 +593,6 @@ a.tag-name:visited {
 
 .draft-mode {
   background-color: $light-bg;
+  background-image: url('/blog/assets/square_bg.png');
+  color: darken($text-color, 10%);
 }
