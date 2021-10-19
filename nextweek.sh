@@ -4,8 +4,11 @@ maxidx=$((${#days[@]} - 1))
 first="next ${days[0]}"
 last="next ${days[$maxidx]}"
 now=$(date +%N)
+# The following SHOULD work, and works in testing,
+# but somehow doesn't in this script.
+# now="${now/#*(0)/}"
+now=$(echo $now | sed 's/^0*//g')
 linkmins=$(rand -s "$now" -N 5 -M 5 -u | xargs -n 1 expr 1 + | paste -sd' ')
-now="${now/#*(0)/}"
 now=$((now * 7 - 3))
 quotemins=$(rand -s $now -N 5 -M 5 -u | xargs -n 1 expr 1 + | paste -sd' ')
 mondate=$(date +%m/%d -d "$first")
