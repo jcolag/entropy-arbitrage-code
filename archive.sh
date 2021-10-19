@@ -9,13 +9,13 @@ path=$(grep '^baseurl: ' _config.yml | cut -f2 -d'"')
 sitemap="${server}${path}/sitemap.xml"
 local=$(mktemp --suffix=.xml)
 
-curl "${sitemap}" >> "${local}"
+curl "${sitemap}" > "${local}"
 if [ ".$1." != ".." ]
 then
   local=$*
 fi
 
-for link in $(grep '<loc>' "${local}" | cut -f2- -d'>' | cut -f1 -d'<')
+for link in $(xmllint --format "${local}" | grep '<loc>' | cut -f2- -d'>' | cut -f1 -d'<')
 do
   echo "${link}"
   curl -s "https://web.archive.org/save/${link}"
