@@ -54,9 +54,9 @@ EOF
 done
 
 # Rebuild and push files
-## Resize all images to the blog width
-mogrify -resize $maxwd\> assets/*.jpg
-mogrify -resize $maxwd\> assets/*.png
+### Resize all images to the blog width
+#mogrify -resize $maxwd\> assets/*.jpg
+#mogrify -resize $maxwd\> assets/*.png
 ## Clean out the unneeded backup files
 rm assets/*~
 ## Rebuild the blog
