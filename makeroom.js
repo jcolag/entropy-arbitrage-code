@@ -5,6 +5,7 @@ const path = require('path');
 // both the filename of the post and the frontmatter.
 
 const locationPath = '_posts';
+const targetNames = [];
 
 // Validate the arguments, both that we have enough and that they
 // parse correctly.
@@ -62,11 +63,17 @@ while(true) {
       `\ndate: ${newPrefix.slice(0, -1)}`
     );
 
+    // Skip files that we've already touched.
+    if (targetNames.indexOf(qname) >= 0) {
+      return;
+    }
+
     console.log(`Moving ${qname} to ${newName}...`);
+    targetNames.push(newName);
     try {
       // Write out the new file and delete the original.
       fs.writeFileSync(newName, newText);
-      fs.unlinkSync(filename);
+      fs.unlinkSync(qname);
     } catch (e) {
       console.log(e);
       exit(-4);
