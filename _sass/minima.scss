@@ -20,6 +20,14 @@
 }
 
 @font-face {
+  font-family: 'Homemade Apple';
+  src: url('/blog/assets/HomemadeApple-Regular.ttf');
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
   font-family: 'Noto Color Emoji';
   src: url('/blog/assets/NotoColorEmoji.ttf');
   font-display: swap;
@@ -595,4 +603,11 @@ a.tag-name:visited {
   background-color: $light-bg;
   background-image: url('/blog/assets/square_bg.png');
   color: darken($text-color, 10%);
+}
+
+.handwritten {
+  color: darken($text-color, 25%);
+  font-family: 'Homemade Apple', cursive;
+  font-size: 1.33em;
+  letter-spacing: 1px;
 }
