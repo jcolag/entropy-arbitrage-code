@@ -18,7 +18,7 @@ for file in _posts/2*.md
 do
   dateline=$(grep '^date:' "$file" | head -1 | cut -f2 -d':' | cut -f2 -d' ' | cut -c1-10)
   dd=$(date -d "$dateline" '+%s')
-  if [ "$dd" -lt "$now" ]
+  if [ $dd -lt $now ]
   then
     files="$files $file"
   fi
