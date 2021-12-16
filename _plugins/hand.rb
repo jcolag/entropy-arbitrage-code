@@ -1,6 +1,9 @@
 class HandWritingBlockTag < Liquid::Block
   def render(context)
-    text = super.strip.gsub("\n", "\n<br>\n")
+    site = context.registers[:site]
+    converter = site.find_converter_instance(::Jekyll::Converters::Markdown)
+    html = converter.convert(super(context))
+    text = html.strip
     "<div class='handwritten'>\n#{text}\n</div>"
   end
 end
