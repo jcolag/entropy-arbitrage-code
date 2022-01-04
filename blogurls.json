@@ -1,0 +1,14 @@
+---
+layout: null
+search: exclude
+---
+
+[
+  {% for page in site.pages %}
+  { "{{page.title | escape}}": "{{page.url}}" },
+  {% endfor %}
+  {% for page in site.posts %}
+  { "{{page.title | escape}}": "{{page.url}}" },
+  {% endfor %}
+  { "0": "" }
+]
