@@ -615,3 +615,19 @@ a.tag-name:visited {
 .fake-link {
   cursor: pointer;
 }
+
+.preview {
+  float: right;
+  text-align: center;
+  margin-left: 1em !important;
+  width: 250px;
+}
+
+.preview > img {
+  border-radius: 1em;
+}
+
+.preview .caption {
+  font-family: Vollkorn;
+  font-size: small;
+}
