@@ -25,7 +25,7 @@ class GithubInlineTag < Liquid::Tag
       url = prop(lines, '="og:url"')
     end
 
-    caption = title.split(':')[1].strip
+    caption = title.split(':').shift.strip
     return "<a class='preview' href='#{url}'><span class='caption'>" +
       "<i class='fab fa-github'></i> #{caption}</span>" +
       "<img alt='#{imageAlt}' src='#{imageUrl}' title='#{title}'></a>"
