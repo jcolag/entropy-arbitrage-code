@@ -32,4 +32,7 @@ gem "wdm", "~> 0.1.1", :install_if => Gem.win_platform?
 gem "jekyll-paginate-v2"
 gem "jekyll-minifier"
 
+# To manage plugins
+gem 'rubocop', require: false
+
 gem "webrick", "~> 1.7"
