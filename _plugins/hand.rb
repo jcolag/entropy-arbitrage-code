@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+# Code for the handwriting inline tag
 class HandWritingBlockTag < Liquid::Block
   def render(context)
     site = context.registers[:site]
@@ -7,5 +10,4 @@ class HandWritingBlockTag < Liquid::Block
     "<div class='handwritten'>\n#{text}\n</div>"
   end
 end
-Liquid::Template.register_tag("hand", HandWritingBlockTag)
-
+Liquid::Template.register_tag('hand', HandWritingBlockTag)
