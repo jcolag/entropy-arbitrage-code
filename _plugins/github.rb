@@ -1,43 +1,80 @@
 # frozen_string_literal: true
 
 require 'net/http'
+require 'yaml'
 
 # Code for the github inline tag
 class GithubInlineTag < Liquid::Tag
   def initialize(tag_name, text, parse_context)
     super
-    @uri = URI("https://github.com/#{text.strip}/")
+    @text = text
+    @cache_file = File.join '_cache', 'github.yml'
+    cache_yaml = File.read @cache_file
+    list = YAML.safe_load cache_yaml
+    @cache = {}
+    list.each do |site|
+      site.each_key { |key| @cache[key] = site[key] }
+    end
   end
 
   def render(_context)
-    image_alt = ''
-    image_url = ''
-    title = ''
-    url = ''
-    Net::HTTP.start(@uri.host, @uri.port, use_ssl: true) do |http|
-      request = Net::HTTP::Get.new @uri
-      response = http.request request
-      lines = response
-              .body
-              .gsub('<', "\n<")
-              .split("\n")
-              .filter { |l| l.include? '="og:' }
-      image_url = prop(lines, '="og:image"')
-      image_alt = prop(lines, '="og:image:alt"')
-      title = prop(lines, '="og:title"')
-      url = prop(lines, '="og:url"')
-    end
+    repo = get_repo @cache_file, @cache, @text
+    caption = repo['title'].split(':').shift.strip
 
-    caption = title.split(':').shift.strip
-    "<a class='preview' href='#{url}'><span class='caption'>" \
+    @cache[@text] = repo
+    save_yaml @cache_file, @cache
+
+    "<a class='preview' href='#{repo['url']}'><span class='caption'>" \
       "<i class='fab fa-github'></i> #{caption}</span>" \
-      "<img alt='#{image_alt}' src='#{image_url}' title='#{title}'></a>"
+      "<img alt='#{repo['image_alt']}' src='#{repo['image_url']}' " \
+      "title='#{repo['title']}'></a>"
   end
 
   def prop(lines, name)
     parts = lines.filter { |l| l.include? name }[0].split('"')
     idx = parts[1].include?('og:') ? 3 : 1
     parts[idx]
+  end
+
+  def get_repo(_file, cache, key)
+    return cache[key] if cache.key? key
+
+    uri = URI "https://github.com/#{key.strip}/"
+    repo = {}
+
+    Net::HTTP.start(uri.host, uri.port, use_ssl: true) do |http|
+      request = Net::HTTP::Get.new uri
+      response = http.request request
+      repo = extract_from_head response.body
+    end
+
+    repo
+  end
+
+  def extract_from_head(html)
+    repo = {}
+
+    lines = html
+            .gsub('<', "\n<")
+            .split("\n")
+            .filter { |l| l.include? '="og:' }
+    repo['image_url'] = prop(lines, '="og:image"')
+    repo['image_alt'] = prop(lines, '="og:image:alt"')
+    repo['title'] = prop(lines, '="og:title"')
+    repo['url'] = prop(lines, '="og:url"')
+    repo
+  end
+
+  def save_yaml(file, cache)
+    list = []
+
+    cache.each_key do |key|
+      o = {}
+      o[key] = cache[key]
+      list.push o
+    end
+
+    File.open(file, 'w') { |f| f.write list.to_yaml.gsub ' :', ' ' }
   end
 end
 Liquid::Template.register_tag('github', GithubInlineTag)
