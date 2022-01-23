@@ -9,18 +9,14 @@ class GithubInlineTag < Liquid::Tag
     super
     @text = text
     @cache_file = File.join '_cache', 'github.yml'
-    cache_yaml = File.read @cache_file
-    list = YAML.safe_load cache_yaml
-    @cache = {}
-    list.each do |site|
-      site.each_key { |key| @cache[key] = site[key] }
-    end
+    @cache = load_cache @cache_file
   end
 
   def render(_context)
     repo = get_repo @cache_file, @cache, @text
     caption = repo['title'].split(':').shift.strip
 
+    @cache = load_cache @cache_file
     @cache[@text] = repo
     save_yaml @cache_file, @cache
 
@@ -63,6 +59,17 @@ class GithubInlineTag < Liquid::Tag
     repo['title'] = prop(lines, '="og:title"')
     repo['url'] = prop(lines, '="og:url"')
     repo
+  end
+
+  def load_cache(file)
+    cache_yaml = File.read file
+    list = YAML.safe_load cache_yaml
+    cache = {}
+    list.each do |site|
+      site.each_key { |key| cache[key] = site[key] }
+    end
+
+    cache
   end
 
   def save_yaml(file, cache)
