@@ -20,7 +20,8 @@ class GithubInlineTag < Liquid::Tag
     @cache[@text] = repo
     save_yaml @cache_file, @cache
 
-    "<a class='preview' href='#{repo['url']}'><span class='caption'>" \
+    "<a class='preview' href='#{repo['url']}'><span class='caption'" \
+      " title='#{caption}'>" \
       "<i class='fab fa-github'></i> #{caption}</span>" \
       "<img alt='#{repo['image_alt']}' src='#{repo['image_url']}' " \
       "title='#{repo['title']}'></a>"
