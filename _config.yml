@@ -75,6 +75,8 @@ exclude:
   - .git/
   - node_modules/
   - _plugins
+  - _cache
+  - _test
 
 feed:
   posts_limit: 30

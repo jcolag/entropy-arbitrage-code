@@ -9,3 +9,4 @@ vendor
 .lastbuild
 _config.yml
 google*.html
+_cache
