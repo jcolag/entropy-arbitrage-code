@@ -58,7 +58,12 @@ done
 #mogrify -resize $maxwd\> assets/*.jpg
 #mogrify -resize $maxwd\> assets/*.png
 ## Clean out the unneeded backup files
-rm assets/*~
+rm -f assets/*~
+rm -f _cache/*
+cat > _cache/github.yml <<EOF
+---
+- nothing/nothing: 
+EOF
 ## Rebuild the blog
 bundle exec jekyll clean
 JEKYLL_ENV=production bundle exec jekyll build
