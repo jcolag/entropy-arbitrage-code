@@ -617,10 +617,21 @@ a.tag-name:visited {
 }
 
 .preview {
+  border-radius: 1em;
   float: right;
   text-align: center;
   margin-left: 1em !important;
+  transition: all 1s ease-in-out;
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  -ms-transition: all 1s ease-in-out;
   width: 250px;
+}
+
+.preview:hover {
+  box-shadow: 1px 1px 15px $brand-color;
+  opacity: 0.8;
 }
 
 .preview > img {
@@ -628,6 +639,11 @@ a.tag-name:visited {
 }
 
 .preview .caption {
+  display: inline-block;
   font-family: Vollkorn;
   font-size: small;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
 }
