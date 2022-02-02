@@ -77,6 +77,7 @@ exclude:
   - _plugins
   - _cache
   - _test
+  - assets/.git/
 
 feed:
   posts_limit: 30
