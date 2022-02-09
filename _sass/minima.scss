@@ -301,6 +301,10 @@ td {
   color: $light-text !important;
 }
 
+blockquote i, blockquote em {
+  font-style: normal;
+}
+
 .post-content img {
   box-shadow: 5px 5px 5px $dark-bg;
   display: block;
