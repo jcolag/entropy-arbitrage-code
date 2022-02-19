@@ -14,7 +14,7 @@ class FakeLinkInlineTag < Liquid::Tag
 
   def params(input)
     parts = input.split '|'
-    [parts[0].strip, parts.length > 1 ? parts[1].strip : "This button doesn't actually do anything."]
+    [parts[0].strip, parts.length > 1 ? parts[1].strip : "This link doesn't actually go anywhere."]
   end
 end
 Liquid::Template.register_tag('fake_link', FakeLinkInlineTag)
