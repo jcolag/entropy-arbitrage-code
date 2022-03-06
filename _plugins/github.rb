@@ -19,12 +19,22 @@ class GithubInlineTag < Liquid::Tag
     @cache = load_cache @cache_file
     @cache[@text] = repo
     save_yaml @cache_file, @cache
+    fallback =
+    image_alt = repo['image_alt'].force_encoding('UTF-8')
+    image_url = repo['image_url'].force_encoding('UTF-8')
+    title = repo['title'].force_encoding('UTF-8')
 
-    "<a class='preview' href='#{repo['url']}'><span class='caption'" \
-      " title='#{caption}'>" \
-      "<i class='fab fa-github'></i> #{caption}</span>" \
-      "<img alt='#{repo['image_alt']}' src='#{repo['image_url']}' " \
-      "title='#{repo['title']}'></a>"
+    "<a class='preview' href='#{repo['url']}'>" \
+      "<span class='caption' title='#{caption}'>" \
+      "<i class='fab fa-github'></i>" \
+      " #{caption}" \
+      "</span>" \
+      "<img" \
+      " alt='#{image_alt}'" \
+      " src='#{image_url}'" \
+      " title='#{title}'" \
+      ">" \
+      "</a>"
   end
 
   def prop(lines, name)
