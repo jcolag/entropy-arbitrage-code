@@ -23,6 +23,7 @@ do
     --encoding utf-8 --json --language en-US --xmlfilter \
     "${file}" | jq .matches >> "${outfile}"
   pluma "${outfile}"
+  alex --why --reporter="${HOME}/code/entropy-arbitrage-code/_plugins/alex-formatter.js" "${file}" >> "${outfile}" 2>&1
 done
 
 mv "${HOME}/.proselintrc" "${HOME}/proselintrc.bk"
