@@ -1,8 +1,15 @@
+// This exists to format write-good's colon-separated output to
+// more sensible JSON.
+
 let leftover = '';
+let json = '';
 
 process.stdin.setEncoding('utf8');
 process.stdin.on('data', (data) => {
-  const lines = (leftover + data).split('\n').map((l) => l.split(':'));
+  json += data;
+});
+process.stdin.on('end', () => {
+  const lines = (leftover + json).split('\n').map((l) => l.split(':'));
 
   if (lines[-1] !== '') {
     leftover = lines[-1];
