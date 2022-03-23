@@ -45,7 +45,7 @@ summary: Tweets for the Week of ${longmon}
 thumbnail: /blog/assets/CLM_14456_71r_detail.png
 ---
 
-As [discussed previously]({% post_url 2019-12-31-new-year %}), this is my weekly Twitter roundup.  Note that tweets of articles generally include header images from the articles, which are not included here unless they *happen* to be available under a free license.  Most are not.  But I now add most of my commentary here, where I'm not restricted by the message length.
+As [discussed previously]({% post_url 2019-12-31-new-year %}), this is my weekly Twitter roundup.  Note that tweets of articles generally include header images from the articles, which I don't include here unless their creators *happen* to have released them for use under a free license.  Most have not.  But I now add most of my commentary here, where I don't feel restricted by the message length.
 
 ![diagrams showing the division of the day and of the week](/blog/assets/CLM_14456_71r_detail.png "diagrams showing the division of the day and of the week")
 
@@ -81,7 +81,7 @@ done
 cat >> "${filename}" <<HERE
 ## Bonus
 
-Because it accidentally became a tradition early on in the life of the blog, here are any additional articles that didn't fit into the week, but too weird or important to not mention.
+Because it accidentally became a tradition early on in the life of the blog, I drop any additional articles that didn't fit into the one-article-per-day week, but too weird or important to not mention, here.
 
 <i class="fas fa-square"></i> []() from
 
