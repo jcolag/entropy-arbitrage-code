@@ -26,7 +26,7 @@ hh=$((14 + offh))
 HH=$(printf "%02d" "$hh")
 mm=$(rand -M 60)
 MM=$(printf "%02d" "$mm")
-ss=$(rand -M 60)
+ss=$(rand -M 15)
 SS=$(printf "%02d" "$ss")
 
 if [ -f "${filename}" ]
@@ -39,7 +39,7 @@ cat > "${filename}" <<HERE
 layout: post
 title: Tweets from ${mondate} to ${fridate}
 date: ${pubdate} ${HH}:${MM}:${SS}${TZ}
-categories: media
+categories:
 tags: [twitter, week, socialmedia, linkdump]
 summary: Tweets for the Week of ${longmon}
 thumbnail: /blog/assets/CLM_14456_71r_detail.png
