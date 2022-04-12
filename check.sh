@@ -21,8 +21,8 @@ do
   java -jar "${HOME}/bin/LanguageTool-5.2-stable/languagetool-commandline.jar" \
     --disablecategories TYPOGRAPHY \
     --encoding utf-8 --json --language en-US --xmlfilter \
-  pluma "${outfile}"
-    "${file}" | node _plugins/languagetool.js "${file}" >> "${outfile}"
+    "${file}" | node "${HOME}/code/entropy-arbitrage-code/_plugins/languagetool.js" "${file}" >> "${outfile}"
+  rm map.json
   write-good --no-adverb --no-tooWordy --parse "${file}" | node "${HOME}/code/entropy-arbitrage-code/_plugins/write-good.js" >> "${outfile}"
   alex --why --reporter="${HOME}/code/entropy-arbitrage-code/_plugins/alex-formatter.js" "${file}" >> "${outfile}" 2>&1
 done
