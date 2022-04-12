@@ -13,7 +13,7 @@ if case $(echo "${files}" | tr '*' '#') in *#*) ;; *) false;; esac; then
 fi
 
 echo "${files}"
-mv "${HOME}/proselintrc.bk" "${HOME}/.proselintrc"
+mv "${HOME}/proselintrc.bk" "${HOME}/.proselintrc.json"
 for file in ${files}
 do
   outfile=$(mktemp).json
@@ -27,5 +27,5 @@ do
   alex --why --reporter="${HOME}/code/entropy-arbitrage-code/_plugins/alex-formatter.js" "${file}" >> "${outfile}" 2>&1
 done
 
-mv "${HOME}/.proselintrc" "${HOME}/proselintrc.bk"
+mv "${HOME}/.proselintrc.json" "${HOME}/proselintrc.bk"
 
