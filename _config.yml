@@ -35,6 +35,7 @@ pagination:
   sort_reverse: true;
 
 # Build settings
+encoding: utf-8
 theme: minima
 plugins:
   - jekyll-feed
@@ -78,6 +79,7 @@ exclude:
   - _cache
   - _test
   - assets/.git/
+  - map.json
 
 feed:
   posts_limit: 30
