@@ -10,3 +10,4 @@ vendor
 _config.yml
 google*.html
 _cache
+map.json
