@@ -13,8 +13,8 @@ pagination:
     <ul class="post-list">
       {% for post in paginator.posts %}
       <li>
-        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        <span class="post-meta">
+        {%- assign date_format = site.minima.date_format | default: "%Y %B %e" -%}
+        <span class="post-meta" title="{{ post.date | date: '%H:%M %Z' }}">
           {{ post.date | date: date_format }}
         </span>
         {% if post.offset %}
