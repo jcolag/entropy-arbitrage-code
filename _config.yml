@@ -80,6 +80,7 @@ exclude:
   - _test
   - assets/.git/
   - map.json
+  - _posts/data
 
 feed:
   posts_limit: 30
