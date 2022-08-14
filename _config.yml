@@ -50,6 +50,9 @@ live_reload: true
 
 jekyll-minifier:
   exclude: 'atom.xml'
+  compress_css: false
+  compress_javascript: false
+  compress_json: false
 
 # Exclude from processing.
 # The following items will not be processed, by default.
