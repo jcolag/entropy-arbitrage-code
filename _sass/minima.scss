@@ -171,19 +171,27 @@ blockquote {
   );
   border: none;
   border-radius: 1em;
-  box-shadow: 5px 5px 15px $brand-color;
+  box-shadow: 2px 2px 5px $brand-color;
   color: $brand-color;
   padding: 1em;
+  text-align: right;
+  transition: box-shadow 1s;
+  -moz-transition: box-shadow 1s;
+  -webkit-transition: box-shadow 1s;
+}
+
+blockquote:hover {
+  box-shadow: 5px 5px 15px $brand-color;
 }
 
 .quote-author {
   color: $brand-color;
   font-family: $header-font-family;
   font-size: 0.8em;
-  -moz-transition: color 2s;
-  -webkit-transition: color 2s;
   text-align: right;
   transition: color 2s;
+  -moz-transition: color 2s;
+  -webkit-transition: color 2s;
 }
 
 .quote-author cite {
