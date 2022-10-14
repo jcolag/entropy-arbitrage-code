@@ -17,7 +17,7 @@ mv "${HOME}/proselintrc.bk" "${HOME}/.proselintrc.json"
 for file in ${files}
 do
   outfile=$(mktemp).json
-  proselint --json "${file}" | jq .data.errors > "${outfile}"
+  proselint --json "${file}" | jq .data.errors >> "${outfile}"
   java -jar "${HOME}/bin/LanguageTool-5.2-stable/languagetool-commandline.jar" \
     --disablecategories TYPOGRAPHY \
     --encoding utf-8 --json --language en-US --xmlfilter \
