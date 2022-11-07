@@ -84,6 +84,8 @@ exclude:
   - assets/.git/
   - map.json
   - _posts/data
+  - _posts/.github
+  - _posts/.git
 
 feed:
   posts_limit: 30
