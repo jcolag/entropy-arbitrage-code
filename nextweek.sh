@@ -45,7 +45,7 @@ summary: Tweets for the Week of ${longmon}
 thumbnail: /blog/assets/CLM_14456_71r_detail.png
 ---
 
-As [discussed previously]({% post_url 2019-12-31-new-year %}), this is my weekly Twitter roundup.  Note that tweets of articles generally include header images from the articles, which I don't include here unless their creators *happen* to have released them for use under a free license.  Most have not.  But I now add most of my commentary here, where I don't feel restricted by the message length.
+As [discussed previously]({% post_url 2019-12-31-new-year %}), Fridays host my weekly Twitter roundups.  Note that tweets of articles generally include header images from the articles, which I don't include here unless their creators *happen* to have released them for use under a free license and I notice.  Most have not, or I don't notice.  But I now add most of my commentary here, where I don't feel restricted by the message length.
 
 ![diagrams showing the division of the day and of the week](/blog/assets/CLM_14456_71r_detail.png "diagrams showing the division of the day and of the week")
 
