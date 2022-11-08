@@ -183,6 +183,13 @@ blockquote:hover {
   box-shadow: 5px 5px 15px $brand-color;
 }
 
+blockquote img {
+  border-radius: 0.5em;
+  float: left;
+  margin-right: 0.5em !important;
+  margin-top: 0.33em;
+}
+
 .quote-author {
   color: $brand-color;
   font-family: $header-font-family;
