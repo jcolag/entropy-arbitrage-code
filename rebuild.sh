@@ -115,14 +115,14 @@ then
   else
     ${toot} login_cli
   fi
-  ${toot} post "Posted to ${blog}:${titles} ${tags}"
+  ${toot} post "On my blog:${titles} ${tags}"
   ### twtxt
-  ${twtxt} tweet "On the blog:${titles} ${tags}"
+  ${twtxt} tweet "On my blog:${titles} ${tags}"
   ### I can't get diclish to work, so Diaspora will be manual for now
   echo "Post this to Diaspora:"
   ntfy send "Post to Diaspora..."
-  echo "Posted to ${blog}: ${links} ${tags}"
-  echo "Posted to ${blog}: ${links} ${tags}" | xsel --clipboard
+  echo "On my blog: ${links} ${tags}"
+  echo "On my blog: ${links} ${tags}" | xsel --clipboard
 fi
 
 # Update timestamp
