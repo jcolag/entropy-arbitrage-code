@@ -484,6 +484,12 @@ div.highlighter-rouge pre[class*="language-"] {
   width: 80%;
 }
 
+#social-links {
+  line-height: 1.25em;
+	max-height: 4.5em;
+	overflow-y: auto;
+}
+
 a .page-link:hover {
   left: 0.1em;
   margin-right: -0.05em !important;
@@ -622,7 +628,7 @@ a.tag-name:visited {
 }
 
 .draft-mode {
-  background-color: $light-bg;
+  background-color: darken($background-color, 10%);
   background-image: url('/blog/assets/square_bg.png');
   color: darken($text-color, 10%);
 }
