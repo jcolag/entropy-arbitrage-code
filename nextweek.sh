@@ -1,5 +1,15 @@
 #!/bin/bash
 days=(mon tue wed thu fri)
+captions=( \
+  "Just what the world needed:  A calendar that flips the bird." \
+  "And over here, we have...the Roman numeral for four, I guess." \
+  "Some champion eye-rolling, there." \
+  "Carmen Miranda presents the Days of the Week." \
+  "Wait a second, are these all the same day of the week?" \
+  "I hate Venn diagram memes, especially when they don't make any sense" \
+  "I like to assume that the bust on the right, wearing a crown, blouse, and jacket, then shows up on the left, pointing with arms clad in sleeves made from woven wood slats..." \
+)
+cap=$(rand -M "${#captions[@]}")
 maxidx=$((${#days[@]} - 1))
 first="next ${days[0]}"
 last="next ${days[$maxidx]}"
@@ -8,9 +18,9 @@ now=$(date +%N)
 # but somehow doesn't in this script.
 # now="${now/#*(0)/}"
 now=$(echo $now | sed 's/^0*//g')
-linkmins=$(rand -s "$now" -N 5 -M 5 -u | xargs -n 1 expr 1 + | paste -sd' ')
+linkmins=$(seq 7 | sort -R | head -5 | paste -sd' ')
 now=$((now * 7 - 3))
-quotemins=$(rand -s $now -N 5 -M 5 -u | xargs -n 1 expr 1 + | paste -sd' ')
+quotemins=$(seq 7 | sort -R | head -5 | paste -sd' ')
 mondate=$(date +%m/%d -d "$first")
 longmon=$(date +"%B %dXX, %Y" -d "$first" | sed -e 's/1\([0-9]\)XX/1\1th/' -e 's/1XX/1st/' -e 's/2XX/2nd/' -e 's/3XX/3rd/' -e 's/\([0,4-9]\)XX/\1th/')
 fridate=$(date +%m/%d -d "$last")
@@ -37,19 +47,19 @@ fi
 cat > "${filename}" <<HERE
 ---
 layout: post
-title: Tweets from ${mondate} to ${fridate}
+title: Toots 🐘 from ${mondate} to ${fridate}
 date: ${pubdate} ${HH}:${MM}:${SS}${TZ}
 categories:
-tags: [twitter, week, socialmedia, linkdump]
-summary: Tweets for the Week of ${longmon}
+tags: [linkdump, mastodon, socialmedia, week]
+summary: Toots for the Week of ${longmon}
 thumbnail: /blog/assets/CLM_14456_71r_detail.png
 ---
 
-As [discussed previously]({% post_url 2019-12-31-new-year %}), Fridays host my weekly Twitter roundups.  Note that tweets of articles generally include header images from the articles, which I don't include here unless their creators *happen* to have released them for use under a free license and I notice.  Most have not, or I don't notice.  But I now add most of my commentary here, where I don't feel restricted by the message length.
+As [discussed previously]({% post_url 2019-12-31-new-year %}), on Fridays, I present my weekly social media roundups.  Note that toots of articles generally include header images from the articles, which I don't include here unless their creators *happen* to have released them for use under a free license, and I notice.  Most have not, or I don't notice.  But I now add my commentary here, where I don't feel restricted by message length.
 
-![diagrams showing the division of the day and of the week](/blog/assets/CLM_14456_71r_detail.png "diagrams showing the division of the day and of the week")
+![diagrams showing the division of the day and of the week](/blog/assets/CLM_14456_71r_detail.png "${captions[cap]}")
 
-I also don't generally attach pictures to posts with quotations.
+Also, I don't generally attach pictures to posts with quotations.
 
 HERE
 #> "$filename"
@@ -61,7 +71,7 @@ do
   cat >> "${filename}" <<HERE
 ## 9:0${linkmins[$i]} -- ${dd}
 
-[<i class="fab fa-twitter-square"></i>]() []() from
+[<i class="fab fa-mastodon"></i>]() []() from
 
  >
 
@@ -69,7 +79,7 @@ do
 
 ## 12:0${quotemins[$i]} -- ${dd}
 
-[<i class="fab fa-twitter-square"></i>]()
+[<i class="fab fa-mastodon"></i> Quoted on Mastodon]()
 
  >
 
@@ -94,5 +104,5 @@ Because it accidentally became a tradition early on in the life of the blog, I d
 **Credits**:  Header image is [Circular diagrams showing the division of the day and of the week](https://commons.wikimedia.org/wiki/File:CLM_14456_71r_detail.jpg) from a manuscript drafted during the Carolingian Dynasty.
 HERE
 
-pluma "${filename}"
+gedit "${filename}"
 
