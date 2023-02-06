@@ -676,6 +676,48 @@ a.tag-name:visited {
   width: 100%;
 }
 
+.content-warning {
+  background-color: lighten($text-color, 50%);
+  border: 2px solid $light-brand-color;
+  border-radius: 0.5em;
+  color: $light-brand-color;
+  padding: 0.5em;
+}
+
+.content-warning i, .content-warning b {
+  color: $light-brand-color;
+}
+
+.embedded-image {
+  border: 1px dotted $light-text;
+  width: calc($content-width - 65px);
+}
+
+.embedded-image > img {
+  width: calc($content-width - 69px);
+}
+
+.external-image > figcaption {
+	margin-top: -3.5em;
+	padding-left: 1em;
+	text-shadow: 1px 1px $background-color;
+}
+
+.no-image {
+  background-color: $text-color;
+  border: 2px solid $brand-color;
+  border-radius: 0.5em;
+  color: $background-color;
+  padding-bottom: 0.5em;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-top: 0.5em;
+}
+
+.no-image > b, .no-image i {
+  color: $background-color;
+}
+
 .fa, .fas, .far, .fal, .fad, .fab, .fa-brands {
   font-style: normal;
 }
