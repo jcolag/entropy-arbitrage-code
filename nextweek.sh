@@ -71,6 +71,9 @@ do
   cat >> "${filename}" <<HERE
 ## 9:0${linkmins[$i]} -- ${dd}
 
+{% cw  %}
+{% embed ||false| %}
+
 [<i class="fab fa-mastodon"></i>]() []() from
 
  >
@@ -92,6 +95,9 @@ cat >> "${filename}" <<HERE
 ## Bonus
 
 Because it accidentally became a tradition early on in the life of the blog, I drop any additional articles that didn't fit into the one-article-per-day week, but too weird or important to not mention, here.
+
+{% cw  %}
+{% embed ||false| %}
 
 <i class="fas fa-square"></i> []() from
 
