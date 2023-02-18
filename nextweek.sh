@@ -105,6 +105,10 @@ Because it accidentally became a tradition early on in the life of the blog, I d
 
 
 
+## Follow Me
+
+If you appreciate this sort of content, then you should probably [follow me <i class="fab fa-mastodon"></i> on Mastodon](https://mastodon.social/@jcolag/) to get it as early as possible...and feel free to reply, at least to the good stuff.
+
 * * *
 
 **Credits**:  Header image is [Circular diagrams showing the division of the day and of the week](https://commons.wikimedia.org/wiki/File:CLM_14456_71r_detail.jpg) from a manuscript drafted during the Carolingian Dynasty.
