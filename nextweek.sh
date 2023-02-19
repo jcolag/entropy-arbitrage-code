@@ -8,6 +8,8 @@ captions=( \
   "Wait a second, are these all the same day of the week?" \
   "I hate Venn diagram memes, especially when they don't make any sense" \
   "I like to assume that the bust on the right, wearing a crown, blouse, and jacket, then shows up on the left, pointing with arms clad in sleeves made from woven wood slats..." \
+  "I don't know, it seems to have turned into all cowlicks." \
+  "What do you think, too much rouge for a monk?" \
 )
 cap=$(rand -M "${#captions[@]}")
 maxidx=$((${#days[@]} - 1))
