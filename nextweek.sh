@@ -80,6 +80,8 @@ do
 
  >
 
+Hashtags:  
+
 
 
 ## 12:0${quotemins[$i]} -- ${dd}
@@ -89,6 +91,8 @@ do
  >
 
 {% cite  %}
+
+Hashtags:  #Quotes
 
 HERE
 done
@@ -104,6 +108,8 @@ Because it accidentally became a tradition early on in the life of the blog, I d
 <i class="fas fa-square"></i> []() from
 
  >
+
+Hashtags:  
 
 
 
