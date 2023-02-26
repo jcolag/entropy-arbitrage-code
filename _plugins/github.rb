@@ -76,6 +76,8 @@ class GithubInlineTag < Liquid::Tag
     cache_yaml = File.read file
     list = YAML.safe_load cache_yaml
     cache = {}
+    return cache if list.nil?
+
     list.each do |site|
       site.each_key { |key| cache[key] = site[key] }
     end
