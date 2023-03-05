@@ -95,6 +95,7 @@ for file in ${todayfiles}
 do
   title=$(grep "^title:" "${file}" | cut -f2- -d' ')
   tags=$(grep "^tags:" "${file}" | cut -f2 -d'[' | cut -f1 -d']' | tr -d ',' | sed 's/\([a-z]*\)/#\1/g')
+  teasers=$(grep "^teaser:" "${file}" | cut -f2- -d' ')
   cat=$(grep '^categories:' "${file}" | cut -f2 -d':' | tr -d ' ')
   if [ -n "$cat" ]
   then
@@ -115,14 +116,14 @@ then
   else
     ${toot} login_cli
   fi
-  ${toot} post "On my blog:${titles} ${tags}"
+  ${toot} post "On my blog:${titles} - ${teasers} ${tags}"
   ### twtxt
   ${twtxt} tweet "On my blog:${titles} ${tags}"
   ### I can't get diclish to work, so Diaspora will be manual for now
   echo "Post this to Diaspora:"
   ntfy send "Post to Diaspora..."
-  echo "On my blog: ${links} ${tags}"
-  echo "On my blog: ${links} ${tags}" | xsel --clipboard
+  echo -e "On my blog: ${links}\n${teasers}\n${tags}"
+  echo -e "On my blog: ${links}\n${teasers}\n${tags}" | xsel --clipboard
 fi
 
 # Update timestamp
@@ -139,5 +140,5 @@ echo "Current count of published posts: ${count}"
 ntfy send "Current count of published posts: ${count}"
 
 # Kick off the local server
-bundle exec jekyll serve --future --drafts --unpublished
+bundle exec jekyll serve --future --drafts --unpublished --trace
 
