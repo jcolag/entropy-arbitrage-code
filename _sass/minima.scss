@@ -512,9 +512,44 @@ a.tag-name:visited {
 .tray-panel {
   background-color: $dark-bg;
   border: 5px solid $brand-color;
-  border-left: 0;
   border-bottom-right-radius: 2em;
   border-top-right-radius: 2em;
+}
+
+.tray-panel-right {
+  border: 5px solid $brand-color;
+}
+
+@media (max-width: 750px) {
+  .tray-panel {
+    border: 2px solid $brand-color !important;
+    border-radius: 1em !important;
+    height: inherit !important;
+    overflow-x: inherit !important;
+    position: relative !important;
+    transition: none;
+    width: inherit !important;
+  }
+
+  .tray-panel .tray-pull {
+    display: none !important;
+  }
+
+  .tray-panel .tray-header {
+    display: block !important;
+    transform: none !important;
+  }
+
+  .tray-panel .tray-contents {
+    display: block !important;
+  }
+
+  .tray-panel-right {
+  }
+}
+
+.tray-panel {
+  border-left: 0;
   height: 40vh;
   left: 0;
   overflow-x: hidden;
