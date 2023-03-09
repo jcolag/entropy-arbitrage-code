@@ -109,8 +109,6 @@ Because it accidentally became a tradition early on in the life of the blog, I d
 
  >
 
-Hashtags:  
-
 
 
 ## Follow Me
