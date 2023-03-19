@@ -19,6 +19,21 @@
   {%- if jekyll.environment == 'production' and site.google_analytics -%}
     {%- include google-analytics.html -%}
   {%- endif -%}
+  <script type="text/javascript">
+    window.addEventListener('load', (e) => {
+      Array.from(document.getElementsByClassName('sensitive')).forEach((i) => {
+        i.addEventListener('click', handleImageClick);
+      });
+    });
+    function handleImageClick(e) {
+      const cs = e.target.classList;
+      if (cs.contains('sensitive')) {
+        cs.remove('sensitive');
+      } else {
+        cs.add('sensitive');
+      }
+    }
+  </script>
   <!-- Matomo -->
   <script type="text/javascript">
     var _paq = window._paq || [];
