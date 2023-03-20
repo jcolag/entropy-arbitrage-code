@@ -723,19 +723,21 @@ a.tag-name:visited {
   color: $light-brand-color;
 }
 
-.embedded-image {
+.embedded {
   border: 1px dotted $light-text;
   width: calc($content-width - 65px);
 }
 
-.embedded-image > img {
+.embedded > img {
   width: calc($content-width - 69px);
 }
 
 .external-image > figcaption {
 	margin-top: -3.5em;
 	padding-left: 1em;
+	position: absolute;
 	text-shadow: 1px 1px $background-color;
+	z-index: 100;
 }
 
 .no-image {
@@ -751,6 +753,14 @@ a.tag-name:visited {
 
 .no-image > b, .no-image i {
   color: $background-color;
+}
+
+.sensitive {
+  filter: blur(0.5em) contrast(0.1);
+}
+
+.sensitive:hover {
+  filter: unset;
 }
 
 .fa, .fas, .far, .fal, .fad, .fab, .fa-brands {
