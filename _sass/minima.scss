@@ -733,7 +733,8 @@ a.tag-name:visited {
 }
 
 .external-image > figcaption {
-	margin-top: -3.5em;
+	margin-top: -7em;
+	max-width: 740px;
 	padding-left: 1em;
 	position: absolute;
 	text-shadow: 1px 1px $background-color;
