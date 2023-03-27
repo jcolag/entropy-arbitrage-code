@@ -44,17 +44,19 @@ $base-line-height: 1.5 !default;
 
 $spacing-unit:     30px !default;
 
-$background-color: #dccea1 !default;
-$text-color:       #14252e !default;
-$brand-color:      #49281b !default;
-$grey-color:       #828282 !default;
+$background-color: hsl(45.8,45.7%,74.7%) !default;
+$text-color:       hsl(200.8,39.4%,12.9%) !default;
+$brand-color:      hsl(17,46%,19.6%) !default;
+$grey-color:       hsl(0,0%,51%) !default;
 
 $light-bg:         lighten($background-color, 10%) !default;
-$light-bg-x:       $light-bg !default;
 $dark-bg:          darken($background-color, 15%) !default;
+$bg-xp:            rgba($light-bg, 0.0) !default;
 $light-text:       lighten($text-color, 15%) !default;
-$light-brand-color: lighten($brand-color, 10%) !default;
-$xp-brand-color:   $brand-color !default;
+$light-text-x:     lighten($text-color, 50%) !default;
+$dark-text:        darken($text-color, 25%) !default;
+$light-brand-color:lighten($brand-color, 10%) !default;
+$brand-xp:         rgba($light-brand-color, 0.1) !default;
 $grey-color-light: lighten($grey-color, 40%) !default;
 $grey-color-dark:  darken($grey-color, 25%) !default;
 
@@ -166,8 +168,8 @@ h6 {
 blockquote {
   background: linear-gradient(
     to bottom right,
-    rgba($background-color, 0.0),
-    rgba($light-brand-color, 0.1)
+    $bg-xp,
+    $brand-xp
   );
   border: none;
   border-radius: 1em;
@@ -223,8 +225,8 @@ blockquote img {
 .pull-quote-left {
   background: linear-gradient(
     to bottom left,
-    rgba($background-color, 0.0),
-    rgba($light-brand-color, 0.075)
+    $bg-xp,
+    $brand-xp
   );
   border-left: 0;
   border-right: 0.125em solid $brand-color;
@@ -237,8 +239,8 @@ blockquote img {
 .pull-quote-right {
   background: linear-gradient(
     to bottom right,
-    rgba($background-color, 0.0),
-    rgba($light-brand-color, 0.075)
+    $bg-xp,
+    $brand-xp
   );
   border-left: 0.125em solid $brand-color;
   border-right: 0;
@@ -253,11 +255,11 @@ time {
 }
 
 code {
-  background-color: $light-bg-x;
+  background-color: $light-bg;
 }
 
 :not(pre) > code[class*="language-"], pre[class*="language-"] {
-  background-color: $light-bg-x !important;
+  background-color: $light-bg !important;
 }
 
 .highlight pre {
@@ -277,7 +279,7 @@ a {
 }
 
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
-  text-decoration: underline dotted $xp-brand-color 0.5px;
+  text-decoration: underline dotted $brand-color 0.5px;
 }
 
 b, em, i, strong {
@@ -416,7 +418,7 @@ div.highlighter-rouge pre[class*="language-"] {
 }
 
 .highlighter-rouge .highlight {
-  background: $light-bg-x;
+  background: $light-bg;
   border-radius: 1em;
   box-shadow: 5px 5px 5px $dark-bg;
 }
@@ -474,8 +476,8 @@ div.highlighter-rouge pre[class*="language-"] {
 .post-update {
   background: linear-gradient(
     to bottom right,
-    rgba($background-color, 0.0),
-    rgba($light-brand-color, 0.075)
+    $bg-xp,
+    $brand-xp
   );
   border: 5px solid $brand-color;
   border-radius: 1em;
@@ -663,13 +665,13 @@ a.tag-name:visited {
 }
 
 .draft-mode {
-  background-color: darken($background-color, 10%);
+  background-color: $dark-bg;
   background-image: url('/blog/assets/square_bg.png');
-  color: darken($text-color, 10%);
+  color: $dark-text;
 }
 
 .handwritten {
-  color: darken($text-color, 25%);
+  color: $dark-text;
   font-family: 'Homemade Apple', cursive;
   font-size: 1.33em;
   letter-spacing: 1px;
@@ -712,7 +714,7 @@ a.tag-name:visited {
 }
 
 .content-warning {
-  background-color: lighten($text-color, 50%);
+  background-color: $light-text-x;
   border: 2px solid $light-brand-color;
   border-radius: 0.5em;
   color: $light-brand-color;
