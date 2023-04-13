@@ -92,6 +92,11 @@ $on-laptop:        800px !default;
   "minima/syntax-highlighting"
 ;
 
+::selection {
+  background-color: $brand-color;
+  color: $background-color;
+}
+
 body {
   background-image: url('/blog/assets/square_bg.png');
   color: $text-color;
