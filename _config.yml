@@ -21,8 +21,8 @@
 title: Entropy Arbitrage
 email: jcolag@colagioia.net
 description: John has thoughts. Some of those thoughts make it here. Some of those thoughts might even be worth reading.
-baseurl: "/blog" # the subpath of your site, e.g. /blog
-url: "https://john.colagioia.net" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/blog"
+url: "https://john.colagioia.net"
 
 cohost_username: jcolag
 diaspora:
@@ -34,6 +34,7 @@ mastodon:
   username: jcolag
   instance: mastodon.social
 postnews_username: jcolag
+spoutible_username: jcolag
 
 pagination:
   enabled: true
@@ -72,6 +73,7 @@ jekyll-minifier:
 exclude:
   - archive.sh
   - check.sh
+  - gentrek.sh
   - nextweek.sh
   - open.sh
   - rebuild.sh
