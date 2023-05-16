@@ -780,3 +780,15 @@ a.tag-name:visited {
 .fa, .fas, .far, .fal, .fad, .fab, .fa-brands {
   font-style: normal;
 }
+
+.emoji {
+  display: inline-block;
+}
+
+.emoji:hover {
+  background-color: $background-color;
+  border-radius: 0.5em;
+  padding-left: 0.25em;
+  padding-right: 0.25em;
+  transform: scale(3);
+}
