@@ -472,6 +472,7 @@
     "dizzy"
   ],
   "🤯": [
+    "exploding head",
     "exploding_head",
     "face",
     "shocked",
@@ -743,6 +744,7 @@
     "death"
   ],
   "☠️": [
+    "skull and crossbones",
     "skull_and_crossbones",
     "poison",
     "danger",
@@ -1760,7 +1762,10 @@
     "girl"
   ],
   "🤦": [
+    "facepalm",
+    "person facepalming",
     "person_facepalming",
+    "facepalm",
     "disappointed"
   ],
   "🤦‍♂️": [
@@ -7341,6 +7346,7 @@
     "sound"
   ],
   "🎶": [
+    "musical notes",
     "musical_notes",
     "music",
     "score"
@@ -9252,8 +9258,7 @@
     "stars",
     "green-square",
     "awesome",
-    "good",
-    "fireworks"
+    "good"
   ],
   "‼️": [
     "double_exclamation_mark",
@@ -9901,6 +9906,7 @@
     "transgender"
   ],
   "🏴‍☠️": [
+    "pirate flag",
     "pirate_flag",
     "skull",
     "crossbones",
