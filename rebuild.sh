@@ -2,8 +2,9 @@
 blog="Entropy Arbitrage"
 target=jcolag@colagioia.net:www/blog
 toot="toot"
-twtxt="/usr/local/bin/twtxt"
+twtxt="twtxt"
 diclish="diclish"
+matrix="~/bin/matrix.sh"
 maxwd=740
 JEKYLL_ENV="production"
 now=$(date '+%s')
@@ -119,6 +120,8 @@ then
   ${toot} post "On my blog:${titles} - ${teasers} ${tags}"
   ### twtxt
   ${twtxt} tweet "On my blog:${titles} ${tags}"
+  ### Matrix
+  ${matrix} ${titles} posted - ${teasers}
   ### I can't get diclish to work, so Diaspora will be manual for now
   echo "Post this to Diaspora:"
   ntfy send "Post to Diaspora..."
