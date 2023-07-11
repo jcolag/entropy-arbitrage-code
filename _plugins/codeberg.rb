@@ -30,16 +30,16 @@ class CodebergInlineTag < Liquid::Tag
       " <i class='fas fa-mountain'></i>" \
       "Codeberg &mdash; #{caption}" \
       "</span>" \
-      "<span class='description'> " \
+      "<div class='description'> " \
       "<img" \
       " src='#{image_url}'" \
       " title='#{title}'" \
       ">" \
-      " <span class='desc-title'>#{user}/<b>#{name}</b></span>" \
+      " <div class='desc-title'>#{user}/<b>#{name}</b></div>" \
       " <hr>" \
-      " #{description}" \
+      " <div class='desc-text'>#{description}</div>" \
       " <hr>" \
-      "</span>" \
+      "</div>" \
       "</a>"
   end
 
