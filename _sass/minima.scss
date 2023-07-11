@@ -692,6 +692,54 @@ a.tag-name:visited {
   cursor: pointer;
 }
 
+.codeberg {
+	display: -webkit-box;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 4;
+}
+
+.codeberg hr {
+  opacity: 0.1;
+}
+
+.codeberg img {
+  box-shadow: none;
+  float: right;
+  height: 3em;
+  margin-left: 0.5em;
+}
+
+.codeberg .caption {
+  display: inline;
+  font-size: smaller;
+  font-weight: bold;
+  line-height: 1.5rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.codeberg .description {
+	background: white;
+	border-radius: 1em;
+	float: left;
+  font-size: small;
+	opacity: 1.0;
+	padding: 1em;
+  text-align: justify;
+}
+
+.codeberg .description .desc-text {
+  border-bottom: 2px solid $brand-xp;
+  border-top: 2px solid $brand-xp;
+}
+
+.codeberg .desc-title {
+  font-size: larger;
+}
+
 .preview {
   border-radius: 1em;
   float: right;
