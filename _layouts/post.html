@@ -102,7 +102,9 @@ layout: default
     </a>
     as the rest of the blog.
   </p>
-  {% if jekyll.environment == "production" %}
+  {% if page.comments == "false" %}
+    <div>No comments for this post.</div>
+  {% elsif jekyll.environment == "production" %}
     <script
       type="text/javascript"
       src="/hashover-next/comments.php"
