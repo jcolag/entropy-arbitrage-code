@@ -28,13 +28,20 @@ process.stdin.on('data', (data) => {
   json += data;
 });
 process.stdin.on('end', () => {
-  const issues = JSON.parse(json);
+  const issues = JSON
+    .parse(json);
   const result = [];
 
-  issues.matches.forEach((i) => {
-    i.line = findLineFromOffset(i);
-    result.push(i);
-  });
+  issues
+    .matches
+    .filter((i) => !(i.replacements.length > 0
+      && i.replacements[0].value === 'URL'
+      && i.context.text.indexOf('post_url') === 43)
+    )
+    .forEach((i) => {
+      i.line = findLineFromOffset(i);
+      result.push(i);
+    });
   console.log(JSON.stringify(result, ' ', 2));
 });
 
