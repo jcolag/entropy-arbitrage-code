@@ -25,21 +25,19 @@ class CodebergInlineTag < Liquid::Tag
     image_url = repo['image_url'].force_encoding('UTF-8')
     title = repo['title'].force_encoding('UTF-8')
 
-    "<a class='codeberg preview' href='#{repo['url']}'>" \
-      " <span class='caption' title='#{caption}'>" \
-      " <i class='fas fa-mountain'></i>" \
-      "Codeberg &mdash; #{caption}" \
-      "</span>" \
-      "<div class='description'> " \
-      "<img" \
-      " src='#{image_url}'" \
-      " title='#{title}'" \
-      ">" \
-      " <div class='desc-title'>#{user}/<b>#{name}</b></div>" \
-      " <hr>" \
-      " <div class='desc-text'>#{description}</div>" \
-      " <hr>" \
-      "</div>" \
+    "<a class='codeberg preview' href='#{repo['url']}'>\n" \
+      "  <span class='caption' title='#{caption}'>\n" \
+      "    <i class='fas fa-mountain'></i>\n" \
+      "    Codeberg &mdash; #{caption}\n" \
+      "  </span>\n" \
+      "  <span class='description'> \n" \
+      "    <img\n" \
+      "      src='#{image_url}'\n" \
+      "      title='#{title}'\n" \
+      "    >\n" \
+      "    <span class='desc-title'>#{user}/<b>#{name}</b></span>\n" \
+      "    <span class='desc-text'>#{description}</span>\n" \
+      "  </span>\n" \
       "</a>"
   end
 

@@ -731,13 +731,15 @@ a.tag-name:visited {
   text-align: justify;
 }
 
+.codeberg .description .desc-title {
+  display: block;
+  font-size: larger;
+}
+
 .codeberg .description .desc-text {
   border-bottom: 2px solid $brand-xp;
   border-top: 2px solid $brand-xp;
-}
-
-.codeberg .desc-title {
-  font-size: larger;
+  display: block;
 }
 
 .preview {
