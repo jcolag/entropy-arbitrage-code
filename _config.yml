@@ -92,6 +92,7 @@ exclude:
   - _test
   - assets/.git/
   - map.json
+  - .ruby-version
   - _posts/data
   - _posts/.github
   - _posts/.git
