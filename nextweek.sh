@@ -33,8 +33,7 @@ IFS=' ' read -r -a linkmins <<< "$linkmins"
 IFS=' ' read -r -a quotemins <<< "$quotemins"
 
 filename="_posts/$pubdate-week.md"
-offh=$(rand -M 2)
-hh=$((16 + offh))
+hh=17 # $((16 + offh))
 HH=$(printf "%02d" "$hh")
 mm=$(rand -M 60)
 MM=$(printf "%02d" "$mm")
