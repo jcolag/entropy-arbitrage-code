@@ -35,4 +35,8 @@ gem "jekyll-minifier"
 # To manage plugins
 gem 'rubocop', require: false
 
+# For testing plugins
+gem 'irb', '~> 1.6.0'
+gem 'tracer'
+
 gem "webrick", "~> 1.7"
