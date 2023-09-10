@@ -742,6 +742,24 @@ a.tag-name:visited {
   display: block;
 }
 
+.codeberg-languages, .codeberg-language {
+  height: 0.75em;
+}
+
+.codeberg-languages {
+  left: -1em;
+  position: relative;
+  top: 0.5em;
+  white-space: nowrap;
+  width: calc(100% + 2em);
+}
+
+.codeberg-language {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+
 .preview {
   border-radius: 1em;
   float: right;
