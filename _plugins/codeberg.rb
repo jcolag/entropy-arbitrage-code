@@ -75,6 +75,20 @@ class CodebergInlineTag < Liquid::Tag
     repo
   end
 
+  def extract_langauges(html)
+    languages = []
+
+    html.gsub('<', "\n<").split("\n").filter { |l| l.include? '<div class="bar"' }
+        .each do |l|
+          lang = {}
+          lang['color'] = (/background-color: (#[^;"]*)[;"]/.match l)[1]
+          lang['name'] = (/data-tooltip-content=([^>]*)>/.match l)[1]
+          lang['width'] = (/width: (.*%)/.match l)[1]
+          languages.push lang
+        end
+    languages
+  end
+
   def load_cache(file)
     cache_yaml = File.read file
     list = YAML.safe_load cache_yaml
