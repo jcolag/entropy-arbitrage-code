@@ -20,7 +20,6 @@ class CodebergInlineTag < Liquid::Tag
     @cache = load_cache @cache_file
     @cache[@text] = repo
     save_yaml @cache_file, @cache
-    fallback =
     description = repo['description'].force_encoding('UTF-8')
     image_url = repo['image_url'].force_encoding('UTF-8')
     title = repo['title'].force_encoding('UTF-8')
