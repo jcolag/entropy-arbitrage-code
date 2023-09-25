@@ -48,7 +48,7 @@ fi
 cat > "${filename}" <<HERE
 ---
 layout: post
-title: Toots 🐘 from ${mondate} to ${fridate}
+title: Toots 🦣 from ${mondate} to ${fridate}
 date: ${pubdate} ${HH}:${MM}:${SS}${TZ}
 categories:
 tags: [linkdump, mastodon, socialmedia, week]
