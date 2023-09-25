@@ -4526,10 +4526,11 @@
     "mediterranean"
   ],
   "🥚": [
-    "egg",
-    "food",
+    "breakfast",
     "chicken",
-    "breakfast"
+    "egg",
+    "eggshell",
+    "food"
   ],
   "🍳": [
     "cooking",
@@ -12482,6 +12483,7 @@
     "straw"
   ],
   "🪨": [
+    "pebble",
     "rock",
     "stone"
   ],
