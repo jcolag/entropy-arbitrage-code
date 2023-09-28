@@ -1,0 +1,8 @@
+{
+  "allow": [
+    "he-she",
+    "her-him",
+    "his-hers"
+  ],
+  "profanitySureness": 2
+}
