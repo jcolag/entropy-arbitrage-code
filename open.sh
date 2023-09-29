@@ -6,14 +6,14 @@ then
   max=$1
 fi
 date -d "+${max} days"
-pluma _sass/minima.scss
+gedit _sass/minima.scss
 while [ "$day" -le "$max" ]
 do
   dd=$(date --date "+${day} days" +%F)
   file=$(ls -1 _posts/"${dd}"-*.md 2> /dev/null)
   if [ -n "$file" ]
   then
-    pluma "$file"
+    gedit "$file"
     sleep 0.3
   fi
   day=$((day + 1))
