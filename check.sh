@@ -35,7 +35,9 @@ do
   /bin/ls "${HOME}/spelling_custom.txt" "${spelling}"
   mv -f "${HOME}/spelling_custom.txt" "${spelling}"
   rm map.json
-  write-good --no-adverb --no-tooWordy --no-weasel --parse "${file}" | node "${HOME}/code/entropy-arbitrage-code/_plugins/write-good.js" >> "${outfile}"
+  write-good --no-adverb --no-tooWordy --no-weasel --parse "${file}" \
+    | node "${HOME}/code/entropy-arbitrage-code/_plugins/write-good.js" \
+    >> "${outfile}"
   alex --why --reporter="${HOME}/code/entropy-arbitrage-code/_plugins/alex-formatter.js" "${file}" >> "${outfile}" 2>&1
 done
 
