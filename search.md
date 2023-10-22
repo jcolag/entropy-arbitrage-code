@@ -8,7 +8,7 @@ permalink: /search/
     autofocus
     id="search-input"
     placeholder="🔍 Search..."
-    type="text"
+    type="search"
   >
   <ul id="results-container"></ul>
 </div>
