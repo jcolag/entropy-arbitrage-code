@@ -55,6 +55,7 @@ tags: [linkdump, mastodon, socialmedia, week]
 summary: Toots for the Week of ${longmon}
 thumbnail: /blog/assets/CLM_14456_71r_detail.png
 teaser: This week, we have 
+spell: 
 ---
 
 As [discussed previously]({% post_url 2019-12-31-new-year %}), on Fridays, I present my weekly social media roundups.  Note that toots of articles generally include header images from the articles, which I don't include here unless their creators *happen* to have released them for use under a free license, and I notice.  Most have not, or I don't notice.  But I now add my commentary here, where I don't feel restricted by message length.
