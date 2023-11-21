@@ -39,7 +39,7 @@ cd ..
 # Generate tags from released posts
 #  NB: $files is unquoted, because it's a list to be split
 # shellcheck disable=SC2086
-for tag in $(grep '^tags:' $files | cut -f2- -d'[' | cut -f1 -d']' | tr -d ' ' | tr ',' '\n' | sort | uniq -c | tr -s ' ' | tr ' ' ':')
+for tag in $(grep '^tags:' $files | cut -f2- -d'[' | cut -f1 -d']' | tr -d ' -' | tr ',' '\n' | sort | uniq -c | tr -s ' ' | tr ' ' ':')
 do
   tagname=$(echo "${tag}" | cut -f3 -d':')
   tagcount=$(echo "${tag}" | cut -f2 -d':')
