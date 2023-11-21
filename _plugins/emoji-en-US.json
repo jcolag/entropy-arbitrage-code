@@ -1229,6 +1229,7 @@
     "shaka"
   ],
   "👈": [
+    "backhand index pointing left",
     "backhand_index_pointing_left",
     "direction",
     "fingers",
@@ -1236,6 +1237,7 @@
     "left"
   ],
   "👉": [
+    "backhand index pointing right",
     "backhand_index_pointing_right",
     "fingers",
     "hand",
@@ -1243,6 +1245,7 @@
     "right"
   ],
   "👆": [
+    "backhand index pointing up",
     "backhand_index_pointing_up",
     "fingers",
     "hand",
