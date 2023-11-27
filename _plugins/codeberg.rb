@@ -23,6 +23,10 @@ class CodebergInlineTag < Liquid::Tag
     description = repo['description'].force_encoding('UTF-8')
     image_url = repo['image_url'].force_encoding('UTF-8')
     title = repo['title'].force_encoding('UTF-8')
+    langs = repo['languages'].map do |l|
+      "<div class='codeberg-language' style='background-color: " \
+        "#{l['color']}; width: #{l['width']}' title='#{l['name']}'></div>"
+    end
 
     "<a class='codeberg preview' href='#{repo['url']}'>\n" \
       "  <span class='caption' title='#{caption}'>\n" \
@@ -36,8 +40,11 @@ class CodebergInlineTag < Liquid::Tag
       "    >\n" \
       "    <span class='desc-title'>#{user}/<b>#{name}</b></span>\n" \
       "    <span class='desc-text'>#{description}</span>\n" \
+      "    <div class='codeberg-languages'>\n" \
+      "      #{langs.join}" \
+      "    </div>\n" \
       "  </span>\n" \
-      "</a>"
+      '</a>'
   end
 
   def prop(lines, name)
@@ -64,14 +71,12 @@ class CodebergInlineTag < Liquid::Tag
   def extract_from_head(html)
     repo = {}
 
-    lines = html
-            .gsub('<', "\n<")
-            .split("\n")
-            .filter { |l| l.include? '="og:' }
+    lines = html.gsub('<', "\n<").split("\n").filter { |l| l.include? '="og:' }
     repo['description'] = prop(lines, '="og:description"')
     repo['image_url'] = prop(lines, '="og:image"')
     repo['title'] = prop(lines, '="og:title"')
     repo['url'] = prop(lines, '="og:url"')
+    repo['languages'] = extract_langauges html
     repo
   end
 
