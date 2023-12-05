@@ -1,12 +1,12 @@
 # entropy-arbitrage-code
 
-This is a repository for the Jekyll side of the posts found in [entropy-arbitrage](https://github.com/jcolag/entropy-arbitrage).
+This repository holds the Jekyll side of the posts found in [entropy-arbitrage](https://github.com/jcolag/entropy-arbitrage).
 
-For reference, this is mostly for transparency and I don't recommend using this directly *at all*, since it's deliberately built around my website's design.  The `about.md` and header/footer also refer rather directly to me, of course, in addition to configuration and the like.
+For reference, this mostly exists for transparency, and I don't recommend using this directly *at all*, since I deliberately built it around my website's design.  The `about.md` and header/footer also refer rather directly to me, as a superficial inspection shows, in addition to configuration and the like.
 
 ## Assets
 
-Because it's a lot, I've opted not to include the `assets` folder---which includes not just the images used in the blog, originals linked to in the posts---but also fonts, JavaScript, and CSS bits.  Here's the layout, minus images:
+Because it contains a lot, I've opted not to include the `assets` folder---which includes not only the images used in the blog, originals linked to in the posts---but also fonts, JavaScript, and CSS bits.  You can see the layout here, minus images:
 
 ```
 ├── Exo2-Light.ttf
@@ -47,12 +47,13 @@ Because it's a lot, I've opted not to include the `assets` folder---which includ
 ├── NotoColorEmoji.ttf
 ├── prism.css
 ├── prism.js
+├── redirect.js
 └── Vollkorn-Bold.ttf
 ```
 
-The `fa` material is, of course, [Font Awesome 5](https://fontawesome.com/).  The files named `prism.*` are from [Prism.js](https://prismjs.com/index.html), used for syntax highlighting of code snippets.  The fonts are widely available.
+The `fa` material, as you may guess, comes from [Font Awesome 5](https://fontawesome.com/).  The files named `prism.*` come from [Prism.js](https://prismjs.com/index.html), used for syntax highlighting of code snippets.  The fonts come from multiple common sources.
 
-It would probably be smart to separate the two different kinds of assets---images and utility content---at some point.
+It would probably make sense to separate the two different kinds of assets---images and utility content---at some point.
 
-For my own convenience, though, and usable to anybody who needs it, I finally created [a repository for the assets](https://gitlab.com/jcolag/entropy-arbitrage-assets), which will probably be updated weekly or so, probably Tuesday nights.
+For my own convenience, though, and usable to anybody who needs it, I finally created [a repository for the assets](https://gitlab.com/jcolag/entropy-arbitrage-assets), which sees updates weekly or so, generally Tuesday nights unless something goes wrong.
 
