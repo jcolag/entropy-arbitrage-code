@@ -51,7 +51,7 @@ Because it contains a lot, I've opted not to include the `assets` folder---which
 └── Vollkorn-Bold.ttf
 ```
 
-The `fa` material, as you may guess, comes from [Font Awesome 5](https://fontawesome.com/).  The files named `prism.*` come from [Prism.js](https://prismjs.com/index.html), used for syntax highlighting of code snippets.  The fonts come from multiple common sources.
+The `fa` material, as you may guess, comes from [Font Awesome 5](https://fontawesome.com/).  The files named `prism.*` come from [Prism.js](https://prismjs.com/index.html), used for syntax highlighting of code snippets.  The `redirect.js` script comes from [unrot∙link](https://unrot.link/) to catch web pages that may have vanished.  The fonts come from multiple common sources.
 
 It would probably make sense to separate the two different kinds of assets---images and utility content---at some point.
 
