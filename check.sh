@@ -43,3 +43,19 @@ done
 
 mv "${HOME}/.proselintrc.json" "${HOME}/proselintrc.bk"
 
+# For blog posts, check to see if someone has proofread the file.
+if grep -q "proofed: \+true" "$file"
+then
+  exit 0
+fi
+
+# If nobody has proofread the file, extract all URLs and ask
+# the Internet Archive to grab a current copy.
+for file in ${files}
+do
+  grep -oP 'https?://[^)>" ]+' $file | while read -r link
+  do
+    curl -s "https://web.archive.org/save/${link}" > /dev/null
+  done
+done
+
