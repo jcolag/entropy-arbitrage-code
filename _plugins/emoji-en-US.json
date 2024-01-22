@@ -237,6 +237,7 @@
   ],
   "🤪": [
     "zany_face",
+    "zany face",
     "face",
     "goofy",
     "crazy"
@@ -2290,6 +2291,7 @@
     "halo"
   ],
   "🎅": [
+    "santa claus",
     "santa_claus",
     "festival",
     "man",
@@ -2298,6 +2300,7 @@
     "father christmas"
   ],
   "🤶": [
+    "mrs claus",
     "mrs_claus",
     "woman",
     "female",
@@ -5019,12 +5022,14 @@
     "jar"
   ],
   "🌍": [
+    "globe europe africa",
     "globe_showing_europe_africa",
     "globe",
     "world",
     "international"
   ],
   "🌎": [
+    "globe americas",
     "globe_showing_americas",
     "globe",
     "world",
@@ -5032,6 +5037,7 @@
     "international"
   ],
   "🌏": [
+    "globe asia australia",
     "globe_showing_asia_australia",
     "globe",
     "world",
@@ -5039,6 +5045,7 @@
     "international"
   ],
   "🌐": [
+    "globe meridians",
     "globe_with_meridians",
     "earth",
     "international",
@@ -7554,15 +7561,18 @@
     "calculation"
   ],
   "🎥": [
+    "movie camera",
     "movie_camera",
     "film",
     "record"
   ],
   "🎞️": [
+    "film frames",
     "film_frames",
     "movie"
   ],
   "📽️": [
+    "film projector",
     "film_projector",
     "video",
     "tape",
@@ -7570,6 +7580,7 @@
     "movie"
   ],
   "🎬": [
+    "clapper board",
     "clapper_board",
     "movie",
     "film",
@@ -8240,6 +8251,7 @@
     "tool"
   ],
   "⚖️": [
+    "balance scale",
     "balance_scale",
     "law",
     "fairness",
