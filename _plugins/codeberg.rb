@@ -14,6 +14,9 @@ class CodebergInlineTag < Liquid::Tag
 
   def render(_context)
     repo = get_repo @cache_file, @cache, @text
+
+    return "<span class='codeberg preview'>Codeberg unavailable at page creation</span>" if repo.nil?
+
     caption = repo['title'].split(':').shift.strip
     user, name = @text.split '/'
 
@@ -59,10 +62,14 @@ class CodebergInlineTag < Liquid::Tag
     uri = URI "https://codeberg.org/#{key.strip}/"
     repo = {}
 
-    Net::HTTP.start(uri.host, uri.port, use_ssl: true) do |http|
-      request = Net::HTTP::Get.new uri
-      response = http.request request
-      repo = extract_from_head response.body
+    begin
+      Net::HTTP.start(uri.host, uri.port, use_ssl: true) do |http|
+        request = Net::HTTP::Get.new uri
+        response = http.request request
+        repo = extract_from_head response.body
+      end
+    rescue
+      return nil
     end
 
     repo
