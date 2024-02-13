@@ -130,7 +130,7 @@ h6,
 
 .site-nav .page-link:not(:last-child) {
   color: white;
-  margin-right: 1em;
+  margin-inline-end: 1em;
 }
 
 .site-nav a i {
@@ -180,8 +180,8 @@ blockquote {
   border-radius: 1em;
   box-shadow: 2px 2px 5px $brand-color;
   color: $brand-color;
-  margin-left: 1em;
-  margin-right: 1em;
+  margin-inline-start: 1em;
+  margin-inline-end: 1em;
   padding: 1em;
   transition: box-shadow 1s;
   -moz-transition: box-shadow 1s;
@@ -195,8 +195,8 @@ blockquote:hover {
 blockquote img {
   border-radius: 0.5em;
   float: left;
-  margin-right: 0.5em !important;
-  margin-top: 0.33em;
+  margin-inline-end: 0.5em !important;
+  margin-block-start: 0.33em;
 }
 
 .quote-author {
@@ -216,7 +216,7 @@ blockquote img {
 .image-right {
   float: right;
   text-align: right;
-  margin-left: 1em !important;
+  margin-inline-start: 1em !important;
   max-width: 35%;
 }
 
@@ -238,7 +238,7 @@ blockquote img {
   border-left: 0;
   border-right: 0.125em solid $brand-color;
   float: left;
-  margin-right: 2%;
+  margin-inline-end: 2%;
   text-align: left;
   width: 33%;
 }
@@ -252,7 +252,7 @@ blockquote img {
   border-left: 0.125em solid $brand-color;
   border-right: 0;
   float: right;
-  margin-left: 0.25em;
+  margin-inline-start: 0.25em;
   text-align: right;
   width: 35%;
 }
@@ -335,8 +335,8 @@ blockquote i, blockquote em {
 .post-content img {
   box-shadow: 5px 5px 5px $dark-bg;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
+  margin-inline-start: auto;
+  margin-inline-end: auto;
 }
 
 a.site-title:visited, a.page-link:visited {
@@ -414,18 +414,18 @@ a.site-title:visited, a.page-link:visited {
 }
 
 div.highlighter-rouge {
-  margin-left: 7.5%;
-  margin-right: 7.5%;
+  margin-inline-start: 7.5%;
+  margin-inline-end: 7.5%;
 }
 
 pre[class*="language-"] {
-  margin-left: 7.5% !important;
-  margin-right: 7.5% !important;
+  margin-inline-start: 7.5% !important;
+  margin-inline-end: 7.5% !important;
 }
 
 div.highlighter-rouge pre[class*="language-"] {
-  margin-left: 0 !important;
-  margin-right: 0 !important;
+  margin-inline-start: 0 !important;
+  margin-inline-end: 0 !important;
 }
 
 .highlighter-rouge .highlight {
@@ -481,7 +481,7 @@ div.highlighter-rouge pre[class*="language-"] {
 
 .page-link:hover {
   font-size: 1.2em;
-  margin-right: 0.75em !important;
+  margin-inline-end: 0.75em !important;
 }
 
 .post-update {
@@ -492,7 +492,7 @@ div.highlighter-rouge pre[class*="language-"] {
   );
   border: 5px solid $brand-color;
   border-radius: 1em;
-  margin-left: 10%;
+  margin-inline-start: 10%;
   padding: 0.5em;
   width: 80%;
 }
@@ -505,7 +505,7 @@ div.highlighter-rouge pre[class*="language-"] {
 
 a .page-link:hover {
   left: 0.1em;
-  margin-right: -0.05em !important;
+  margin-inline-end: -0.05em !important;
 }
 
 a.tag-name {
@@ -602,7 +602,7 @@ a.tag-name:visited {
 
 .tray-panel .tray-pull {
   display: block;
-  margin-top: calc(20vh - 0.5em);
+  margin-block-start: calc(20vh - 0.5em);
 }
 
 .tray-pull-right {
@@ -612,7 +612,7 @@ a.tag-name:visited {
 }
 
 .tray-pull-right h2 i {
-  margin-left: 0.5em;
+  margin-inline-start: 0.5em;
 }
 
 .tray-panel .tray-contents {
@@ -654,7 +654,7 @@ a.tag-name:visited {
   border: 1px solid $text-color;
   border-radius: 0.25em;
   font-weight: bold;
-  margin-right: 0.25em;
+  margin-inline-end: 0.25em;
   padding-left: 0.25em;
 }
 
@@ -708,7 +708,7 @@ a.tag-name:visited {
   box-shadow: none;
   float: right;
   height: 3em;
-  margin-left: 0.5em;
+  margin-inline-start: 0.5em;
 }
 
 .codeberg .caption {
@@ -764,7 +764,7 @@ a.tag-name:visited {
   border-radius: 1em;
   float: right;
   text-align: center;
-  margin-left: 1em !important;
+  margin-inline-start: 1em !important;
   transition: all 1s ease-in-out;
   -webkit-transition: all 1s ease-in-out;
   -moz-transition: all 1s ease-in-out;
@@ -814,7 +814,7 @@ a.tag-name:visited {
 }
 
 .external-image > figcaption {
-	margin-top: -7em;
+	margin-block-start: -7em;
 	max-width: 740px;
 	padding-left: 1em;
 	position: absolute;
