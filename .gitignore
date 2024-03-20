@@ -11,3 +11,4 @@ _config.yml
 google*.html
 _cache
 map.json
+/js/JekyllWebmentionIO.js
