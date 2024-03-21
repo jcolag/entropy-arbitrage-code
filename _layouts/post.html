@@ -28,6 +28,15 @@ layout: default
         -%}
         {{ page.date | date: date_format }}
       </time>
+      <a
+        class="p-author h-card"
+        href="https://john.colagioia.net"
+        rel="author"
+        style="display: none;"
+      >
+        <img class="u-photo" src="/blog/assets/d29181b871b001b0.png" />
+        {{ page.author }}
+      </a>
       {%- if page.author -%}
         •
         <span
