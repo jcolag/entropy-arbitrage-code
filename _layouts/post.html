@@ -102,6 +102,9 @@ layout: default
 
   <hr>
 
+  <p class="webmentions">
+    {% webmentions page.url %}
+  </p>
   <p class="hashover-title hashover-main-title hashover-dashed-title">
     By commenting, you agree to follow the blog's
     <a href="/blog/coc">Code of Conduct</a>
@@ -150,5 +153,17 @@ layout: default
   </span>
 
   <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
+  <a
+    class="h-syndication"
+    href="."
+    rel="syndication"
+    style="display: none"
+  >None</a>
+  <a
+    class="p-category"
+    href="."
+    style="display: none"
+  ></a>
 </article>
 {% include mlist.html %}
+{% webmentions_js %}
