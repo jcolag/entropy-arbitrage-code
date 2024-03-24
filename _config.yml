@@ -101,4 +101,15 @@ feed:
   posts_limit: 30
 
 webmentions:
+  author:
+    name: John Colagioia
+    url: https://john.colagioia.net
+    photo: /blog/assets/d29181b871b001b0.png
+  debug: true
+  throttle_lookups:
+    last_week: daily
+    last_month: weekly
+    last_year: every 2 weeks
+    older: monthly
   username: john.colagioia.net
+
