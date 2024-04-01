@@ -35,6 +35,14 @@
   font-weight: 300;
 }
 
+@font-face {
+  font-family: 'Font Awesome';
+  src: url('/blog/assets/fa-solid-900.ttf');
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
+}
+
 $base-font-family: 'Exo 2', "Noto Color Emoji" !default;
 $header-font-family: Vollkorn, 'Noto Color Emoji' !default;
 $base-font-size:   16px !default;
@@ -426,6 +434,36 @@ pre[class*="language-"] {
 div.highlighter-rouge pre[class*="language-"] {
   margin-inline-start: 0 !important;
   margin-inline-end: 0 !important;
+}
+
+.h-entry .h-entry {
+  border: 1px dotted $brand-color;
+  border-radius: 0.5em;
+  color: $text-color;
+  margin-block-end: 0.75em;
+  padding: 0.5em;
+  position: relative;
+}
+
+.webmention-reply:after {
+	content: "\f3e5";
+	font-family: "Font Awesome";
+	font-size: 5em;
+	margin-left: -1.5em;
+	opacity: 0.25;
+	position: absolute;
+	transform: translate(0, -50%);
+	top: 50%;
+	right: 0.1em;
+}
+
+.h-entry .u-photo {
+  display: inline-block;
+  height: 1em;
+}
+
+.u-uid .p-note {
+  font-size: 0.75em;
 }
 
 .highlighter-rouge .highlight {
