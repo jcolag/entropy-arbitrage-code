@@ -97,6 +97,7 @@
     "smile"
   ],
   "😉": [
+    "winking face",
     "winking_face",
     "face",
     "happy",
@@ -618,6 +619,7 @@
   ],
   "😢": [
     "crying_face",
+    "crying face",
     "face",
     "tears",
     "sad",
@@ -712,6 +714,7 @@
   ],
   "😠": [
     "angry_face",
+    "angry face",
     "mad",
     "face",
     "annoyed",
@@ -1278,6 +1281,7 @@
   ],
   "👍": [
     "thumbs_up",
+    "thumbs up",
     "thumbsup",
     "yes",
     "awesome",
@@ -4929,6 +4933,7 @@
   ],
   "🍻": [
     "clinking_beer_mugs",
+    "clinking beer mugs",
     "relax",
     "beverage",
     "drink",
@@ -5846,6 +5851,7 @@
   ],
   "⌛": [
     "hourglass_done",
+    "hourglass done",
     "time",
     "clock",
     "oldschool",
@@ -6324,11 +6330,13 @@
   ],
   "⭐": [
     "star",
+    "pentacle",
     "night",
     "yellow"
   ],
   "🌟": [
     "glowing_star",
+    "glowing star",
     "night",
     "sparkle",
     "awesome",
@@ -7397,6 +7405,7 @@
   ],
   "📻": [
     "radio",
+    "boombox",
     "communication",
     "music",
     "podcast",
