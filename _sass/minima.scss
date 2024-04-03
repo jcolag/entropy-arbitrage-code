@@ -445,8 +445,11 @@ div.highlighter-rouge pre[class*="language-"] {
   position: relative;
 }
 
+.webmention-bookmark:after,
+.webmention-like:after,
+.webmention-quote:after,
+.webmention-quote:after,
 .webmention-reply:after {
-	content: "\f3e5";
 	font-family: "Font Awesome";
 	font-size: 5em;
 	margin-left: -1.5em;
@@ -455,6 +458,22 @@ div.highlighter-rouge pre[class*="language-"] {
 	transform: translate(0, -50%);
 	top: 50%;
 	right: 0.1em;
+}
+
+.webmention-bookmark:after {
+	content: "\f02e";
+}
+
+.webmention-like:after {
+	content: "\f164";
+}
+
+.webmention-quote:after {
+	content: "\f10e";
+}
+
+.webmention-reply:after {
+	content: "\f3e5";
 }
 
 .h-entry .u-photo {
