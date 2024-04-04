@@ -35,7 +35,11 @@ layout: default
         style="display: none;"
       >
         <img class="u-photo" src="/blog/assets/d29181b871b001b0.png" />
-        {{ page.author }}
+        {%- if page.author -%}
+          {{ page.author }}
+        {%- else -%}
+          John Colagioia
+        {%- endif -%}
       </a>
       {%- if page.author -%}
         •
