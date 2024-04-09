@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+  <head>
+    <link rel="authorization_endpoint" href="https://john.colagioia.net/selfauth/" />
+    <link rel="preload" as="font" href="/blog/assets/fa-solid-900.ttf" type="font/ttf" crossorigin="anonymous">
+    <link rel="shortcut icon" href="/blog/assets/jc.ico" />
+    <link rel="stylesheet" href="{{ "/assets/wm.css" | relative_url }}">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      http-equiv="Cache-Control"
+      content="no-cache, no-store, must-revalidate"
+      />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="Thu, 1 Jan 1970 00:00:00 GMT" />
+    <script async defer src="/blog/assets/redirect.js"></script>
+    <script type="text/javascript">
+      var _paq = window._paq || [];
+      _paq.push(['trackPageView']);
+      _paq.push(['enableLinkTracking']);
+      (function() {
+        var u="//colagioia.net/pa/";
+        _paq.push(['setTrackerUrl', u+'matomo.php']);
+        _paq.push(['setSiteId', '15']);
+        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+        g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+      })();
+    </script>
+    <noscript><p><img src="//colagioia.net/pa/matomo.php?idsite=15&amp;rec=1" style="border:0;" alt="" /></p></noscript>
+  </head>
+  <body>
+    <main class="page-content" aria-label="Content">
+      {{ content }}
+    </main>
+  </body>
+</html>
