@@ -8,7 +8,7 @@ class CodebergInlineTag < Liquid::Tag
   def initialize(tag_name, text, parse_context)
     super
     @text = text
-    @cache_file = File.join '_cache', 'github.yml'
+    @cache_file = File.join '.jekyll-cache', 'github.yml'
     @cache = load_cache @cache_file
   end
 
