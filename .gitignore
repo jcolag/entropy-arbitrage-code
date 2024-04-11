@@ -10,5 +10,6 @@ vendor
 _config.yml
 google*.html
 _cache
+_drafts
 map.json
 /js/JekyllWebmentionIO.js
