@@ -118,7 +118,7 @@ h1, h2, h3, h4, h5, h6, header, .site-title, .site-title:visited, .page-link, .p
   transition: color 2s;
 }
 
-h1:hover,h2:hover,h3:hover,h4:hover,h5:hover,header:hover,.site-title:hover,.page-link:hover,.quote-author:hover {
+h1:hover,h2:hover,h3:hover,h4:hover,h5:hover,header:hover,.site-title:hover,.page-link:hover,.quote-author:hover, .webmentions__list::before:hover {
   color: $light-brand-color !important;
 }
 
@@ -483,6 +483,45 @@ div.highlighter-rouge pre[class*="language-"] {
 
 .u-uid .p-note {
   font-size: 0.75em;
+}
+
+.webmentions__item {
+	border: 1px solid $brand-color;
+	border-radius: 0.5em;
+	padding-left: 0.5em;
+	position: relative;
+}
+
+.webmentions__list::before {
+	content: "Webmentions, Not Necessarily CC-Licensed:";
+	font-family: $header-font-family;
+  text-align: center;
+  transition: color 2s;
+}
+
+.webmention.webmention--like::after,
+.webmention.webmention--reply::after,
+.webmention.webmention--repost::after {
+	font-family: "Font Awesome";
+	font-size: 1.5em;
+	margin-left: -1.5em;
+	opacity: 0.25;
+	position: absolute;
+	transform: translate(0, -50%);
+	top: 50%;
+	right: 0.1em;
+}
+
+.webmention.webmention--like::after {
+	content: "\f164";
+}
+
+.webmention.webmention--reply::after {
+	content: "\f3e5";
+}
+
+.webmention.webmention--repost::after {
+  content: "\f064";
 }
 
 .highlighter-rouge .highlight {
