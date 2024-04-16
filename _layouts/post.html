@@ -55,6 +55,29 @@ layout: default
       {%- endif -%}</p>
   </header>
 
+  {% if page.update.size > 0 %}
+    <div class="post-content post-update">
+      <b>Hi!</b>
+      You might want to know that this post continues ideas from the
+      following.
+      <ul>
+        {% for predecessor in page.update %}
+          {% for post in site.posts %}
+            {% assign file = post.path | split: '/' | last %}
+            {% if file == predecessor %}
+              <li>
+                <a href="{{ site.baseurl }}{{ post.url }}">
+                  {{ post.title }}
+                </a>
+                from
+                {{ post.date | date: date_format }}
+              </li>
+            {% endif %}
+          {% endfor %}
+        {% endfor %}
+      </ul>
+    </div>
+  {% endif %}
   {% assign pagename = page.path | split: '/' | last %}
   {% assign related = "" %}
   {% for post in site.posts %}
@@ -75,8 +98,8 @@ layout: default
   {% if related.size > 0 %}
     <div class="post-content post-update">
       <b>Hi!</b>
-      It looks like this post has since been updated or rethought in some
-      ways, so you may want to look at
+      It looks like I have since continued, updated, or rethought this post
+      in some ways, so you may want to look at
       {% if related.size == 1 %}
         this
       {% else %}
