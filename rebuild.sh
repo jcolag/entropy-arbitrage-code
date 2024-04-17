@@ -66,7 +66,7 @@ cat > _cache/github.yml <<EOF
 - nothing/nothing: 
 EOF
 ## Rebuild the blog
-bundle exec jekyll clean
+# bundle exec jekyll clean
 JEKYLL_ENV=production bundle exec jekyll build
 ## Push to the server
 rsync --itemize-changes --recursive --compress --times --delete-delay \
@@ -141,6 +141,9 @@ do
 done | grep -c '-')
 echo "Current count of published posts: ${count}"
 ntfy send "Current count of published posts: ${count}"
+
+# Send webmentions
+bundle exec jekyll webmention
 
 # Kick off the local server
 bundle exec jekyll serve --future --drafts --unpublished --trace
