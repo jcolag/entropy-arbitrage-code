@@ -26,28 +26,24 @@ class CodebergInlineTag < Liquid::Tag
     description = repo['description'].force_encoding('UTF-8')
     image_url = repo['image_url'].force_encoding('UTF-8')
     title = repo['title'].force_encoding('UTF-8')
-    langs = repo['languages'].map do |l|
-      "<div class='codeberg-language' style='background-color: " \
-        "#{l['color']}; width: #{l['width']}' title='#{l['name']}'></div>"
-    end
 
-    "<a class='codeberg preview' href='#{repo['url']}'>\n" \
-      "  <span class='caption' title='#{caption}'>\n" \
-      "    <i class='fas fa-mountain'></i>\n" \
-      "    Codeberg &mdash; #{caption}\n" \
-      "  </span>\n" \
-      "  <span class='description'> \n" \
-      "    <img\n" \
-      "      src='#{image_url}'\n" \
-      "      title='#{title}'\n" \
-      "    >\n" \
-      "    <span class='desc-title'>#{user}/<b>#{name}</b></span>\n" \
-      "    <span class='desc-text'>#{description}</span>\n" \
-      "    <div class='codeberg-languages'>\n" \
-      "      #{langs.join}" \
-      "    </div>\n" \
-      "  </span>\n" \
-      '</a>'
+    result = "<a class='codeberg preview' href='#{repo['url']}'>" \
+      "<span class='caption' title='#{caption}'>" \
+      "<i class='fas fa-mountain'></i>" \
+      "Codeberg &mdash; #{caption}" \
+      "</span>" \
+      "<span class='description'>" \
+      "<img src='#{image_url}' title='#{title}'>" \
+      "<span class='desc-title'>#{user}/<b>#{name}</b></span>" \
+      "<span class='desc-text'>#{description}</span>" \
+      '<span class="codeberg-languages">'
+    repo['languages'].each do |l|
+      lang = l['name'].split(' ')[0]
+      result += "<span class='codeberg-language' style='background-color: " \
+        "#{l['color']}; width: #{l['width']}' title='#{lang}'></span>"
+    end
+    result += '</span></span></a>'
+    result
   end
 
   def prop(lines, name)
