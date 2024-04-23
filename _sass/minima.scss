@@ -828,25 +828,34 @@ a.tag-name:visited {
   font-size: small;
 	opacity: 1.0;
 	padding: 1em;
+	padding-bottom: 0;
   text-align: justify;
 }
 
 .codeberg .description .desc-title {
+  color: black;
   display: block;
   font-size: larger;
+  white-space: nowrap;
+}
+
+.codeberg .description .desc-title b {
+  color: black;
 }
 
 .codeberg .description .desc-text {
   border-bottom: 2px solid $brand-xp;
   border-top: 2px solid $brand-xp;
   display: block;
+  font-size: 0.75em;
 }
 
 .codeberg-languages, .codeberg-language {
-  height: 0.75em;
+  height: 0.5em;
 }
 
 .codeberg-languages {
+  display: inline-block;
   left: -1em;
   position: relative;
   top: 0.5em;
