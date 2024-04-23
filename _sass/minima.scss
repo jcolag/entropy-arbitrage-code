@@ -597,6 +597,15 @@ div.highlighter-rouge pre[class*="language-"] {
   width: 80%;
 }
 
+.post-update ul {
+  max-width: 90%;
+  overflow-x: auto;
+}
+
+.post-update ul li {
+  white-space: nowrap;
+}
+
 #social-links {
   line-height: 1.25em;
 	max-height: 4.5em;
