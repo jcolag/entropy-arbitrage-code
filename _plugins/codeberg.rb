@@ -40,7 +40,8 @@ class CodebergInlineTag < Liquid::Tag
     repo['languages'].each do |l|
       lang = l['name'].split(' ')[0]
       result += "<span class='codeberg-language' style='background-color: " \
-        "#{l['color']}; width: #{l['width']}' title='#{lang}'></span>"
+        "#{l['color']}; width: #{l['width']}' " \
+        "title='#{lang} #{l['width']}'></span>"
     end
     result += '</span></span></a>'
     result
