@@ -844,6 +844,7 @@ a.tag-name:visited {
 .codeberg .description .desc-title {
   color: black;
   display: block;
+  font-family: Sans-Serif;
   font-size: larger;
   white-space: nowrap;
 }
@@ -856,7 +857,8 @@ a.tag-name:visited {
   border-bottom: 2px solid $brand-xp;
   border-top: 2px solid $brand-xp;
   display: block;
-  font-size: 0.75em;
+  font-family: Sans-Serif;
+  font-size: 0.66em;
 }
 
 .codeberg-languages, .codeberg-language {
