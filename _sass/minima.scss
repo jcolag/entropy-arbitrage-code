@@ -881,7 +881,8 @@ a.tag-name:visited {
 }
 
 .preview {
-  border-radius: 1em;
+  border-top-left-radius: 1em;
+  border-top-right-radius: 1em;
   float: right;
   text-align: center;
   margin-inline-start: 1em !important;
