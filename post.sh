@@ -38,7 +38,7 @@ else
   exit -1
 fi
 
-summary=$(grep '^summary: ' "${file}" | head -1 | cut -f2- -d':' | sed 's/^ *//g')
+summary=$(grep '^summary: ' "${file}" | head -1 | cut -f2- -d':' | sed 's/<[^>]*>//g;s/^ *//g')
 tags=$(grep '^tags: ' "${file}" | head -1 | cut -f2 -d'[' | cut -f1 -d']' | sed 's/, / #/g')
 teaser=$(grep '^teaser: ' "${file}" | head -1 | cut -f2- -d':' | sed 's/^ *//g')
 title=$(grep '^title: ' "${file}" | head -1 | cut -f2- -d':' | sed 's/^ *//g')
