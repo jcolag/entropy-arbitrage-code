@@ -30,12 +30,12 @@ day=$(date +'%Y-%m-%d')
 if [ ".${1-}." != ".." ]
 then
   file=$*
-elif test -f "${HOME}/code/entropy-arbitrage-code/_posts/${day}*.md"
+elif test -f "${HOME}"/code/entropy-arbitrage-code/_posts/"${day}"*.md
 then
   file=$(ls -1 "${HOME}"/code/entropy-arbitrage-code/_posts/"${day}"*.md)
 else
   echo No relevant file found.
-  exit -1
+  exit 1
 fi
 
 summary=$(grep '^summary: ' "${file}" | head -1 | cut -f2- -d':' | sed 's/<[^>]*>//g;s/^ *//g')
