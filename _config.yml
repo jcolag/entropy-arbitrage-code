@@ -76,6 +76,7 @@ exclude:
   - gentrek.sh
   - nextweek.sh
   - open.sh
+  - post.sh
   - rebuild.sh
   - makeroom.js
   - README.md
