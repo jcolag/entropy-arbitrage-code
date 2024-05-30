@@ -982,3 +982,9 @@ a.tag-name:visited {
   padding-right: 0.25em;
   transform: scale(3);
 }
+
+li h3 {
+  margin-left: -2em;
+  margin-right: -2em;
+  white-space: nowrap;
+}
