@@ -1,6 +1,6 @@
 #!/bin/sh
 dom=$(date +%_d)
-if [ ${dom} -gt 7 ] || [ .$(date +%a). != .Sat. ]
+if [ "${dom}" -gt 7 ] || [ ".$(date +%a)." != .Sat. ]
 then
   exit 0
 fi
