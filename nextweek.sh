@@ -16,10 +16,7 @@ maxidx=$((${#days[@]} - 1))
 first="next ${days[0]}"
 last="next ${days[$maxidx]}"
 now=$(date +%N)
-# The following SHOULD work, and works in testing,
-# but somehow doesn't in this script.
-# now="${now/#*(0)/}"
-now=$(echo $now | sed 's/^0*//g')
+now="${now/#*(0)/}"
 linkmins=$(seq 7 | sort -R | head -5 | paste -sd' ')
 now=$((now * 7 - 3))
 quotemins=$(seq 7 | sort -R | head -5 | paste -sd' ')
