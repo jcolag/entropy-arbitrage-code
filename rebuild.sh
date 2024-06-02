@@ -1,5 +1,27 @@
 #!/bin/bash
-blog="Entropy Arbitrage"
+
+# Boilerplate
+set -o errexit
+set -o errtrace
+set -o nounset
+set -o pipefail
+trap 'echo "Aborting due to errexit on line $LINENO. Exit code: $?" >&2' ERR
+_ME="$(basename "${0}")"
+
+if [[ "${TRACE-0}" == "1" ]]
+then
+  set -o xtrace
+fi
+
+if [[ "${1-}" =~ ^-*h(elp)?$ ]]
+then
+    echo "Usage: ${_ME} [filename]
+
+This script rebuilds the blog and publishes the update.
+"
+    exit
+fi
+
 target=jcolag@colagioia.net:www/blog
 toot="toot"
 twtxt="twtxt"
@@ -12,14 +34,14 @@ files=
 
 # Ensure tag folder exists and remove existing tag files
 mkdir -p tag
-rm tag/*.md
+rm -f tag/*.md
 
 # Collect posts that should already be released
 for file in _posts/2*.md
 do
   dateline=$(grep '^date:' "$file" | head -1 | cut -f2 -d':' | cut -f2 -d' ' | cut -c1-10)
   dd=$(date -d "$dateline" '+%s')
-  if [ $dd -lt $now ]
+  if [ "$dd" -lt "$now" ]
   then
     files="$files $file"
   fi
@@ -34,6 +56,7 @@ do
 done
 git commit -m "Automated updates: $(date '+%Y-%m-%d')"
 git push
+git push disroot
 cd ..
 
 # Generate tags from released posts
@@ -60,8 +83,8 @@ done
 #mogrify -resize $maxwd\> assets/*.png
 ## Clean out the unneeded backup files
 rm -f assets/*~
-rm -f _cache/*
-cat > _cache/github.yml <<EOF
+rm -f .jekyll-cache/github.yml
+cat > .jekyll-cache/github.yml <<EOF
 ---
 - nothing/nothing: 
 EOF
@@ -121,7 +144,7 @@ then
   ### twtxt
   ${twtxt} tweet "On my blog:${titles} ${tags}"
   ### Matrix
-  ${matrix} ${titles} posted - ${teasers}
+  ${matrix} "${titles} posted - ${teasers}"
   ### I can't get diclish to work, so Diaspora will be manual for now
   echo "Post this to Diaspora:"
   ntfy send "Post to Diaspora..."
@@ -134,7 +157,7 @@ rm -f .lastbuild
 date '+%F %T' > .lastbuild
 
 now=$(date +%s)
-count=$(for i in $(grep '^date: ' _posts/2* | cut -f3- -d':' | cut -c2- | sed 's/ /T/g')
+count=$(for i in $(grep '^date: ' _posts/2*.md | cut -f3- -d':' | cut -c2- | sed 's/ /T/g')
 do
   published=$(date --date="${i}" +%s)
   echo $((published - now))
