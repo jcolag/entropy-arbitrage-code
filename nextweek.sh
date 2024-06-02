@@ -1,4 +1,31 @@
 #!/bin/bash
+
+# Boilerplate
+set -o errexit
+set -o errtrace
+set -o nounset
+set -o pipefail
+trap 'echo "Aborting due to errexit on line $LINENO. Exit code: $?" >&2' ERR
+_ME="$(basename "${0}")"
+
+if [[ "${TRACE-0}" == "1" ]]
+then
+  set -o xtrace
+fi
+
+if [[ "${1-}" =~ ^-*h(elp)?$ ]]
+then
+    echo "Usage: ${_ME} [filename]
+
+This script will assemble a stub post for the following week's toots,
+assuming that the post doesn't already exist.
+"
+    exit
+fi
+
+# For handing search-and-replace without invoking sed
+shopt -s extglob
+
 days=(mon tue wed thu fri)
 captions=( \
   "Just what the world needed:  A calendar that flips the bird." \
