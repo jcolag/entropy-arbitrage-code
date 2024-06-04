@@ -43,6 +43,7 @@ tags=$(grep '^tags: ' "${file}" | head -1 | cut -f2 -d'[' | cut -f1 -d']' | sed 
 teaser=$(grep '^teaser: ' "${file}" | head -1 | cut -f2- -d':' | sed 's/^ *//g')
 title=$(grep '^title: ' "${file}" | head -1 | cut -f2- -d':' | sed 's/^ *//g')
 cat=$(grep '^categories:' "${file}" | head -1 | cut -f2- -d':' | sed 's/^ *//g')
+thumb=$(grep 'thumbnail: ' "${file}" | cut -f3- -d'/')
 
 path=$(basename "${file}" .md | sed 's/-/\//g;s/\//-/g4')
 url="${host}${baseurl}${cat}/${path}.html"
@@ -53,4 +54,11 @@ echo "${title}: ${summary}"
 echo "${url}"
 echo "${teaser}"
 echo "#${tags}"
+echo
+echo "[${title}](${url}): ${summary}"
+echo
+echo "${teaser}"
+echo
+
+cp "$thumb" ~/Downloads
 
