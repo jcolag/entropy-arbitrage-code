@@ -154,6 +154,23 @@ h6,
   color: $light-brand-color;
 }
 
+details {
+  background-color: $light-bg;
+  border: 1px dotted $light-text;
+  border-radius: 0.75em;
+  margin-bottom: 1em;
+  margin-left: 10%;
+  padding: 0.5em;
+  text-wrap: balance;
+  width: 80%;
+}
+
+details[open] summary {
+  font-style: italic;
+  margin-bottom: 0.75em;
+  opacity: 0.67;
+}
+
 h1 {
   font-size: 2em !important;
 }
