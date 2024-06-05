@@ -27,7 +27,6 @@ toot="toot"
 twtxt="twtxt"
 diclish="diclish"
 matrix="~/bin/matrix.sh"
-maxwd=740
 JEKYLL_ENV="production"
 now=$(date '+%s')
 files=
