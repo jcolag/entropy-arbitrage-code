@@ -7,6 +7,7 @@ then
 fi
 date -d "+${max} days"
 gedit _sass/minima.scss
+gedit _drafts/*.md
 while [ "$day" -le "$max" ]
 do
   dd=$(date --date "+${day} days" +%F)
