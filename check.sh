@@ -53,7 +53,7 @@ fi
 # the Internet Archive to grab a current copy.
 for file in ${files}
 do
-  grep -oP 'https?://[^)>" ]+' $file | while read -r link
+  grep -oP 'https?://[^)>" ]+' "$file" | while read -r link
   do
     curl -s "https://web.archive.org/save/${link}" > /dev/null
   done
