@@ -25,8 +25,8 @@ fi
 target=jcolag@colagioia.net:www/blog
 toot="toot"
 twtxt="twtxt"
-diclish="diclish"
 matrix="~/bin/matrix.sh"
+# diclish="diclish"
 JEKYLL_ENV="production"
 now=$(date '+%s')
 files=
