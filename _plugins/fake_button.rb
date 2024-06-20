@@ -14,7 +14,7 @@ class FakeButtonInlineTag < Liquid::Tag
 
   def params(input)
     parts = input.split '|'
-    [parts[0].strip, parts.length > 1 ? parts[1].strip : "This button doesn't actually do anything."]
+    [parts[0].strip, parts.length > 1 ? parts[1].strip : "This button actually does nothing..."]
   end
 end
 Liquid::Template.register_tag('fake_button', FakeButtonInlineTag)
