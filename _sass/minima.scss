@@ -814,6 +814,16 @@ a.tag-name:visited {
   letter-spacing: 1px;
 }
 
+.fake-button {
+  border-radius: 1em;
+  background-color: $brand-color;
+  color: $background-color;
+  font-size: 1.5em;
+  margin-left: 50%;
+  padding: 0.25em;
+  transform: translateX(-50%);
+}
+
 .fake-link {
   cursor: pointer;
 }
