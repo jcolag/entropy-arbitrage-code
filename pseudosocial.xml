@@ -1,0 +1,42 @@
+---
+layout: none
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator>
+  <link href="https://john.colagioia.net/blog/feed.xml" rel="self" type="application/atom+xml"/>
+  <link href="https://john.colagioia.net/blog/" rel="alternate" type="text/html"/>
+  <updated>2024-07-06T07:19:34-04:00</updated>
+  <id>https://john.colagioia.net/blog/pseudosocial.xml</id>
+  <title type="html">Entropy Arbitrage - Social-ish Feed</title>
+  <subtitle>John has thoughts. Some of those thoughts make it here. Some of those thoughts might even be worth reading.</subtitle>
+  {% assign base = site.url | append: site.baseurl %}
+  {% for post in site.posts %}
+    {% if post.hidden %}
+    <entry>
+      <title type="html">{{ post.title }}</title>
+      <link href="{{ base }}{{ post.url }}" rel="alternate" type="text/html" title="{{ post.title }}"/>
+      <published>{{ post.date }}</published>
+      <updated>{{ post.date }}</updated>
+      <id>{{ base }}{{ post.url | remove : '.html' }}</id>
+      <content type="html" xml:base="{{ base }}{{ post.url }}">
+        <![CDATA[
+          {{ post.content }}
+          {% if post.reply %}
+          <p>
+            In reply to: <a href="{{ post.reply }}">{{ post.reply }}</a>
+          </p>
+          {% endif %}
+        ]]>
+      </content>
+      <author>
+        <name>{{ site.webmentions.author.name }}</name>
+      </author>
+      {% for tag in post.tags %}
+        <category term="{{ tag }}"/>
+      {% endfor %}
+      <summary type="html"><![CDATA[{{ post.summary }}]]></summary>
+    </entry>
+    {% endif %}
+  {% endfor %}
+</feed>
