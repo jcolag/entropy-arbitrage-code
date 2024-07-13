@@ -4,7 +4,7 @@ permalink: /socialish/
 title: Social-ish Posts
 ---
 {% assign social_posts = site.posts | where: "hidden", true %}
-<h1>Social&hellip;ish for John Colagioia</h1>
+<h1>Social-ish, for {{ webmention.author.name }}</h1>
 <div class="home">
     {% for post in social_posts %}
       {% assign slug = post.name | split: '.' | first %}

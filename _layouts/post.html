@@ -124,7 +124,7 @@ layout: default
   {% endif %}
 
   <div class="post-content e-content line-numbers match-braces {{ devClass }}" itemprop="articleBody">
-    {{ content }}
+    {% include anchor_headings.html html=content anchorBody="🔗" anchorClass="heading-anchor" anchorTitle="direct link to %heading% section" %}
   </div>
 
   <hr>
