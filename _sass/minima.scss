@@ -659,7 +659,53 @@ a.tag-name:visited {
   border: 5px solid $brand-color;
 }
 
-@media (max-width: 750px) {
+@media (hover: hover) {
+  #markdown-toc {
+	  background-color: $dark-bg;
+	  border-bottom: 5px solid $brand-color;
+	  border-right: 5px solid $brand-color;
+	  border-top: 5px solid $brand-color;
+    border-bottom-right-radius: 2em;
+    border-top-right-radius: 2em;
+	  cursor: pointer;
+	  max-height: 2em;
+	  left: 0;
+	  margin-left: 0;
+	  overflow: hidden;
+	  padding: 1em;
+	  position: fixed;
+	  top: 50%;
+	  transform: translateY(-50%);
+	  transition-duration: 1s;
+	  transition-property: all;
+	  max-width: 2em;
+  }
+
+  #markdown-toc:before {
+    content: "\f0c9";
+    display: block;
+    font-family: 'Font Awesome';
+    font-size: 2em;
+    margin-top: -22%;
+    text-align: center;
+  }
+
+  #markdown-toc:hover {
+	  max-height: 80vh;
+	  overflow-y: auto;
+	  max-width: 33vw;
+  }
+
+  #markdown-toc:hover:before {
+    content: "Contents:";
+    font-family: 'Vollkorn';
+    font-size: 1.5em;
+    margin-top: 0;
+    text-align: unset;
+  }
+}
+
+@media (hover: none) {
   .tray-panel {
     border: 2px solid $brand-color !important;
     border-radius: 1em !important;
