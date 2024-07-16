@@ -1056,6 +1056,18 @@ a.tag-name:visited {
   transform: scale(3);
 }
 
+.heading-anchor {
+  font-size: 0.75rem;
+  opacity: 0.6;
+  text-decoration: none;
+  transition: all 1s linear;
+}
+
+.heading-anchor:hover {
+  opacity: 1.0;
+  text-decoration: none;
+}
+
 li h3 {
   margin-left: -2em;
   margin-right: -2em;
