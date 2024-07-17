@@ -688,6 +688,8 @@ a.tag-name:visited {
     font-size: 2em;
     margin-top: -22%;
     text-align: center;
+	  transition-duration: 1s;
+	  transition-property: all;
   }
 
   #markdown-toc:hover {
