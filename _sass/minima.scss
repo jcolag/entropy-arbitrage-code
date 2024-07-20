@@ -57,6 +57,8 @@ $text-color:       hsl(200.8,39.4%,12.9%) !default;
 $brand-color:      hsl(17,46%,19.6%) !default;
 $grey-color:       hsl(0,0%,51%) !default;
 
+$badge-blue:       hsl(200.8,99.4%,74.9%) !default;
+
 $light-bg:         lighten($background-color, 10%) !default;
 $dark-bg:          darken($background-color, 15%) !default;
 $bg-xp:            rgba($light-bg, 0.0) !default;
