@@ -107,6 +107,242 @@ $on-laptop:        800px !default;
   color: $background-color;
 }
 
+a[href^="http"]::after {
+  color: $dark-text;
+	content: '\f35d';
+	font-family: 'Font Awesome';
+	font-size: 0.67em;
+	opacity: 0.67;
+	vertical-align: top;
+}
+
+a[href^="http"]:hover::after {
+  background-color: $background-color;
+  font-size: 2em;
+  position: absolute;
+  transform: translate(-90%, -18%);
+}
+
+a[href^="https://john.colagioia.net/"]::after,
+a[href*="127.0.0.1:"]::after,
+a[href*="localhost:"]::after,
+a[href^="#"]::after,
+.site-footer a::after {
+	content: none !important;
+}
+
+// File Types
+a[href$=".pdf"]::after {
+	content: '\f1c1';
+	font-family: 'Font Awesome';
+}
+
+// Social Media
+a[href*="diasporafoundation.org"]::after,
+a[href*="nota.404.mn"]::after {
+	content: '\f791';
+	font-family: 'Font Awesome 5 Brands';
+}
+
+a[href*="discord.gg"]::after {
+	content: '\f392';
+	font-family: 'Font Awesome 5 Brands';
+}
+
+a[href*="facebook.com"]::after {
+	content: '\f09a';
+	font-family: 'Font Awesome 5 Brands';
+}
+
+a[href*="linkedin.com"]::after {
+	content: '\f08c';
+	font-family: 'Font Awesome 5 Brands';
+}
+
+a[href*="linkedin.com"]:has(> i.fa-linkedin)::after {
+  content: none;
+}
+
+a[href*="mailchimpsites.com"]::after {
+  content: '\f59e';
+  font-family: 'Font Awesome 5 Brands';
+}
+
+a[href*="mastodon.social"]::after,
+a[href*="joinmastodon.org"]::after,
+a[href*="fe.disroot.org"]::after {
+	content: '\f4f6';
+	font-family: 'Font Awesome 5 Brands';
+}
+
+a[href*="mastodon.social"][rel]::after,
+a[href*="mastodon.social"]:has(> i.fa-mastodon)::after,
+a[href*="joinmastodon.org"]:has(> i.fa-mastodon)::after,
+a[href*="fe.disroot.org"]:has(> i.fa-mastodon)::after {
+  content: none;
+}
+
+a[href*="quora.com"]::after {
+	content: '\f2c4';
+	font-family: 'Font Awesome 5 Brands';
+}
+
+a[href*="reddit.com"]::after {
+	content: '\f1a1';
+	font-family: 'Font Awesome 5 Brands';
+}
+
+a[href*="twitter.com"]::after {
+	content: '\f27d';
+	font-family: 'Font Awesome 5 Brands';
+}
+
+// Media and Reference
+a[href*="deviantart.com"]::after {
+	content: '\f1bd';
+	font-family: 'Font Awesome 5 Brands';
+}
+
+a[href*="flickr.com"]::after {
+	content: '\f16e';
+	font-family: 'Font Awesome 5 Brands';
+}
+
+a[href*="fontawesome.com"]::after {
+  content: '\f2b4';
+  font-family: 'Font Awesome 5 Brands';
+}
+
+a[href*="blog.google"]::after,
+a[href*="google.com"]::after {
+	content: '\f1a0';
+	font-family: 'Font Awesome 5 Brands';
+}
+
+a[href*="itch.io"]::after {
+  content: '\f83a';
+  font-family: 'Font Awesome 5 Brands';
+}
+
+a[href*="soundcloud.com"]::after {
+	content: '\f1be';
+	font-family: 'Font Awesome 5 Brands';
+}
+
+a[href*="unsplash.com"]::after {
+	content: '\e07c';
+	font-family: 'Font Awesome 5 Brands';
+}
+
+a[href*="vimeo.com"]::after {
+	content: '\f27d';
+	font-family: 'Font Awesome 5 Brands';
+}
+
+a[href*="wikibooks.org"]::after,
+a[href*="wikimedia.org"]::after,
+a[href*="wikinews.org"]::after,
+a[href*="wikipedia.org"]::after,
+a[href*="wikiquote.org"]::after,
+a[href*="wikisource.org"]::after,
+a[href*="wiktionary.org"]::after {
+	content: '\f266';
+	font-family: 'Font Awesome 5 Brands';
+}
+
+a[href*="youtube.com"]::after {
+	content: '\f167';
+	font-family: 'Font Awesome 5 Brands';
+}
+
+// Shopping
+a[href*="amazon.com"]::after,
+a[href*="amzn.to"]::after,
+a[href*="goodreads.com"]::after {
+	content: '\f270';
+	font-family: 'Font Awesome 5 Brands';
+}
+
+a[href*="patreon.com"]::after {
+	content: '\f3d9';
+	font-family: 'Font Awesome 5 Brands';
+}
+
+// Technology
+a[href*="bitbucket.org"]::after {
+	content: '\f171';
+	font-family: 'Font Awesome 5 Brands';
+}
+
+a[href*="dev.to"]::after {
+	content: '\f6cc';
+	font-family: 'Font Awesome 5 Brands';
+}
+
+a[href*="git-scm.com"]::after {
+  content: '\f841';
+  font-family: 'Font Awesome 5 Brands';
+}
+
+a[href*="github.com"]::after,
+a[href*="github.io"]::after {
+	content: '\f09b';
+	font-family: 'Font Awesome 5 Brands';
+}
+
+a[href*="github.com"]:has(> i.fa-github)::after,
+a[href*="github.com"]:has(> i.fa-github-alt)::after,
+a[href*="github.com"]:has(> i.fa-github-square)::after {
+  content: none;
+}
+
+a[href*="gitlab.com"]::after {
+	content: '\f296';
+	font-family: 'Font Awesome 5 Brands';
+}
+
+a[href*="nodejs.com"]::after,
+a[href*="nodejs.org"]::after {
+	content: '\f3d3';
+	font-family: 'Font Awesome 5 Brands';
+}
+
+a[href*="npmjs.com"]::after {
+	content: '\f3d4';
+	font-family: 'Font Awesome 5 Brands';
+}
+
+a[href*="reactjs.org"]::after {
+  content: '\f41b';
+  font-family: 'Font Awesome 5 Brands';
+}
+
+a[href*="rust-lang.org"]::after {
+	content: '\e07a';
+	font-family: 'Font Awesome 5 Brands';
+}
+
+a[href*="ubuntu.com"]::after {
+	content: '\f7df';
+	font-family: 'Font Awesome 5 Brands';
+}
+
+a[href*="stackoverflow.com"]::after {
+	content: '\f16c';
+	font-family: 'Font Awesome 5 Brands';
+}
+
+// Other
+a[href*=".gov"]::after {
+	content: '\f74d';
+	font-family: 'Font Awesome 5 Brands';
+}
+
+a[href*="visualstudio.com"]::after {
+  content: '\f3ca';
+  font-family: 'Font Awesome 5 Brands';
+}
+
 body {
   background-image: url('/blog/assets/square_bg.png');
   color: $text-color;
@@ -983,6 +1219,10 @@ a.tag-name:visited {
 .preview:hover {
   box-shadow: 1px 1px 15px $brand-color;
   opacity: 0.8;
+}
+
+a.preview::after {
+  content: none;
 }
 
 .preview > img {
