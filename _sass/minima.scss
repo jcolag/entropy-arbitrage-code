@@ -107,6 +107,7 @@ $on-laptop:        800px !default;
   color: $background-color;
 }
 
+// Annotate external links.
 a[href^="http"]::after {
   color: $dark-text;
 	content: '\f35d';
@@ -175,7 +176,7 @@ a[href*="fe.disroot.org"]::after {
 	font-family: 'Font Awesome 5 Brands';
 }
 
-a[href*="mastodon.social"][rel]::after,
+a[href*="mastodon.social"][rel="me"]::after,
 a[href*="mastodon.social"]:has(> i.fa-mastodon)::after,
 a[href*="joinmastodon.org"]:has(> i.fa-mastodon)::after,
 a[href*="fe.disroot.org"]:has(> i.fa-mastodon)::after {
@@ -198,6 +199,17 @@ a[href*="twitter.com"]::after {
 }
 
 // Media and Reference
+/*
+a[href*="archive.org"]::after {
+	content: '\ef49';
+	font-family: 'Simple Icons';
+}
+*/
+a[href*="creativecommons.org"]::after {
+	content: '\f25e';
+	font-family: 'Font Awesome 5 Brands';
+}
+
 a[href*="deviantart.com"]::after {
 	content: '\f1bd';
 	font-family: 'Font Awesome 5 Brands';
