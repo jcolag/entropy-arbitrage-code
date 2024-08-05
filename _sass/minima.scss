@@ -4,40 +4,45 @@
 // Define defaults for each variable.
 
 @font-face {
-  font-family: 'Exo 2';
-  src: url('/blog/assets/Exo2-Light.ttf');
   font-display: swap;
+  font-family: 'Exo 2';
   font-style: normal;
   font-weight: 300;
+  src: url('/blog/assets/Exo2-Light.ttf');
 }
 
 @font-face {
-  font-family: 'Vollkorn';
-  src: url('/blog/assets/Vollkorn-Bold.ttf');
   font-display: swap;
+  font-family: 'Vollkorn';
   font-style: normal;
   font-weight: 700;
+  src: url('/blog/assets/Vollkorn-Bold.ttf');
 }
 
 @font-face {
-  font-family: 'Homemade Apple';
-  src: url('/blog/assets/HomemadeApple-Regular.ttf');
   font-display: swap;
+  font-family: 'Homemade Apple';
   font-style: normal;
   font-weight: 400;
+  src: url('/blog/assets/HomemadeApple-Regular.ttf');
 }
 
 @font-face {
-  font-family: 'Noto Color Emoji';
-  src: url('/blog/assets/NotoColorEmoji.ttf');
   font-display: swap;
+  font-family: 'Noto Color Emoji';
   font-style: normal;
   font-weight: 300;
+  src: url('/blog/assets/NotoColorEmoji.ttf');
 }
 
 @font-face {
+  font-display: swap;
   font-family: 'Font Awesome';
+  font-style: normal;
+  font-weight: 400;
   src: url('/blog/assets/fa-solid-900.ttf');
+}
+
   font-display: swap;
   font-style: normal;
   font-weight: 400;
