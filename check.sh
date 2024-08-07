@@ -17,7 +17,9 @@ mv "${HOME}/proselintrc.bk" "${HOME}/.proselintrc.json"
 for file in ${files}
 do
   outfile=$(mktemp).json
+  #valeslug=_posts/$(basename ${file})
   spelling="${HOME}/bin/LanguageTool-6.2-stable/org/languagetool/resource/en/hunspell/spelling_custom.txt"
+  #vale --no-wrap --output=JSON "${valeslug}" | jq ".\"${valeslug}\"" > "${outfile}"
   proselint --json "${file}" | jq .data.errors >> "${outfile}"
   grep --silent "# Temporary" "${spelling}"
   if [ "$?" = 1 ]
@@ -34,11 +36,16 @@ do
       >> "${outfile}"
   /bin/ls "${HOME}/spelling_custom.txt" "${spelling}"
   mv -f "${HOME}/spelling_custom.txt" "${spelling}"
+  /bin/ls "${spelling}"
   rm map.json
   write-good --no-adverb --no-tooWordy --no-weasel --parse "${file}" \
     | node "${HOME}/code/entropy-arbitrage-code/_plugins/write-good.js" \
     >> "${outfile}"
+  write-good --eprime --parse "${file}" | node \
+    "${HOME}/code/entropy-arbitrage-code/_plugins/write-good.js" >> \
+    "${outfile}"
   alex --why --reporter="${HOME}/code/entropy-arbitrage-code/_plugins/alex-formatter.js" "${file}" >> "${outfile}" 2>&1
+  gedit "${outfile}"
 done
 
 mv "${HOME}/.proselintrc.json" "${HOME}/proselintrc.bk"

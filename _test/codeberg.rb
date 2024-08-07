@@ -10,5 +10,5 @@ context = Liquid::ParseContext.new
 cht = CodebergInlineTag.send :new, 'codeberg', repo, context
 
 puts cht.render(context)
-Tracer.off
+#Tracer.off
 

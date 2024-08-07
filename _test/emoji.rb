@@ -10,4 +10,4 @@ context = Liquid::ParseContext.new
 ght = EmojiInlineTag.send :new, 'emoji', intent, context
 
 puts ght.render(context)
-Tracer.off
+#Tracer.off

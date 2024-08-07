@@ -24,6 +24,8 @@ description: John has thoughts. Some of those thoughts make it here. Some of tho
 baseurl: "/blog"
 url: "https://john.colagioia.net"
 
+incremental: true
+
 cohost_username: jcolag
 diaspora:
   username: jcolag
@@ -78,6 +80,7 @@ exclude:
   - open.sh
   - post.sh
   - rebuild.sh
+  - update-assets.sh
   - makeroom.js
   - README.md
   - LICENSE.md
@@ -97,10 +100,16 @@ exclude:
   - _posts/data
   - _posts/.github
   - _posts/.git
+  - _eassets
 
 feed:
   posts_limit: 30
 
+webmention:
+  author:
+    name: John Colagioia
+    url: https://john.colagioia.net
+    photo: /blog/assets/d29181b871b001b0.png
 webmentions:
   author:
     name: John Colagioia

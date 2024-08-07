@@ -78,6 +78,8 @@ GEM
       sass-embedded (~> 1.54)
     jekyll-seo-tag (2.8.0)
       jekyll (>= 3.8, < 5.0)
+    jekyll-sidenotes (0.0.1)
+      nanoid
     jekyll-watch (2.2.1)
       listen (~> 3.0)
     jekyll-webmention_io (3.3.7)
@@ -109,6 +111,7 @@ GEM
       jekyll (>= 3.5, < 5.0)
       jekyll-feed (~> 0.9)
       jekyll-seo-tag (~> 2.1)
+    nanoid (2.0.0)
     nokogiri (1.16.6-x86_64-linux)
       racc (~> 1.4)
     openssl (3.2.0)
@@ -180,6 +183,7 @@ DEPENDENCIES
   jekyll-feed
   jekyll-minifier
   jekyll-paginate-v2
+  jekyll-sidenotes
   jekyll-webmention_io
   minima (~> 2.5.1)
   rubocop

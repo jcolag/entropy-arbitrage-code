@@ -11,10 +11,10 @@ layout: default
       class="post-title p-name"
       itemprop="name headline"
     >
-      {% if jekyll.environment == "development" and page.proofed != true %}
-        {% assign devClass = "draft-mode" %}
+      {%- if jekyll.environment == "development" and page.proofed != true -%}
+        {%- assign devClass = "draft-mode" -%}
         DRAFT:
-      {% endif %}
+      {%- endif -%}
       {{ page.title | escape }}
     </h1>
     <p class="post-meta">
@@ -34,7 +34,7 @@ layout: default
         rel="author"
         style="display: none;"
       >
-        <img class="u-photo" src="/blog/assets/d29181b871b001b0.png" />
+        <img class="u-photo" src="/blog/assets/d29181b871b001b0.png.avif" />
         {%- if page.author -%}
           {{ page.author }}
         {%- else -%}
@@ -55,16 +55,16 @@ layout: default
       {%- endif -%}</p>
   </header>
 
-  {% if page.update.size > 0 %}
+  {%- if page.update.size > 0 -%}
     <div class="post-content post-update">
       <b>Hi!</b>
       You might want to know that this post continues ideas from the
       following.
       <ul>
-        {% for predecessor in page.update %}
-          {% for post in site.posts %}
-            {% assign file = post.path | split: '/' | last %}
-            {% if file == predecessor %}
+        {%- for predecessor in page.update -%}
+          {%- for post in site.posts -%}
+            {%- assign file = post.path | split: '/' | last -%}
+            {%- if file == predecessor -%}
               <li>
                 <a href="{{ site.baseurl }}{{ post.url }}">
                   {{ post.title }}
@@ -72,44 +72,44 @@ layout: default
                 from
                 {{ post.date | date: date_format }}
               </li>
-            {% endif %}
-          {% endfor %}
-        {% endfor %}
+            {%- endif -%}
+          {%- endfor -%}
+        {%- endfor -%}
       </ul>
     </div>
-  {% endif %}
-  {% assign pagename = page.path | split: '/' | last %}
-  {% assign related = "" %}
-  {% for post in site.posts %}
-    {% for update in post.update %}
-      {% assign name = update | split: '/' | last %}
-      {% if name == pagename %}
-        {% assign dest = post.title %}
-        {% assign dest = dest | append: ";" %}
-        {% assign dest = dest | append: post.url %}
-        {% assign dest = dest | append: ";" %}
-        {% assign dest = dest | append: post.date %}
-        {% assign dest = dest | append: "|" %}
-        {% assign related = related | append: dest %}
-      {% endif %}
-    {% endfor %}
-  {% endfor %}
-  {% assign related = related | split: "|" %}
-  {% if related.size > 0 %}
+  {%- endif -%}
+  {%- assign pagename = page.path | split: '/' | last -%}
+  {%- assign related = "" -%}
+  {%- for post in site.posts -%}
+    {%- for update in post.update -%}
+      {%- assign name = update | split: '/' | last -%}
+      {%- if name == pagename -%}
+        {%- assign dest = post.title -%}
+        {%- assign dest = dest | append: ";" -%}
+        {%- assign dest = dest | append: post.url -%}
+        {%- assign dest = dest | append: ";" -%}
+        {%- assign dest = dest | append: post.date -%}
+        {%- assign dest = dest | append: "|" -%}
+        {%- assign related = related | append: dest -%}
+      {%- endif -%}
+    {%- endfor -%}
+  {%- endfor -%}
+  {%- assign related = related | split: "|" -%}
+  {%- if related.size > 0 -%}
     <div class="post-content post-update">
       <b>Hi!</b>
       It looks like I have since continued, updated, or rethought this post
       in some ways, so you may want to look at
-      {% if related.size == 1 %}
+      {%- if related.size == 1 -%}
         this
-      {% else %}
+      {%- else -%}
         these
-      {% endif %}
+      {%- endif -%}
       after you're done reading here.
       <ul>
-        {% for r in related %}
-          {% assign rel = r | split: ";" %}
-          {% if rel.size > 1 %}
+        {%- for r in related -%}
+          {%- assign rel = r | split: ";" -%}
+          {%- if rel.size > 1 -%}
             <li>
               <a href="{{ site.baseurl }}{{ rel[1] }}">
                 {{ rel[0] }}
@@ -117,20 +117,20 @@ layout: default
               from
               {{ rel[2] | date: date_format }}
             </li>
-          {% endif %}
-        {% endfor %}
+          {%- endif -%}
+        {%- endfor -%}
       </ul>
     </div>
-  {% endif %}
+  {%- endif -%}
 
   <div class="post-content e-content line-numbers match-braces {{ devClass }}" itemprop="articleBody">
-    {% include anchor_headings.html html=content anchorBody="🔗" anchorClass="heading-anchor" anchorTitle="direct link to the %heading% section" %}
+    {%- include anchor_headings.html html=content anchorBody="🔗" anchorClass="heading-anchor" anchorTitle="direct link to the %heading% section" -%}
   </div>
 
   <hr>
 
   <p class="webmentions">
-    {% webmentions page.url %}
+    {%- webmentions page.url -%}
   </p>
   <p class="hashover-title hashover-main-title hashover-dashed-title">
     By commenting, you agree to follow the blog's
@@ -146,16 +146,16 @@ layout: default
     </a>
     on Matrix&hellip;
   </p>
-  {% if page.comments == "false" %}
+  {%- if page.comments == "false" -%}
     <div>No comments for this post.</div>
-  {% elsif jekyll.environment == "production" %}
+  {%- elsif jekyll.environment == "production" -%}
     <script
       type="text/javascript"
       src="/hashover-next/comments.php"
     ></script>
-  {% else %}
+  {%- else -%}
     <div>No comments available under a development build!</div>
-  {% endif %}
+  {%- endif -%}
   <script
     src="/blog/assets/prism.js"
     type="text/javascript"
@@ -169,14 +169,14 @@ layout: default
       title="View on GitHub"
     ><i class="fab fa-github-square"></i></a>
     &nbsp;Tags:
-    {% for tag in page.tags %}
-      {% capture tag_name %}{{ tag }}{% endcapture %}
+    {%- for tag in page.tags -%}
+      {%- capture tag_name -%}{{ tag }}{%- endcapture -%}
       &nbsp;
       <a
         class="tag-name"
         href="/blog/tag/{{ tag_name }}/"
       ><i class="fas fa-tag"></i> {{ tag_name | strip }}</a>
-    {% endfor %}
+    {%- endfor -%}
   </span>
 
   <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
@@ -192,5 +192,5 @@ layout: default
     style="display: none"
   ></a>
 </article>
-{% include mlist.html %}
-{% webmentions_js %}
+{%- include mlist.html -%}
+{%- webmentions_js -%}

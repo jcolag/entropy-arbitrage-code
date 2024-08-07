@@ -11,38 +11,60 @@ pagination:
       {{ page.list_title | default: "Posts" }}
     </h1>
     <ul class="post-list">
-      {% for post in paginator.posts %}
+      {%- for post in paginator.posts %}
       <li>
         {%- assign date_format = site.minima.date_format | default: "%Y %B %e" -%}
         <span class="post-meta" title="{{ post.date | date: '%H:%M %Z' }}">
           {{ post.date | date: date_format }}
         </span>
-        {% if post.offset %}
-          {% assign offset = post.offset %}
-        {% else %}
-          {% assign offset = '-11%' %}
-        {% endif %}
+        {%- if post.offset %}
+          {%- assign offset = post.offset %}
+        {%- else %}
+          {%- assign offset = '-11%' %}
+        {%- endif %}
         {%- if post.thumbnail -%}
           <a class="post-link" href="{{ post.url | relative_url }}">
             <div class="thumbnail-image">
-              <img
-                src="{{ post.thumbnail }}"
-                style="margin-top: {{ offset }};"
-              >
+              {%- assign thumb = post.thumbnail %}
+              {%- assign tlen = post.thumbnail | size %}
+                {%- assign sidx = tlen | minus: 4 %}
+              {%- assign tail = post.thumbnail | slice: sidx, 4 %}
+              {%- if tail == ".svg" or tail == ".gif" %}
+                <img
+                  src="{{ post.thumbnail }}"
+                  style="margin-top: {{ offset }};"
+                >
+              {%- else %}
+                <picture>
+                  {%- assign tidx = tlen | minus: 5 %}
+                  {%- assign tail = post.thumbnail | slice: tidx, 5 %}
+                  {%- if tail != ".avif" %}
+                    {%- assign thumb = thumb | append: ".avif" %}
+                  {%- endif %}
+                  <source
+                    srcset="{{ thumb }}"
+                    style="margin-top: {{ offset }};"
+                  >
+                  <img
+                    src="{{ post.thumbnail }}"
+                    style="margin-top: {{ offset }};"
+                  >
+                </picture>
+              {%- endif %}
             </div>
           </a>
         {%- endif -%}
         <h3>
           <a class="post-link" href="{{ post.url | relative_url }}">
-            {% assign postDate = post.date | date: '%s' %}
-            {% assign now = 'now' | date: '%s' %}
-            {% if postDate > now %}
+            {%- assign postDate = post.date | date: '%s' %}
+            {%- assign now = 'now' | date: '%s' %}
+            {%- if postDate > now %}
               🛸
-            {% endif %}
+            {%- endif %}
             {{ post.title | escape }}
-            {% if postDate > now %}
+            {%- if postDate > now %}
               🛸
-            {% endif %}
+            {%- endif %}
           </a>
         </h3>
         {%- if site.show_excerpts -%}
@@ -61,12 +83,12 @@ pagination:
           </p>
         {%- endif -%}
       </li>
-      {% endfor %}
+      {%- endfor %}
     </ul>
 
     <!-- Pagination links -->
     <div class="pagination">
-      {% if paginator.previous_page %}
+      {%- if paginator.previous_page %}
         <a
           href="/blog{{ paginator.previous_page_path }}"
           class="previous"
@@ -74,15 +96,15 @@ pagination:
           <i class="fas fa-angle-double-left"></i>
           Newer Posts
         </a>
-      {% else %}
+      {%- else %}
         <span class="previous"></span>
-      {% endif %}
+      {%- endif %}
       |
       <span class="page_number ">
         Page: {{ paginator.page }} of {{ paginator.total_pages }}
       </span>
       |
-      {% if paginator.next_page %}
+      {%- if paginator.next_page %}
         <a
           href="/blog{{ paginator.next_page_path }}"
           class="next"
@@ -90,16 +112,16 @@ pagination:
           Older Posts
           <i class="fas fa-angle-double-right"></i>
         </a>
-      {% else %}
+      {%- else %}
         <span class="next "></span>
-      {% endif %}
+      {%- endif %}
     </div>
 
     <p class="rss-subscribe"><a href="{{ "/feed.xml" | relative_url }}"><i class="fas fa-rss"></i> Subscribe via RSS</a></p>
   {%- endif -%}
 </div>
 
-{% for post in paginator.posts %}
-{% endfor %}
-{% include suggest.html %}
+{%- for post in paginator.posts %}
+{%- endfor %}
+{%- include suggest.html %}
 <a rel="me" href="https://mastodon.social/@jcolag"></a>

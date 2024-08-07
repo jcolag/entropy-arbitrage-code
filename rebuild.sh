@@ -23,10 +23,11 @@ This script rebuilds the blog and publishes the update.
 fi
 
 target=jcolag@colagioia.net:www/blog
-toot="toot"
-twtxt="twtxt"
-matrix="~/bin/matrix.sh"
+toot="/home/john/.local/bin/toot"
+twtxt="/home/john/.local/bin/twtxt"
 # diclish="diclish"
+matrix="/home/john/bin/matrix.sh"
+# maxwd=740
 JEKYLL_ENV="production"
 now=$(date '+%s')
 files=
@@ -147,6 +148,7 @@ then
   ### I can't get diclish to work, so Diaspora will be manual for now
   echo "Post this to Diaspora:"
   ntfy send "Post to Diaspora..."
+  aplay /usr/share/sounds/sound-icons/prompt.wav
   echo -e "On my blog: ${links}\n${teasers}\n${tags}"
   echo -e "On my blog: ${links}\n${teasers}\n${tags}" | xsel --clipboard
 fi
@@ -163,6 +165,7 @@ do
 done | grep -c '-')
 echo "Current count of published posts: ${count}"
 ntfy send "Current count of published posts: ${count}"
+aplay /usr/share/sounds/sound-icons/prompt.wav
 
 # Send webmentions
 bundle exec jekyll webmention
