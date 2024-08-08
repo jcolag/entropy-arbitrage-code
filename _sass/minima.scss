@@ -295,12 +295,12 @@ a[href*="google.com"]::after {
 a[href*="fsf.org"]::after,
 a[href*="fsfe.org"]::after,
 a[href*="gnu.org"]::after {
-  content: '\ee3b';
+  content: '\ee3a';
   font-family: 'Simple Icons';
 }
 
 a[href*="gutenberg.org"]::after {
-  content: '\eea8';
+  content: '\eea6';
   font-family: 'Simple Icons';
 }
 
@@ -326,9 +326,9 @@ a[href*="scp-wiki.wikidot.com"]::after {
   font-family: 'Simple Icons';
 }
 
-a[href*="simpleicons.com"]::after {
+a[href*="simpleicons.org"]::after {
   content: '\f3b8';
-  font-family: 'Font Awesome 5 Brands';
+  font-family: 'Simple Icons';
 }
 
 a[href*="soundcloud.com"]::after {
@@ -348,8 +348,8 @@ a[href*="unesco.org"]::after {
 }
 
 a[href*="unsplash.com"]::after {
-	content: '\e07c';
-	font-family: 'Font Awesome 5 Brands';
+	content: '\f552';
+	font-family: 'Simple Icons';
 }
 
 a[href*="vimeo.com"]::after {
@@ -424,7 +424,7 @@ a[href*="dev.to"]::after {
 }
 
 a[href*="duckduckgo.com"]::after {
-  content: '\ed18';
+  content: '\ed16';
   font-family: 'Simple Icons';
 }
 
@@ -506,8 +506,13 @@ a[href*="jekyllrb.com"]::after {
 }
 
 a[href*="jellyfin.org"]::after {
-  content: '\ef8d';
+  content: '\ef6b';
   font-family: 'Simple Icons';
+}
+
+a[href*=".js.org"]::after {
+  content: '\f3b8';
+	font-family: 'Font Awesome 5 Brands';
 }
 
 a[href*="libreoffice.org"]::after {
@@ -527,7 +532,7 @@ a[href*="matomo.org"]::after {
 
 a[href*="mozilla.com"]::after,
 a[href*="mozilla.org"]::after {
-  content: '\ebb5';
+  content: '\f0e6';
   font-family: 'Simple Icons';
 }
 
@@ -588,8 +593,8 @@ a[href*="rubyonrails.org"]::after {
 }
 
 a[href*="rust-lang.org"]::after {
-	content: '\e07a';
-	font-family: 'Font Awesome 5 Brands';
+	content: '\f34e';
+	font-family: 'Simple Icons';
 }
 
 a[href*="sourceforge.com"]::after {
@@ -909,8 +914,7 @@ pre.language-html::after {
 }
 
 pre.language-javascript::after,
-pre.language-JavaScript::after,
-pre.language-node::after {
+pre.language-JavaScript::after {
   content: '\ef66';
 }
 
@@ -929,6 +933,10 @@ pre.language-markdown::after {
 
 pre.language-mermaid::after {
   content: '\f09f';
+}
+
+pre.language-node::after {
+  content: '\f13e';
 }
 
 pre.language-php::after {
