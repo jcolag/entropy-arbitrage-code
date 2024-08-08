@@ -11,8 +11,8 @@
     </a>
     for topics of interest.
     <ul>
-      {%- for post in site.posts -%}
-        {%- if post.recommend -%}
+      {% for post in site.posts %}
+        {% if post.recommend %}
           <li>
             <a href={{ post.url | prepend: "/blog" }}>
               {{ post.title }}
@@ -21,8 +21,8 @@
               {{ post.recommend }}
             </i>
           </li>
-        {%- endif -%}
-      {%- endfor -%}
+        {% endif %}
+      {% endfor %}
     </ul>
   </div>
 </div>

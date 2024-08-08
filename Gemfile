@@ -18,7 +18,6 @@ group :jekyll_plugins do
   gem "jekyll-archives"
   gem "jekyll-compose"
   gem "jekyll-feed"
-  gem "jekyll-sidenotes"
   gem 'jekyll-webmention_io'
 end
 

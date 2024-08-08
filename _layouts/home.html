@@ -16,11 +16,11 @@ layout: default
       <li>
         {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
         <span class="post-meta">{{ post.date | date: date_format }}</span>
-        {%- if post.offset -%}
-          {%- assign offset = post.offset -%}
-        {%- else -%}
-          {%- assign offset = '-11%' -%}
-        {%- endif -%}
+        {% if post.offset %}
+          {% assign offset = post.offset %}
+        {% else %}
+          {% assign offset = '-11%' %}
+        {% endif %}
         {%- if post.thumbnail -%}
           <a class="post-link" href="{{ post.url | relative_url }}">
             <div class="thumbnail-image">
@@ -60,7 +60,7 @@ layout: default
 >
   <a href="https://john.colagioia.net/" class="u-url u-uid">
     John Colagioia
-    <img class="u-photo" src="https://john.colagioia.net/blog/assets/d29181b871b001b0.png.avif" />
+    <img class="u-photo" src="https://john.colagioia.net/blog/assets/d29181b871b001b0.png" />
   </a>
   <p class="p-note">Hi, I'm John (he/him), and I work on various odd things.</p>
 </span>

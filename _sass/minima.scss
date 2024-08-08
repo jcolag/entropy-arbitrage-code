@@ -43,15 +43,9 @@
   src: url('/blog/assets/fa-solid-900.ttf');
 }
 
-@font-face {
   font-display: swap;
-  font-family: 'Simple Icons';
-  src:
-    url('/blog/assets/simpleicons/SimpleIcons.woff') format('woff'),
-    url('/blog/assets/simpleicons/SimpleIcons.woff2') format('woff2'),
-    url('/blog/assets/simpleicons/SimpleIcons.ttf') format('truetype'),
-    url('/blog/assets/simpleicons/SimpleIcons.otf') format('opentype'),
-    url('/blog/assets/simpleicons/SimpleIcons.eot') format('embedded-opentype');
+  font-style: normal;
+  font-weight: 400;
 }
 
 $base-font-family: 'Exo 2', "Noto Color Emoji" !default;
@@ -118,28 +112,19 @@ $on-laptop:        800px !default;
   color: $background-color;
 }
 
-@media (prefers-reduced-motion) {
-  *, *::before, *::after {
-    animation-duration: 0s !important;
-    transition: none !important;
-    scroll-behavior: auto !important;
-  }
-}
-
 // Annotate external links.
 a[href^="http"]::after {
   color: $dark-text;
 	content: '\f35d';
 	font-family: 'Font Awesome';
 	font-size: 0.67em;
-	opacity: 0.4;
+	opacity: 0.67;
 	vertical-align: top;
 }
 
 a[href^="http"]:hover::after {
   background-color: $background-color;
   font-size: 2em;
-  opacity: 0.9;
   position: absolute;
   transform: translate(-90%, -18%);
 }
@@ -158,27 +143,6 @@ a[href$=".pdf"]::after {
 	font-family: 'Font Awesome';
 }
 
-// Finance
-a[href*="buymeacoffee.com"]::after {
-  content: '\ebb5';
-  font-family: 'Simple Icons';
-}
-
-a[href*="ko-fi.com"]::after {
-  content: '\efce';
-  font-family: 'Simple Icons';
-}
-
-a[href*="liberapay.com"]::after {
-  content: '\f009';
-  font-family: 'Simple Icons';
-}
-
-a[href*="patreon.com"]::after {
-	content: '\f3d9';
-	font-family: 'Font Awesome 5 Brands';
-}
-
 // Social Media
 a[href*="diasporafoundation.org"]::after,
 a[href*="nota.404.mn"]::after {
@@ -194,12 +158,6 @@ a[href*="discord.gg"]::after {
 a[href*="facebook.com"]::after {
 	content: '\f09a';
 	font-family: 'Font Awesome 5 Brands';
-}
-
-a[href*="lemmy.sdf.org"]::after,
-a[href*="vlemmy.net"]::after {
-  content: '\effa';
-  font-family: 'Simple Icons';
 }
 
 a[href*="linkedin.com"]::after {
@@ -230,11 +188,6 @@ a[href*="fe.disroot.org"]:has(> i.fa-mastodon)::after {
   content: none;
 }
 
-a[href*="pixelfed.org"]::after {
-  content: '\f217';
-  font-family: 'Simple Icons';
-}
-
 a[href*="quora.com"]::after {
 	content: '\f2c4';
 	font-family: 'Font Awesome 5 Brands';
@@ -245,27 +198,18 @@ a[href*="reddit.com"]::after {
 	font-family: 'Font Awesome 5 Brands';
 }
 
-a[href*="tumblr.com"]::after {
-  content: '\f51d';
-  font-family: 'Simple Icons';
-}
-
 a[href*="twitter.com"]::after {
 	content: '\f27d';
 	font-family: 'Font Awesome 5 Brands';
 }
 
 // Media and Reference
+/*
 a[href*="archive.org"]::after {
 	content: '\ef49';
 	font-family: 'Simple Icons';
 }
-
-a[href*="archiveofourown.org"]::after {
-  content: '\eae8';
-  font-family: 'Simple Icons';
-}
-
+*/
 a[href*="creativecommons.org"]::after {
 	content: '\f25e';
 	font-family: 'Font Awesome 5 Brands';
@@ -292,59 +236,14 @@ a[href*="google.com"]::after {
 	font-family: 'Font Awesome 5 Brands';
 }
 
-a[href*="fsf.org"]::after,
-a[href*="fsfe.org"]::after,
-a[href*="gnu.org"]::after {
-  content: '\ee3a';
-  font-family: 'Simple Icons';
-}
-
-a[href*="gutenberg.org"]::after {
-  content: '\eea6';
-  font-family: 'Simple Icons';
-}
-
 a[href*="itch.io"]::after {
   content: '\f83a';
   font-family: 'Font Awesome 5 Brands';
 }
 
-a[href*="matrix.org"]::after,
-a[href*="matrix.to"]::after {
-  content: '\f07f';
-  font-family: 'Simple Icons';
-}
-
-a[href*="opensource.org"]::after {
-  content: '\f192';
-  font-family: 'Simple Icons';
-}
-
-a[href*="scpwiki.com"]::after,
-a[href*="scp-wiki.wikidot.com"]::after {
-  content: '\f375';
-  font-family: 'Simple Icons';
-}
-
-a[href*="simpleicons.org"]::after {
-  content: '\f3b8';
-  font-family: 'Simple Icons';
-}
-
 a[href*="soundcloud.com"]::after {
 	content: '\f1be';
 	font-family: 'Font Awesome 5 Brands';
-}
-
-a[href*="tapas.io"]::after {
-  content: '\f48f';
-  font-family: 'Simple Icons';
-}
-
-a[href*="un.org"]::after,
-a[href*="unesco.org"]::after {
-  content: '\f54a';
-  font-family: 'Simple Icons';
 }
 
 a[href*="unsplash.com"]::after {
@@ -355,11 +254,6 @@ a[href*="unsplash.com"]::after {
 a[href*="vimeo.com"]::after {
 	content: '\f27d';
 	font-family: 'Font Awesome 5 Brands';
-}
-
-a[href*="vox.com"]::after {
-  content: '\f5a1';
-  font-family: 'Simple Icons';
 }
 
 a[href*="wikibooks.org"]::after,
@@ -386,71 +280,20 @@ a[href*="goodreads.com"]::after {
 	font-family: 'Font Awesome 5 Brands';
 }
 
-// Technology
-a[href*="apache.org"]::after {
-  content: '\eab1';
-  font-family: 'Simple Icons';
+a[href*="patreon.com"]::after {
+	content: '\f3d9';
+	font-family: 'Font Awesome 5 Brands';
 }
 
+// Technology
 a[href*="bitbucket.org"]::after {
 	content: '\f171';
 	font-family: 'Font Awesome 5 Brands';
 }
 
-a[href*="blender.org"]::after {
-  content: '\eb74';
-  font-family: 'Simple Icons';
-}
-
-a[href*="chartjs.org"]::after {
-  content: '\ebe7';
-  font-family: 'Simple Icons';
-}
-
-a[href*="codeberg.org"]::after,
-a[href*="codeberg.page"]::after {
-  content: '\ec2f';
-  font-family: 'Simple Icons';
-}
-
-a[href*="d3js.org"]::after {
-  content: '\ec9f';
-  font-family: 'Simple Icons';
-}
-
 a[href*="dev.to"]::after {
 	content: '\f6cc';
 	font-family: 'Font Awesome 5 Brands';
-}
-
-a[href*="duckduckgo.com"]::after {
-  content: '\ed16';
-  font-family: 'Simple Icons';
-}
-
-a[href*="electronjs.org"]::after {
-  content: '\ed3f';
-  font-family: 'Simple Icons';
-}
-
-a[href*="emby.media"]::after {
-  content: '\ed50';
-  font-family: 'Simple Icons';
-}
-
-a[href*="eslint.org"]::after {
-  content: '\ed65';
-  font-family: 'Simple Icons';
-}
-
-a[href*="expressjs.com"]::after {
-  content: '\ed7b';
-  font-family: 'Simple Icons';
-}
-
-a[href*="gimp.org"]::after {
-  content: '\ee1c';
-  font-family: 'Simple Icons';
 }
 
 a[href*="git-scm.com"]::after {
@@ -475,67 +318,6 @@ a[href*="gitlab.com"]::after {
 	font-family: 'Font Awesome 5 Brands';
 }
 
-a[href*="gitpod.io"]::after {
-  content: '\ee2f';
-  font-family: 'Simple Icons';
-}
-
-a[href*="golang.org"]::after {
-  content: '\ee40';
-  font-family: 'Simple Icons';
-}
-
-a[href*="handlebarsjs.com"]::after {
-  content: '\eeb2';
-  font-family: 'Simple Icons';
-}
-
-a[href*="haskell.org"]::after {
-  content: '\eebb';
-  font-family: 'Simple Icons';
-}
-
-a[href*="htmx.org"]::after {
-  content: '\eef7';
-  font-family: 'Simple Icons';
-}
-
-a[href*="jekyllrb.com"]::after {
-  content: '\ef6a';
-  font-family: 'Simple Icons';
-}
-
-a[href*="jellyfin.org"]::after {
-  content: '\ef6b';
-  font-family: 'Simple Icons';
-}
-
-a[href*=".js.org"]::after {
-  content: '\f3b8';
-	font-family: 'Font Awesome 5 Brands';
-}
-
-a[href*="libreoffice.org"]::after {
-  content: '\f00c';
-  font-family: 'Simple Icons';
-}
-
-a[href*="markdownguide.org"]::after {
-  content: '\f071';
-  font-family: 'Simple Icons';
-}
-
-a[href*="matomo.org"]::after {
-  content: '\f07e';
-  font-family: 'Simple Icons';
-}
-
-a[href*="mozilla.com"]::after,
-a[href*="mozilla.org"]::after {
-  content: '\f0e6';
-  font-family: 'Simple Icons';
-}
-
 a[href*="nodejs.com"]::after,
 a[href*="nodejs.org"]::after {
 	content: '\f3d3';
@@ -547,49 +329,9 @@ a[href*="npmjs.com"]::after {
 	font-family: 'Font Awesome 5 Brands';
 }
 
-a[href*="python.org"]::after {
-  content: '\f296';
-  font-family: 'Simple Icons';
-}
-
 a[href*="reactjs.org"]::after {
   content: '\f41b';
   font-family: 'Font Awesome 5 Brands';
-}
-
-a[href*="redis.com"]::after {
-  content: '\f2ed';
-  font-family: 'Simple Icons';
-}
-
-a[href*="redux.js.org"]::after {
-  content: '\f2f1';
-  font-family: 'Simple Icons';
-}
-
-a[href*="renpy.org"]::after {
-  content: '\f2ff';
-  font-family: 'Simple Icons';
-}
-
-a[href*="rubocop.org"]::after {
-  content: '\f341';
-  font-family: 'Simple Icons';
-}
-
-a[href*="ruby-lang.org"]::after {
-  content: '\f342';
-  font-family: 'Simple Icons';
-}
-
-a[href*="rubygems.org"]::after {
-  content: '\f343';
-  font-family: 'Simple Icons';
-}
-
-a[href*="rubyonrails.org"]::after {
-  content: '\f345';
-  font-family: 'Simple Icons';
 }
 
 a[href*="rust-lang.org"]::after {
@@ -597,9 +339,9 @@ a[href*="rust-lang.org"]::after {
 	font-family: 'Simple Icons';
 }
 
-a[href*="sourceforge.com"]::after {
-  content: '\fef7';
-  font-family: 'Simple Icons';
+a[href*="ubuntu.com"]::after {
+	content: '\f7df';
+	font-family: 'Font Awesome 5 Brands';
 }
 
 a[href*="stackoverflow.com"]::after {
@@ -607,39 +349,8 @@ a[href*="stackoverflow.com"]::after {
 	font-family: 'Font Awesome 5 Brands';
 }
 
-a[href*="sqlite.org"]::after {
-  content: '\f41a';
-  font-family: 'Simple Icons';
-}
-
-a[href*="thingiverse.com"]::after {
-  content: '\f4c3';
-  font-family: 'Simple Icons';
-}
-
-a[href*="ubuntu.com"]::after {
-	content: '\f7df';
-	font-family: 'Font Awesome 5 Brands';
-}
-
-a[href*="vscodium.com"]::after {
-  content: '\f5a3';
-  font-family: 'Simple Icons';
-}
-
-a[href*="webpack.js.org"]::after {
-  content: '\f5ce';
-  font-family: 'Simple Icons';
-}
-
-a[href*="wordpress.org"]::after {
-  content: '\f5fc';
-  font-family: 'Simple Icons';
-}
-
 // Other
-a[href*=".mil/"]::after,
-a[href*=".gov/"]::after {
+a[href*=".gov"]::after {
 	content: '\f74d';
 	font-family: 'Font Awesome 5 Brands';
 }
@@ -649,14 +360,8 @@ a[href*="visualstudio.com"]::after {
   font-family: 'Font Awesome 5 Brands';
 }
 
-a[href*="yarnpkg.com"]::after {
-  content: '\f61d';
-  font-family: 'Simple Icons';
-}
-
 body {
-  accent-color: $light-text-x;
-  background-image: url('/blog/assets/square_bg.png.avif');
+  background-image: url('/blog/assets/square_bg.png');
   color: $text-color;
 }
 
@@ -665,7 +370,6 @@ h1, h2, h3, h4, h5, h6, header, .site-title, .site-title:visited, .page-link, .p
   text-align: center;
   -moz-transition: color 2s;
   -webkit-transition: color 2s;
-  text-wrap: balance;
   transition: color 2s;
 }
 
@@ -851,116 +555,6 @@ code {
 
 .highlight pre {
   border: 1px solid $text-color;
-}
-
-// Show language icons
-pre {
-  position: relative;
-}
-
-pre::after {
-  content: '\eef7';
-  font-family: 'Simple Icons';
-  font-size: 3em;
-  opacity: 0.25;
-  position: absolute;
-  right: 0.5em;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-pre.language-bash::after,
-pre.language-console::after,
-pre.language-sh::after {
-  content: '\ee3b';
-}
-
-pre.language-c::after {
-  content: '\ebbb';
-}
-
-pre.language-c-sharp::after {
-  content: '\ed01';
-}
-
-pre.language-css::after,
-pre.language-CSS::after {
-  content: '\ec90';
-}
-
-pre.language-elixir::after {
-  content: '\ed48';
-}
-
-pre.language-erb::after,
-pre.language-rails::after {
-  content: '\f345';
-}
-
-pre.language-fortran::after {
-  content: '\eddb';
-}
-
-pre.language-gitignore::after {
-  content: '\ee1f';
-}
-
-pre.language-go::after {
-  content: '\ee40';
-}
-
-pre.language-html::after {
-  content: '\eef5';
-}
-
-pre.language-javascript::after,
-pre.language-JavaScript::after {
-  content: '\ef66';
-}
-
-pre.language-json::after,
-pre.language-JSON::after {
-  content: '\ef85';
-}
-
-pre.language-jsx::after {
-  content: '\f2d6';
-}
-
-pre.language-markdown::after {
-  content: '\f071';
-}
-
-pre.language-mermaid::after {
-  content: '\f09f';
-}
-
-pre.language-node::after {
-  content: '\f13e';
-}
-
-pre.language-php::after {
-  content: '\f1fd';
-}
-
-pre.language-ruby::after,
-pre.language-Ruby::after {
-  content: '\f342';
-}
-
-pre.language-rust::after {
-  content: '\f34e';
-}
-
-pre.language-sql::after {
-  font-family: 'Font Awesome';
-  content: '\f1c0';
-}
-
-pre.language-yaml::after,
-pre.language-YAML::after,
-pre.language-yml::after {
-  content: '\f61b';
 }
 
 pre code {
@@ -1521,7 +1115,7 @@ a.tag-name:visited {
 
 .draft-mode {
   background-color: $dark-bg;
-  background-image: url('/blog/assets/square_bg.png.avif');
+  background-image: url('/blog/assets/square_bg.png');
   color: $dark-text;
 }
 

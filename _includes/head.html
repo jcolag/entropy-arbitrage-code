@@ -41,7 +41,7 @@
   <script type="text/javascript">
     var _paq = window._paq || [];
     /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
-    /* _paq.push(['requireConsent']); */
+    _paq.push(['requireConsent']);
     _paq.push(['trackPageView']);
     _paq.push(['enableLinkTracking']);
     (function() {
@@ -54,5 +54,5 @@
   </script>
   <noscript><p><img src="//colagioia.net/pa/matomo.php?idsite=15&amp;rec=1" style="border:0;" alt="" /></p></noscript>
   <!-- End Matomo Code -->
-  {%- webmentions_head -%}
+  {% webmentions_head %}
 </head>
