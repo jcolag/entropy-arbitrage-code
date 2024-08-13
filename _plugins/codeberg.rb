@@ -29,8 +29,8 @@ class CodebergInlineTag < Liquid::Tag
 
     result = "<a class='codeberg preview' href='#{repo['url']}'>" \
       "<span class='caption' title='#{caption}'>" \
-      "<i class='fas fa-mountain'></i>" \
-      "Codeberg &mdash; #{caption}" \
+      "<span style='font-family: \"Simple Icons\";'>&#xec2f;</span>" \
+      "&nbsp;Codeberg &mdash; #{caption}" \
       "</span>" \
       "<span class='description'>" \
       "<img src='#{image_url}' title='#{title}'>" \
