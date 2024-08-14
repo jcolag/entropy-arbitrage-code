@@ -124,6 +124,7 @@ a[href^="http"]::after {
 	content: '\f35d';
 	font-family: 'Font Awesome';
 	font-size: 0.67em;
+	font-style: normal;
 	opacity: 0.4;
 	vertical-align: top;
 }
@@ -287,7 +288,7 @@ a[href*="google.com"]::after {
 a[href*="fsf.org"]::after,
 a[href*="fsfe.org"]::after,
 a[href*="gnu.org"]::after {
-  content: '\ee3b';
+  content: '\ee3a';
   font-family: 'Simple Icons';
 }
 
@@ -318,9 +319,9 @@ a[href*="scp-wiki.wikidot.com"]::after {
   font-family: 'Simple Icons';
 }
 
-a[href*="simpleicons.com"]::after {
+a[href*="simpleicons.org"]::after {
   content: '\f3b8';
-  font-family: 'Font Awesome 5 Brands';
+  font-family: 'Simple Icons';
 }
 
 a[href*="soundcloud.com"]::after {
@@ -519,7 +520,7 @@ a[href*="matomo.org"]::after {
 
 a[href*="mozilla.com"]::after,
 a[href*="mozilla.org"]::after {
-  content: '\ebb5';
+  content: '\f0e6';
   font-family: 'Simple Icons';
 }
 
@@ -624,21 +625,20 @@ a[href*="wordpress.org"]::after {
   font-family: 'Simple Icons';
 }
 
+a[href*="yarnpkg.com"]::after {
+  content: '\f61d';
+  font-family: 'Simple Icons';
+}
+
 // Other
 a[href*=".mil/"]::after,
 a[href*=".gov/"]::after {
 	content: '\f74d';
-	font-family: 'Font Awesome 5 Brands';
+	font-family: 'Font Awesome';
 }
 
-a[href*="visualstudio.com"]::after {
-  content: '\f3ca';
-  font-family: 'Font Awesome 5 Brands';
-}
-
-a[href*="yarnpkg.com"]::after {
-  content: '\f61d';
-  font-family: 'Simple Icons';
+article {
+  font-size: calc($content-width / 90 * 2);
 }
 
 body {
