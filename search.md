@@ -3,6 +3,20 @@ layout: page
 permalink: /search/
 ---
 
+<div id="search-modal">
+  <div>
+    <i class="fas fa-compass fa-fw fa-xl fa-spin"></i>
+    <br>
+    Please Wait
+    <noscript>
+      <hr>
+      <p style="font-size: 0.6em;">
+        Actually, search won't work without JavaScript enabled, nor will
+        this modal box ever go away, so maybe don't wait&hellip;
+      </p>
+    </noscript>
+  </div>
+</div>
 <div id="search-container">
   <input
     autofocus
@@ -29,4 +43,8 @@ var search = document.getElementById('search-input');
 var string = window.location.href.split('?');
 search.value = string.length > 1 ? decodeURI(string[1]) : '';
 search.focus();
+window.addEventListener("load", (e) => {
+  var modal = document.getElementById('search-modal');
+  modal.style.display = 'none';
+});
 </script>
