@@ -54,6 +54,29 @@
     url('/blog/assets/simpleicons/SimpleIcons.eot') format('embedded-opentype');
 }
 
+@media(prefers-color-scheme: dark) {
+  article img {
+    filter: saturate(0.3) brightness(0.5);
+    transition: all 1s;
+  }
+  article img:hover {
+    filter: none;
+  }
+}
+
+:root {
+  color-scheme: light dark;
+  --blue: 200.8;
+  --red: 17;
+  --yellow: 45.8;
+  code {
+    color: hsl(var(--blue),39.4%,70.1%) !important;
+  }
+  pre::after {
+    opacity: 0.5;
+  }
+}
+
 $base-font-family: 'Exo 2', "Noto Color Emoji" !default;
 $header-font-family: Vollkorn, 'Noto Color Emoji' !default;
 $base-font-size:   16px !default;
@@ -63,23 +86,25 @@ $base-line-height: 1.5 !default;
 
 $spacing-unit:     30px !default;
 
-$background-color: hsl(45.8,45.7%,74.7%) !default;
-$text-color:       hsl(200.8,39.4%,12.9%) !default;
-$brand-color:      hsl(17,46%,19.6%) !default;
+
+$background-color: light-dark(hsl(var(--yellow),45.7%,74.7%), hsl(var(--blue),45.7%,16.3%)) !default;
+$text-color:       light-dark(hsl(var(--blue),39.4%,12.9%), hsl(var(--yellow),39.4%,87.1%)) !default;
+$brand-color:      light-dark(hsl(var(--red),46%,19.6%), hsl(var(--red),66%,70.4%)) !default;
 $grey-color:       hsl(0,0%,51%) !default;
 
-$badge-blue:       hsl(200.8,99.4%,74.9%) !default;
+$badge-blue:       hsl(var(--blue),99.4%,74.9%) !default;
 
-$light-bg:         lighten($background-color, 10%) !default;
-$dark-bg:          darken($background-color, 15%) !default;
-$bg-xp:            rgba($light-bg, 0.0) !default;
-$light-text:       lighten($text-color, 15%) !default;
-$light-text-x:     lighten($text-color, 50%) !default;
-$dark-text:        darken($text-color, 25%) !default;
-$light-brand-color:lighten($brand-color, 10%) !default;
-$brand-xp:         rgba($light-brand-color, 0.1) !default;
-$grey-color-light: lighten($grey-color, 40%) !default;
-$grey-color-dark:  darken($grey-color, 25%) !default;
+$light-bg:         light-dark(hsl(var(--yellow),45.7%,84.7%), hsl(var(--blue),45.7%,6.3%)) !default;
+$dark-bg:          light-dark(hsl(var(--yellow),45.7%,59.7%), hsl(var(--blue),45.7%,31.3%)) !default;
+$bg-xp:            light-dark(hsl(var(--yellow),45.7%,74.7%,0.0), hsl(var(--blue),45.7%,16.3%,0.0)) !default;
+$light-text:       light-dark(hsl(var(--blue),39.4%,27.9%), hsl(var(--yellow),39.4%,60.1%)) !default;
+$light-text-x:     light-dark(hsl(var(--blue),39.4%,62.9%), hsl(var(--yellow),39.4%,37.1%)) !default;
+$dark-text:        light-dark(hsl(var(--blue),39.4%,0.9%), hsl(var(--yellow),39.4%,99.1%)) !default;
+$light-brand-color:light-dark(hsl(var(--red),56%,29.6%), hsl(var(--red),76%,60.4%)) !default;
+$dark-brand-color: light-dark(hsl(var(--red),56%,4.6%), hsl(var(--red),76%,80.4%)) !default;
+$brand-xp:         light-dark(hsl(var(--red),46%,19.6%,0.1), hsl(var(--red),46%,80.4%,0.1)) !default;
+$grey-color-light: light-dark(hsl(0,0%,91%), hsl(0,0%,11%)) !default;
+$grey-color-dark:  light-dark(hsl(0,0%,76%), hsl(0,0%,26%)) !default;
 
 $table-text-align: left !default;
 
