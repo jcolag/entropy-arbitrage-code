@@ -143,6 +143,14 @@ $on-laptop:        800px !default;
   color: $background-color;
 }
 
+@media (prefers-reduced-motion) {
+  *, *::before, *::after {
+    animation-duration: 0s !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
 // Annotate external links.
 a[href^="http"]::after {
   color: $dark-text;
@@ -229,7 +237,8 @@ a[href*="linkedin.com"]:has(> i.fa-linkedin)::after {
   content: none;
 }
 
-a[href*="mailchimpsites.com"]::after {
+a[href*="mailchimpsites.com"]::after,
+a[href*="campaign-archive.com"]::after {
   content: '\f59e';
   font-family: 'Font Awesome 5 Brands';
 }
@@ -667,7 +676,8 @@ article {
 }
 
 body {
-  background-image: url('/blog/assets/square_bg.png');
+  accent-color: $light-text-x;
+  background-image: url('/blog/assets/square_bg.png.avif');
   color: $text-color;
 }
 
@@ -676,10 +686,20 @@ h1, h2, h3, h4, h5, h6, header, .site-title, .site-title:visited, .page-link, .p
   text-align: center;
   -moz-transition: color 2s;
   -webkit-transition: color 2s;
+  text-wrap: balance;
   transition: color 2s;
 }
 
-h1:hover,h2:hover,h3:hover,h4:hover,h5:hover,header:hover,.site-title:hover,.page-link:hover,.quote-author:hover, .webmentions__list::before:hover {
+h1:hover,
+h2:hover,
+h3:hover,
+h4:hover,
+h5:hover,
+header:hover,
+.site-title:hover,
+.page-link:hover,
+.quote-author:hover,
+.webmentions__list:hover::before {
   color: $light-brand-color !important;
 }
 
@@ -1190,6 +1210,10 @@ div.highlighter-rouge pre[class*="language-"] {
   font-size: 0.75em;
 }
 
+div.webmentions {
+  display: none;
+}
+
 .webmentions__item {
 	border: 1px solid $brand-color;
 	border-radius: 0.5em;
@@ -1564,7 +1588,7 @@ a.tag-name:visited {
 
 .draft-mode {
   background-color: $dark-bg;
-  background-image: url('/blog/assets/square_bg.png');
+  background-image: url('/blog/assets/square_bg.png.avif');
   color: $dark-text;
 }
 
