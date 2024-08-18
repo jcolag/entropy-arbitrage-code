@@ -129,6 +129,11 @@ layout: default
 
   <hr>
 
+  <iframe
+    id="tootpick"
+    src="/blog/tootpick/index.html#text=Read {{page.title}} on @jcolag@mastodon.social's blog%20{{-site.url-}}{{-site.baseurl-}}{{-page.url-}}%20{%-for tag in page.tags-%}#{{-tag-}}%20{%-endfor-%}"
+  >
+  </iframe>
   <p class="webmentions">
     {%- webmentions page.url -%}
   </p>

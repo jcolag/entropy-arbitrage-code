@@ -980,6 +980,8 @@ pre code {
 }
 
 iframe {
+  accent-color: transparent;
+  border: 0;
   width: 100%;
 }
 
@@ -1309,6 +1311,10 @@ div.highlighter-rouge pre[class*="language-"] {
   line-height: 1.25em;
 	max-height: 4.5em;
 	overflow-y: auto;
+}
+
+#tootpick {
+  height: 11em;
 }
 
 a .page-link:hover {
