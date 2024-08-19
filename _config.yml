@@ -71,32 +71,38 @@ jekyll-minifier:
 # their entries' file path in the `include:` list.
 #
 exclude:
+  - .alexrc
+  - .assets-latest
+  - .git/
+  - .gitignore
+  - .jekyll-metadata
+  - .jekyll-cache/
+  - .lastbuild
+  - .ruby-version
+  - .vale.ini
+  - _cache
+  - _eassets
+  - _plugins
+  - _posts/.git
+  - _posts/.github
+  - _posts/data
+  - _test
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE.md
+  - README.md
   - archive.sh
+  - assets/.git/
   - check.sh
   - gentrek.sh
+  - makeroom.js
+  - map.json
   - nextweek.sh
+  - node_modules/
   - open.sh
   - post.sh
   - rebuild.sh
-  - makeroom.js
-  - README.md
-  - LICENSE.md
-  - Gemfile
-  - Gemfile.lock
-  - .gitignore
-  - .lastbuild
-  - .jekyll-cache/
-  - .git/
-  - node_modules/
-  - _plugins
-  - _cache
-  - _test
-  - assets/.git/
-  - map.json
-  - .ruby-version
-  - _posts/data
-  - _posts/.github
-  - _posts/.git
+  - update-assets.sh
 
 feed:
   posts_limit: 30
