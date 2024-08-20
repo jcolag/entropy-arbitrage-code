@@ -69,9 +69,6 @@
   --blue: 200.8;
   --red: 17;
   --yellow: 45.8;
-  code {
-    color: hsl(var(--blue),39.4%,70.1%) !important;
-  }
   pre::after {
     opacity: 0.5;
   }
@@ -869,6 +866,7 @@ time {
 
 code {
   background-color: $light-bg;
+  color: $dark-text;
 }
 
 :not(pre) > code[class*="language-"], pre[class*="language-"] {
