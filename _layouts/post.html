@@ -179,7 +179,7 @@ layout: default
       &nbsp;
       <a
         class="tag-name"
-        href="/blog/tag/{{ tag_name }}/"
+        href="/blog/tag/{{ tag_name | strip | replace: '-', '' }}/"
       ><i class="fas fa-tag"></i> {{ tag_name | strip }}</a>
     {%- endfor -%}
   </span>
