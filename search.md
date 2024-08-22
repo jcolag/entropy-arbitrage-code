@@ -5,7 +5,7 @@ permalink: /search/
 
 <div id="search-modal">
   <div>
-    <i class="fas fa-compass fa-fw fa-xl fa-spin"></i>
+    <img class="fa-spin spinner" src="/blog/assets/jc.svg">
     <br>
     Please Wait
     <noscript>
