@@ -1593,7 +1593,7 @@ a.tag-name:visited {
 }
 
 .draft-mode {
-  background-color: $dark-bg;
+  background-color: $light-bg;
   background-image: url('/blog/assets/square_bg.png.avif');
   color: $dark-text;
 }
@@ -1657,6 +1657,7 @@ a.tag-name:visited {
 	padding: 1em;
 	padding-bottom: 0;
   text-align: justify;
+  width: calc(250px - 2em);
 }
 
 .codeberg .description .desc-title {
