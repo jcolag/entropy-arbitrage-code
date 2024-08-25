@@ -243,9 +243,12 @@ a[href*="campaign-archive.com"]::after {
   font-family: 'Font Awesome 5 Brands';
 }
 
+a[href*="mastodon.art"]::after,
 a[href*="mastodon.social"]::after,
 a[href*="joinmastodon.org"]::after,
-a[href*="fe.disroot.org"]::after {
+a[href*="fe.disroot.org"]::after,
+a[href*="newsmast.community"]::after,
+a[href*="comicscamp.club"]::after {
 	content: '\f4f6';
 	font-family: 'Font Awesome 5 Brands';
 }
