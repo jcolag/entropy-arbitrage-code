@@ -9,6 +9,8 @@ class ImgrInlineTag < Liquid::Tag
 
   def render(_context)
     alt, url, title = params @text
+    avif = "assets/#{url}.avif"
+    url = "#{url}.avif" if File.exist? avif
     "<img alt=\"#{alt}\" class=\"image-right\" " \
       "src=\"/blog/assets/#{url}\" title=\"#{title}\">"
   end
