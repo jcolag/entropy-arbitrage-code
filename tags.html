@@ -2,28 +2,36 @@
 permalink: /tags/
 layout: default
 ---
-
+{%- assign posts = site.posts -%}
 <div class="tag-grid">
   {%- assign default_paths = site.pages | map: "path" -%}
   {%- assign page_paths = site.header_pages | default: default_paths -%}
   {%- for path in page_paths -%}
     {%- assign my_page = site.pages | where: "path", path | first -%}
     {%- if my_page.title -%}
-      {%- if my_page.title -%}
-        {%- assign title = my_page.title | split: " " -%}
-      {%- endif -%}
-      {%- if title[0] == 'Tag:' -%}
-        <div>
-          <a
-            href="/blog/tag/{{ title[1] }}"
-            title="All pages tagged with: {{ title[1] }}"
-          >
-            <i class="fa fa-tag"></i>
-            {{ title[1] }}
-          </a>
-          ({{ my_page.count }})
-        </div>
-      {%- endif -%}
+      {%- assign title = my_page.title | split: " " -%}
+    {%- endif -%}
+    {%- if title[0] == 'Tag:' -%}
+      {%- assign count = 0 -%}
+      {%- assign tag = title[1] | remove: ',' -%}
+      {%- for post in posts -%}
+        {%- for t in post.tags -%}
+          {%- assign tt = t | remove: '-' -%}
+          {%- if tt == tag -%}
+            {%- assign count = count | plus: 1 -%}
+          {%- endif -%}
+        {%- endfor -%}
+      {%- endfor -%}
+      <div>
+        <a
+          href="/blog/tag/{{ tag }}"
+          title="{{ count }} pages tagged with: {{ tag }}"
+        >
+          <i class="fa fa-tag"></i>
+          {{ tag }}
+        </a>
+        ({{ count }})
+      </div>
     {%- endif -%}
   {%- endfor -%}
 </div>
