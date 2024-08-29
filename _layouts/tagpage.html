@@ -2,18 +2,40 @@
 layout: default
 ---
 <div class="post">
-<h1>Tag: {{ page.tag }}</h1>
+{%- assign variants = page.tag -%}
+{%- for post in site.posts -%}
+  {%- for tag in post.tags -%}
+    {%- assign tt = tag | remove: '-' -%}
+    {%- unless variants contains tag or page.tag != tt -%}
+      {%- assign variants = variants | append: ',' | append: tag -%}
+    {%- endunless -%}
+  {%- endfor -%}
+{%- endfor -%}
+<h1>Tag: {{ variants | replace: ',', ', ' }}</h1>
+{%- assign tags = variants | split: ',' -%}
+{%- if page.description -%}
+  <div>
+    {{ page.description }}
+  </div>
+  <br>
+{%- endif -%}
 <ul>
-{%- for post in site.tags[page.tag] -%}
-  <li><a href="/blog{{ post.url }}">{{ post.title }}</a> ({{ post.date | date_to_string }}), {{ post.content
-                       | strip_html
-                       | strip_newlines
-                       | split: " "
-                       | size
-                       | round: -2
-                    }}-ish words<br>
-    Summary:  {{ post.summary }}
-  </li>
+{%- for post in site.posts -%}
+  {%- for tag in tags -%}
+    {%- if post.tags contains tag -%}
+      <li>
+        <a href="/blog{{ post.url }}">{{ post.title }}</a>
+        ({{ post.date | date_to_string }}), {{ post.content
+                           | strip_html
+                           | strip_newlines
+                           | split: " "
+                           | size
+                           | round: -2
+                        }}-ish words<br>
+        Summary:  {{ post.summary }}
+      </li>
+    {%- endif -%}
+  {%- endfor -%}
 {%- endfor -%}
 </ul>
 </div>
