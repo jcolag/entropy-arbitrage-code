@@ -29,52 +29,8 @@ matrix="~/bin/matrix.sh"
 # diclish="diclish"
 JEKYLL_ENV="production"
 now=$(date '+%s')
-files=
 
-# Ensure tag folder exists and remove existing tag files
-mkdir -p tag
-rm -f tag/*.md
-
-# Collect posts that should already be released
-for file in _posts/2*.md
-do
-  dateline=$(grep '^date:' "$file" | head -1 | cut -f2 -d':' | cut -f2 -d' ' | cut -c1-10)
-  dd=$(date -d "$dateline" '+%s')
-  if [ "$dd" -lt "$now" ]
-  then
-    files="$files $file"
-  fi
-done
-
-# Commit any changes in released posts
-cd _posts || exit
-for file in $files
-do
-  ff=$(echo "$file" | cut -f2 -d'/')
-  git add "$ff"
-done
-git commit -m "Automated updates: $(date '+%Y-%m-%d')"
-git push
-git push disroot
-cd ..
-
-# Generate tags from released posts
-#  NB: $files is unquoted, because it's a list to be split
-# shellcheck disable=SC2086
-for tag in $(grep '^tags:' $files | cut -f2- -d'[' | cut -f1 -d']' | tr -d ' -' | tr ',' '\n' | sort | uniq -c | tr -s ' ' | tr ' ' ':')
-do
-  tagname=$(echo "${tag}" | cut -f3 -d':')
-  tagcount=$(echo "${tag}" | cut -f2 -d':')
-  cat > "tag/${tagname}.md" <<EOF
----
-layout: tagpage
-permalink: /tag/${tagname}/
-tag: ${tagname}
-title: "Tag: ${tagname}"
-count: "${tagcount}"
----
-EOF
-done
+./tags.sh
 
 # Rebuild and push files
 ### Resize all images to the blog width
