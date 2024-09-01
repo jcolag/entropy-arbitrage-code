@@ -1,0 +1,18 @@
+<!DOCTYPE HTML>
+{%- assign url = site.baseurl | append: '/tag/' | append: page.destination -%}
+<html lang="en-US">
+    <head>
+        <link rel="shortcut icon" href="/blog/assets/jc.ico" />
+        <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
+        <meta charset="UTF-8">
+        <meta http-equiv="refresh" content="0; url={{ url }}">
+        <script type="text/javascript">
+            window.location.href = "{{ url }}"
+        </script>
+        <title>Redirection from {{ page.tag }} to {{ page.destination }}</title>
+    </head>
+    <body>
+        If you are not redirected automatically, follow this
+        <a href='{{ url }}'>link to the {{ page.destination }} page</a>.
+    </body>
+</html>
