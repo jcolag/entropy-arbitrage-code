@@ -65,6 +65,9 @@
   #search-modal img {
     filter: contrast(200%) invert(1) brightness(50%);
   }
+  .site-nav div a img {
+    filter: contrast(200%) invert(1) brightness(125%);
+  }
 }
 
 :root {
@@ -149,6 +152,24 @@ $on-laptop:        800px !default;
     transition: none !important;
     scroll-behavior: auto !important;
   }
+}
+
+// Annotate links to tag pages.
+a[href^="/blog/tag"]::after {
+  color: $dark-text;
+	content: '\f02b';
+	font-family: 'Font Awesome';
+	font-size: 0.67em;
+	font-style: normal;
+	opacity: 0.4;
+	vertical-align: top;
+}
+
+a[href^="/blog/tag"]:hover::after {
+  background-color: $background-color;
+  font-size: 1em;
+  opacity: 0.9;
+  position: absolute;
 }
 
 // Annotate external links.
@@ -674,7 +695,8 @@ a[href*=".gov/"]::after {
 	font-family: 'Font Awesome';
 }
 
-article {
+article,
+.post {
   font-size: calc($content-width / 90 * 2);
 }
 
@@ -1282,13 +1304,21 @@ div.webmentions {
 
 .tag-grid {
   display: grid;
+  font-size: calc($content-width / 90 * 2);
   grid-gap: 1em;
   grid-template: repeat(3, 1fr) / repeat(3, 1fr);
   grid-auto-flow: row dense;
 }
 
 .tag-grid div {
+  overflow-x: auto;
+  white-space: nowrap;
   width: 200px;
+}
+
+.tag-grid a::before {
+  content: '\f02b';
+  font-family: "Font Awesome";
 }
 
 .pagination {
@@ -1362,6 +1392,12 @@ a.tag-name {
 
 a.tag-name:visited {
   color: $light-text !important;
+}
+
+.tag-grid a::after,
+.tag-name::after,
+.page-link a::after {
+  content: none !important;
 }
 
 .tray-panel {
