@@ -29,6 +29,30 @@ matrix="~/bin/matrix.sh"
 # diclish="diclish"
 JEKYLL_ENV="production"
 now=$(date '+%s')
+files=
+
+# Collect posts that should already be released
+for file in _posts/2*.md
+do
+  dateline=$(grep '^date:' "$file" | head -1 | cut -f2 -d':' | cut -f2 -d' ' | cut -c1-10)
+  dd=$(date -d "$dateline" '+%s')
+  if [ "$dd" -lt "$now" ]
+  then
+    files="$files $file"
+  fi
+done
+
+# Commit any changes in released posts
+cd _posts || exit
+for file in $files
+do
+  ff=$(echo "$file" | cut -f2 -d'/')
+  git add "$ff"
+done
+git commit -m "Automated updates: $(date '+%Y-%m-%d')"
+git push
+git push disroot
+cd ..
 
 ./tags.sh
 

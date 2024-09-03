@@ -52,7 +52,7 @@ do
     cat > "tag/${tagname}.md" <<EOF
 ---
 layout: tagalias
-permalink: /tag/${tagname}
+permalink: /tag/${tagname}/
 tag: ${tagname}
 destination: ${tag}
 ---
