@@ -269,7 +269,8 @@ a[href*="mastodon.social"]::after,
 a[href*="joinmastodon.org"]::after,
 a[href*="fe.disroot.org"]::after,
 a[href*="newsmast.community"]::after,
-a[href*="comicscamp.club"]::after {
+a[href*="comicscamp.club"]::after,
+a[href*="theres.life"]::after {
 	content: '\f4f6';
 	font-family: 'Font Awesome 5 Brands';
 }
@@ -301,9 +302,10 @@ a[href*="tumblr.com"]::after {
   font-family: 'Simple Icons';
 }
 
-a[href*="twitter.com"]::after {
-	content: '\f27d';
-	font-family: 'Font Awesome 5 Brands';
+a[href*="twitter.com"]::after,
+a[href*="x.com"]::after {
+	content: '\1D54F';
+	font-family: 'Exo 2';
 }
 
 // Media and Reference
@@ -334,6 +336,11 @@ a[href*="flickr.com"]::after {
 
 a[href*="fontawesome.com"]::after {
   content: '\f2b4';
+  font-family: 'Font Awesome 5 Brands';
+}
+
+a[href*="freecodecamp.org"]::after {
+  content: '\f2c5';
   font-family: 'Font Awesome 5 Brands';
 }
 
