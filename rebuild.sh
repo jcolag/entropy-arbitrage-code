@@ -71,7 +71,7 @@ EOF
 # bundle exec jekyll clean
 JEKYLL_ENV=production bundle exec jekyll build
 ## Push to the server
-rsync --itemize-changes --recursive --compress --times --delete-delay \
+rsync --checksum --itemize-changes --recursive --compress --times --delete-delay \
     _site/ "$target"
 JEKYLL_ENV=
 
@@ -148,5 +148,5 @@ ntfy send "Current count of published posts: ${count}"
 bundle exec jekyll webmention
 
 # Kick off the local server
-bundle exec jekyll serve --future --drafts --unpublished --trace
+bundle exec jekyll serve --future --drafts --unpublished --trace --incremental
 
