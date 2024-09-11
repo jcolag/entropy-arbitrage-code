@@ -1,0 +1,124 @@
+advice:
+  I rarely give direct advice, because we don't know each other&rsquo;s lives
+  and my context undoubtedly differs from yours.  However, I occasionally talk
+  about ideas that worked or flopped for my life that <i>may</i> transfer to
+  yours.
+announcement:
+  When I launch projects, regardless of their licensing, you&rsquo;ll find
+  a post about it here.
+blog:
+  To the presumed surprise of nobody, these posts deal with the blog, other
+  than routine improvements to the system.
+bookclub:
+  The &ldquo;Free Culture Book Club&rdquo; series explores works of
+  fiction released under public licenses compatible with a
+  <a href="https://creativecommons.org/licenses/by-sa/4.0/">Creative
+  Commons Attribution Share-Alike 4.0 International</a> license (with
+  occasional exceptions), with an eye towards helping to improve or adapt parts
+  of the project.  Read the background for the project in
+  <a href="/blog/2020/05/02/freeculture.html">introductory post</a>.
+books:
+  I enjoy books, and sometimes need to talk about them in general terms.
+  Don&rsquo;t expect to find many reviews, though.  I usually save my thoughts
+  on individual books for
+  <a href="https://buymeacoffee.com/jcolag">my newsletter</a>, along with
+  other items.
+closereading:
+  These posts focus on careful review of source material to draw out the
+  details, ideally without considering what others have said about the source.
+devjournal:
+  My developer diary posts&mdash;formerly referred to as developer
+  journals&mdash;review the public-facing work that I&rsquo;ve done over the
+  prior week.  While originally named after what I worked on or the time of
+  year, I have since adapted the idea to work off holidays or other events on
+  the Monday of release, to minimize the number of indistinguishable titles.
+education:
+  I taught for many years in parallel to various day jobs, and also enjoy
+  learning new things.  When I want to teach myself or others something novel,
+  or maybe talk about the educational value of a tool, those posts will end
+  up here.
+fiction:
+  Not as often as I would like, I write the odd work of fiction to satisfy
+  some gap that I see in discourse and can pull together in a short run.
+  It also includes the occasional short public domain work that I found
+  interesting, including the occasional translation.
+freeculture:
+  In contrast to the <a href="/blog/tag/bookclub">Free Culture Book Club</a>
+  posts, posts marked &ldquo;Free Culture&rdquo; also include all my writing
+  related to Free Culture works, including fiction that I wrote and general
+  ideas about the movement.
+indieweb:
+  This tag helps track the sporadic progress on integrating
+  <a href="https://indieweb.org/">Indie Web</a> features with the blog.
+letsfix:
+  An infrequent series, where I (usually) consider what it would take to get
+  a famous brand &ldquo;right,&rdquo; and least for the parts of the idea
+  that I find important or prominent.
+linkdump:
+  I post links and quotes to Mastodon (and pre-&#x1D54F; Twitter) on a
+  semi-automated schedule, the most interesting of what I found during the
+  prior week.  On Fridays, I package the contents of those posts up for these
+  weekly &ldquo;link dumps.&rdquo;
+media:
+  While I don't have the expertise (or pretension) to call myself a
+  &ldquo;media theorist,&rdquo; I do frequently think about how mass media
+  works and where it goes wrong.
+newyear:
+  I have made the new year a minor celebration for the blog, taking a moment
+  beforehand to look back on the previous year, and another after to look
+  ahead to the incoming year.
+oopsie:
+  These posts provided incorrect information in such an unrecoverable way
+  that they needed to come down, such as pointing to a project as Free Culture
+  when the creator hasn't released it under any public license.
+programming:
+  I write a fair bit of code, and these posts include project updates, tips
+  that I picked up at the time, thoughts on the field, and so forth.
+programminglanguages:
+  If you know me &ldquo;from the Internet,&rdquo; then it might come from my
+  work in small, hobbyist, &ldquo;esoteric&rdquo; (I never liked the word)
+  languages.  If you know me in person, then you might have taken one of my
+  programming languages classes.  In either case, these posts touch on those
+  experiences.
+quora:
+  For a few years starting in 2014, I spent a lot of time on question-and-answer
+  site <a href="https://quora.com">Quora</a>, writing thousands of answers on
+  various topics.  Every once in a while, I pull from that pile of answers and
+  update them as a blog post.
+politics:
+  When I need to talk about how people with power have gotten things wrong,
+  how I think we need to fix certain societal issues, or the definitions of
+  words that certain people seem interested in misrepresenting, those posts
+  end up here.
+rant:
+  When the odds point to the post growing out of control as I rage at the
+  skies, it gets a &ldquo;Rant&rdquo; label&hellip;
+recipe:
+  I experiment fairly often with my cooking.  When such an experiment pans
+  out well, I provide a loose, improvisational recipe in the Monday
+  <a href="/blog/tag/devjournal">developer diary</a> post, also tagging them
+  so that you can find <i>only</i> the posts where I talk food.
+socialshowdown:
+  The Free Software Social Networking Showdown ran in the early days of the
+  blog, looking at the social networks that run on Free Software.  It tries
+  to cover the on-boarding, general user experience, and community, plus my
+  gut reactions after working with the network for a while.
+startrek:
+  The &ldquo;Real Life in Star Trek&rdquo; series tries to tease out
+  information on the culture of the United Federation of Planets in
+  the background of the <i>Star Trek</i> franchise, relying on the evidence
+  in the primary sources, as opposed to nostalgia or another analysis.  See
+  the background on the project in
+  <a href="/blog/2020/01/02/trek-00.html">the introductory post</a>.
+superhero:
+  I grew up on superheroes&mdash;comic books, cartoons, toys, live-action
+  television and film&mdash;and still occasionally have thoughts about the
+  milieu.
+techtips:
+  Once in a while, I have a small problem with some regularity that has a
+  drop-in solution.  Traditionally, I wrote notes to myself, somewhere, and
+  then needed to hunt down the right note when I need the information next
+  time through a project.  Predictably, that doesn't work, so I started
+  writing them as short blog posts, instead, which <i>you</i> can fail to find
+  when you need them, too&hellip;
+
