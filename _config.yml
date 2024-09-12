@@ -80,12 +80,12 @@ exclude:
   - .lastbuild
   - .ruby-version
   - .vale.ini
-  - _cache
   - _eassets
   - _plugins
   - _posts/.git
   - _posts/.github
   - _posts/data
+  - _taginfo.yml
   - _test
   - Gemfile
   - Gemfile.lock
@@ -102,6 +102,7 @@ exclude:
   - open.sh
   - post.sh
   - rebuild.sh
+  - tags.sh
   - update-assets.sh
 
 feed:
