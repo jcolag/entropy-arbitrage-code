@@ -31,6 +31,7 @@ class GithubInlineTag < Liquid::Tag
       "</span>" \
       "<img" \
       " alt='#{image_alt}'" \
+      " class='github'" \
       " src='#{image_url}'" \
       " title='#{title}'" \
       ">" \
