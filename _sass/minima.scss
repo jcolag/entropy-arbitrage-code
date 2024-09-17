@@ -62,6 +62,9 @@
   article img:hover {
     filter: none;
   }
+  img.github {
+    filter: invert(0.9);
+  }
   #search-modal img {
     filter: contrast(200%) invert(1) brightness(50%);
   }
