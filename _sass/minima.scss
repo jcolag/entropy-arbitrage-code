@@ -1698,7 +1698,7 @@ a.tag-name:visited {
 }
 
 .codeberg .description {
-	background: white;
+	background: light-dark(white, black);
 	border-radius: 1em;
 	float: left;
   font-size: small;
@@ -1710,7 +1710,7 @@ a.tag-name:visited {
 }
 
 .codeberg .description .desc-title {
-  color: black;
+  color: light-dark(black, white);
   display: block;
   font-family: Sans-Serif;
   font-size: larger;
@@ -1718,7 +1718,7 @@ a.tag-name:visited {
 }
 
 .codeberg .description .desc-title b {
-  color: black;
+  color: light-dark(black, white);
 }
 
 .codeberg .description .desc-text {
