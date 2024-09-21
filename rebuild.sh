@@ -113,13 +113,15 @@ done
 if [ -n "$titles" ]
 then
   ### Mastodon
+  thumb=$(grep '^thumbnail: ' "${file}" | cut -f2 -d' ' | sed 's/\/blog\//_e/g')
+  desc=$(grep '^!\[' "${file}" | cut -f2 -d'[' | cut -f1 -d']')
   if ${toot} auth | grep -q ACTIVE
   then
     echo Already logged in to Mastodon.
   else
     ${toot} login_cli
   fi
-  ${toot} post "On my blog:${titles} - ${teasers} ${tags}"
+  ${toot} post --media "${thumb}" --description "${desc}" "On my blog:${titles} - ${teasers} ${tags}"
   ### twtxt
   ${twtxt} tweet "On my blog:${titles} ${tags}"
   ### Matrix
