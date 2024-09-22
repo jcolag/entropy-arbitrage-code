@@ -127,10 +127,13 @@ then
   ### Matrix
   ${matrix} "${titles} posted - ${teasers}"
   ### I can't get diclish to work, so Diaspora will be manual for now
+  ### And honestly, at this point, I have probably alread posted everywhere
+  ### using the post.sh script to generate the blurb for everywhere that
+  ### didn't automatically happen above.
   echo "Post this to Diaspora:"
   ntfy send "Post to Diaspora..."
-  echo -e "On my blog: ${links}\n${teasers}\n${tags}"
-  echo -e "On my blog: ${links}\n${teasers}\n${tags}" | xsel --clipboard
+  # echo -e "On my blog: ${links}\n${teasers}\n${tags}"
+  # echo -e "On my blog: ${links}\n${teasers}\n${tags}" | xsel --clipboard
 fi
 
 # Update timestamp
