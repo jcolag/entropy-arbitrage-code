@@ -42,4 +42,4 @@ gem 'rubocop', require: false
 gem 'irb', '~> 1.6.0'
 gem 'tracer'
 
-gem "webrick", "~> 1.7"
+gem "webrick", "~> 1.8"
