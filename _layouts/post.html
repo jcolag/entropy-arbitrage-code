@@ -133,14 +133,6 @@ layout: default
 
   <hr>
 
-  <iframe
-    id="tootpick"
-    src="/blog/tootpick/index.html#text=Read {{page.title}} on @jcolag@mastodon.social's blog%20{{-site.url-}}{{-site.baseurl-}}{{-page.url-}}%20{%-for tag in page.tags-%}#{{-tag-}}%20{%-endfor-%}"
-  >
-  </iframe>
-  <p class="webmentions">
-    {%- webmentions page.url -%}
-  </p>
   <p class="hashover-title hashover-main-title hashover-dashed-title">
     By commenting, you agree to follow the blog's
     <a href="/blog/coc">Code of Conduct</a>
@@ -148,15 +140,32 @@ layout: default
     <a href="http://creativecommons.org/licenses/by-sa/4.0/">
       same license
     </a>
-    as the rest of the blog.
+    as the rest of the blog, mostly so that I don't need to ask for explicit
+    permission to add your insight (with credit) to the post or display the
+    comment.
     Or do you not like comments sections?  Continue the conversation in the
-    <a href="https://matrix.to/#/#entropy-arbitrage:matrix.org">
-      #entropy-arbitrage chatroom
-    </a>
-    on Matrix&hellip;
+    <a
+      href="https://matrix.to/#/#entropy-arbitrage:matrix.org"
+    >#entropy-arbitrage chatroom</a>
+    on Matrix or on social media&hellip;
   </p>
+  {%- if jekyll.environment == "production" -%}
+    <p class="webmentions">
+      {%- webmentions page.url -%}
+    </p>
+  {%- endif -%}
+  {%- if jekyll.environment == "production" -%}
+    <iframe
+      id="tootpick"
+      loading="lazy"
+      src="/blog/tootpick/index.html#text=Read%20{{page.title}}%20on%20@jcolag@mastodon.social's blog%20{{-site.url-}}{{-site.baseurl-}}{{-page.url-}}%20{%-for tag in page.tags-%}#{{-tag-}}%20{%-endfor-%}"
+      title="Post about this on Mastodon"
+    >
+    </iframe>
+  {%- endif -%}
   {%- if page.comments == "false" -%}
     <div>No comments for this post.</div>
+    <br>
   {%- elsif jekyll.environment == "production" -%}
     <script
       defer
@@ -164,6 +173,7 @@ layout: default
     ></script>
   {%- else -%}
     <div>No comments available under a development build!</div>
+    <br>
   {%- endif -%}
   <span>
     <a
