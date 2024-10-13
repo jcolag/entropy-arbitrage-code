@@ -15,7 +15,7 @@ class SocialImageInlineTag < Liquid::Tag
     end
 
     css_class = "embedded#{sensitive ? ' sensitive' : ''}"
-    "<figure class='external-image'><img alt='#{description}' " \
+    "<figure class='external-image'><img loading='lazy' alt='#{description}' " \
       "class='#{css_class}' src='#{url}' title='#{description}'>" \
       "<figcaption>#{description}<br>Image credit: #{credit}" \
       "</figcaption></figure>"

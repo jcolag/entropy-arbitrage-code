@@ -33,7 +33,7 @@ class CodebergInlineTag < Liquid::Tag
       "&nbsp;Codeberg &mdash; #{caption}" \
       "</span>" \
       "<span class='description'>" \
-      "<img src='#{image_url}' title='#{title}'>" \
+      "<img loading='lazy' src='#{image_url}' title='#{title}'>" \
       "<span class='desc-title'>#{user}/<b>#{name}</b></span>" \
       "<span class='desc-text'>#{description}</span>" \
       '<span class="codeberg-languages">'
