@@ -150,7 +150,8 @@ echo "Current count of published posts: ${count}"
 ntfy send "Current count of published posts: ${count}"
 
 # Send webmentions
-bundle exec jekyll webmention
+# Already happened with the plugin?
+# bundle exec jekyll webmention
 
 # Kick off the local server
 bundle exec jekyll serve --future --drafts --unpublished --trace --incremental
