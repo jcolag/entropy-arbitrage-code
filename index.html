@@ -5,6 +5,11 @@ pagination:
   enabled: true
 ---
 
+<noscript>
+  <p>
+    <img src="//colagioia.net/pa/matomo.php?idsite=15&amp;rec=1" style="border:0;" alt="">
+  </p>
+</noscript>
 <div class="home">
   {%- if paginator.posts.size > 0 -%}
     <h1 class="post-list-heading">
@@ -31,6 +36,7 @@ pagination:
               {%- assign tail = post.thumbnail | slice: sidx, 4 %}
               {%- if tail == ".svg" or tail == ".gif" %}
                 <img
+                  alt="{{ post.title | escape }}"
                   src="{{ post.thumbnail }}"
                   style="margin-top: {{ offset }};"
                 >
@@ -46,6 +52,7 @@ pagination:
                     style="margin-top: {{ offset }};"
                   >
                   <img
+                    alt="{{ post.title | escape }}"
                     src="{{ post.thumbnail }}"
                     style="margin-top: {{ offset }};"
                   >
