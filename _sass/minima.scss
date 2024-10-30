@@ -236,7 +236,8 @@ a[href*="nota.404.mn"]::after {
 	font-family: 'Font Awesome 5 Brands';
 }
 
-a[href*="discord.gg"]::after {
+a[href*="discord.gg"]::after,
+a[href*="discord.me"]::after {
 	content: '\f392';
 	font-family: 'Font Awesome 5 Brands';
 }
@@ -348,7 +349,8 @@ a[href*="freecodecamp.org"]::after {
 }
 
 a[href*="blog.google"]::after,
-a[href*="google.com"]::after {
+a[href*="google.com"]::after,
+a[href*="web.dev"]::after {
 	content: '\f1a0';
 	font-family: 'Font Awesome 5 Brands';
 }
