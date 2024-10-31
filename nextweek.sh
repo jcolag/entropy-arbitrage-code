@@ -78,7 +78,7 @@ categories:
 tags: [link-dump, social-media, quotes, week]
 summary: Toots for the Week of ${longmon}
 thumbnail: /blog/assets/CLM_14456_71r_detail.png
-teaser: This week, we have .
+description: This week, we have .
 spell: 
 ---
 
