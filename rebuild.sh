@@ -98,7 +98,7 @@ for file in ${todayfiles}
 do
   title=$(grep "^title:" "${file}" | cut -f2- -d' ')
   tags=$(grep "^tags:" "${file}" | cut -f2 -d'[' | cut -f1 -d']' | tr -d ',-' | sed 's/\([a-z]*\)/#\1/g')
-  teasers=$(grep "^teaser:" "${file}" | cut -f2- -d' ')
+  teasers=$(grep "^description:" "${file}" | cut -f2- -d' ')
   cat=$(grep '^categories:' "${file}" | cut -f2 -d':' | tr -d ' ')
   if [ -n "$cat" ]
   then
