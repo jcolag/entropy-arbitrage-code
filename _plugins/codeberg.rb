@@ -26,15 +26,21 @@ class CodebergInlineTag < Liquid::Tag
     description = repo['description'].force_encoding('UTF-8')
     image_url = repo['image_url'].force_encoding('UTF-8')
     title = repo['title'].force_encoding('UTF-8')
+    wd = (user.length + 1) * 8.65 + name.length * 4.75
 
     result = "<a class='codeberg preview' href='#{repo['url']}'>" \
       "<span class='caption' title='#{caption}'>" \
-      "<span style='font-family: \"Simple Icons\";'>&#xec2f;</span>" \
+      "<span class='icon' style='font-family: \"Simple Icons\";'>&#xec2f;</span>" \
       "&nbsp;Codeberg &mdash; #{caption}" \
       "</span>" \
       "<span class='description'>" \
       "<img loading='lazy' src='#{image_url}' title='#{title}'>" \
-      "<span class='desc-title'>#{user}/<b>#{name}</b></span>" \
+      "<svg class='codeberg-repo' viewBox='0 0 #{wd} 18'>" \
+      '<text x="0" y="15">' \
+      "<tspan>#{user}/</tspan>" \
+      "<tspan style='font-weight: bold;'>#{name}</tspan>" \
+      '</text>' \
+      '</svg>' \
       "<span class='desc-text'>#{description}</span>" \
       '<span class="codeberg-languages">'
     repo['languages'].each do |l|
