@@ -1750,6 +1750,13 @@ a.tag-name:visited {
   padding: 0;
 }
 
+.codeberg-repo {
+  display: inline-block;
+  fill: light-dark(black, white);
+  font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+  max-width: calc(100% - 3.5em);
+}
+
 .github {
   height: 125px;
   width: 250px;
