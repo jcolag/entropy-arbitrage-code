@@ -1699,6 +1699,10 @@ a.tag-name:visited {
   white-space: nowrap;
 }
 
+.codeberg .caption .icon {
+  color: $text-color;
+}
+
 .codeberg .description {
 	background: light-dark(white, black);
 	border-radius: 1em;
