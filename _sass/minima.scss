@@ -1728,11 +1728,13 @@ a.tag-name:visited {
 }
 
 .codeberg .description .desc-text {
-  border-bottom: 2px solid $brand-xp;
-  border-top: 2px solid $brand-xp;
+  border-bottom: 1px solid $brand-xp;
+  border-top: 1px solid $brand-xp;
+  color: light-dark(black, white);
   display: block;
   font-family: Sans-Serif;
   font-size: 0.66em;
+  padding: 2px 0;
 }
 
 .codeberg-languages, .codeberg-language {
