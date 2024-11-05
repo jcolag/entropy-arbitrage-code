@@ -121,7 +121,11 @@ then
   else
     ${toot} login_cli
   fi
-  ${toot} post --media "${thumb}" --description "${desc}" "On my blog:${titles} - ${teasers} ${tags}"
+  cat <<HERE | ${toot} post --media "${thumb}" --description "${desc}"
+On my blog:${titles}
+${teasers}
+${tags}
+HERE
   ### twtxt
   ${twtxt} tweet "On my blog:${titles} ${tags}"
   ### Matrix
