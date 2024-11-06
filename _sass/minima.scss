@@ -54,6 +54,18 @@
     url('/blog/assets/simpleicons/SimpleIcons.eot') format('embedded-opentype');
 }
 
+@font-face {
+  font-display: swap;
+  font-family: CCSymbols;
+  font-synthesis: none;
+  src: url(/blog/assets/ccsymbols/CCSymbols.woff2) format(woff2),
+       url(/blog/assets/ccsymbols/CCSymbols.woff)  format(woff),
+       url(/blog/assets/ccsymbols/CCSymbols.ttf)  format(ttf);
+  unicode-range: u+a9, u+229c,
+                 u+1f10d-1f10f,
+                 u+1f16d-1f16f;
+}
+
 @media(prefers-color-scheme: dark) {
   article img {
     filter: saturate(0.3) brightness(0.5);
@@ -83,8 +95,8 @@
   }
 }
 
-$base-font-family: 'Exo 2', "Noto Color Emoji" !default;
-$header-font-family: Vollkorn, 'Noto Color Emoji' !default;
+$base-font-family: 'Exo 2', 'Noto Color Emoji', CCSymbols !default;
+$header-font-family: Vollkorn, 'Noto Color Emoji', CCSymbols !default;
 $base-font-size:   16px !default;
 $base-font-weight: 400 !default;
 $small-font-size:  $base-font-size * 0.875 !default;
