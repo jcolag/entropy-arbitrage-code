@@ -127,7 +127,8 @@ ${teasers}
 ${tags}
 HERE
   ### twtxt
-  ${twtxt} tweet "On my blog:${titles} ${tags}"
+  # Somehow, this stopped working, even though it still works from the command line
+  echo "${twtxt} tweet \"On my blog:${titles} ${tags}\""
   ### Matrix
   ${matrix} "${titles} posted - ${teasers}"
   ### I can't get diclish to work, so Diaspora will be manual for now
