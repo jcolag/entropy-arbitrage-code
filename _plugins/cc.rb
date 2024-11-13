@@ -14,12 +14,12 @@ class CcInlineTag < Liquid::Tag
       '' => '&#xa9;',
       '0' => '&#x1f16d;&#x1f10d;',
       'by' => '&#x1f16d;&#x1f16f;',
-      'by-sa' => '&#x1f16d;&#x1f16f;&#x1f10e;',
       'by-nc' => '&#x1f16d;&#x1f16f;&#x1f10f;',
+      'by-nc-nd' => '&#x1f16d;&#x1f16f;&#x1f10f;&#x229C;',
       'by-nc-sa' => '&#x1f16d;&#x1f16f;&#x1f10f;&#x1f10e;',
       'by-nd' => '&#x1f16d;&#x1f16f;&#x229C;',
-      'by-nc-nd' => '&#x1f16d;&#x1f16f;&#x1f10f;&#x229C;',
-      'pd' => '&#x1f16d;&#x1f16e;',
+      'by-sa' => '&#x1f16d;&#x1f16f;&#x1f10e;',
+      'pd' => '&#x1f16d;&#x1f16e;'
     }
     license = licenses[@text]
 
