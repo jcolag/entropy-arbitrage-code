@@ -19,7 +19,7 @@ class CcInlineTag < Liquid::Tag
       'by-nc-sa' => '&#x1f16d;&#x1f16f;&#x1f10f;&#x1f10e;',
       'by-nd' => '&#x1f16d;&#x1f16f;&#x229C;',
       'by-sa' => '&#x1f16d;&#x1f16f;&#x1f10e;',
-      'pd' => '&#x1f16d;&#x1f16e;'
+      'pd' => '&#x1f16e;'
     }
     license = licenses[@text]
 
