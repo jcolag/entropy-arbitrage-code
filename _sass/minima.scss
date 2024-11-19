@@ -1309,6 +1309,19 @@ div.webmentions {
   content: "\f064";
 }
 
+.footnote {
+  background-color: $brand-xp;
+  border-radius: 0.5em;
+  padding: 0 0.5em;
+}
+
+.footnote::before {
+  content: '👣 ';
+  font-size: smaller;
+  opacity: 0.67;
+  white-space: nowrap;
+}
+
 .highlighter-rouge .highlight {
   background: $light-bg;
   border-radius: 1em;
