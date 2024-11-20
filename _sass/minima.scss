@@ -1703,6 +1703,9 @@ a.tag-name:visited {
 
 .license {
   font-size: 1.25em;
+  line-height: 0;
+  position: relative;
+  top: 0.1em;
 }
 
 .license:hover {
