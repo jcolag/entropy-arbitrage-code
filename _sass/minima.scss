@@ -1926,11 +1926,15 @@ a.preview::after {
 .heading-anchor {
   font-size: 0.75rem;
   opacity: 0.6;
+  padding: 0.1em;
   text-decoration: none;
   transition: all 1s linear;
 }
 
 .heading-anchor:hover {
+  background-color: $background-color;
+  font-size: 1em;
+  margin-left: 0.25em;
   opacity: 1.0;
   text-decoration: none;
 }
