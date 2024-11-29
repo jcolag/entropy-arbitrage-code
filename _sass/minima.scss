@@ -163,6 +163,11 @@ $on-laptop:        800px !default;
   color: $background-color;
 }
 
+::target-text {
+  background-color: $light-brand-color;
+  color: $dark-bg;
+}
+
 @media (prefers-reduced-motion) {
   *, *::before, *::after {
     animation-duration: 0s !important;
