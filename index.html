@@ -89,6 +89,16 @@ pagination:
                | round: -2
             }}-ish words
           </p>
+          <p class="index-tags">
+          {%- for tag in post.tags -%}
+            {%- capture tag_name -%}{{ tag }}{%- endcapture -%}
+            &nbsp;
+            <a
+              class="tag-name"
+              href="/blog/tag/{{ tag_name | strip | replace: '-', '' }}/"
+            ><i class="fas fa-tag"></i> {{ tag_name | strip }}</a>
+          {%- endfor -%}
+          </p>
       </li>
       {%- endfor %}
     </ul>
