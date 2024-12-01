@@ -1123,6 +1123,10 @@ blockquote i, blockquote em {
   margin-inline-end: auto;
 }
 
+.post-link {
+  text-decoration: none;
+}
+
 a.site-title:visited, a.page-link:visited {
   color: $brand-color !important;
 }
