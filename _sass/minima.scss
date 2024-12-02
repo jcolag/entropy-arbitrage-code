@@ -1363,6 +1363,11 @@ div.webmentions {
   max-width: fit-content;
 }
 
+.index-tags .tag-name {
+  background-color: transparent;
+  border: 1px solid $brand-color;
+}
+
 .tag-grid {
   display: grid;
   font-size: calc($content-width / 90 * 2);
