@@ -19,6 +19,13 @@
   {%- if jekyll.environment == 'production' and site.google_analytics -%}
     {%- include google-analytics.html -%}
   {%- endif -%}
+  <noscript>
+    <style>
+    .js-require {
+      display: none;
+    }
+    </style>
+  </noscript>
   <script async src="/blog/assets/prism.js"></script>
   <script async src="/blog/assets/redirect.js"></script>
   <script>
