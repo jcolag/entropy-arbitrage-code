@@ -153,11 +153,9 @@ $on-laptop:        800px !default;
 }
 
 // Import partials.
-@import
-  "minima/base",
-  "minima/layout",
-  "minima/syntax-highlighting"
-;
+@include meta.load-css("minima/base");
+@include meta.load-css("minima/layout");
+@include meta.load-css("minima/syntax-highlighting");
 
 ::selection {
   background-color: $brand-color;
