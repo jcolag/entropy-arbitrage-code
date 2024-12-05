@@ -2,6 +2,7 @@
  * Reset some basic elements
  */
 @use "sass:list";
+@use "constants" as *;
 
 body, h1, h2, h3, h4, h5, h6,
 p, blockquote, pre, hr,
@@ -9,8 +10,6 @@ dl, dd, ol, ul, figure {
   margin: 0;
   padding: 0;
 }
-
-
 
 /**
  * Basic styling
@@ -134,7 +133,7 @@ blockquote {
   color: $grey-color;
   border-left: 4px solid $grey-color-light;
   padding-left: calc($spacing-unit / 2);
-  @include relative-font-size(1.125);
+  font-size: scale-font-size(1.125);
   letter-spacing: -1px;
   font-style: italic;
 
@@ -150,7 +149,7 @@ blockquote {
  */
 pre,
 code {
-  @include relative-font-size(0.9375);
+  font-size: scale-font-size(0.9375);
   border: 1px solid $grey-color-light;
   border-radius: 3px;
   background-color: #eef;
@@ -185,9 +184,8 @@ pre {
   padding-left: $spacing-unit;
   @extend %clearfix;
 
-  @include media-query($on-laptop) {
-    max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
-    max-width:         calc(#{$content-width} - (#{$spacing-unit}));
+  @media($on-laptop) {
+    max-width: calc(#{$content-width} - (#{$spacing-unit}));
     padding-right: calc($spacing-unit / 2);
     padding-left: calc($spacing-unit / 2);
   }
