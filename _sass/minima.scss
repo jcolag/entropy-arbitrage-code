@@ -1,7 +1,7 @@
 @charset "utf-8";
 @use "sass:meta";
 @use "sass:math";
-@use 'minima/constants';
+@use 'minima/constants' as *;
 
 @import '/blog/assets/fa/css/all.css';
 
