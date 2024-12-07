@@ -35,7 +35,7 @@ $content-width:    800px !default;
 $on-palm:          600px !default;
 $on-laptop:        800px !default;
 
-@function scale-font-size($size, $base: 16) {
-  @return calc($size / $base * 1rem);
+@function scale-font-size($size) {
+  @return calc($size * 1em);
 }
 
