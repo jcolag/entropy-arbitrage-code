@@ -1346,6 +1346,10 @@ div.webmentions {
   width: 200px;
 }
 
+.tag-grid a {
+  text-decoration: none !important;
+}
+
 .tag-grid a::before {
   content: '\f02b';
   font-family: "Font Awesome";
