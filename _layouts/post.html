@@ -133,28 +133,10 @@ layout: default
 
   <hr>
 
-  <p class="hashover-title hashover-main-title hashover-dashed-title">
-    By commenting, you agree to follow the blog's
-    <a href="/blog/coc">Code of Conduct</a>
-    and that your comment is released under the
-    <a href="http://creativecommons.org/licenses/by-sa/4.0/">
-      same license
-    </a>
-    as the rest of the blog, mostly so that I don't need to ask for explicit
-    permission to add your insight (with credit) to the post or display the
-    comment.
-    Or do you not like comments sections?  Continue the conversation in the
-    <a
-      href="https://matrix.to/#/#entropy-arbitrage:matrix.org"
-    >#entropy-arbitrage chatroom</a>
-    on Matrix or on social media&hellip;
-  </p>
   {%- if jekyll.environment == "production" -%}
     <p class="webmentions">
       {%- webmentions page.url -%}
     </p>
-  {%- endif -%}
-  {%- if jekyll.environment == "production" -%}
     <iframe
       id="tootpick"
       loading="lazy"
@@ -163,10 +145,27 @@ layout: default
     >
     </iframe>
   {%- endif -%}
+
   {%- if page.comments == "false" -%}
     <div>No comments for this post.</div>
     <br>
   {%- elsif jekyll.environment == "production" -%}
+    <p class="hashover-title hashover-main-title hashover-dashed-title">
+      By commenting, you agree to follow the blog's
+      <a href="/blog/coc">Code of Conduct</a>
+      and that your comment is released under the
+      <a href="http://creativecommons.org/licenses/by-sa/4.0/">
+        same license
+      </a>
+      as the rest of the blog, mostly so that I don't need to ask for explicit
+      permission to add your insight (with credit) to the post or display the
+      comment.
+      Or do you not like comments sections?  Continue the conversation in the
+      <a
+        href="https://matrix.to/#/#entropy-arbitrage:matrix.org"
+      >#entropy-arbitrage chatroom</a>
+      on Matrix or on social media&hellip;
+    </p>
     <script
       defer
       src="/hashover-next/comments.php"
