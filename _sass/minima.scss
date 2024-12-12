@@ -180,7 +180,6 @@ a[href^="http"]:hover::after {
 a[href^="https://john.colagioia.net/"]::after,
 a[href*="127.0.0.1:"]::after,
 a[href*="localhost:"]::after,
-a[href^="#"]::after,
 .site-footer a::after {
 	content: none !important;
 }
