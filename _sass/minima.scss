@@ -1928,6 +1928,20 @@ a.preview::after {
   text-decoration: none;
 }
 
+.toc-active {
+  font-weight: bold;
+  text-decoration-line: underline;
+  text-decoration-style: wavy;
+}
+
+.toc-active::after {
+  content: ' 👈';
+}
+
+.toc-active::before {
+  content: '👉 ';
+}
+
 li h3 {
   font-size: 1em !important;
   margin-left: -2em;
