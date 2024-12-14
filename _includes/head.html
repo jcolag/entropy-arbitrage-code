@@ -29,7 +29,12 @@
   <script async src="/blog/assets/prism.js"></script>
   <script async src="/blog/assets/redirect.js"></script>
   <script>
+    let anchors = null;
+    let links = null;
     window.addEventListener('load', (e) => {
+      anchors = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
+      links = document.querySelectorAll('#markdown-toc li > a');
+
       Array.from(document.getElementsByClassName('sensitive')).forEach((i) => {
         i.addEventListener('click', handleImageClick);
       });
@@ -42,12 +47,29 @@
         cs.add('sensitive');
       }
     }
+    window.addEventListener('scroll', (event) => {
+      if (anchors && links) {
+        let scrollTop = window.scrollY;
+
+        links.forEach((link, index) => {
+          link.classList.remove("toc-active");
+        });
+
+        // Moving backwards, hightlight the first match and break
+        for (var i = links.length; i >= 0; i--) {
+          if (scrollTop > anchors[i].offsetTop - window.screen.height / 3 && i > 0) {
+            links[i - 1].classList.add('toc-active');
+            break;
+          }
+        }
+      }
+    });
   </script>
   <!-- Matomo -->
   <script>
     var _paq = window._paq || [];
     /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
-    _paq.push(['requireConsent']);
+    /* _paq.push(['requireConsent']); */
     _paq.push(['trackPageView']);
     _paq.push(['enableLinkTracking']);
     (function() {
