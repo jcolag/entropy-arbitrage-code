@@ -1854,6 +1854,10 @@ a.preview::after {
   color: $light-brand-color;
 }
 
+.content-warning p {
+  display: inline;
+}
+
 .embedded {
   border: 1px dotted $light-text;
   width: calc($content-width - 65px);
