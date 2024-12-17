@@ -1444,6 +1444,14 @@ a.tag-name:visited {
   border: 5px solid $brand-color;
 }
 
+#markdown-toc {
+  z-index: 5;
+}
+
+#markdown-toc a {
+  text-decoration: none;
+}
+
 @media (hover: hover) {
   #markdown-toc {
 	  background-color: $dark-bg;
