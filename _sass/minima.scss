@@ -1884,6 +1884,10 @@ a.preview::after {
 	z-index: 100;
 }
 
+.in-progress {
+  display: none;
+}
+
 .no-image {
   background-color: $text-color;
   border: 2px solid $brand-color;
