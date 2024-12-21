@@ -65,6 +65,28 @@
         }
       }
     });
+    function saveForLater(title, url) {
+      let pages = localStorage.getItem('savedPages');
+
+      if (!pages) {
+        pages = [];
+      } else {
+        pages = JSON.parse(pages);
+      }
+
+      const index = pages.findIndex((e) => e.url === url);
+
+      if (index >= 0) {
+        return;
+      }
+
+      pages.push({
+        time: Date.now(),
+        title: title,
+        url: url,
+      });
+      localStorage.setItem('savedPages', JSON.stringify(pages));
+    }
   </script>
   <!-- Matomo -->
   <script>
