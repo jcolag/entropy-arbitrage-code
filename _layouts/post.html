@@ -59,6 +59,14 @@ layout: default
       {%- endif -%}</p>
   </header>
 
+  <div class="bookmark in-progress js-required">
+    No time to read this post now?
+    <br>
+    <a href="javascript:saveForLater('{{ page.title }}', '{{ site.baseurl }}{{ page.url }}');">
+      <i class="far fa-bookmark"></i>
+      Save this page for later</a>.
+  </div>
+
   {%- if page.update.size > 0 -%}
     <div class="post-content post-update">
       <b>Hi!</b>
