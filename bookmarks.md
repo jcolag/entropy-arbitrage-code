@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Bookmarked Pages
+title: Saved Pages
 permalink: /bookmarks/
 show_page: false
 ---
