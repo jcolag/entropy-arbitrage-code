@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Saved Pages
-permalink: /bookmarks/
+permalink: /saved/
 show_page: false
 ---
 
