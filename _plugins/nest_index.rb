@@ -5,7 +5,6 @@ class NestIndexInlineTag < Liquid::Tag
   def initialize(tag_name, text, parse_context)
     super
     @post_id = text.strip
-puts @post_id
   end
 
   def render(_context)
