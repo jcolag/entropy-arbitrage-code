@@ -643,8 +643,9 @@ a[href*="rust-lang.org"]::after {
 	font-family: 'Simple Icons';
 }
 
-a[href*="sourceforge.com"]::after {
-  content: '\fef7';
+a[href*="sourceforge.com"]::after,
+a[href*="sourceforge.net"]::after {
+  content: '\f3f7';
   font-family: 'Simple Icons';
 }
 
