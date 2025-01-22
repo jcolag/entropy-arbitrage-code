@@ -560,6 +560,11 @@ a[href*="jellyfin.org"]::after {
   font-family: 'Simple Icons';
 }
 
+a[href*="laravel.com"]::after {
+  content: '\efe9';
+  font-family: 'Simple Icons';
+}
+
 a[href*="libreoffice.org"]::after {
   content: '\f00c';
   font-family: 'Simple Icons';
