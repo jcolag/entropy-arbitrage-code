@@ -493,6 +493,11 @@ a[href*="expressjs.com"]::after {
   font-family: 'Simple Icons';
 }
 
+a[href*="freecad.org"]::after {
+	content: '\edeb';
+	font-family: 'Simple Icons';
+}
+
 a[href*="gimp.org"]::after {
   content: '\ee1c';
   font-family: 'Simple Icons';
