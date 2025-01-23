@@ -603,6 +603,11 @@ a[href*="npmjs.com"]::after {
 	font-family: 'Font Awesome 5 Brands';
 }
 
+a[href*="openscad.org"]::after {
+	content: '\f18e';
+	font-family: 'Simple Icons';
+}
+
 a[href*="python.org"]::after {
   content: '\f296';
   font-family: 'Simple Icons';
