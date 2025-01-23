@@ -580,6 +580,11 @@ a[href*="matomo.org"]::after {
   font-family: 'Simple Icons';
 }
 
+a[href*="mercurial-scm.org"]::after {
+  content: '\f09e';
+  font-family: 'Simple Icons';
+}
+
 a[href*="microsoft.com"]::after,
 a[href*="msdn.com"]::after {
   content: '\f3ca';
