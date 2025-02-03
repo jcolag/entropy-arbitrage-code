@@ -716,6 +716,16 @@ a[href*=".gov/"]::after {
 	font-family: 'Font Awesome';
 }
 
+a[href*="imdb.com"]::after {
+  content: '\ef22';
+  font-family: 'Simple Icons';
+}
+
+a[href*="kickstarter.com"]::after {
+  content: '\efb7';
+  font-family: 'Simple Icons';
+}
+
 article,
 .post {
   font-size: calc($content-width / 90 * 2);
