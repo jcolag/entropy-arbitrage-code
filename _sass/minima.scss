@@ -560,6 +560,11 @@ a[href*="jellyfin.org"]::after {
   font-family: 'Simple Icons';
 }
 
+a[href*="json.org"]::after {
+  content: '\ef85';
+  font-family: 'Simple Icons';
+}
+
 a[href*="laravel.com"]::after {
   content: '\efe9';
   font-family: 'Simple Icons';
@@ -606,6 +611,12 @@ a[href*="nodejs.org"]::after {
 a[href*="npmjs.com"]::after {
 	content: '\f3d4';
 	font-family: 'Font Awesome 5 Brands';
+}
+
+a[href*="openbadges.org"]::after,
+a[href*="imsglobal.org"]::after {
+  content: '\f17d';
+  font-family: 'Simple Icons';
 }
 
 a[href*="openscad.org"]::after {
@@ -701,6 +712,11 @@ a[href*="webpack.js.org"]::after {
 
 a[href*="wordpress.org"]::after {
   content: '\f5fc';
+  font-family: 'Simple Icons';
+}
+
+a[href*="yaml.org"]::after {
+  content: '\f61b';
   font-family: 'Simple Icons';
 }
 
