@@ -349,6 +349,11 @@ a[href*="gutenberg.org"]::after {
   font-family: 'Simple Icons';
 }
 
+a[href*="instagram.com"]::after {
+  content: '\ef3d';
+  font-family: 'Simple Icons';
+}
+
 a[href*="itch.io"]::after {
   content: '\f83a';
   font-family: 'Font Awesome 5 Brands';
