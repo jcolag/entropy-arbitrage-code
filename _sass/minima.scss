@@ -167,6 +167,7 @@ a[href^="http"]::after {
 	font-style: normal;
 	opacity: 0.4;
 	vertical-align: top;
+	text-shadow: 1px 1px light-dark(transparent, white), -1px -1px light-dark(transparent, white);
 }
 
 a[href^="http"]:hover::after {
