@@ -232,7 +232,7 @@ a[href*="facebook.com"]::after {
 
 a[href*="lemmy.sdf.org"]::after,
 a[href*="vlemmy.net"]::after {
-  content: '\effa';
+  content: '\f02d';
   font-family: 'Simple Icons';
 }
 
@@ -259,8 +259,8 @@ a[href*="newsmast.community"]::after,
 a[href*="comicscamp.club"]::after,
 a[href*="gamerplus.org"]::after,
 a[href*="theres.life"]::after {
-	content: '\f4f6';
-	font-family: 'Font Awesome 5 Brands';
+	content: '\f0b1';
+	font-family: 'Simple Icons';
 }
 
 a[href*="mastodon.social"][rel="me"]::after,
@@ -271,7 +271,7 @@ a[href*="fe.disroot.org"]:has(> i.fa-mastodon)::after {
 }
 
 a[href*="pixelfed.org"]::after {
-  content: '\f217';
+  content: '\f263';
   font-family: 'Simple Icons';
 }
 
@@ -286,7 +286,7 @@ a[href*="reddit.com"]::after {
 }
 
 a[href*="tumblr.com"]::after {
-  content: '\f51d';
+  content: '\f57b';
   font-family: 'Simple Icons';
 }
 
