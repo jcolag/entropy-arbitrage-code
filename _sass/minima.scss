@@ -969,7 +969,7 @@ pre {
 }
 
 pre::after {
-  content: '\eef7';
+  content: '\ef1c';
   font-family: 'Simple Icons';
   font-size: 3em;
   opacity: 0.25;
@@ -982,86 +982,86 @@ pre::after {
 pre.language-bash::after,
 pre.language-console::after,
 pre.language-sh::after {
-  content: '\ee3b';
+  content: '\ee57';
 }
 
 pre.language-c::after {
-  content: '\ebbb';
+  content: '\ebc3';
 }
 
 pre.language-c-sharp::after {
-  content: '\ed01';
+  content: '\ea02';
 }
 
 pre.language-css::after,
 pre.language-CSS::after {
-  content: '\ec90';
+  content: '\eca8';
 }
 
 pre.language-elixir::after {
-  content: '\ed48';
+  content: '\ed60';
 }
 
 pre.language-erb::after,
 pre.language-rails::after {
-  content: '\f345';
+  content: '\f394';
 }
 
 pre.language-fortran::after {
-  content: '\eddb';
+  content: '\edf7';
 }
 
 pre.language-gitignore::after {
-  content: '\ee1f';
+  content: '\ee46';
 }
 
 pre.language-go::after {
-  content: '\ee40';
+  content: '\ee5c';
 }
 
 pre.language-html::after {
-  content: '\eef5';
+  content: '\ef1b';
 }
 
 pre.language-javascript::after,
 pre.language-JavaScript::after,
 pre.language-node::after {
-  content: '\ef66';
+  content: '\ef8f';
 }
 
 pre.language-json::after,
 pre.language-JSON::after {
-  content: '\ef85';
+  content: '\efaf';
 }
 
 pre.language-jsx::after {
-  content: '\f2d6';
+  content: '\f323';
 }
 
 pre.language-markdown::after {
-  content: '\f071';
+  content: '\f0aa';
 }
 
 pre.language-mermaid::after {
-  content: '\f09f';
+  content: '\f0d9';
 }
 
 pre.language-php::after {
-  content: '\f1fd';
+  content: '\f247';
 }
 
 pre.language-ruby::after,
 pre.language-Ruby::after {
-  content: '\f342';
+  content: '\f393';
 }
 
 pre.language-rust::after {
-  content: '\f34e';
+  content: '\f39f';
 }
 
 pre.language-sass::after,
 pre.language-SASS::after {
-  content: '\f367';
+  content: '\f3b8';
 }
 
 pre.language-sql::after {
@@ -1072,7 +1072,7 @@ pre.language-sql::after {
 pre.language-yaml::after,
 pre.language-YAML::after,
 pre.language-yml::after {
-  content: '\f61b';
+  content: '\f687';
 }
 
 pre code {
