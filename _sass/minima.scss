@@ -194,21 +194,27 @@ a[href$=".pdf"]::after {
 // Finance
 a[href*="buymeacoffee.com"]::after {
   content: '\ebbd';
+  color: #FFDD00;
   font-family: 'Simple Icons';
+	text-shadow: 1px 1px light-dark(black, white), -1px -1px light-dark(black, white);
 }
 
 a[href*="ko-fi.com"]::after {
   content: '\eff5';
+  color: #FF6433;
   font-family: 'Simple Icons';
 }
 
 a[href*="liberapay.com"]::after {
   content: '\f03c';
+  color: #F6C915;
   font-family: 'Simple Icons';
+	text-shadow: 1px 1px light-dark(black, white), -1px -1px light-dark(black, white);
 }
 
 a[href*="patreon.com"]::after {
 	content: '\f3d9';
+	color: #000000;
 	font-family: 'Font Awesome 5 Brands';
 }
 
