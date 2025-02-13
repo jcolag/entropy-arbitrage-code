@@ -222,23 +222,27 @@ a[href*="patreon.com"]::after {
 a[href*="diasporafoundation.org"]::after,
 a[href*="nota.404.mn"]::after {
 	content: '\f791';
+	color: #000000;
 	font-family: 'Font Awesome 5 Brands';
 }
 
 a[href*="discord.gg"]::after,
 a[href*="discord.me"]::after {
 	content: '\f392';
+	color: #5865F2;
 	font-family: 'Font Awesome 5 Brands';
 }
 
 a[href*="facebook.com"]::after {
 	content: '\f09a';
+	color: #0866FF;
 	font-family: 'Font Awesome 5 Brands';
 }
 
 a[href*="lemmy.sdf.org"]::after,
 a[href*="vlemmy.net"]::after {
   content: '\f02d';
+  color: #000000;
   font-family: 'Simple Icons';
 }
 
@@ -266,6 +270,7 @@ a[href*="comicscamp.club"]::after,
 a[href*="gamerplus.org"]::after,
 a[href*="theres.life"]::after {
 	content: '\f0b1';
+	color: #6364FF;
 	font-family: 'Simple Icons';
 }
 
@@ -278,21 +283,25 @@ a[href*="fe.disroot.org"]:has(> i.fa-mastodon)::after {
 
 a[href*="pixelfed.org"]::after {
   content: '\f263';
+  color: #6366F1;
   font-family: 'Simple Icons';
 }
 
 a[href*="quora.com"]::after {
 	content: '\f2c4';
+	color: #B92B27;
 	font-family: 'Font Awesome 5 Brands';
 }
 
 a[href*="reddit.com"]::after {
 	content: '\f1a1';
+	color: #FF4500;
 	font-family: 'Font Awesome 5 Brands';
 }
 
 a[href*="tumblr.com"]::after {
   content: '\f57b';
+  color: #36465D;
   font-family: 'Simple Icons';
 }
 
