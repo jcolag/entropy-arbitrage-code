@@ -219,6 +219,12 @@ a[href*="patreon.com"]::after {
 }
 
 // Social Media
+a[href*="cohost.org"]::after {
+  content: '\ec5e';
+  color: #83254F;
+  font-family: 'Simple Icons';
+}
+
 a[href*="diasporafoundation.org"]::after,
 a[href*="nota.404.mn"]::after {
 	content: '\f791';
