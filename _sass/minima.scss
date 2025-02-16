@@ -320,36 +320,43 @@ a[href*="x.com"]::after {
 // Media and Reference
 a[href*="archive.org"]::after {
 	content: '\ef71';
+	color: #666666;
 	font-family: 'Simple Icons';
 }
 
 a[href*="archiveofourown.org"]::after {
   content: '\eaed';
+  color: #990000;
   font-family: 'Simple Icons';
 }
 
 a[href*="creativecommons.org"]::after {
 	content: '\f25e';
+	color: #ED592F;
 	font-family: 'Font Awesome 5 Brands';
 }
 
 a[href*="deviantart.com"]::after {
 	content: '\f1bd';
+	color: #05CC47;
 	font-family: 'Font Awesome 5 Brands';
 }
 
 a[href*="flickr.com"]::after {
 	content: '\f16e';
+	color: #0063DC;
 	font-family: 'Font Awesome 5 Brands';
 }
 
 a[href*="fontawesome.com"]::after {
   content: '\f2b4';
+  color: #538DD7;
   font-family: 'Font Awesome 5 Brands';
 }
 
 a[href*="freecodecamp.org"]::after {
   content: '\f2c5';
+  color: #0A0A23;
   font-family: 'Font Awesome 5 Brands';
 }
 
@@ -357,6 +364,7 @@ a[href*="blog.google"]::after,
 a[href*="google.com"]::after,
 a[href*="web.dev"]::after {
 	content: '\f1a0';
+	color: #4285F4;
 	font-family: 'Font Awesome 5 Brands';
 }
 
@@ -364,6 +372,7 @@ a[href*="fsf.org"]::after,
 a[href*="fsfe.org"]::after,
 a[href*="gnu.org"]::after {
   content: '\ee56';
+  color: #A42E2B;
   font-family: 'Simple Icons';
 }
 
@@ -374,11 +383,13 @@ a[href*="gutenberg.org"]::after {
 a[href*="instagram.com"]::after {
   content: '\ef3d';
   content: '\eec5';
+  color: #000000;
   font-family: 'Simple Icons';
 }
 
 a[href*="itch.io"]::after {
   content: '\f83a';
+  color: #FA5C5C;
   font-family: 'Font Awesome 5 Brands';
 }
 
@@ -390,48 +401,57 @@ a[href*="matrix.to"]::after {
 
 a[href*="opensource.org"]::after {
   content: '\f1c8';
+  color: #3DA639;
   font-family: 'Simple Icons';
 }
 
 a[href*="scpwiki.com"]::after,
 a[href*="scp-wiki.wikidot.com"]::after {
   content: '\f3c7';
+  color: #FFFFFF;
   font-family: 'Simple Icons';
 }
 
 a[href*="simpleicons.org"]::after {
   content: '\f40c';
+  color: #111111;
   font-family: 'Simple Icons';
 }
 
 a[href*="soundcloud.com"]::after {
 	content: '\f1be';
+	color: #FF5500;
 	font-family: 'Font Awesome 5 Brands';
 }
 
 a[href*="tapas.io"]::after {
   content: '\f4e7';
+  color: #FFCE00;
   font-family: 'Simple Icons';
 }
 
 a[href*="un.org"]::after,
 a[href*="unesco.org"]::after {
   content: '\f5ab';
+  color: #009EDB;
   font-family: 'Simple Icons';
 }
 
 a[href*="unsplash.com"]::after {
 	content: '\f5b3';
+	color: #000000;
 	font-family: 'Simple Icons';
 }
 
 a[href*="vimeo.com"]::after {
 	content: '\f27d';
+	color: #1AB7EA;
 	font-family: 'Font Awesome 5 Brands';
 }
 
 a[href*="vox.com"]::after {
   content: '\f606';
+  color: #DA074A;
   font-family: 'Simple Icons';
 }
 
@@ -448,6 +468,7 @@ a[href*="wiktionary.org"]::after {
 
 a[href*="youtube.com"]::after {
 	content: '\f167';
+	color: #FF0000;
 	font-family: 'Font Awesome 5 Brands';
 }
 
