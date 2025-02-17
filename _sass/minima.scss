@@ -477,58 +477,69 @@ a[href*="amazon.com"]::after,
 a[href*="amzn.to"]::after,
 a[href*="goodreads.com"]::after {
 	content: '\f270';
+	color: #FF9900;
 	font-family: 'Font Awesome 5 Brands';
 }
 
 // Technology
 a[href*="apache.org"]::after {
   content: '\eab1';
+  color: #D22128;
   font-family: 'Simple Icons';
 }
 
 a[href*="bitbucket.org"]::after {
 	content: '\f171';
+	color: #0052CC;
 	font-family: 'Font Awesome 5 Brands';
 }
 
 a[href*="blender.org"]::after {
   content: '\eb7b';
+  color: #E87D0D;
   font-family: 'Simple Icons';
 }
 
 a[href*="chartjs.org"]::after {
   content: '\ebf4';
+  color: #FF6384;
   font-family: 'Simple Icons';
 }
 
 a[href*="codeberg.org"]::after,
 a[href*="codeberg.page"]::after {
   content: '\ec3f';
+  color: #2185D0;
   font-family: 'Simple Icons';
 }
 
 a[href*="d3js.org"]::after {
   content: '\ecb6';
+  color: #F9A03C;
   font-family: 'Simple Icons';
 }
 
 a[href*="dev.to"]::after {
 	content: '\f6cc';
+	color: #0A0A0A;
 	font-family: 'Font Awesome 5 Brands';
 }
 
 a[href*="duckduckgo.com"]::after {
   content: '\ed2d';
+  color: #DE5833;
   font-family: 'Simple Icons';
 }
 
 a[href*="electronjs.org"]::after {
   content: '\ed56';
+  color: #47848F;
   font-family: 'Simple Icons';
 }
 
 a[href*="emby.media"]::after {
   content: '\ed66';
+  color: #52B54B;
   font-family: 'Simple Icons';
 }
 
@@ -544,11 +555,13 @@ a[href*="expressjs.com"]::after {
 
 a[href*="freecad.org"]::after {
 	content: '\ee06';
+	color: #729FCF;
 	font-family: 'Simple Icons';
 }
 
 a[href*="gimp.org"]::after {
   content: '\ee36';
+  color: #5C5543;
   font-family: 'Simple Icons';
 }
 
@@ -560,6 +573,7 @@ a[href*="git-scm.com"]::after {
 a[href*="github.com"]::after,
 a[href*="github.io"]::after {
 	content: '\f09b';
+	color: #181717;
 	font-family: 'Font Awesome 5 Brands';
 }
 
@@ -571,71 +585,85 @@ a[href*="github.com"]:has(> i.fa-github-square)::after {
 
 a[href*="gitlab.com"]::after {
 	content: '\f296';
+	color: #FC6D26;
 	font-family: 'Font Awesome 5 Brands';
 }
 
 a[href*="gitpod.io"]::after {
   content: '\ee2f';
+  color: #FFAE33;
   font-family: 'Simple Icons';
 }
 
 a[href*="golang.org"]::after {
   content: '\ee5c';
+  color: #00ADD8;
   font-family: 'Simple Icons';
 }
 
 a[href*="handlebarsjs.com"]::after {
   content: '\eed2';
+  color: #000000;
   font-family: 'Simple Icons';
 }
 
 a[href*="haskell.org"]::after {
   content: '\eeda';
+  color: #5D4F85;
   font-family: 'Simple Icons';
 }
 
 a[href*="htmx.org"]::after {
   content: '\ef1c';
+  color: #3366CC;
   font-family: 'Simple Icons';
 }
 
 a[href*="jekyllrb.com"]::after {
   content: '\ef93';
+  color: #CC0000;
   font-family: 'Simple Icons';
 }
 
 a[href*="jellyfin.org"]::after {
   content: '\ef94';
+  color: #00A4DC;
   font-family: 'Simple Icons';
 }
 
 a[href*="json.org"]::after {
   content: '\efaf';
+  color: #000000;
   font-family: 'Simple Icons';
 }
 
 a[href*="laravel.com"]::after {
   content: '\f01b';
+  color: #FF2D20;
   font-family: 'Simple Icons';
 }
 
 a[href*="libreoffice.org"]::after {
   content: '\f03f';
+  color: #18A303;
   font-family: 'Simple Icons';
 }
 
 a[href*="markdownguide.org"]::after {
   content: '\f0aa';
+  color: #000000;
   font-family: 'Simple Icons';
 }
 
 a[href*="matomo.org"]::after {
   content: '\f0b6';
+  color: #3152A0;
   font-family: 'Simple Icons';
 }
 
 a[href*="mercurial-scm.org"]::after {
   content: '\f0d8';
+  color: #999999;
   font-family: 'Simple Icons';
 }
 
@@ -648,129 +676,154 @@ a[href*="msdn.com"]::after {
 a[href*="mozilla.com"]::after,
 a[href*="mozilla.org"]::after {
   content: '\f123';
+  color: #000000;
   font-family: 'Simple Icons';
 }
 
 a[href*="nodejs.com"]::after,
 a[href*="nodejs.org"]::after {
 	content: '\f3d3';
+	color: #5FA04E;
 	font-family: 'Font Awesome 5 Brands';
 }
 
 a[href*="npmjs.com"]::after {
 	content: '\f3d4';
+	color: #CB3837;
 	font-family: 'Font Awesome 5 Brands';
 }
 
 a[href*="openbadges.org"]::after,
 a[href*="imsglobal.org"]::after {
   content: '\f1c3';
+  color: #073B5A;
   font-family: 'Simple Icons';
 }
 
 a[href*="openscad.org"]::after {
 	content: '\f1da';
+	color: #F9D72C;
 	font-family: 'Simple Icons';
 }
 
 a[href*="python.org"]::after {
   content: '\f2e3';
+  color: #3776AB;
   font-family: 'Simple Icons';
 }
 
 a[href*="reactjs.org"]::after {
   content: '\f41b';
+  color: #61DAFB;
   font-family: 'Font Awesome 5 Brands';
 }
 
 a[href*="redis.com"]::after {
   content: '\f33a';
+  color: #FF4438;
   font-family: 'Simple Icons';
 }
 
 a[href*="redux.js.org"]::after {
   content: '\f33f';
+  color: #764ABC;
   font-family: 'Simple Icons';
 }
 
 a[href*="renpy.org"]::after {
   content: '\f34b';
+  color: #FF7F7F;
   font-family: 'Simple Icons';
 }
 
 a[href*="rubocop.org"]::after {
   content: '\f392';
+  color: #000000;
   font-family: 'Simple Icons';
 }
 
 a[href*="ruby-lang.org"]::after {
   content: '\f393';
+  color: #CC342D;
   font-family: 'Simple Icons';
 }
 
 a[href*="rubygems.org"]::after {
   content: '\f396';
+  color: #E9573F;
   font-family: 'Simple Icons';
 }
 
 a[href*="rubyonrails.org"]::after {
   content: '\f394';
+  color: #D30001;
   font-family: 'Simple Icons';
 }
 
 a[href*="rust-lang.org"]::after {
 	content: '\f39f';
+	color: #000000;
 	font-family: 'Simple Icons';
 }
 
 a[href*="sourceforge.com"]::after,
 a[href*="sourceforge.net"]::after {
   content: '\f44d';
+  color: #FF6600;
   font-family: 'Simple Icons';
 }
 
 a[href*="stackoverflow.com"]::after {
 	content: '\f16c';
+	color: #F58025;
 	font-family: 'Font Awesome 5 Brands';
 }
 
 a[href*="sqlite.org"]::after {
   content: '\f46f';
+  color: #003B57;
   font-family: 'Simple Icons';
 }
 
 a[href*="thingiverse.com"]::after {
   content: '\f51f';
+  color: #248BFB;
   font-family: 'Simple Icons';
 }
 
 a[href*="ubuntu.com"]::after {
 	content: '\f7df';
 	font-family: 'Font Awesome 5 Brands';
+	color: #E95420;
 }
 
 a[href*="vscodium.com"]::after {
   content: '\f609';
+  color: #2F80ED;
   font-family: 'Simple Icons';
 }
 
 a[href*="webpack.js.org"]::after {
   content: '\f635';
+  color: #8DD6F9;
   font-family: 'Simple Icons';
 }
 
 a[href*="wordpress.org"]::after {
   content: '\f664';
+  color: #21759B;
   font-family: 'Simple Icons';
 }
 
 a[href*="yaml.org"]::after {
   content: '\f687';
+  color: #CB171E;
   font-family: 'Simple Icons';
 }
 
 a[href*="yarnpkg.com"]::after {
   content: '\f689';
+  color: #2C8EBB;
   font-family: 'Simple Icons';
 }
 
