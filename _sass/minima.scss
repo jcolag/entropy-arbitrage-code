@@ -273,11 +273,14 @@ a[href*="joinmastodon.org"]::after,
 a[href*="fe.disroot.org"]::after,
 a[href*="newsmast.community"]::after,
 a[href*="comicscamp.club"]::after,
+a[href*="channel.org"]::after,
 a[href*="gamerplus.org"]::after,
+a[href*="kind.social"]::after,
+a[href*="turtleisland.social"]::after,
 a[href*="theres.life"]::after {
-	content: '\f0b1';
-	color: #6364FF;
-	font-family: 'Simple Icons';
+  content: '\f0b1';
+  color: #6364FF;
+  font-family: 'Simple Icons';
 }
 
 a[href*="mastodon.social"][rel="me"]::after,
