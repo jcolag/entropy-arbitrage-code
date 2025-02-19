@@ -290,7 +290,15 @@ a[href*="fe.disroot.org"]:has(> i.fa-mastodon)::after {
   content: none;
 }
 
-a[href*="pixelfed.org"]::after {
+a[href*="matrix.org"]::after,
+a[href*="matrix.to"]::after {
+  content: '\f0b7';
+  color: #000000;
+  font-family: 'Simple Icons';
+}
+
+a[href*="pixelfed.org"]::after,
+a[href*="pixelfed.dk"]::after {
   content: '\f263';
   color: #6366F1;
   font-family: 'Simple Icons';
@@ -380,11 +388,6 @@ a[href*="gnu.org"]::after {
 }
 
 a[href*="gutenberg.org"]::after {
-  font-family: 'Simple Icons';
-}
-
-a[href*="instagram.com"]::after {
-  content: '\ef3d';
   content: '\eec5';
   color: #000000;
   font-family: 'Simple Icons';
@@ -394,12 +397,6 @@ a[href*="itch.io"]::after {
   content: '\f83a';
   color: #FA5C5C;
   font-family: 'Font Awesome 5 Brands';
-}
-
-a[href*="matrix.org"]::after,
-a[href*="matrix.to"]::after {
-  content: '\f07f';
-  font-family: 'Simple Icons';
 }
 
 a[href*="opensource.org"]::after {
@@ -581,12 +578,14 @@ a[href*="emby.media"]::after {
 }
 
 a[href*="eslint.org"]::after {
+  content: '\ed7b';
+  color: #4B32C3;
   font-family: 'Simple Icons';
 }
 
 a[href*="expressjs.com"]::after {
-  content: '\ed7b';
-  color: #4B32C3;
+  content: '\ed92';
+  color: #000000;
   font-family: 'Simple Icons';
 }
 
