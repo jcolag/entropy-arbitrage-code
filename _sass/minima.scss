@@ -143,12 +143,12 @@
 // Annotate links to tag pages.
 a[href^="/blog/tag"]::after {
   color: $dark-text;
-	content: '\f02b';
-	font-family: 'Font Awesome';
-	font-size: 0.67em;
-	font-style: normal;
-	opacity: 0.4;
-	vertical-align: top;
+  content: '\f02b';
+  font-family: 'Font Awesome';
+  font-size: 0.67em;
+  font-style: normal;
+  opacity: 0.4;
+  vertical-align: top;
 }
 
 a[href^="/blog/tag"]:hover::after {
@@ -161,13 +161,13 @@ a[href^="/blog/tag"]:hover::after {
 // Annotate external links.
 a[href^="http"]::after {
   color: $dark-text;
-	content: '\f35d';
-	font-family: 'Font Awesome';
-	font-size: 0.67em;
-	font-style: normal;
-	opacity: 0.4;
-	vertical-align: top;
-	text-shadow: 1px 1px light-dark(transparent, white), -1px -1px light-dark(transparent, white);
+  content: '\f35d';
+  font-family: 'Font Awesome';
+  font-size: 0.67em;
+  font-style: normal !important;
+  opacity: 0.4;
+  vertical-align: top;
+  text-shadow: 1px 1px light-dark(transparent, white), -1px -1px light-dark(transparent, white);
 }
 
 a[href^="http"]:hover::after {
@@ -182,13 +182,13 @@ a[href^="https://john.colagioia.net/"]::after,
 a[href*="127.0.0.1:"]::after,
 a[href*="localhost:"]::after,
 .site-footer a::after {
-	content: none !important;
+  content: none !important;
 }
 
 // File Types
 a[href$=".pdf"]::after {
-	content: '\f1c1';
-	font-family: 'Font Awesome';
+  content: '\f1c1';
+  font-family: 'Font Awesome';
 }
 
 // Finance
@@ -196,7 +196,7 @@ a[href*="buymeacoffee.com"]::after {
   content: '\ebbd';
   color: #FFDD00;
   font-family: 'Simple Icons';
-	text-shadow: 1px 1px light-dark(black, white), -1px -1px light-dark(black, white);
+  text-shadow: 1px 1px light-dark(black, white), -1px -1px light-dark(black, white);
 }
 
 a[href*="ko-fi.com"]::after {
@@ -209,13 +209,13 @@ a[href*="liberapay.com"]::after {
   content: '\f03c';
   color: #F6C915;
   font-family: 'Simple Icons';
-	text-shadow: 1px 1px light-dark(black, white), -1px -1px light-dark(black, white);
+  text-shadow: 1px 1px light-dark(black, white), -1px -1px light-dark(black, white);
 }
 
 a[href*="patreon.com"]::after {
-	content: '\f3d9';
-	color: #000000;
-	font-family: 'Font Awesome 5 Brands';
+  content: '\f3d9';
+  color: #000000;
+  font-family: 'Font Awesome 5 Brands';
 }
 
 // Social Media
@@ -227,22 +227,22 @@ a[href*="cohost.org"]::after {
 
 a[href*="diasporafoundation.org"]::after,
 a[href*="nota.404.mn"]::after {
-	content: '\f791';
-	color: #000000;
-	font-family: 'Font Awesome 5 Brands';
+  content: '\f791';
+  color: #000000;
+  font-family: 'Font Awesome 5 Brands';
 }
 
 a[href*="discord.gg"]::after,
 a[href*="discord.me"]::after {
-	content: '\f392';
-	color: #5865F2;
-	font-family: 'Font Awesome 5 Brands';
+  content: '\f392';
+  color: #5865F2;
+  font-family: 'Font Awesome 5 Brands';
 }
 
 a[href*="facebook.com"]::after {
-	content: '\f09a';
-	color: #0866FF;
-	font-family: 'Font Awesome 5 Brands';
+  content: '\f09a';
+  color: #0866FF;
+  font-family: 'Font Awesome 5 Brands';
 }
 
 a[href*="lemmy.sdf.org"]::after,
@@ -253,8 +253,8 @@ a[href*="vlemmy.net"]::after {
 }
 
 a[href*="linkedin.com"]::after {
-	content: '\f08c';
-	font-family: 'Font Awesome 5 Brands';
+  content: '\f08c';
+  font-family: 'Font Awesome 5 Brands';
 }
 
 a[href*="linkedin.com"]:has(> i.fa-linkedin)::after {
@@ -297,15 +297,15 @@ a[href*="pixelfed.org"]::after {
 }
 
 a[href*="quora.com"]::after {
-	content: '\f2c4';
-	color: #B92B27;
-	font-family: 'Font Awesome 5 Brands';
+  content: '\f2c4';
+  color: #B92B27;
+  font-family: 'Font Awesome 5 Brands';
 }
 
 a[href*="reddit.com"]::after {
-	content: '\f1a1';
-	color: #FF4500;
-	font-family: 'Font Awesome 5 Brands';
+  content: '\f1a1';
+  color: #FF4500;
+  font-family: 'Font Awesome 5 Brands';
 }
 
 a[href*="tumblr.com"]::after {
@@ -316,15 +316,15 @@ a[href*="tumblr.com"]::after {
 
 a[href*="twitter.com"]::after,
 a[href*="x.com"]::after {
-	content: '\1D54F';
-	font-family: 'Exo 2';
+  content: '\1D54F';
+  font-family: 'Exo 2';
 }
 
 // Media and Reference
 a[href*="archive.org"]::after {
-	content: '\ef71';
-	color: #666666;
-	font-family: 'Simple Icons';
+  content: '\ef71';
+  color: #666666;
+  font-family: 'Simple Icons';
 }
 
 a[href*="archiveofourown.org"]::after {
@@ -334,21 +334,21 @@ a[href*="archiveofourown.org"]::after {
 }
 
 a[href*="creativecommons.org"]::after {
-	content: '\f25e';
-	color: #ED592F;
-	font-family: 'Font Awesome 5 Brands';
+  content: '\f25e';
+  color: #ED592F;
+  font-family: 'Font Awesome 5 Brands';
 }
 
 a[href*="deviantart.com"]::after {
-	content: '\f1bd';
-	color: #05CC47;
-	font-family: 'Font Awesome 5 Brands';
+  content: '\f1bd';
+  color: #05CC47;
+  font-family: 'Font Awesome 5 Brands';
 }
 
 a[href*="flickr.com"]::after {
-	content: '\f16e';
-	color: #0063DC;
-	font-family: 'Font Awesome 5 Brands';
+  content: '\f16e';
+  color: #0063DC;
+  font-family: 'Font Awesome 5 Brands';
 }
 
 a[href*="fontawesome.com"]::after {
@@ -366,9 +366,9 @@ a[href*="freecodecamp.org"]::after {
 a[href*="blog.google"]::after,
 a[href*="google.com"]::after,
 a[href*="web.dev"]::after {
-	content: '\f1a0';
-	color: #4285F4;
-	font-family: 'Font Awesome 5 Brands';
+  content: '\f1a0';
+  color: #4285F4;
+  font-family: 'Font Awesome 5 Brands';
 }
 
 a[href*="fsf.org"]::after,
@@ -422,9 +422,9 @@ a[href*="simpleicons.org"]::after {
 }
 
 a[href*="soundcloud.com"]::after {
-	content: '\f1be';
-	color: #FF5500;
-	font-family: 'Font Awesome 5 Brands';
+  content: '\f1be';
+  color: #FF5500;
+  font-family: 'Font Awesome 5 Brands';
 }
 
 a[href*="tapas.io"]::after {
@@ -441,15 +441,15 @@ a[href*="unesco.org"]::after {
 }
 
 a[href*="unsplash.com"]::after {
-	content: '\f5b3';
-	color: #000000;
-	font-family: 'Simple Icons';
+  content: '\f5b3';
+  color: #000000;
+  font-family: 'Simple Icons';
 }
 
 a[href*="vimeo.com"]::after {
-	content: '\f27d';
-	color: #1AB7EA;
-	font-family: 'Font Awesome 5 Brands';
+  content: '\f27d';
+  color: #1AB7EA;
+  font-family: 'Font Awesome 5 Brands';
 }
 
 a[href*="vox.com"]::after {
@@ -526,9 +526,9 @@ a[href*="apache.org"]::after {
 }
 
 a[href*="bitbucket.org"]::after {
-	content: '\f171';
-	color: #0052CC;
-	font-family: 'Font Awesome 5 Brands';
+  content: '\f171';
+  color: #0052CC;
+  font-family: 'Font Awesome 5 Brands';
 }
 
 a[href*="blender.org"]::after {
@@ -557,9 +557,9 @@ a[href*="d3js.org"]::after {
 }
 
 a[href*="dev.to"]::after {
-	content: '\f6cc';
-	color: #0A0A0A;
-	font-family: 'Font Awesome 5 Brands';
+  content: '\f6cc';
+  color: #0A0A0A;
+  font-family: 'Font Awesome 5 Brands';
 }
 
 a[href*="duckduckgo.com"]::after {
@@ -591,9 +591,9 @@ a[href*="expressjs.com"]::after {
 }
 
 a[href*="freecad.org"]::after {
-	content: '\ee06';
-	color: #729FCF;
-	font-family: 'Simple Icons';
+  content: '\ee06';
+  color: #729FCF;
+  font-family: 'Simple Icons';
 }
 
 a[href*="gimp.org"]::after {
@@ -609,9 +609,9 @@ a[href*="git-scm.com"]::after {
 
 a[href*="github.com"]::after,
 a[href*="github.io"]::after {
-	content: '\f09b';
-	color: #181717;
-	font-family: 'Font Awesome 5 Brands';
+  content: '\f09b';
+  color: #181717;
+  font-family: 'Font Awesome 5 Brands';
 }
 
 a[href*="github.com"]:has(> i.fa-github)::after,
@@ -621,15 +621,16 @@ a[href*="github.com"]:has(> i.fa-github-square)::after {
 }
 
 a[href*="gitlab.com"]::after {
-	content: '\f296';
-	color: #FC6D26;
-	font-family: 'Font Awesome 5 Brands';
+  content: '\f296';
+  color: #FC6D26;
+  font-family: 'Font Awesome 5 Brands';
 }
 
 a[href*="gitpod.io"]::after {
   content: '\ee2f';
   color: #FFAE33;
   font-family: 'Simple Icons';
+  text-shadow: 1px 1px light-dark(black, white), -1px -1px light-dark(black, white);
 }
 
 a[href*="golang.org"]::after {
@@ -707,7 +708,7 @@ a[href*="mercurial-scm.org"]::after {
 a[href*="microsoft.com"]::after,
 a[href*="msdn.com"]::after {
   content: '\f3ca';
-	font-family: 'Font Awesome 5 Brands';
+  font-family: 'Font Awesome 5 Brands';
 }
 
 a[href*="mozilla.com"]::after,
@@ -719,15 +720,15 @@ a[href*="mozilla.org"]::after {
 
 a[href*="nodejs.com"]::after,
 a[href*="nodejs.org"]::after {
-	content: '\f3d3';
-	color: #5FA04E;
-	font-family: 'Font Awesome 5 Brands';
+  content: '\f3d3';
+  color: #5FA04E;
+  font-family: 'Font Awesome 5 Brands';
 }
 
 a[href*="npmjs.com"]::after {
-	content: '\f3d4';
-	color: #CB3837;
-	font-family: 'Font Awesome 5 Brands';
+  content: '\f3d4';
+  color: #CB3837;
+  font-family: 'Font Awesome 5 Brands';
 }
 
 a[href*="openbadges.org"]::after,
@@ -738,9 +739,9 @@ a[href*="imsglobal.org"]::after {
 }
 
 a[href*="openscad.org"]::after {
-	content: '\f1da';
-	color: #F9D72C;
-	font-family: 'Simple Icons';
+  content: '\f1da';
+  color: #F9D72C;
+  font-family: 'Simple Icons';
 }
 
 a[href*="python.org"]::after {
@@ -798,9 +799,9 @@ a[href*="rubyonrails.org"]::after {
 }
 
 a[href*="rust-lang.org"]::after {
-	content: '\f39f';
-	color: #000000;
-	font-family: 'Simple Icons';
+  content: '\f39f';
+  color: #000000;
+  font-family: 'Simple Icons';
 }
 
 a[href*="sourceforge.com"]::after,
@@ -811,9 +812,9 @@ a[href*="sourceforge.net"]::after {
 }
 
 a[href*="stackoverflow.com"]::after {
-	content: '\f16c';
-	color: #F58025;
-	font-family: 'Font Awesome 5 Brands';
+  content: '\f16c';
+  color: #F58025;
+  font-family: 'Font Awesome 5 Brands';
 }
 
 a[href*="sqlite.org"]::after {
@@ -867,8 +868,8 @@ a[href*="yarnpkg.com"]::after {
 // Other
 a[href*=".mil/"]::after,
 a[href*=".gov/"]::after {
-	content: '\f74d';
-	font-family: 'Font Awesome';
+  content: '\f74d';
+  font-family: 'Font Awesome';
 }
 
 a[href*="imdb.com"]::after {
@@ -1381,10 +1382,10 @@ div.highlighter-rouge pre[class*="language-"] {
 }
 
 .u-url.u-uid::after {
-	font-family: 'Font Awesome';
-	content: ' \f058';
-	color: $badge-blue;
-	text-decoration: none;
+  font-family: 'Font Awesome';
+  content: ' \f058';
+  color: $badge-blue;
+  text-decoration: none;
 }
 
 .webmention-bookmark:after,
@@ -1392,30 +1393,30 @@ div.highlighter-rouge pre[class*="language-"] {
 .webmention-quote:after,
 .webmention-quote:after,
 .webmention-reply:after {
-	font-family: "Font Awesome";
-	font-size: 5em;
-	margin-left: -1.5em;
-	opacity: 0.25;
-	position: absolute;
-	transform: translate(0, -50%);
-	top: 50%;
-	right: 0.1em;
+  font-family: "Font Awesome";
+  font-size: 5em;
+  margin-left: -1.5em;
+  opacity: 0.25;
+  position: absolute;
+  transform: translate(0, -50%);
+  top: 50%;
+  right: 0.1em;
 }
 
 .webmention-bookmark:after {
-	content: "\f02e";
+  content: "\f02e";
 }
 
 .webmention-like:after {
-	content: "\f164";
+  content: "\f164";
 }
 
 .webmention-quote:after {
-	content: "\f10e";
+  content: "\f10e";
 }
 
 .webmention-reply:after {
-	content: "\f3e5";
+  content: "\f3e5";
 }
 
 .h-entry .u-photo {
@@ -1432,15 +1433,15 @@ div.webmentions {
 }
 
 .webmentions__item {
-	border: 1px solid $brand-color;
-	border-radius: 0.5em;
-	padding-left: 0.5em;
-	position: relative;
+  border: 1px solid $brand-color;
+  border-radius: 0.5em;
+  padding-left: 0.5em;
+  position: relative;
 }
 
 .webmentions__list::before {
-	content: "Webmentions, Not Necessarily CC-Licensed:";
-	font-family: $header-font-family;
+  content: "Webmentions, Not Necessarily CC-Licensed:";
+  font-family: $header-font-family;
   text-align: center;
   transition: color 2s;
 }
@@ -1448,22 +1449,22 @@ div.webmentions {
 .webmention.webmention--like::after,
 .webmention.webmention--reply::after,
 .webmention.webmention--repost::after {
-	font-family: "Font Awesome";
-	font-size: 1.5em;
-	margin-left: -1.5em;
-	opacity: 0.25;
-	position: absolute;
-	transform: translate(0, -50%);
-	top: 50%;
-	right: 0.1em;
+  font-family: "Font Awesome";
+  font-size: 1.5em;
+  margin-left: -1.5em;
+  opacity: 0.25;
+  position: absolute;
+  transform: translate(0, -50%);
+  top: 50%;
+  right: 0.1em;
 }
 
 .webmention.webmention--like::after {
-	content: "\f164";
+  content: "\f164";
 }
 
 .webmention.webmention--reply::after {
-	content: "\f3e5";
+  content: "\f3e5";
 }
 
 .webmention.webmention--repost::after {
@@ -1586,8 +1587,8 @@ div.webmentions {
 
 #social-links {
   line-height: 1.25em;
-	max-height: 4.5em;
-	overflow-y: auto;
+  max-height: 4.5em;
+  overflow-y: auto;
 }
 
 #tootpick {
@@ -1640,24 +1641,24 @@ a.tag-name:visited {
 
 @media (hover: hover) {
   #markdown-toc {
-	  background-color: $dark-bg;
-	  border-bottom: 5px solid $brand-color;
-	  border-right: 5px solid $brand-color;
-	  border-top: 5px solid $brand-color;
+    background-color: $dark-bg;
+    border-bottom: 5px solid $brand-color;
+    border-right: 5px solid $brand-color;
+    border-top: 5px solid $brand-color;
     border-bottom-right-radius: 2em;
     border-top-right-radius: 2em;
-	  cursor: pointer;
-	  max-height: 2em;
-	  left: 0;
-	  margin-left: 0;
-	  overflow: hidden;
-	  padding: 1em;
-	  position: fixed;
-	  top: 50%;
-	  transform: translateY(-50%);
-	  transition-duration: 1s;
-	  transition-property: all;
-	  max-width: 2em;
+    cursor: pointer;
+    max-height: 2em;
+    left: 0;
+    margin-left: 0;
+    overflow: hidden;
+    padding: 1em;
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    transition-duration: 1s;
+    transition-property: all;
+    max-width: 2em;
   }
 
   #markdown-toc:before {
@@ -1667,14 +1668,14 @@ a.tag-name:visited {
     font-size: 2em;
     margin-top: -22%;
     text-align: center;
-	  transition-duration: 1s;
-	  transition-property: all;
+    transition-duration: 1s;
+    transition-property: all;
   }
 
   #markdown-toc:hover {
-	  max-height: 80vh;
-	  overflow-y: auto;
-	  max-width: 33vw;
+    max-height: 80vh;
+    overflow-y: auto;
+    max-width: 33vw;
   }
 
   #markdown-toc:hover:before {
@@ -1901,11 +1902,11 @@ a.tag-name:visited {
 }
 
 .codeberg {
-	display: -webkit-box;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	-webkit-box-orient: vertical;
-	-webkit-line-clamp: 4;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
 }
 
 .codeberg hr {
@@ -1934,13 +1935,13 @@ a.tag-name:visited {
 }
 
 .codeberg .description {
-	background: light-dark(white, black);
-	border-radius: 1em;
-	float: left;
+  background: light-dark(white, black);
+  border-radius: 1em;
+  float: left;
   font-size: small;
-	opacity: 1.0;
-	padding: 1em;
-	padding-bottom: 0;
+  opacity: 1.0;
+  padding: 1em;
+  padding-bottom: 0;
   text-align: justify;
   width: calc(250px - 2em);
 }
@@ -2062,12 +2063,12 @@ a.preview::after {
 }
 
 .external-image > figcaption {
-	margin-block-start: -7em;
-	max-width: 740px;
-	padding-left: 1em;
-	position: absolute;
-	text-shadow: 1px 1px $background-color;
-	z-index: 100;
+  margin-block-start: -7em;
+  max-width: 740px;
+  padding-left: 1em;
+  position: absolute;
+  text-shadow: 1px 1px $background-color;
+  z-index: 100;
 }
 
 .in-progress {
