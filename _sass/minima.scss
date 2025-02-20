@@ -840,9 +840,9 @@ a[href*="thingiverse.com"]::after {
 }
 
 a[href*="ubuntu.com"]::after {
-	content: '\f7df';
-	font-family: 'Font Awesome 5 Brands';
-	color: #E95420;
+  content: '\f595';
+  color: #E95420;
+  font-family: 'Simple Icons';
 }
 
 a[href*="vscodium.com"]::after {
