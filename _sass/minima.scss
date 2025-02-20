@@ -884,12 +884,14 @@ a[href*=".gov/"]::after {
 
 a[href*="imdb.com"]::after {
   content: '\ef49';
+  color: #F5C518;
   font-family: 'Simple Icons';
   text-shadow: 1px 1px light-dark(black, white), -1px -1px light-dark(black, white);
 }
 
 a[href*="kickstarter.com"]::after {
   content: '\efe3';
+  color: #05CE78;
   font-family: 'Simple Icons';
 }
 
