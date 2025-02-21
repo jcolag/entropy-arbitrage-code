@@ -245,6 +245,12 @@ a[href*="facebook.com"]::after {
   font-family: 'Font Awesome 5 Brands';
 }
 
+a[href*="instagram.com"]::after {
+  content: '\ef65';
+  color: #FF0069;
+  font-family: 'Simple Icons';
+}
+
 a[href*="lemmy.sdf.org"]::after,
 a[href*="vlemmy.net"]::after {
   content: '\f02d';
@@ -600,6 +606,12 @@ a[href*="freecad.org"]::after {
   color: #729FCF;
   font-family: 'Simple Icons';
   text-shadow: 1px 1px light-dark(black, white), -1px -1px light-dark(black, white);
+}
+
+a[href*="gitea.com"]::after {
+  content: '\ee3f';
+  color: #609926;
+  font-family: 'Simple Icons';
 }
 
 a[href*="gimp.org"]::after {
