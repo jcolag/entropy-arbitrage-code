@@ -887,6 +887,32 @@ a[href*="yarnpkg.com"]::after {
   font-family: 'Simple Icons';
 }
 
+// News
+a[href*="cnbc.com"]::after,
+a[href*="nbcnews.com"]::after {
+  content: '\f14d';
+  color: #222222;
+  font-family: 'Simple Icons';
+}
+
+a[href*="nytimes.com"]::after {
+  content: '\f164';
+  color: #000000;
+  font-family: 'Simple Icons';
+}
+
+a[href*="theconversation.com"]::after {
+  content: '\f511';
+  color: #D8352A;
+  font-family: 'Simple Icons';
+}
+
+a[href*="theguardian.com"]::after {
+  content: '\f513';
+  color: #052962;
+  font-family: 'Simple Icons';
+}
+
 // Other
 a[href*=".mil/"]::after,
 a[href*=".gov/"]::after {
