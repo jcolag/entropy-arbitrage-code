@@ -1,0 +1,269 @@
+---
+kickstarter:
+- kickstarter.com
+imdb:
+- (ld)
+- imdb.com
+theguardian:
+- theguardian.com
+theconversation:
+- theconversation.com
+newyorktimes:
+- nytimes.com
+nbc:
+- nbcnews.com
+- cnbc.com
+yarn:
+- yarnpkg.com
+yaml:
+- yaml.org
+wordpress:
+- wordpress.org
+webpack:
+- webpack.js.org
+vscodium:
+- vscodium.com
+ubuntu:
+- ubuntu.com
+thingiverse:
+- thingiverse.com
+sqlite:
+- sqlite.org
+stackoverflow:
+- (ld)
+- stackoverflow.com
+sourceforge:
+- sourceforge.net
+- sourceforge.com
+rust:
+- rust-lang.org
+rubyonrails:
+- rubyonrails.org
+rubygems:
+- rubygems.org
+ruby:
+- ruby-lang.org
+rubocop:
+- rubocop.org
+renpy:
+- (ld)
+- renpy.org
+redux:
+- redux.js.org
+redis:
+- redis.com
+react:
+- (ld)
+- reactjs.org
+python:
+- python.org
+openscad:
+- (ld)
+- openscad.org
+openbadges:
+- imsglobal.org
+- openbadges.org
+npm:
+- npmjs.com
+nodedotjs:
+- nodejs.org
+- nodejs.com
+mozilla:
+- mozilla.org
+- mozilla.com
+mercurial:
+- mercurial-scm.org
+matomo:
+- matomo.org
+markdown:
+- markdownguide.org
+libreoffice:
+- libreoffice.org
+laravel:
+- laravel.com
+json:
+- json.org
+jellyfin:
+- jellyfin.org
+jekyll:
+- jekyllrb.com
+htmx:
+- htmx.org
+haskell:
+- haskell.org
+handlebarsdotjs:
+- handlebarsjs.com
+go:
+- golang.org
+gitpod:
+- (ld)
+- gitpod.io
+gitlab:
+- gitlab.com
+github:
+- github.io
+- github.com
+git:
+- git-scm.com
+gimp:
+- gimp.org
+gitea:
+- gitea.com
+freecad:
+- (ld)
+- freecad.org
+express:
+- expressjs.com
+eslint:
+- eslint.org
+emby:
+- emby.media
+electron:
+- (ld)
+- electronjs.org
+duckduckgo:
+- duckduckgo.com
+- dev.to
+d3:
+- (ld)
+- d3js.org
+codeberg:
+- codeberg.page
+- codeberg.org
+chartdotjs:
+- chartjs.org
+blender:
+- blender.org
+bitbucket:
+- bitbucket.org
+apache:
+- apache.org
+amazon:
+- (ld)
+- goodreads.com
+- amzn.to
+- amazon.com
+youtube:
+- youtube.com
+wikiversity:
+- wikiversity.org
+wikiquote:
+- wikiquote.org
+wikipedia:
+- wiktionary.org
+- wikipedia.org
+wikimediacommons:
+- commons.wikimedia.org
+wikimediafoundation:
+- wikimedia.org
+- wikisource.org
+- wikinews.org
+wikidata:
+- wikidata.org
+wikibooks:
+- wikibooks.org
+vox:
+- vox.com
+vimeo:
+- vimeo.com
+unsplash:
+- unsplash.com
+unitednations:
+- (ld)
+- unesco.org
+- un.org
+tapas:
+- (ld)
+- tapas.io
+soundcloud:
+- soundcloud.com
+simpleicons:
+- simpleicons.org
+scpfoundation:
+- (ld)
+- scp-wiki.wikidot.com
+- scpwiki.com
+opensourceinitiative:
+- opensource.org
+itchdotio:
+- itch.io
+gutenberg:
+- gutenberg.org
+gnu:
+- gnu.org
+- fsfe.org
+- fsf.org
+google:
+- web.dev
+- google.com
+- blog.google
+freecodecamp:
+- freecodecamp.org
+fontawesome:
+- fontawesome.com
+flickr:
+- flickr.com
+deviantart:
+- deviantart.com
+creativecommons:
+- creativecommons.org
+archiveofourown:
+- archiveofourown.org
+internetarchive:
+- archive.org
+x:
+- x.com
+- twitter.com
+tumblr:
+- tumblr.com
+reddit:
+- reddit.com
+quora:
+- quora.com
+pixelfed:
+- pixelfed.dk
+- pixelfed.org
+matrix:
+- matrix.to
+- matrix.org
+mastodon:
+- theres.life
+- turtleisland.social
+- kind.social
+- gamerplus.org
+- channel.org
+- comicscamp.club
+- newsmast.community
+- fe.disroot.org
+- joinmastodon.org
+- mastodon.social
+- mastodon.art
+mailchimp:
+- campaign-archive.com
+- mailchimpsites.com
+lemmy:
+- vlemmy.net
+- lemmy.sdf.org
+instagram:
+- instagram.com
+facebook:
+- facebook.com
+discord:
+- discord.me
+- discord.gg
+diaspora:
+- nota.404.mn
+- diasporafoundation.org
+cohost:
+- cohost.org
+patreon:
+- patreon.com
+liberapay:
+- (ld)
+- liberapay.com
+kofi:
+- ko-fi.com
+buymeacoffee:
+- (ld)
+- buymeacoffee.com
+
