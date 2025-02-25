@@ -1,3 +1,9 @@
+# Each entry must have the Simple Icons si-XXX icon name without the prefix,
+# Followed by a list of domains (or other URL fragments) that should use
+# that icon.
+# A parenthesized domain will get interpreted as defining shadows to outline
+# the icon, l setting a black shadow in light mode, d setting a white
+# shadow in dark mode, or both.
 ---
 kickstarter:
 - kickstarter.com
