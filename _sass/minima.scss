@@ -1167,6 +1167,7 @@ pre::after {
   right: 0.5em;
   top: 50%;
   transform: translateY(-50%);
+  z-index: 0;
 }
 
 pre.language-bash::after,
@@ -1267,6 +1268,7 @@ pre.language-yml::after {
 
 pre code {
   background-color: transparent;
+  z-index: 2;
 }
 
 iframe {
