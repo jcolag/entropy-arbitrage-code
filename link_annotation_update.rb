@@ -4,7 +4,30 @@
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
+require 'optparse'
+require 'ostruct'
 require 'yaml'
+
+# Class to process command-line arguments
+class Options
+  def self.parse(args)
+    options = OpenStruct.new
+
+    opt_parser = OptionParser.new do |opts|
+      opts.banner = 'Usage:  link_annotation_update.rb [options]'
+      opts.separator 'Specific options:'
+      opts.on('-m', '--mapping FILE', 'The YAML file mapping names to metadata') do |m|
+        options.mapping = m
+      end
+      opts.on('-s', '--stylesheet FILE', 'The CSS file for the icon font to analyze') do |c|
+        options.stylesheet = c
+      end
+    end
+
+    opt_parser.parse!(args)
+    options
+  end
+end
 
 def get_codepoint(line)
   content_match = line.match(/content:\s*"([^"]*)"/)
