@@ -763,6 +763,12 @@ a[href*="openscad.org"]::after {
   text-shadow: 1px 1px light-dark(black, white), -1px -1px light-dark(black, white);
 }
 
+a[href*="openssl.org"]::after {
+  color: #721412;
+  content: '\f1dd';
+  font-family: 'Simple Icons';
+}
+
 a[href*="python.org"]::after {
   content: '\f2e3';
   color: #3776AB;
