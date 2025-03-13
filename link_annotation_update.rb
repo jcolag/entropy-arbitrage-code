@@ -60,11 +60,21 @@ def process_icon(icon_name, sites)
   [urls, shadow]
 end
 
-def process_all_icons(input_file, sites)
+def process_language(content, icon_name, sites)
+  lang = sites[icon_name]
+
+  return { names: nil } if lang.nil? || lang['type'] != 'language'
+
+  { content:, name: icon_name, names: lang['names'] }
+end
+
+def process_all_icons(input_file, sites, prefix)
   content = nil
   icons = []
+  languages = []
   shadow = nil
   urls = nil
+  color = nil
 
   File.foreach input_file do |line|
     next unless line =~ /\.si-([^:]+)::before\s*\{/
