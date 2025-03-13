@@ -4,272 +4,596 @@
 # A parenthesized domain will get interpreted as defining shadows to outline
 # the icon, l setting a black shadow in light mode, d setting a white
 # shadow in dark mode, or both.
----
+
+disroot:
+  type: link
+  urls:
+  - disroot.org
 kickstarter:
-- kickstarter.com
+  type: link
+  urls:
+  - kickstarter.com
 imdb:
-- (ld)
-- imdb.com
+  type: link
+  shadow: ld
+  urls:
+  - imdb.com
 theguardian:
-- theguardian.com
+  type: link
+  urls:
+  - theguardian.com
 theconversation:
-- theconversation.com
+  type: link
+  urls:
+  - theconversation.com
 newyorktimes:
-- nytimes.com
+  type: link
+  urls:
+  - nytimes.com
 nbc:
-- nbcnews.com
-- cnbc.com
+  type: link
+  urls:
+  - nbcnews.com
+  - cnbc.com
 yarn:
-- yarnpkg.com
+  type: link
+  urls:
+  - yarnpkg.com
 yaml:
-- yaml.org
+  type: link
+  urls:
+  - yaml.org
 wordpress:
-- wordpress.org
+  type: link
+  urls:
+  - wordpress.org
 webpack:
-- webpack.js.org
+  type: link
+  urls:
+  - webpack.js.org
 vscodium:
-- vscodium.com
+  type: link
+  urls:
+  - vscodium.com
 ubuntu:
-- ubuntu.com
+  type: link
+  urls:
+  - ubuntu.com
 thingiverse:
-- thingiverse.com
+  type: link
+  urls:
+  - thingiverse.com
 sqlite:
-- sqlite.org
+  type: link
+  urls:
+  - sqlite.org
 stackoverflow:
-- (ld)
-- stackoverflow.com
+  type: link
+  shadow: ld
+  urls:
+  - stackoverflow.com
 sourceforge:
-- sourceforge.net
-- sourceforge.com
+  type: link
+  urls:
+  - sourceforge.net
+  - sourceforge.com
 rust:
-- rust-lang.org
+  type: link
+  urls:
+  - rust-lang.org
 rubyonrails:
-- rubyonrails.org
+  type: link
+  urls:
+  - rubyonrails.org
 rubygems:
-- rubygems.org
+  type: link
+  urls:
+  - rubygems.org
 ruby:
-- ruby-lang.org
+  type: link
+  urls:
+  - ruby-lang.org
 rubocop:
-- rubocop.org
+  type: link
+  urls:
+  - rubocop.org
 renpy:
-- (ld)
-- renpy.org
+  type: link
+  shadow: ld
+  urls:
+  - renpy.org
 redux:
-- redux.js.org
+  type: link
+  urls:
+  - redux.js.org
 redis:
-- redis.com
+  type: link
+  urls:
+  - redis.com
 react:
-- (ld)
-- reactjs.org
+  type: link
+  shadow: ld
+  urls:
+  - reactjs.org
 python:
-- python.org
+  type: link
+  urls:
+  - python.org
+openssl:
+  type: link
+  urls:
+  - openssl.org
 openscad:
-- (ld)
-- openscad.org
+  type: link
+  shadow: ld
+  urls:
+  - openscad.org
 openbadges:
-- imsglobal.org
-- openbadges.org
+  type: link
+  urls:
+  - imsglobal.org
+  - openbadges.org
 npm:
-- npmjs.com
+  type: link
+  urls:
+  - npmjs.com
 nodedotjs:
-- nodejs.org
-- nodejs.com
+  type: link
+  urls:
+  - nodejs.org
+  - nodejs.com
 mozilla:
-- mozilla.org
-- mozilla.com
+  type: link
+  urls:
+  - mozilla.org
+  - mozilla.com
 mercurial:
-- mercurial-scm.org
+  type: link
+  urls:
+  - mercurial-scm.org
 matomo:
-- matomo.org
+  type: link
+  urls:
+  - matomo.org
 markdown:
-- markdownguide.org
+  type: link
+  urls:
+  - markdownguide.org
 libreoffice:
-- libreoffice.org
+  type: link
+  urls:
+  - libreoffice.org
 laravel:
-- laravel.com
+  type: link
+  urls:
+  - laravel.com
 json:
-- json.org
+  type: link
+  urls:
+  - json.org
 jellyfin:
-- jellyfin.org
+  type: link
+  urls:
+  - jellyfin.org
 jekyll:
-- jekyllrb.com
+  type: link
+  urls:
+  - jekyllrb.com
 htmx:
-- htmx.org
+  type: link
+  urls:
+  - htmx.org
 haskell:
-- haskell.org
+  type: link
+  urls:
+  - haskell.org
 handlebarsdotjs:
-- handlebarsjs.com
+  type: link
+  urls:
+  - handlebarsjs.com
 go:
-- golang.org
+  type: link
+  urls:
+  - golang.org
 gitpod:
-- (ld)
-- gitpod.io
+  type: link
+  shadow: ld
+  urls:
+  - gitpod.io
 gitlab:
-- gitlab.com
+  type: link
+  urls:
+  - gitlab.com
 github:
-- github.io
-- github.com
+  type: link
+  urls:
+  - github.io
+  - github.com
 git:
-- git-scm.com
+  type: link
+  urls:
+  - git-scm.com
 gimp:
-- gimp.org
+  type: link
+  urls:
+  - gimp.org
 gitea:
-- gitea.com
+  type: link
+  urls:
+  - gitea.com
 freecad:
-- (ld)
-- freecad.org
+  type: link
+  shadow: ld
+  urls:
+  - freecad.org
+forgejo:
+  type: link
+  urls:
+  - forgejo.org
+  - git.disroot.org
 express:
-- expressjs.com
+  type: link
+  urls:
+  - expressjs.com
 eslint:
-- eslint.org
+  type: link
+  urls:
+  - eslint.org
 emby:
-- emby.media
+  type: link
+  urls:
+  - emby.media
 electron:
-- (ld)
-- electronjs.org
+  type: link
+  shadow: ld
+  urls:
+  - electronjs.org
 duckduckgo:
-- duckduckgo.com
-- dev.to
+  type: link
+  urls:
+  - duckduckgo.com
+devdotto:
+  type: link
+  urls:
+  - dev.to
 d3:
-- (ld)
-- d3js.org
+  type: link
+  shadow: ld
+  urls:
+  - d3js.org
 codeberg:
-- codeberg.page
-- codeberg.org
+  type: link
+  urls:
+  - codeberg.page
+  - codeberg.org
 chartdotjs:
-- chartjs.org
+  type: link
+  urls:
+  - chartjs.org
 blender:
-- blender.org
+  type: link
+  urls:
+  - blender.org
 bitbucket:
-- bitbucket.org
+  type: link
+  urls:
+  - bitbucket.org
 apache:
-- apache.org
+  type: link
+  urls:
+  - apache.org
 amazon:
-- (ld)
-- goodreads.com
-- amzn.to
-- amazon.com
+  type: link
+  shadow: ld
+  urls:
+  - goodreads.com
+  - amzn.to
+  - amazon.com
 youtube:
-- youtube.com
+  type: link
+  urls:
+  - youtube.com
 wikiversity:
-- wikiversity.org
+  type: link
+  urls:
+  - wikiversity.org
 wikiquote:
-- wikiquote.org
+  type: link
+  urls:
+  - wikiquote.org
 wikipedia:
-- wiktionary.org
-- wikipedia.org
+  type: link
+  urls:
+  - wiktionary.org
+  - wikipedia.org
 wikimediacommons:
-- commons.wikimedia.org
+  type: link
+  urls:
+  - commons.wikimedia.org
 wikimediafoundation:
-- wikimedia.org
-- wikisource.org
-- wikinews.org
+  type: link
+  urls:
+  - wikimedia.org
+  - wikisource.org
+  - wikinews.org
 wikidata:
-- wikidata.org
+  type: link
+  urls:
+  - wikidata.org
 wikibooks:
-- wikibooks.org
+  type: link
+  urls:
+  - wikibooks.org
 vox:
-- vox.com
+  type: link
+  urls:
+  - vox.com
 vimeo:
-- vimeo.com
+  type: link
+  urls:
+  - vimeo.com
 unsplash:
-- unsplash.com
+  type: link
+  urls:
+  - unsplash.com
 unitednations:
-- (ld)
-- unesco.org
-- un.org
+  type: link
+  shadow: ld
+  urls:
+  - unesco.org
+  - un.org
 tapas:
-- (ld)
-- tapas.io
+  type: link
+  shadow: ld
+  urls:
+  - tapas.io
 soundcloud:
-- soundcloud.com
+  type: link
+  urls:
+  - soundcloud.com
 simpleicons:
-- simpleicons.org
+  type: link
+  urls:
+  - simpleicons.org
 scpfoundation:
-- (ld)
-- scp-wiki.wikidot.com
-- scpwiki.com
+  type: link
+  shadow: ld
+  urls:
+  - scp-wiki.wikidot.com
+  - scpwiki.com
 opensourceinitiative:
-- opensource.org
+  type: link
+  urls:
+  - opensource.org
 itchdotio:
-- itch.io
+  type: link
+  urls:
+  - itch.io
 gutenberg:
-- gutenberg.org
+  type: link
+  urls:
+  - gutenberg.org
 gnu:
-- gnu.org
-- fsfe.org
-- fsf.org
+  type: link
+  urls:
+  - gnu.org
+  - fsfe.org
+  - fsf.org
 google:
-- web.dev
-- google.com
-- blog.google
+  type: link
+  urls:
+  - web.dev
+  - google.com
+  - blog.google
 freecodecamp:
-- freecodecamp.org
+  type: link
+  urls:
+  - freecodecamp.org
 fontawesome:
-- fontawesome.com
+  type: link
+  urls:
+  - fontawesome.com
 flickr:
-- flickr.com
+  type: link
+  urls:
+  - flickr.com
 deviantart:
-- deviantart.com
+  type: link
+  urls:
+  - deviantart.com
 creativecommons:
-- creativecommons.org
+  type: link
+  urls:
+  - creativecommons.org
 archiveofourown:
-- archiveofourown.org
+  type: link
+  urls:
+  - archiveofourown.org
 internetarchive:
-- archive.org
+  type: link
+  urls:
+  - archive.org
 x:
-- x.com
-- twitter.com
+  type: link
+  urls:
+  - x.com
+  - twitter.com
 tumblr:
-- tumblr.com
+  type: link
+  urls:
+  - tumblr.com
 reddit:
-- reddit.com
+  type: link
+  urls:
+  - reddit.com
 quora:
-- quora.com
+  type: link
+  urls:
+  - quora.com
 pixelfed:
-- pixelfed.dk
-- pixelfed.org
+  type: link
+  urls:
+  - pixelfed.dk
+  - pixelfed.org
 matrix:
-- matrix.to
-- matrix.org
+  type: link
+  urls:
+  - matrix.to
+  - matrix.org
 mastodon:
-- theres.life
-- turtleisland.social
-- kind.social
-- gamerplus.org
-- channel.org
-- comicscamp.club
-- newsmast.community
-- fe.disroot.org
-- joinmastodon.org
-- mastodon.social
-- mastodon.art
+  type: link
+  urls:
+  - theres.life
+  - turtleisland.social
+  - kind.social
+  - gamerplus.org
+  - channel.org
+  - comicscamp.club
+  - newsmast.community
+  - fe.disroot.org
+  - joinmastodon.org
+  - mastodon.social
+  - mastodon.art
 mailchimp:
-- campaign-archive.com
-- mailchimpsites.com
+  type: link
+  urls:
+  - campaign-archive.com
+  - mailchimpsites.com
 lemmy:
-- vlemmy.net
-- lemmy.sdf.org
+  type: link
+  urls:
+  - vlemmy.net
+  - lemmy.sdf.org
 instagram:
-- instagram.com
+  type: link
+  urls:
+  - instagram.com
 facebook:
-- facebook.com
+  type: link
+  urls:
+  - facebook.com
 discord:
-- discord.me
-- discord.gg
+  type: link
+  urls:
+  - discord.me
+  - discord.gg
 diaspora:
-- nota.404.mn
-- diasporafoundation.org
+  type: link
+  urls:
+  - nota.404.mn
+  - diasporafoundation.org
 cohost:
-- cohost.org
+  type: link
+  urls:
+  - cohost.org
 patreon:
-- patreon.com
+  type: link
+  urls:
+  - patreon.com
 liberapay:
-- (ld)
-- liberapay.com
+  type: link
+  shadow: ld
+  urls:
+  - liberapay.com
 kofi:
-- ko-fi.com
+  type: link
+  urls:
+  - ko-fi.com
 buymeacoffee:
-- (ld)
-- buymeacoffee.com
+  type: link
+  shadow: ld
+  urls:
+  - buymeacoffee.com
+gnubash:
+  type: language
+  names:
+  - bash
+  - console
+  - sh
+c:
+  type: language
+  names:
+  - c
+dotnet:
+  type: language
+  names:
+  - c-sharp
+css3:
+  type: language
+  names:
+  - css
+  - CSS
+elixir:
+  type: language
+  names:
+  - elixir
+rubyonrails:
+  type: language
+  names:
+  - erb
+  - rails
+fortran:
+  type: language
+  names:
+  - fortran
+gitignoredotio:
+  type: language
+  names:
+  - gitignore
+go:
+  type: language
+  names:
+  - go
+html5:
+  type: language
+  names:
+  - html
+  - HTML
+javascript:
+  type: language
+  names:
+  - javascript
+  - JavaScript
+json:
+  type: language
+  names:
+  - json
+  - JSON
+react:
+  type: language
+  names:
+  - jsx
+markdown:
+  type: language
+  names:
+  - markdown
+mermaid:
+  type: language
+  names:
+  - mermaid
+php:
+  type: language
+  names:
+  - php
+  - PHP
+ruby:
+  type: language
+  names:
+  - ruby
+  - Ruby
+rust:
+  type: language
+  names:
+  - rust
+sass:
+  type: language
+  names:
+  - sass
+  - SASS
+yaml:
+  type: language
+  names:
+  - yaml
+  - YAML
+  - yml
 
