@@ -45,8 +45,8 @@ def split_url_list(list, regex)
   [a, b]
 end
 
-def color(list, code, color)
-  list[0].include?(code) ? color : transparent
+def color(str, code, color)
+  str.include?(code) ? color : 'transparent'
 end
 
 def process_icon(icon_name, sites)
