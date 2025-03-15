@@ -39,10 +39,12 @@ def get_color(line)
   color_match[1].strip.sub(/'/, '') unless color_match.nil?
 end
 
-def split_url_list(list, regex)
-  a = list.select { |f| regex.match f } unless list.nil?
-  b = list.reject { |f| regex.match f } unless list.nil?
-  [a, b]
+def split_url_list(icon)
+  return if icon.nil?
+  return unless icon['type'] == 'link'
+
+  shadow = icon.key?('shadow') ? icon['shadow'] : nil
+  [shadow, icon['urls']]
 end
 
 def color(str, code, color)
