@@ -51,14 +51,15 @@ def color(str, code, color)
   str.include?(code) ? color : 'transparent'
 end
 
-def process_icon(icon_name, sites)
-  ld, urls = split_url_list sites[icon_name], /\([ld]*\)/
+def process_link(icon_name, sites)
+  ld, urls = split_url_list sites[icon_name]
   shadow = nil
   unless ld.nil? || ld.empty?
     l = color ld, 'l', 'black'
     d = color ld, 'd', 'white'
     shadow = "  text-shadow: 1px 1px light-dark(#{l}, #{d}), -1px -1px light-dark(#{l}, #{d});\n"
   end
+
   [urls, shadow]
 end
 
