@@ -85,10 +85,12 @@ def process_all_icons(input_file, sites, prefix)
     name = Regexp.last_match 1
 
     if name.include? '--color'
-      icons << { content:, color: get_color(line), name:, shadow:, urls: }
+      color = get_color line
     else
+      icons << { content:, color:, name:, shadow:, urls: } unless urls.nil? || color.nil?
       content = get_codepoint line
-      urls, shadow = process_icon name, sites
+      urls, shadow = process_link name, sites
+      languages << process_language(content, name, sites)
     end
   end
 
