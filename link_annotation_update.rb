@@ -94,7 +94,7 @@ def process_all_icons(input_file, sites, prefix)
     end
   end
 
-  icons
+  [icons, languages]
 end
 
 def print_link_css(icons)
@@ -108,5 +108,5 @@ def print_link_css(icons)
 end
 
 sites = YAML.load_file '_plugins/simpleicons.yml'
-icons = process_all_icons ARGV[0], sites
+icons, languages = process_all_icons options.stylesheet, sites, options.prefix
 print_link_css icons
