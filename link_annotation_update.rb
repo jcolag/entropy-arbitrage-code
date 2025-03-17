@@ -97,7 +97,7 @@ def process_all_icons(input_file, sites, prefix)
   icons
 end
 
-def print_css(icons)
+def print_link_css(icons)
   icons.each do |icon|
     next if icon[:urls].nil?
 
@@ -109,4 +109,4 @@ end
 
 sites = YAML.load_file '_plugins/simpleicons.yml'
 icons = process_all_icons ARGV[0], sites
-print_css icons
+print_link_css icons
