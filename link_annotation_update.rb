@@ -107,6 +107,7 @@ def print_link_css(icons)
   end
 end
 
-sites = YAML.load_file '_plugins/simpleicons.yml'
+options = Options.parse ARGV
+sites = YAML.load_file options.mapping
 icons, languages = process_all_icons options.stylesheet, sites, options.prefix
 print_link_css icons
