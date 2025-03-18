@@ -19,6 +19,9 @@ class Options
       opts.on('-m', '--mapping FILE', 'The YAML file mapping names to metadata') do |m|
         options.mapping = m
       end
+      opts.on('-p', '--prefix FILE', 'The CSS class prefix') do |p|
+        options.prefix = p
+      end
       opts.on('-s', '--stylesheet FILE', 'The CSS file for the icon font to analyze') do |c|
         options.stylesheet = c
       end
