@@ -104,6 +104,7 @@ exclude:
   - rebuild.sh
   - tags.sh
   - update-assets.sh
+  - link_annotation_update.rb
 
 feed:
   posts_limit: 30
