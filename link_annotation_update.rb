@@ -110,7 +110,17 @@ def print_link_css(icons)
   end
 end
 
+def print_language_css(icons)
+  icons.each do |icon|
+    next if icon[:names].nil?
+
+    selector = icon[:names].sort.map { |name| "pre.language-#{name}::after" }.join ",\n"
+    puts "#{selector} {\n  content: '#{icon[:content]}';\n}"
+  end
+end
+
 options = Options.parse ARGV
 sites = YAML.load_file options.mapping
 icons, languages = process_all_icons options.stylesheet, sites, options.prefix
 print_link_css icons
+print_language_css languages
