@@ -347,6 +347,12 @@ a[href*="archiveofourown.org"]::after {
   font-family: 'Simple Icons';
 }
 
+a[href*="bandcamp.com"]::after {
+  content: '\eb40';
+  color: #990000;
+  font-family: 'Simple Icons';
+}
+
 a[href*="creativecommons.org"]::after {
   content: '\f25e';
   color: #ED592F;
