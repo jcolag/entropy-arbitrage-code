@@ -405,6 +405,10 @@ creativecommons:
   type: link
   urls:
   - creativecommons.org
+bandcamp:
+  type: link
+  urls:
+  - bandcamp.com
 archiveofourown:
   type: link
   urls:
