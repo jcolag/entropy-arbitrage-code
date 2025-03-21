@@ -3,7 +3,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="fediverse:creator" content="@jcolag@mastodon.social">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta property="og:image" content="{{ page.thumbnail }}">
+  <meta property="og:image" content="{{-site.url-}}{{-page.thumbnail-}}">
   {%- for tag in page.tags -%}
     <meta property="og:article:tag" content="{{ tag }}">
   {%- endfor -%}
