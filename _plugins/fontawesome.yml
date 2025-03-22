@@ -1,0 +1,23 @@
+file-pdf:
+  type: link
+  urls:
+  - .pdf
+linkedin:
+  type: link
+  urls:
+  - linkedin.com
+microsoft:
+  type: link
+  urls:
+  - microsoft.com
+  - msdn.com
+flag-usa:
+  type: link
+  urls:
+  - .mil/
+  - .gov/
+database:
+  type: language
+  names:
+  - sql
+
