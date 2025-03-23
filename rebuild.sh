@@ -121,7 +121,7 @@ then
   else
     ${toot} login_cli
   fi
-  cat <<HERE | ${toot} post --media "${thumb}" --description "${desc}"
+  cat <<HERE | ${toot} post # --media "${thumb}" --description "${desc}"
 On my blog:${titles}
 ${teasers}
 ${tags}
