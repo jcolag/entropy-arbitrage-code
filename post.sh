@@ -60,5 +60,9 @@ echo "${teaser}"
 echo
 echo "#${tags}"
 
-cp "$thumb" ~/Downloads
+weekday=$(date "+%w")
+if [ $weekday -ne 5 ]
+then
+  cp "$thumb" ~/Downloads
+fi
 
