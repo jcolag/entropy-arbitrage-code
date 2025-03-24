@@ -83,7 +83,7 @@ def process_all_icons(input_file, sites, prefix)
   color = nil
 
   File.foreach input_file do |line|
-    next unless line =~ /\.#{prefix}-([^:]+):+before\s*\{/
+    next unless line =~ /\.#{prefix}-([^:]+):+before[^{]*\{/
 
     name = Regexp.last_match 1
 
