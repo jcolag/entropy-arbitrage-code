@@ -33,7 +33,7 @@ class Options
 end
 
 def get_codepoint(line)
-  content_match = line.match(/content:\s*"([^"]*)"/)
+  content_match = line.match(/content:\s*["']([^"']*)["']/)
   content_match[1] unless content_match.nil?
 end
 
