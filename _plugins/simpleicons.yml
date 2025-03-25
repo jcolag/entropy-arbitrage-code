@@ -426,6 +426,11 @@ tumblr:
   type: link
   urls:
   - tumblr.com
+signal:
+  type: link
+  urls:
+  - signal.me
+  - signal.org
 reddit:
   type: link
   urls:
