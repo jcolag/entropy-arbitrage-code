@@ -322,6 +322,13 @@ a[href*="reddit.com"]::after {
   font-family: 'Font Awesome 5 Brands';
 }
 
+a[href*="signal.me"]::after,
+a[href*="signal.org"]::after {
+  content: '\f407';
+  color: #3B45FD;
+  font-family: 'Simple Icons';
+}
+
 a[href*="tumblr.com"]::after {
   content: '\f57b';
   color: #36465D;
