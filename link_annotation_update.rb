@@ -90,10 +90,11 @@ def process_all_icons(input_file, sites, prefix)
     if name.include? '--color'
       color = get_color line
     else
-      icons << { content:, color:, name:, shadow:, urls: } unless urls.nil? || color.nil?
+      icons << { content:, color:, name:, shadow:, urls: } unless urls.nil?
       content = get_codepoint line
       urls, shadow = process_link name, sites
       languages << process_language(content, name, sites)
+      color = nil
     end
   end
 
