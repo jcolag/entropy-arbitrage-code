@@ -25,32 +25,23 @@ class CodebergInlineTag < Liquid::Tag
     save_yaml @cache_file, @cache
     description = repo['description'].force_encoding('UTF-8')
     image_url = repo['image_url'].force_encoding('UTF-8')
+    image_alt = repo['image_alt'].force_encoding('UTF-8')
     title = repo['title'].force_encoding('UTF-8')
     wd = (user.length + 1) * 8.65 + name.length * 4.75
 
-    result = "<a class='codeberg preview' href='#{repo['url']}'>" \
+    "<a class='preview' href='#{repo['url']}'>" \
       "<span class='caption' title='#{caption}'>" \
-      "<span class='icon' style='font-family: \"Simple Icons\";'>&#xec2f;</span>" \
-      "&nbsp;Codeberg &mdash; #{caption}" \
+      "<i class='fab fa-github'></i>" \
+      " #{caption}" \
       "</span>" \
-      "<span class='description'>" \
-      "<img loading='lazy' src='#{image_url}' title='#{title}'>" \
-      "<svg class='codeberg-repo' viewBox='0 0 #{wd} 18'>" \
-      '<text x="0" y="15">' \
-      "<tspan>#{user}/</tspan>" \
-      "<tspan style='font-weight: bold;'>#{name}</tspan>" \
-      '</text>' \
-      '</svg>' \
-      "<span class='desc-text'>#{description}</span>" \
-      '<span class="codeberg-languages">'
-    repo['languages'].each do |l|
-      lang = l['name'].split(' ')[0]
-      result += "<span class='codeberg-language' style='background-color: " \
-        "#{l['color']}; width: #{l['width']}' " \
-        "title='#{lang} #{l['width']}'></span>"
-    end
-    result += '</span></span></a>'
-    result
+      "<img" \
+      " alt='#{image_alt}'" \
+      " class='github'" \
+      " loading='lazy'" \
+      " src='#{image_url}'" \
+      " title='#{title}'" \
+      ">" \
+      "</a>"
   end
 
   def prop(lines, name)
@@ -84,6 +75,7 @@ class CodebergInlineTag < Liquid::Tag
     lines = html.gsub('<', "\n<").split("\n").filter { |l| l.include? '="og:' }
     repo['description'] = prop(lines, '="og:description"')
     repo['image_url'] = prop(lines, '="og:image"')
+    repo['image_alt'] = prop(lines, '="og:image:alt"')
     repo['title'] = prop(lines, '="og:title"')
     repo['url'] = prop(lines, '="og:url"')
     repo['languages'] = extract_langauges html
