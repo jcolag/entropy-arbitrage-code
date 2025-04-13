@@ -570,6 +570,12 @@ a[href*="codeberg.page"]::after {
   font-family: 'Simple Icons';
 }
 
+a[href*="cryptpad.org"]::after {
+  content: '\eca1';
+  color: #0087FF;
+  font-family: 'Simple Icons';
+}
+
 a[href*="d3js.org"]::after {
   content: '\ecb6';
   color: #F9A03C;
@@ -611,6 +617,12 @@ a[href*="eslint.org"]::after {
 a[href*="expressjs.com"]::after {
   content: '\ed92';
   color: #000000;
+  font-family: 'Simple Icons';
+}
+
+a[href*="forgejo.org"]::after {
+  content: '\edf2';
+  color: #FB923C;
   font-family: 'Simple Icons';
 }
 
