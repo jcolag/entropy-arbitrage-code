@@ -718,6 +718,12 @@ a[href*="json.org"]::after {
   font-family: 'Simple Icons';
 }
 
+a[href*="jwt.io"]::after {
+  content: '\efb0';
+  color: #000000;
+  font-family: 'Simple Icons';
+}
+
 a[href*="laravel.com"]::after {
   content: '\f01b';
   color: #FF2D20;
