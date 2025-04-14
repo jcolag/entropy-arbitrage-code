@@ -761,6 +761,12 @@ a[href*="mozilla.org"]::after {
   font-family: 'Simple Icons';
 }
 
+a[href*="nextcloud.com"]::after {
+  content: '\f169';
+  color: #0082C9;
+  font-family: 'Simple Icons';
+}
+
 a[href*="nodejs.com"]::after,
 a[href*="nodejs.org"]::after {
   content: '\f3d3';
@@ -949,6 +955,12 @@ a[href*=".mil/"]::after,
 a[href*=".gov/"]::after {
   content: '\f74d';
   font-family: 'Font Awesome';
+}
+
+a[href*="disroot.org"]::after {
+  content: '\ed07';
+  color: #50162D;
+  font-family: 'Simple Icons';
 }
 
 a[href*="imdb.com"]::after {
