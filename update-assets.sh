@@ -28,7 +28,8 @@ do
   avifenc --min 30 --max 63 --speed 0 --yuv 420 -d 8 --codec aom "${file}" "${dest}"
   if [ $? == 1 ]
   then
-    cp "${from}/${base}" "${to}"
+    dest=$(echo "${file}" | sed "s/${from}/${to}/g")
+    cp "${file}" "${dest}"
   fi
 done
 
