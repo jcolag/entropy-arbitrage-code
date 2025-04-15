@@ -142,6 +142,10 @@ nodedotjs:
   urls:
   - nodejs.org
   - nodejs.com
+nextcloud:
+  type: link
+  urls:
+  - nextcloud.com
 mozilla:
   type: link
   urls:
@@ -167,6 +171,10 @@ laravel:
   type: link
   urls:
   - laravel.com
+jsonwebtokens:
+  type: link
+  urls:
+  - jwt.io
 json:
   type: link
   urls:
@@ -261,6 +269,10 @@ d3:
   shadow: ld
   urls:
   - d3js.org
+cryptpad:
+  type: link
+  urls:
+  - cryptpad.org
 codeberg:
   type: link
   urls:
