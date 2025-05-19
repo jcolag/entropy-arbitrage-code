@@ -8,6 +8,6 @@
   that, by indicating areas of the project where <i>you</i>, dear reader, might
   consider it as an invitation to get involved with the project.
   <br>
-  And yes, sometimes complains slip through, too&hellip;
+  And yes, sometimes complaints slip through, too&hellip;
 </details>
 
