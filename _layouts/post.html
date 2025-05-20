@@ -112,11 +112,11 @@ layout: default
       <b>Hi!</b>
       It looks like I have since continued, updated, or rethought this post
       in some ways, so you may want to look at
-      {%- if related.size == 1 -%}
+      {% if related.size == 1 -%}
         this
-      {%- else -%}
+      {% else -%}
         these
-      {%- endif -%}
+      {% endif -%}
       after you're done reading here.
       <ul>
         {%- for r in related -%}
