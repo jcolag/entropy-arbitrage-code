@@ -162,20 +162,26 @@ a[href^="/blog/tag"]:hover::after {
 a[href^="http"]::after {
   color: $dark-text;
   content: '\f35d';
+  display: inline-block;
   font-family: 'Font Awesome';
   font-size: 0.67em;
   font-style: normal !important;
   opacity: 0.4;
-  vertical-align: top;
+  text-decoration: none;
   text-shadow: 1px 1px light-dark(transparent, white), -1px -1px light-dark(transparent, white);
+  transition: all 0.5s linear;
+  vertical-align: top;
 }
 
 a[href^="http"]:hover::after {
   background-color: $background-color;
-  font-size: 2em;
-  opacity: 0.9;
-  position: absolute;
-  transform: translate(-90%, -18%);
+  border-radius: 0.5em;
+  font-size: 1em;
+  margin-left: -0.75em;
+  opacity: 1.0;
+  padding-left: 0.25em;
+  padding-right: 0.25em;
+  transform: scale(3.0);
 }
 
 a[href^="https://john.colagioia.net/"]::after,
