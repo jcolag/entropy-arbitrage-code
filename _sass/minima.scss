@@ -1461,10 +1461,9 @@ a.preview::after {
 
 .heading-anchor:hover {
   background-color: $background-color;
-  font-size: 1em;
-  margin-left: 0.25em;
   opacity: 1.0;
   text-decoration: none;
+  transform: scale(3.0);
 }
 
 .toc-active {
