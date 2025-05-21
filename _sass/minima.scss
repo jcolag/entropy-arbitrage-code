@@ -1438,17 +1438,20 @@ a.preview::after {
 .emoji {
   display: inline-block;
   font-style: normal;
+  transition: all 0.5s linear;
 }
 
 .emoji:hover {
   background-color: $background-color;
   border-radius: 0.5em;
+  margin-left: -0.5em;
   padding-left: 0.25em;
   padding-right: 0.25em;
   transform: scale(3);
 }
 
 .heading-anchor {
+  display: inline-block;
   font-size: 0.75rem;
   opacity: 0.6;
   padding: 0.1em;
