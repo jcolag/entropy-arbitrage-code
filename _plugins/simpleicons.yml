@@ -35,6 +35,10 @@ nbc:
   urls:
   - nbcnews.com
   - cnbc.com
+arstechnica:
+  type: link
+  urls:
+  - arstechnica.com
 yarn:
   type: link
   urls:
@@ -305,6 +309,10 @@ youtube:
   type: link
   urls:
   - youtube.com
+stackexchange:
+  type: link
+  urls:
+  - stackexchange.com
 wikiversity:
   type: link
   urls:
@@ -507,6 +515,10 @@ cohost:
   type: link
   urls:
   - cohost.org
+stripe:
+  type: link
+  urls:
+  - stripe.com
 patreon:
   type: link
   urls:
