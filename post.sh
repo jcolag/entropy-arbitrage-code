@@ -66,3 +66,19 @@ then
   cp "$thumb" ~/Downloads
 fi
 
+recovery=$(find ~/.mozilla/firefox -name "recovery.jsonlz4" -print)
+tabs=$(lz4jsoncat "${recovery}" | jq -r .windows[].tabs[].entries[0].url)
+
+if grep -q 'buymeacoffee.com' <<< "${tabs}"
+then
+  echo Already open!
+else
+  xdg-open https://www.buymeacoffee.com/app/dashboard
+fi
+
+xdg-open https://nota.404.mn/stream
+xdg-open https://spoutible.com/
+xdg-open https://pinkary.com/
+xdg-open https://sez.us/
+xdg-open https://fe.disroot.org/
+
