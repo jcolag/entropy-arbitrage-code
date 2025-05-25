@@ -105,6 +105,7 @@ exclude:
   - tags.sh
   - update-assets.sh
   - link_annotation_update.rb
+  - _scripts
 
 feed:
   posts_limit: 30
