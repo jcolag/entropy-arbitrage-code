@@ -430,14 +430,14 @@ a[href*="openssl.org"]::after {
 }
 
 a[href*="python.org"]::after {
-  content: '\f335';
-  color: #EE0000;
+  content: '\f2e3';
+  color: #3776AB;
   font-family: 'Simple Icons';
 }
 
 a[href*="redhat.com"]::after {
-  content: '\f33a';
-  color: #FF4438;
+  content: '\f335';
+  color: #EE0000;
   font-family: 'Simple Icons';
 }
 
