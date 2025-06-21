@@ -1481,6 +1481,25 @@ a.preview::after {
   content: '👉 ';
 }
 
+.inline-steno-keyboard {
+  height: 1em;
+  user-select: none;
+}
+
+.steno-keyboard {
+  left: 50%;
+  position: relative;
+  transform: translateX(-50%);
+  user-select: none;
+  width: 67%;
+}
+
+@media (prefers-color-scheme: dark) {
+  .steno-keyboard {
+    filter: invert(1.0);
+  }
+}
+
 li h3 {
   font-size: 1em !important;
   margin-left: -2em;
