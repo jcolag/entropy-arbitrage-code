@@ -1,598 +1,685 @@
-a[href*="buymeacoffee.com"]::after {
-  content: '\ebbd';
-  color: #FFDD00;
+a[href*="amazon.com"]::after,
+a[href*="amzn.to"]::after,
+a[href*="goodreads.com"]::after {
+  color: #FF9900;
+  content: '\ea78';
   font-family: 'Simple Icons';
   text-shadow: 1px 1px light-dark(black, white), -1px -1px light-dark(black, white);
 }
-
-a[href*="ko-fi.com"]::after {
-  content: '\eff5';
-  color: #FF6433;
+a[href*="apache.org"]::after {
+  color: #D22128;
+  content: '\eab1';
   font-family: 'Simple Icons';
 }
-
-a[href*="liberapay.com"]::after {
-  content: '\f03c';
-  color: #F6C915;
-  font-family: 'Simple Icons';
-  text-shadow: 1px 1px light-dark(black, white), -1px -1px light-dark(black, white);
-}
-
-a[href*="stripe.com"]::after {
-  content: '\f4a5';
-  color: #635BFF;
-  font-family: 'Simple Icons';
-  text-shadow: 1px 1px light-dark(black, white), -1px -1px light-dark(black, white);
-}
-
-a[href*="cohost.org"]::after {
-  content: '\ec5e';
-  color: #83254F;
-  font-family: 'Simple Icons';
-}
-
-a[href*="instagram.com"]::after {
-  content: '\ef65';
-  color: #FF0069;
-  font-family: 'Simple Icons';
-}
-
-a[href*="lemmy.sdf.org"]::after,
-a[href*="vlemmy.net"]::after {
-  content: '\f02d';
-  color: #000000;
-  font-family: 'Simple Icons';
-}
-
-a[href*="mastodon.art"]::after,
-a[href*="mastodon.social"]::after,
-a[href*="joinmastodon.org"]::after,
-a[href*="fe.disroot.org"]::after,
-a[href*="newsmast.community"]::after,
-a[href*="comicscamp.club"]::after,
-a[href*="channel.org"]::after,
-a[href*="gamerplus.org"]::after,
-a[href*="kind.social"]::after,
-a[href*="turtleisland.social"]::after,
-a[href*="theres.life"]::after {
-  content: '\f0b1';
-  color: #6364FF;
-  font-family: 'Simple Icons';
-}
-
-a[href*="matrix.org"]::after,
-a[href*="matrix.to"]::after {
-  content: '\f0b7';
-  color: #000000;
-  font-family: 'Simple Icons';
-}
-
-a[href*="pixelfed.org"]::after,
-a[href*="pixelfed.dk"]::after {
-  content: '\f263';
-  color: #6366F1;
-  font-family: 'Simple Icons';
-}
-
-a[href*="signal.me"]::after,
-a[href*="signal.org"]::after {
-  content: '\f407';
-  color: #3B45FD;
-  font-family: 'Simple Icons';
-}
-
-a[href*="tumblr.com"]::after {
-  content: '\f57b';
-  color: #36465D;
-  font-family: 'Simple Icons';
-}
-
-a[href*="archive.org"]::after {
-  content: '\ef71';
-  color: #666666;
-  font-family: 'Simple Icons';
-}
-
 a[href*="archiveofourown.org"]::after {
+  color: #990000;
   content: '\eaed';
-  color: #990000;
   font-family: 'Simple Icons';
 }
-
+a[href*="arstechnica.com"]::after {
+  color: #FF4E00;
+  content: '\eaf7';
+  font-family: 'Simple Icons';
+}
 a[href*="bandcamp.com"]::after {
+  color: #408294;
   content: '\eb40';
-  color: #990000;
   font-family: 'Simple Icons';
 }
-
+a[href*="bitbucket.org"]::after {
+  color: #0052CC;
+  content: '\eb6c';
+  font-family: 'Simple Icons';
+}
+a[href*="blender.org"]::after {
+  color: #E87D0D;
+  content: '\eb7b';
+  font-family: 'Simple Icons';
+}
+a[href*="buymeacoffee.com"]::after {
+  color: #FFDD00;
+  content: '\ebbd';
+  font-family: 'Simple Icons';
+  text-shadow: 1px 1px light-dark(black, white), -1px -1px light-dark(black, white);
+}
+a[href*="chartjs.org"]::after {
+  color: #FF6384;
+  content: '\ebf4';
+  font-family: 'Simple Icons';
+}
+a[href*="codeberg.org"]::after,
+a[href*="codeberg.page"]::after {
+  color: #2185D0;
+  content: '\ec3f';
+  font-family: 'Simple Icons';
+}
+a[href*="cohost.org"]::after {
+  color: #83254F;
+  content: '\ec5e';
+  font-family: 'Simple Icons';
+}
+a[href*="creativecommons.org"]::after {
+  color: #ED592F;
+  content: '\ec94';
+  font-family: 'Simple Icons';
+}
+a[href*="cryptpad.org"]::after {
+  color: #0087FF;
+  content: '\eca1';
+  font-family: 'Simple Icons';
+}
+a[href*="d3js.org"]::after {
+  color: #F9A03C;
+  content: '\ecb6';
+  font-family: 'Simple Icons';
+  text-shadow: 1px 1px light-dark(black, white), -1px -1px light-dark(black, white);
+}
+a[href*="dev.to"]::after {
+  color: #0A0A0A;
+  content: '\ecf0';
+  font-family: 'Simple Icons';
+}
+a[href*="deviantart.com"]::after {
+  color: #05CC47;
+  content: '\ecf3';
+  font-family: 'Simple Icons';
+}
+a[href*="diasporafoundation.org"]::after,
+a[href*="nota.404.mn"]::after {
+  color: #000000;
+  content: '\ecfa';
+  font-family: 'Simple Icons';
+}
+a[href*="discord.gg"]::after,
+a[href*="discord.me"]::after {
+  color: #5865F2;
+  content: '\ed03';
+  font-family: 'Simple Icons';
+}
+a[href*="disroot.org"]::after {
+  color: #50162D;
+  content: '\ed07';
+  font-family: 'Simple Icons';
+}
+a[href*="duckduckgo.com"]::after {
+  color: #DE5833;
+  content: '\ed2d';
+  font-family: 'Simple Icons';
+}
+a[href*="electronjs.org"]::after {
+  color: #47848F;
+  content: '\ed56';
+  font-family: 'Simple Icons';
+  text-shadow: 1px 1px light-dark(black, white), -1px -1px light-dark(black, white);
+}
+a[href*="emby.media"]::after {
+  color: #52B54B;
+  content: '\ed66';
+  font-family: 'Simple Icons';
+}
+a[href*="eslint.org"]::after {
+  color: #4B32C3;
+  content: '\ed7b';
+  font-family: 'Simple Icons';
+}
+a[href*="expressjs.com"]::after {
+  color: #000000;
+  content: '\ed92';
+  font-family: 'Simple Icons';
+}
+a[href*="facebook.com"]::after {
+  color: #0866FF;
+  content: '\ed9b';
+  font-family: 'Simple Icons';
+}
+a[href*="flickr.com"]::after {
+  color: #0063DC;
+  content: '\eddb';
+  font-family: 'Simple Icons';
+}
+a[href*="fontawesome.com"]::after {
+  color: #538DD7;
+  content: '\edec';
+  font-family: 'Simple Icons';
+}
+a[href*="forgejo.org"]::after,
+a[href*="git.disroot.org"]::after {
+  color: #FB923C;
+  content: '\edf2';
+  font-family: 'Simple Icons';
+}
+a[href*="freecad.org"]::after {
+  color: #729FCF;
+  content: '\ee06';
+  font-family: 'Simple Icons';
+  text-shadow: 1px 1px light-dark(black, white), -1px -1px light-dark(black, white);
+}
+a[href*="freecodecamp.org"]::after {
+  color: #0A0A23;
+  content: '\ee07';
+  font-family: 'Simple Icons';
+}
+a[href*="gimp.org"]::after {
+  color: #5C5543;
+  content: '\ee36';
+  font-family: 'Simple Icons';
+}
+a[href*="git-scm.com"]::after {
+  color: #F05032;
+  content: '\ee39';
+  font-family: 'Simple Icons';
+}
+a[href*="gitea.com"]::after {
+  color: #609926;
+  content: '\ee3f';
+  font-family: 'Simple Icons';
+}
+a[href*="github.com"]::after,
+a[href*="github.io"]::after {
+  color: #181717;
+  content: '\ee41';
+  font-family: 'Simple Icons';
+}
+a[href*="gitlab.com"]::after {
+  color: #FC6D26;
+  content: '\ee48';
+  font-family: 'Simple Icons';
+}
+a[href*="gitpod.io"]::after {
+  color: #FFAE33;
+  content: '\ee49';
+  font-family: 'Simple Icons';
+  text-shadow: 1px 1px light-dark(black, white), -1px -1px light-dark(black, white);
+}
 a[href*="fsf.org"]::after,
 a[href*="fsfe.org"]::after,
 a[href*="gnu.org"]::after {
-  content: '\ee56';
   color: #A42E2B;
+  content: '\ee56';
   font-family: 'Simple Icons';
 }
-
+a[href*="blog.google"]::after,
+a[href*="google.com"]::after,
+a[href*="web.dev"]::after {
+  color: #4285F4;
+  content: '\ee67';
+  font-family: 'Simple Icons';
+}
 a[href*="gutenberg.org"]::after {
+  color: #000000;
   content: '\eec5';
-  color: #000000;
   font-family: 'Simple Icons';
 }
-
-a[href*="opensource.org"]::after {
-  content: '\f1c8';
-  color: #3DA639;
-  font-family: 'Simple Icons';
-}
-
-a[href*="scpwiki.com"]::after,
-a[href*="scp-wiki.wikidot.com"]::after {
-  content: '\f3c7';
-  color: #FFFFFF;
-  font-family: 'Simple Icons';
-  text-shadow: 1px 1px light-dark(black, white), -1px -1px light-dark(black, white);
-}
-
-a[href*="simpleicons.org"]::after {
-  content: '\f40c';
-  color: #111111;
-  font-family: 'Simple Icons';
-}
-
-a[href*="tapas.io"]::after {
-  content: '\f4e7';
-  color: #FFCE00;
-  font-family: 'Simple Icons';
-  text-shadow: 1px 1px light-dark(black, white), -1px -1px light-dark(black, white);
-}
-
-a[href*="un.org"]::after,
-a[href*="unesco.org"]::after {
-  content: '\f5ab';
-  color: #009EDB;
-  font-family: 'Simple Icons';
-  text-shadow: 1px 1px light-dark(black, white), -1px -1px light-dark(black, white);
-}
-
-a[href*="unsplash.com"]::after {
-  content: '\f5b3';
-  color: #000000;
-  font-family: 'Simple Icons';
-}
-
-a[href*="vox.com"]::after {
-  content: '\f606';
-  color: #DA074A;
-  font-family: 'Simple Icons';
-}
-
-a[href*="wikibooks.org"]::after {
-  content: '\f64a';
-  color: #006699;
-  font-family: 'Simple Icons';
-}
-
-a[href*="wikidata.org"]::after {
-  content: '\f64b';
-  color: #006699;
-  font-family: 'Simple Icons';
-}
-
-a[href*="wikinews.org"]::after,
-a[href*="wikisource.org"]::after,
-a[href*="wikimedia.org"]::after {
-  content: '\f64d';
-  color: #000000;
-  font-family: 'Simple Icons';
-}
-
-a[href*="commons.wikimedia.org"]::after {
-  content: '\f64c';
-  color: #006699;
-  font-family: 'Simple Icons';
-}
-
-a[href*="wikipedia.org"]::after,
-a[href*="wiktionary.org"]::after {
-  content: '\f64e';
-  color: #000000;
-  font-family: 'Simple Icons';
-}
-
-a[href*="wikiquote.org"]::after {
-  content: '\f64f';
-  color: #006699;
-  font-family: 'Simple Icons';
-}
-
-a[href*="wikiversity.org"]::after {
-  content: '\f650';
-  color: #00649A;
-  font-family: 'Simple Icons';
-}
-
-a[href*="stackexchange.com"]::after {
-  content: '\f476';
-  color: #1E5397;
-  font-family: 'Simple Icons';
-}
-
-a[href*="apache.org"]::after {
-  content: '\eab1';
-  color: #D22128;
-  font-family: 'Simple Icons';
-}
-
-a[href*="blender.org"]::after {
-  content: '\eb7b';
-  color: #E87D0D;
-  font-family: 'Simple Icons';
-}
-
-a[href*="chartjs.org"]::after {
-  content: '\ebf4';
-  color: #FF6384;
-  font-family: 'Simple Icons';
-}
-
-a[href*="codeberg.org"]::after,
-a[href*="codeberg.page"]::after {
-  content: '\ec3f';
-  color: #2185D0;
-  font-family: 'Simple Icons';
-}
-
-a[href*="cryptpad.org"]::after {
-  content: '\eca1';
-  color: #0087FF;
-  font-family: 'Simple Icons';
-}
-
-a[href*="d3js.org"]::after {
-  content: '\ecb6';
-  color: #F9A03C;
-  font-family: 'Simple Icons';
-  text-shadow: 1px 1px light-dark(black, white), -1px -1px light-dark(black, white);
-}
-
-a[href*="duckduckgo.com"]::after {
-  content: '\ed2d';
-  color: #DE5833;
-  font-family: 'Simple Icons';
-}
-
-a[href*="electronjs.org"]::after {
-  content: '\ed56';
-  color: #47848F;
-  font-family: 'Simple Icons';
-  text-shadow: 1px 1px light-dark(black, white), -1px -1px light-dark(black, white);
-}
-
-a[href*="emby.media"]::after {
-  content: '\ed66';
-  color: #52B54B;
-  font-family: 'Simple Icons';
-}
-
-a[href*="eslint.org"]::after {
-  content: '\ed7b';
-  color: #4B32C3;
-  font-family: 'Simple Icons';
-}
-
-a[href*="expressjs.com"]::after {
-  content: '\ed92';
-  color: #000000;
-  font-family: 'Simple Icons';
-}
-
-a[href*="forgejo.org"]::after {
-  content: '\edf2';
-  color: #FB923C;
-  font-family: 'Simple Icons';
-}
-
-a[href*="freecad.org"]::after {
-  content: '\ee06';
-  color: #729FCF;
-  font-family: 'Simple Icons';
-  text-shadow: 1px 1px light-dark(black, white), -1px -1px light-dark(black, white);
-}
-
-a[href*="gitea.com"]::after {
-  content: '\ee3f';
-  color: #609926;
-  font-family: 'Simple Icons';
-}
-
-a[href*="gimp.org"]::after {
-  content: '\ee36';
-  color: #5C5543;
-  font-family: 'Simple Icons';
-}
-
-a[href*="gitpod.io"]::after {
-  content: '\ee2f';
-  color: #FFAE33;
-  font-family: 'Simple Icons';
-  text-shadow: 1px 1px light-dark(black, white), -1px -1px light-dark(black, white);
-}
-
-a[href*="golang.org"]::after {
-  content: '\ee5c';
-  color: #00ADD8;
-  font-family: 'Simple Icons';
-}
-
 a[href*="handlebarsjs.com"]::after {
+  color: #000000;
   content: '\eed2';
-  color: #000000;
   font-family: 'Simple Icons';
 }
-
 a[href*="haskell.org"]::after {
-  content: '\eeda';
   color: #5D4F85;
+  content: '\eeda';
   font-family: 'Simple Icons';
 }
-
 a[href*="htmx.org"]::after {
-  content: '\ef1c';
   color: #3366CC;
+  content: '\ef1c';
   font-family: 'Simple Icons';
 }
-
+a[href*="imdb.com"]::after {
+  color: #F5C518;
+  content: '\ef49';
+  font-family: 'Simple Icons';
+  text-shadow: 1px 1px light-dark(black, white), -1px -1px light-dark(black, white);
+}
+a[href*="instagram.com"]::after {
+  color: #FF0069;
+  content: '\ef65';
+  font-family: 'Simple Icons';
+}
+a[href*="archive.org"]::after {
+  color: #666666;
+  content: '\ef71';
+  font-family: 'Simple Icons';
+}
+a[href*="itch.io"]::after {
+  color: #FA5C5C;
+  content: '\ef82';
+  font-family: 'Simple Icons';
+}
 a[href*="jekyllrb.com"]::after {
-  content: '\ef93';
   color: #CC0000;
+  content: '\ef93';
   font-family: 'Simple Icons';
 }
-
 a[href*="jellyfin.org"]::after {
-  content: '\ef94';
   color: #00A4DC;
+  content: '\ef94';
   font-family: 'Simple Icons';
 }
-
-a[href*="json.org"]::after {
-  content: '\efaf';
-  color: #000000;
-  font-family: 'Simple Icons';
-}
-
 a[href*="jwt.io"]::after {
+  color: #000000;
   content: '\efb0';
-  color: #000000;
   font-family: 'Simple Icons';
 }
-
+a[href*="kickstarter.com"]::after {
+  color: #05CE78;
+  content: '\efe3';
+  font-family: 'Simple Icons';
+}
+a[href*="ko-fi.com"]::after {
+  color: #FF6433;
+  content: '\eff5';
+  font-family: 'Simple Icons';
+}
 a[href*="laravel.com"]::after {
-  content: '\f01b';
   color: #FF2D20;
+  content: '\f01b';
   font-family: 'Simple Icons';
 }
-
-a[href*="libreoffice.org"]::after {
-  content: '\f03f';
-  color: #18A303;
-  font-family: 'Simple Icons';
-}
-
-a[href*="markdownguide.org"]::after {
-  content: '\f0aa';
+a[href*="lemmy.sdf.org"]::after,
+a[href*="vlemmy.net"]::after {
   color: #000000;
+  content: '\f02d';
   font-family: 'Simple Icons';
 }
-
+a[href*="liberapay.com"]::after {
+  color: #F6C915;
+  content: '\f03c';
+  font-family: 'Simple Icons';
+  text-shadow: 1px 1px light-dark(black, white), -1px -1px light-dark(black, white);
+}
+a[href*="libreoffice.org"]::after {
+  color: #18A303;
+  content: '\f03f';
+  font-family: 'Simple Icons';
+}
+a[href*="campaign-archive.com"]::after,
+a[href*="mailchimpsites.com"]::after {
+  color: #FFE01B;
+  content: '\f095';
+  font-family: 'Simple Icons';
+}
+a[href*="channel.org"]::after,
+a[href*="comicscamp.club"]::after,
+a[href*="fe.disroot.org"]::after,
+a[href*="gamerplus.org"]::after,
+a[href*="joinmastodon.org"]::after,
+a[href*="kind.social"]::after,
+a[href*="mastodon.art"]::after,
+a[href*="mastodon.social"]::after,
+a[href*="newsmast.community"]::after,
+a[href*="theres.life"]::after,
+a[href*="turtleisland.social"]::after {
+  color: #6364FF;
+  content: '\f0b1';
+  font-family: 'Simple Icons';
+}
 a[href*="matomo.org"]::after {
-  content: '\f0b6';
   color: #3152A0;
+  content: '\f0b6';
   font-family: 'Simple Icons';
 }
-
+a[href*="matrix.org"]::after,
+a[href*="matrix.to"]::after {
+  color: #000000;
+  content: '\f0b7';
+  font-family: 'Simple Icons';
+}
 a[href*="mercurial-scm.org"]::after {
-  content: '\f0d8';
   color: #999999;
+  content: '\f0d8';
   font-family: 'Simple Icons';
 }
-
 a[href*="mozilla.com"]::after,
 a[href*="mozilla.org"]::after {
-  content: '\f123';
   color: #000000;
+  content: '\f123';
   font-family: 'Simple Icons';
 }
-
+a[href*="cnbc.com"]::after,
+a[href*="nbc.com"]::after,
+a[href*="nbcmiami.com"]::after,
+a[href*="nbcnews.com"]::after {
+  color: #222222;
+  content: '\f14d';
+  font-family: 'Simple Icons';
+}
+a[href*="nytimes.com"]::after {
+  color: #000000;
+  content: '\f164';
+  font-family: 'Simple Icons';
+}
 a[href*="nextcloud.com"]::after {
-  content: '\f169';
   color: #0082C9;
+  content: '\f169';
   font-family: 'Simple Icons';
 }
-
-a[href*="openbadges.org"]::after,
-a[href*="imsglobal.org"]::after {
-  content: '\f1c3';
+a[href*="nodejs.com"]::after,
+a[href*="nodejs.org"]::after {
+  color: #5FA04E;
+  content: '\f17f';
+  font-family: 'Simple Icons';
+}
+a[href*="npmjs.com"]::after {
+  color: #CB3837;
+  content: '\f18f';
+  font-family: 'Simple Icons';
+}
+a[href*="imsglobal.org"]::after,
+a[href*="openbadges.org"]::after {
   color: #073B5A;
+  content: '\f1c3';
   font-family: 'Simple Icons';
 }
-
+a[href*="opensource.org"]::after {
+  color: #3DA639;
+  content: '\f1c8';
+  font-family: 'Simple Icons';
+}
 a[href*="openscad.org"]::after {
-  content: '\f1da';
   color: #F9D72C;
+  content: '\f1da';
   font-family: 'Simple Icons';
   text-shadow: 1px 1px light-dark(black, white), -1px -1px light-dark(black, white);
 }
-
 a[href*="openssl.org"]::after {
   color: #721412;
   content: '\f1dd';
   font-family: 'Simple Icons';
 }
-
+a[href*="patreon.com"]::after {
+  color: #000000;
+  content: '\f221';
+  font-family: 'Simple Icons';
+}
+a[href*="pixelfed.dk"]::after,
+a[href*="pixelfed.org"]::after {
+  color: #6366F1;
+  content: '\f263';
+  font-family: 'Simple Icons';
+}
 a[href*="python.org"]::after {
-  content: '\f2e3';
   color: #3776AB;
+  content: '\f2e3';
   font-family: 'Simple Icons';
 }
-
-a[href*="redhat.com"]::after {
-  content: '\f335';
-  color: #EE0000;
+a[href*="quora.com"]::after {
+  color: #B92B27;
+  content: '\f306';
   font-family: 'Simple Icons';
 }
-
+a[href*="reddit.com"]::after {
+  color: #FF4500;
+  content: '\f339';
+  font-family: 'Simple Icons';
+}
 a[href*="redis.com"]::after {
-  content: '\f33a';
   color: #FF4438;
+  content: '\f33a';
   font-family: 'Simple Icons';
 }
-
 a[href*="redux.js.org"]::after {
-  content: '\f33f';
   color: #764ABC;
+  content: '\f33f';
   font-family: 'Simple Icons';
 }
-
 a[href*="renpy.org"]::after {
-  content: '\f34b';
   color: #FF7F7F;
+  content: '\f34b';
   font-family: 'Simple Icons';
   text-shadow: 1px 1px light-dark(black, white), -1px -1px light-dark(black, white);
 }
-
 a[href*="rubocop.org"]::after {
+  color: #000000;
   content: '\f392';
-  color: #000000;
   font-family: 'Simple Icons';
 }
-
-a[href*="ruby-lang.org"]::after {
-  content: '\f393';
-  color: #CC342D;
-  font-family: 'Simple Icons';
-}
-
 a[href*="rubygems.org"]::after {
-  content: '\f396';
   color: #E9573F;
+  content: '\f396';
   font-family: 'Simple Icons';
 }
-
-a[href*="rubyonrails.org"]::after {
-  content: '\f394';
-  color: #D30001;
+a[href*="scp-wiki.wikidot.com"]::after,
+a[href*="scpwiki.com"]::after {
+  color: #FFFFFF;
+  content: '\f3c7';
+  font-family: 'Simple Icons';
+  text-shadow: 1px 1px light-dark(black, white), -1px -1px light-dark(black, white);
+}
+a[href*="signal.me"]::after,
+a[href*="signal.org"]::after {
+  color: #3B45FD;
+  content: '\f407';
   font-family: 'Simple Icons';
 }
-
-a[href*="rust-lang.org"]::after {
-  content: '\f39f';
-  color: #000000;
+a[href*="simpleicons.org"]::after {
+  color: #111111;
+  content: '\f40c';
   font-family: 'Simple Icons';
 }
-
+a[href*="soundcloud.com"]::after {
+  color: #FF5500;
+  content: '\f44b';
+  font-family: 'Simple Icons';
+}
 a[href*="sourceforge.com"]::after,
 a[href*="sourceforge.net"]::after {
-  content: '\f44d';
   color: #FF6600;
+  content: '\f44d';
   font-family: 'Simple Icons';
 }
-
 a[href*="sqlite.org"]::after {
-  content: '\f46f';
   color: #003B57;
+  content: '\f46f';
   font-family: 'Simple Icons';
 }
-
-a[href*="thingiverse.com"]::after {
-  content: '\f51f';
-  color: #248BFB;
+a[href*="stackexchange.com"]::after {
+  color: #1E5397;
+  content: '\f476';
   font-family: 'Simple Icons';
 }
-
-a[href*="ubuntu.com"]::after {
-  content: '\f595';
-  color: #E95420;
-  font-family: 'Simple Icons';
-}
-
-a[href*="vscodium.com"]::after {
-  content: '\f609';
-  color: #2F80ED;
-  font-family: 'Simple Icons';
-}
-
-a[href*="webpack.js.org"]::after {
-  content: '\f635';
-  color: #8DD6F9;
-  font-family: 'Simple Icons';
-}
-
-a[href*="wordpress.org"]::after {
-  content: '\f664';
-  color: #21759B;
-  font-family: 'Simple Icons';
-}
-
-a[href*="yaml.org"]::after {
-  content: '\f687';
-  color: #CB171E;
-  font-family: 'Simple Icons';
-}
-
-a[href*="yarnpkg.com"]::after {
-  content: '\f689';
-  color: #2C8EBB;
-  font-family: 'Simple Icons';
-}
-
-// News
-a[href*="arstechnica.com"]::after {
-  content: '\eaf7';
-  color: #FF4E00;
-  font-family: 'Simple Icons';
-}
-
-a[href*="cnbc.com"]::after,
-a[href*="nbcnews.com"]::after {
-  content: '\f14d';
-  color: #222222;
-  font-family: 'Simple Icons';
-}
-
-a[href*="nytimes.com"]::after {
-  content: '\f164';
-  color: #000000;
-  font-family: 'Simple Icons';
-}
-
-a[href*="theconversation.com"]::after {
-  content: '\f511';
-  color: #D8352A;
-  font-family: 'Simple Icons';
-}
-
-a[href*="theguardian.com"]::after {
-  content: '\f513';
-  color: #052962;
-  font-family: 'Simple Icons';
-}
-
-a[href*="disroot.org"]::after {
-  content: '\ed07';
-  color: #50162D;
-  font-family: 'Simple Icons';
-}
-
-a[href*="imdb.com"]::after {
-  content: '\ef49';
-  color: #F5C518;
+a[href*="stackoverflow.com"]::after {
+  color: #F58025;
+  content: '\f477';
   font-family: 'Simple Icons';
   text-shadow: 1px 1px light-dark(black, white), -1px -1px light-dark(black, white);
 }
-
-a[href*="kickstarter.com"]::after {
-  content: '\efe3';
-  color: #05CE78;
+a[href*="stripe.com"]::after {
+  color: #635BFF;
+  content: '\f4a5';
   font-family: 'Simple Icons';
 }
-
+a[href*="tapas.io"]::after {
+  color: #FFCE00;
+  content: '\f4e7';
+  font-family: 'Simple Icons';
+  text-shadow: 1px 1px light-dark(black, white), -1px -1px light-dark(black, white);
+}
+a[href*="theconversation.com"]::after {
+  color: #D8352A;
+  content: '\f511';
+  font-family: 'Simple Icons';
+}
+a[href*="theguardian.com"]::after {
+  color: #052962;
+  content: '\f513';
+  font-family: 'Simple Icons';
+}
+a[href*="thingiverse.com"]::after {
+  color: #248BFB;
+  content: '\f51f';
+  font-family: 'Simple Icons';
+}
+a[href*="tumblr.com"]::after {
+  color: #36465D;
+  content: '\f57b';
+  font-family: 'Simple Icons';
+}
+a[href*="ubuntu.com"]::after {
+  color: #E95420;
+  content: '\f595';
+  font-family: 'Simple Icons';
+}
+a[href*="un.org"]::after,
+a[href*="unesco.org"]::after {
+  color: #009EDB;
+  content: '\f5ab';
+  font-family: 'Simple Icons';
+  text-shadow: 1px 1px light-dark(black, white), -1px -1px light-dark(black, white);
+}
+a[href*="unsplash.com"]::after {
+  color: #000000;
+  content: '\f5b3';
+  font-family: 'Simple Icons';
+}
+a[href*="vimeo.com"]::after {
+  color: #1AB7EA;
+  content: '\f5e9';
+  font-family: 'Simple Icons';
+}
+a[href*="vox.com"]::after {
+  color: #DA074A;
+  content: '\f606';
+  font-family: 'Simple Icons';
+}
+a[href*="vscodium.com"]::after {
+  color: #2F80ED;
+  content: '\f609';
+  font-family: 'Simple Icons';
+}
+a[href*="webpack.js.org"]::after {
+  color: #8DD6F9;
+  content: '\f635';
+  font-family: 'Simple Icons';
+}
+a[href*="wikibooks.org"]::after {
+  color: #006699;
+  content: '\f64a';
+  font-family: 'Simple Icons';
+}
+a[href*="wikidata.org"]::after {
+  color: #006699;
+  content: '\f64b';
+  font-family: 'Simple Icons';
+}
+a[href*="commons.wikimedia.org"]::after {
+  color: #006699;
+  content: '\f64c';
+  font-family: 'Simple Icons';
+}
+a[href*="wikimedia.org"]::after,
+a[href*="wikinews.org"]::after,
+a[href*="wikisource.org"]::after {
+  color: #000000;
+  content: '\f64d';
+  font-family: 'Simple Icons';
+}
+a[href*="wikipedia.org"]::after,
+a[href*="wiktionary.org"]::after {
+  color: #000000;
+  content: '\f64e';
+  font-family: 'Simple Icons';
+}
+a[href*="wikiquote.org"]::after {
+  color: #006699;
+  content: '\f64f';
+  font-family: 'Simple Icons';
+}
+a[href*="wikiversity.org"]::after {
+  color: #00649A;
+  content: '\f650';
+  font-family: 'Simple Icons';
+}
+a[href*="wordpress.org"]::after {
+  color: #21759B;
+  content: '\f664';
+  font-family: 'Simple Icons';
+}
+a[href*="twitter.com"]::after,
+a[href*="x.com"]::after {
+  color: #000000;
+  content: '\f670';
+  font-family: 'Simple Icons';
+}
+a[href*="yarnpkg.com"]::after {
+  color: #2C8EBB;
+  content: '\f689';
+  font-family: 'Simple Icons';
+}
+a[href*="youtube.com"]::after {
+  color: #FF0000;
+  content: '\f690';
+  font-family: 'Simple Icons';
+}
+pre.language-c-sharp::after {
+  content: '\ea02';
+}
+pre.language-c::after {
+  content: '\ebc3';
+}
+pre.language-CSS::after,
+pre.language-css::after {
+  content: '\eca8';
+}
+pre.language-elixir::after {
+  content: '\ed60';
+}
+pre.language-fortran::after {
+  content: '\edf7';
+}
+pre.language-gitignore::after {
+  content: '\ee46';
+}
+pre.language-bash::after,
+pre.language-console::after,
+pre.language-sh::after {
+  content: '\ee57';
+}
+pre.language-go::after {
+  content: '\ee5c';
+}
+pre.language-HTML::after,
+pre.language-html::after {
+  content: '\ef1b';
+}
+pre.language-JavaScript::after,
+pre.language-javascript::after {
+  content: '\ef8f';
+}
+pre.language-JSON::after,
+pre.language-json::after {
+  content: '\efaf';
+}
+pre.language-markdown::after {
+  content: '\f0aa';
+}
+pre.language-mermaid::after {
+  content: '\f0d9';
+}
+pre.language-PHP::after,
+pre.language-php::after {
+  content: '\f247';
+}
+pre.language-jsx::after {
+  content: '\f323';
+}
+pre.language-Ruby::after,
+pre.language-ruby::after {
+  content: '\f393';
+}
+pre.language-erb::after,
+pre.language-rails::after {
+  content: '\f394';
+}
+pre.language-rust::after {
+  content: '\f39f';
+}
+pre.language-SASS::after,
+pre.language-sass::after {
+  content: '\f3b8';
+}
+pre.language-YAML::after,
+pre.language-yaml::after,
+pre.language-yml::after {
+  content: '\f687';
+}
