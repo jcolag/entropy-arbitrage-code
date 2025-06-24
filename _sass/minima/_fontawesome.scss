@@ -1,200 +1,22 @@
-a[href*="patreon.com"]::after {
-  content: '\f3d9';
-  color: #000000;
-  font-family: 'Font Awesome 5 Brands';
+a[href*=".pdf"]::after {
+  color: #990000;
+  content: '\f1c1';
+  font-family: 'Font Awesome';
 }
-
-a[href*="diasporafoundation.org"]::after,
-a[href*="nota.404.mn"]::after {
-  content: '\f791';
-  color: #000000;
-  font-family: 'Font Awesome 5 Brands';
+a[href*=".gov/"]::after,
+a[href*=".mil/"]::after {
+  content: '\f74d';
+  font-family: 'Font Awesome';
 }
-
-a[href*="discord.gg"]::after,
-a[href*="discord.me"]::after {
-  content: '\f392';
-  color: #5865F2;
-  font-family: 'Font Awesome 5 Brands';
-}
-
-a[href*="facebook.com"]::after {
-  content: '\f09a';
-  color: #0866FF;
-  font-family: 'Font Awesome 5 Brands';
-}
-
 a[href*="linkedin.com"]::after {
   content: '\f08c';
   font-family: 'Font Awesome 5 Brands';
 }
-
-a[href*="linkedin.com"]:has(> i.fa-linkedin)::after {
-  content: none;
-}
-
-a[href*="mailchimpsites.com"]::after,
-a[href*="campaign-archive.com"]::after {
-  content: '\f59e';
-  font-family: 'Font Awesome 5 Brands';
-}
-
-a[href*="quora.com"]::after {
-  content: '\f2c4';
-  color: #B92B27;
-  font-family: 'Font Awesome 5 Brands';
-}
-
-a[href*="reddit.com"]::after {
-  content: '\f1a1';
-  color: #FF4500;
-  font-family: 'Font Awesome 5 Brands';
-}
-
-a[href*="twitter.com"]::after,
-a[href*="x.com"]::after {
-  content: '\1D54F';
-  font-family: 'Exo 2';
-}
-
-a[href*="creativecommons.org"]::after {
-  content: '\f25e';
-  color: #ED592F;
-  font-family: 'Font Awesome 5 Brands';
-}
-
-a[href*="deviantart.com"]::after {
-  content: '\f1bd';
-  color: #05CC47;
-  font-family: 'Font Awesome 5 Brands';
-}
-
-a[href*="flickr.com"]::after {
-  content: '\f16e';
-  color: #0063DC;
-  font-family: 'Font Awesome 5 Brands';
-}
-
-a[href*="fontawesome.com"]::after {
-  content: '\f2b4';
-  color: #538DD7;
-  font-family: 'Font Awesome 5 Brands';
-}
-
-a[href*="freecodecamp.org"]::after {
-  content: '\f2c5';
-  color: #0A0A23;
-  font-family: 'Font Awesome 5 Brands';
-}
-
-a[href*="blog.google"]::after,
-a[href*="google.com"]::after,
-a[href*="web.dev"]::after {
-  content: '\f1a0';
-  color: #4285F4;
-  font-family: 'Font Awesome 5 Brands';
-}
-
-a[href*="itch.io"]::after {
-  content: '\f83a';
-  color: #FA5C5C;
-  font-family: 'Font Awesome 5 Brands';
-}
-
-a[href*="soundcloud.com"]::after {
-  content: '\f1be';
-  color: #FF5500;
-  font-family: 'Font Awesome 5 Brands';
-}
-
-a[href*="vimeo.com"]::after {
-  content: '\f27d';
-  color: #1AB7EA;
-  font-family: 'Font Awesome 5 Brands';
-}
-
-a[href*="youtube.com"]::after {
-  content: '\f167';
-  color: #FF0000;
-  font-family: 'Font Awesome 5 Brands';
-}
-
-a[href*="amazon.com"]::after,
-a[href*="amzn.to"]::after,
-a[href*="goodreads.com"]::after {
-  content: '\f270';
-  color: #FF9900;
-  font-family: 'Font Awesome 5 Brands';
-  text-shadow: 1px 1px light-dark(black, white), -1px -1px light-dark(black, white);
-}
-
-a[href*="bitbucket.org"]::after {
-  content: '\f171';
-  color: #0052CC;
-  font-family: 'Font Awesome 5 Brands';
-}
-
-a[href*="dev.to"]::after {
-  content: '\f6cc';
-  color: #0A0A0A;
-  font-family: 'Font Awesome 5 Brands';
-}
-
-a[href*="git-scm.com"]::after {
-  content: '\f841';
-  font-family: 'Font Awesome 5 Brands';
-}
-
-a[href*="github.com"]::after,
-a[href*="github.io"]::after {
-  content: '\f09b';
-  color: #181717;
-  font-family: 'Font Awesome 5 Brands';
-}
-
-a[href*="github.com"]:has(> i.fa-github)::after,
-a[href*="github.com"]:has(> i.fa-github-alt)::after,
-a[href*="github.com"]:has(> i.fa-github-square)::after {
-  content: none;
-}
-
-a[href*="gitlab.com"]::after {
-  content: '\f296';
-  color: #FC6D26;
-  font-family: 'Font Awesome 5 Brands';
-}
-
 a[href*="microsoft.com"]::after,
 a[href*="msdn.com"]::after {
   content: '\f3ca';
   font-family: 'Font Awesome 5 Brands';
 }
-
-a[href*="nodejs.com"]::after,
-a[href*="nodejs.org"]::after {
-  content: '\f3d3';
-  color: #5FA04E;
-  font-family: 'Font Awesome 5 Brands';
+pre.language-sql::after {
+  content: '\f1c0';
 }
-
-a[href*="npmjs.com"]::after {
-  content: '\f3d4';
-  color: #CB3837;
-  font-family: 'Font Awesome 5 Brands';
-}
-
-a[href*="reactjs.org"]::after {
-  content: '\f41b';
-  color: #61DAFB;
-  font-family: 'Font Awesome 5 Brands';
-  text-shadow: 1px 1px light-dark(black, white), -1px -1px light-dark(black, white);
-}
-
-a[href*="stackoverflow.com"]::after {
-  content: '\f16c';
-  color: #F58025;
-  font-family: 'Font Awesome 5 Brands';
-  text-shadow: 1px 1px light-dark(black, white), -1px -1px light-dark(black, white);
-}
-
-
