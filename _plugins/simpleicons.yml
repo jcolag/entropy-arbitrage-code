@@ -34,6 +34,8 @@ nbc:
   type: link
   urls:
   - nbcnews.com
+  - nbcmiami.com
+  - nbc.com
   - cnbc.com
 arstechnica:
   type: link
