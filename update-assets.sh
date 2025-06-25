@@ -25,7 +25,7 @@ do
   base=$(basename "${file}")
   dest="${to}/${base}.avif"
 
-  avifenc --min 30 --max 63 --speed 0 --yuv 420 -d 8 --codec aom "${file}" "${dest}"
+  avifenc --qcolor 27 --speed 0 --yuv 420 -d 8 --codec aom "${file}" "${dest}"
   if [ $? == 1 ]
   then
     dest=$(echo "${file}" | sed "s/${from}/${to}/g")
