@@ -23,13 +23,12 @@ done
 find "${from}" -newermt "${last}" -not -path "${from}/.git/*" -type f -print | while read -r file
 do
   base=$(basename "${file}")
-  dest="${to}/${base}.avif"
+  dest=$(echo "${file}" | sed "s/${from}/${to}/g")
 
   avifenc --qcolor 27 --speed 0 --yuv 420 -d 8 --codec aom "${file}" "${dest}"
   if [ $? == 1 ]
   then
-    dest=$(echo "${file}" | sed "s/${from}/${to}/g")
-    cp "${file}" "${dest}"
+    cp -p "${file}" "${dest}"
   fi
 done
 
