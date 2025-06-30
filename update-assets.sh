@@ -25,7 +25,7 @@ do
   base=$(basename "${file}")
   dest=$(echo "${file}" | sed "s/${from}/${to}/g")
 
-  avifenc --qcolor 27 --speed 0 --yuv 420 -d 8 --codec aom "${file}" "${dest}"
+  avifenc --qcolor 27 --speed 0 --yuv 420 -d 8 --codec aom "${file}" "${dest}.avif"
   if [ $? == 1 ]
   then
     cp -p "${file}" "${dest}"
