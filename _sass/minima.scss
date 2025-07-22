@@ -693,6 +693,7 @@ a.site-title:visited, a.page-link:visited {
 div.highlighter-rouge {
   margin-inline-start: 7.5%;
   margin-inline-end: 7.5%;
+  overflow: auto;
 }
 
 pre[class*="language-"] {
@@ -703,6 +704,7 @@ pre[class*="language-"] {
 div.highlighter-rouge pre[class*="language-"] {
   margin-inline-start: 0 !important;
   margin-inline-end: 0 !important;
+  overflow-y: hidden;
 }
 
 .h-entry .h-entry {
