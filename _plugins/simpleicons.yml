@@ -36,6 +36,7 @@ nbc:
   - nbcnews.com
   - nbcmiami.com
   - nbc.com
+  - msnbc.com
   - cnbc.com
 arstechnica:
   type: link
