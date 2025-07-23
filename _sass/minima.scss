@@ -1054,14 +1054,14 @@ a.tag-name:visited {
 
 .tray-panel {
   border-left: 0;
-  height: 40vh;
   left: 0;
   overflow-x: hidden;
   overflow-y: auto;
   position: fixed;
-  top: calc(50% - 20vh);
+  top: 50%;
+  transform: translateY(-50%);
   transition: all 1s;
-  width: 2em;
+  width: 3em;
 }
 
 .tray-panel-right {
@@ -1093,7 +1093,7 @@ a.tag-name:visited {
 
 .tray-panel .tray-pull {
   display: block;
-  margin-block-start: calc(20vh - 0.5em);
+  margin-block-start: 0.5em;
 }
 
 .tray-pull-right {
@@ -1114,7 +1114,8 @@ a.tag-name:visited {
 }
 
 .tray-panel:hover {
-  width: 33vw;
+  height: 40vh;
+  width: 350px;
 }
 
 .tray-panel:hover .tray-header {
