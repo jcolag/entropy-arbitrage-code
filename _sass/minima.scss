@@ -1341,8 +1341,9 @@ a.tag-name:visited {
   border-top-left-radius: 1em;
   border-top-right-radius: 1em;
   float: right;
-  text-align: center;
+  margin-block-end: 1em;
   margin-inline-start: 1em !important;
+  text-align: center;
   transition: all 1s ease-in-out;
   -webkit-transition: all 1s ease-in-out;
   -moz-transition: all 1s ease-in-out;
