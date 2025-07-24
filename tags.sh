@@ -57,10 +57,14 @@ tag: ${tagname}
 destination: ${tag}
 ---
 EOF
-  else
-    tagname=$(echo "${tag}" | cut -f3 -d':')
-    desc=$(yq -r ".${tagname}" < _taginfo.yml)
-    cat > "tag/${tagname}.md" <<EOF
+  fi
+  tagname=$(echo "${tag}" | cut -f3 -d':')
+  desc=$(yq -r ".[\"${tagname}\"]" < _taginfo.yml)
+  if [[ "${desc}" == "null" ]]
+  then
+    desc=
+  fi
+  cat > "tag/${tagname}.md" <<EOF
 ---
 layout: tagpage
 permalink: /tag/${tagname}/
@@ -70,7 +74,6 @@ count: 0
 description: ${desc}
 ---
 EOF
-  fi
 done
 
 cat > "tag/index.html" <<EOF
