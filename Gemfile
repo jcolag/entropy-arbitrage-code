@@ -43,3 +43,5 @@ gem 'irb', '~> 1.6.0'
 gem 'tracer'
 
 gem "webrick", "~> 1.8"
+
+gem "jekyll-mermaid", "~> 1.0"
