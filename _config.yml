@@ -48,7 +48,6 @@ theme: minima
 plugins:
   - jekyll-feed
   - jekyll-mermaid
-  - jekyll-minifier
   - jekyll-paginate-v2
 future: false
 unpublished: false
