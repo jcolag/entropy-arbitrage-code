@@ -1472,6 +1472,17 @@ a.preview::after {
   transform: scale(3.0);
 }
 
+.mermaid {
+  left: 50%;
+  position: relative;
+  transform: translateX(-50%);
+  width: fit-content;
+}
+
+.mermaid svg {
+  width: 640px;
+}
+
 .toc-active {
   font-weight: bold;
   text-decoration-line: underline;
