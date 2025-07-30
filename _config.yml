@@ -47,8 +47,9 @@ encoding: utf-8
 theme: minima
 plugins:
   - jekyll-feed
-  - jekyll-paginate-v2
+  - jekyll-mermaid
   - jekyll-minifier
+  - jekyll-paginate-v2
 future: false
 unpublished: false
 show_drafts: false
@@ -61,6 +62,9 @@ jekyll-minifier:
   compress_css: false
   compress_javascript: false
   compress_json: false
+
+mermaid:
+  src: '/blog/assets/mermaid.min.js'
 
 # Exclude from processing.
 # The following items will not be processed, by default.
