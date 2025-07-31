@@ -136,7 +136,7 @@ HERE
   ### using the post.sh script to generate the blurb for everywhere that
   ### didn't automatically happen above.
   # echo "Post this to Diaspora:"
-  # ntfy send "Post to Diaspora..."
+  # notify-send "Post to Diaspora..."
   # aplay /usr/share/sounds/sound-icons/prompt.wav
   # echo -e "On my blog: ${links}\n${teasers}\n${tags}"
   # echo -e "On my blog: ${links}\n${teasers}\n${tags}" | xsel --clipboard
@@ -153,7 +153,7 @@ do
   echo $((published - now))
 done | grep -c '-')
 echo "Current count of published posts: ${count}"
-ntfy send "Current count of published posts: ${count}"
+#notify-send "Current count of published posts: ${count}"
 
 # Send webmentions
 # Already happened with the plugin?
