@@ -17,7 +17,7 @@ mv "${HOME}/proselintrc.bk" "${HOME}/.proselintrc.json"
 for file in ${files}
 do
   outfile=$(mktemp).json
-  spelling="${HOME}/bin/LanguageTool-6.2-stable/org/languagetool/resource/en/hunspell/spelling_custom.txt"
+  spelling="${HOME}/bin/LanguageTool-6.6/org/languagetool/resource/en/hunspell/spelling_custom.txt"
   proselint --json "${file}" | jq .data.errors >> "${outfile}"
   grep --silent "# Temporary" "${spelling}"
   if [ "$?" = 1 ]
@@ -26,7 +26,7 @@ do
     echo '# Temporary' >> "${spelling}"
   fi
   grep '^spell: ' "${file}" | cut -f2 -d':' | sed 's/ /\n/g' >> "${spelling}"
-  java -jar "${HOME}/bin/LanguageTool-6.2-stable/languagetool-commandline.jar" \
+  java -jar "${HOME}/bin/LanguageTool-6.6/languagetool-commandline.jar" \
     --disablecategories TYPOGRAPHY \
     --encoding utf-8 --json --language en-US --xmlfilter \
     "${file}" | node \
