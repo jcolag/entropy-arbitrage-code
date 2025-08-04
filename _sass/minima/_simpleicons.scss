@@ -132,6 +132,11 @@ a[href*="facebook.com"]::after {
   content: '\ed9b';
   font-family: 'Simple Icons';
 }
+a[href*="firefox.com"]::after {
+  color: #FF7139;
+  content: '\edcd';
+  font-family: 'Simple Icons';
+}
 a[href*="flickr.com"]::after {
   color: #0063DC;
   content: '\eddb';
