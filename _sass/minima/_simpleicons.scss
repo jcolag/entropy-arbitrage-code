@@ -601,7 +601,8 @@ a[href*="wordpress.org"]::after {
   font-family: 'Simple Icons';
 }
 a[href*="twitter.com"]::after,
-a[href*="x.com"]::after {
+a[href*="/x.com"]::after ,
+a[href*=".x.com"]::after {
   color: #000000;
   content: '\f670';
   font-family: 'Simple Icons';
