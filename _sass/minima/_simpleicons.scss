@@ -335,6 +335,11 @@ a[href*="mercurial-scm.org"]::after {
   content: '\f0d8';
   font-family: 'Simple Icons';
 }
+a[href*="mermaid.js.org"]::after {
+  color: #FF3670;
+  content: '\f0d9';
+  font-family: 'Simple Icons';
+}
 a[href*="mozilla.com"]::after,
 a[href*="mozilla.org"]::after {
   color: #000000;
