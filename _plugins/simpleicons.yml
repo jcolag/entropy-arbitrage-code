@@ -443,7 +443,8 @@ internetarchive:
 x:
   type: link
   urls:
-  - x.com
+  - /x.com
+  - www.x.com
   - twitter.com
 tumblr:
   type: link
@@ -467,6 +468,10 @@ pixelfed:
   urls:
   - pixelfed.dk
   - pixelfed.org
+mermaid:
+  type: link
+  urls:
+  - mermaid.js.org
 matrix:
   type: link
   urls:
