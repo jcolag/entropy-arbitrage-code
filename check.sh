@@ -42,6 +42,10 @@ do
 done
 
 mv "${HOME}/.proselintrc.json" "${HOME}/proselintrc.bk"
+if [ -f "${outfile}" ]
+then
+  gedit "${outfile}"
+fi
 
 # For blog posts, check to see if someone has proofread the file.
 if grep -q "proofed: \+true" "$file"
