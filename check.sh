@@ -12,6 +12,11 @@ if case $(echo "${files}" | tr '*' '#') in *#*) ;; *) false;; esac; then
   exit
 fi
 
+# Make sure that we have the current Node.js version
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+nvm use default > /dev/null
+
 if [ -z "${files}" ]
 then
   exit 0
