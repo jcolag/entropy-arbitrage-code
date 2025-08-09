@@ -12,6 +12,11 @@ if case $(echo "${files}" | tr '*' '#') in *#*) ;; *) false;; esac; then
   exit
 fi
 
+if [ -z "${files}" ]
+then
+  exit 0
+fi
+
 echo "${files}"
 mv "${HOME}/proselintrc.bk" "${HOME}/.proselintrc.json"
 for file in ${files}
