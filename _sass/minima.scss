@@ -52,20 +52,16 @@
   font-display: swap;
   font-family: 'Simple Icons';
   src:
-    url('/blog/assets/simpleicons/SimpleIcons.woff') format('woff'),
-    url('/blog/assets/simpleicons/SimpleIcons.woff2') format('woff2'),
-    url('/blog/assets/simpleicons/SimpleIcons.ttf') format('truetype'),
-    url('/blog/assets/simpleicons/SimpleIcons.otf') format('opentype'),
-    url('/blog/assets/simpleicons/SimpleIcons.eot') format('embedded-opentype');
+    url('/blog/assets/freeccicons/FreeCCIcons.woff2') format('woff2'),
+    url('/blog/assets/freeccicons/FreeCCIcons.ttf') format('truetype');
 }
 
 @font-face {
   font-display: swap;
   font-family: CCSymbols;
   font-synthesis: none;
-  src: url(/blog/assets/ccsymbols/CCSymbols.woff2) format(woff2),
-       url(/blog/assets/ccsymbols/CCSymbols.woff)  format(woff),
-       url(/blog/assets/ccsymbols/CCSymbols.ttf)  format(ttf);
+  src: url(/blog/assets/freeccicons/FreeCCIcons.woff2) format(woff2),
+       url(/blog/assets/freeccicons/FreeCCIcons.ttf)  format(ttf);
   unicode-range: u+a9, u+229c,
                  u+1f10d-1f10f,
                  u+1f16d-1f16f;
