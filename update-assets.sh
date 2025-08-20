@@ -28,6 +28,7 @@ do
   avifenc --qcolor 27 --speed 0 --yuv 420 -d 8 --codec aom "${file}" "${dest}.avif"
   if [ $? == 1 ]
   then
+    mkdir -p "$(dirname ${dest})"
     cp -p "${file}" "${dest}"
   fi
 done
