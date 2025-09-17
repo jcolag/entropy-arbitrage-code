@@ -30,8 +30,8 @@ class CodebergInlineTag < Liquid::Tag
 
     "<a class='preview' href='#{repo['url']}'>" \
       "<span class='caption' title='#{caption}'>" \
-      "<i class='fab fa-github'></i>" \
-      " #{caption}" \
+      "<i class='si si-codeberg'></i>" \
+      "&nbsp;#{caption}" \
       "</span>" \
       "<img" \
       " alt='#{image_alt}'" \
