@@ -653,6 +653,16 @@ a.site-title:visited, a.page-link:visited {
   width: 100%;
 }
 
+.si {
+  font-family: 'Simple Icons';
+}
+
+i.si-codeberg:after {
+  content: '\ec3f';
+  font-family: 'Simple Icons';
+  vertical-align: middle;
+}
+
 .thumbnail-image {
   border: 1px solid $brand-color;
   border-radius: 1.625em;
