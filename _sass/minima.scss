@@ -1447,6 +1447,10 @@ a.preview::after {
   font-style: normal;
 }
 
+.code-scroll {
+  max-height: 15em;
+}
+
 .emoji {
   display: inline-block;
   font-style: normal;
