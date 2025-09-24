@@ -365,6 +365,7 @@ unitednations:
   urls:
   - unesco.org
   - un.org
+  - who.int
 tapas:
   type: link
   shadow: ld
