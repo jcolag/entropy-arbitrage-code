@@ -9,7 +9,7 @@ Welcome to **Entropy Arbitrage**, John Colagioia's blog!  This serves as an irre
 
 The title refers to the idea that disorder has uses in some situations, but shows in abundance in other situations.  That balance and exchange between ordered and disordered systems have grown into something of an obsession for me for many years.  Some systems need more order, some less.
 
-If you made it this far and are worried about the irregular schedule, you may want to <span class="rss-subscribe"><a href="{{ "/feed.xml" | relative_url }}">Subscribe <i class="fas fa-rss"></i></a></span> to the RSS feed.
+If you made it this far and are worried about the irregular schedule, you may want to <span class="rss-subscribe"><a href="{{ "/feed.xml" | relative_url }}">Subscribe <i class="fas fa-rss"></i></a></span> to the RSS feed.  And if you find yourself wanting to support the various projects described in here, then you might want to check out the [store](/store), which admittedly mostly points you to other sites, because who actually wants to develop the software to do this right?
 
 A bio?  Sure, if we must...
 
