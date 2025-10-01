@@ -49,7 +49,7 @@ Instances of abusive, harassing, or otherwise unacceptable behavior may be repor
 
 Project maintainers who do not follow or enforce the Code of Conduct in good faith may face temporary or permanent repercussions as determined by other members of the project's leadership.
 
-This is *not* zero tolerance, so don't be afraid to report and don't let the fear of mistakes keep you from participating, but tolerance is not and will not be high.
+This is *not* zero tolerance, so don't be afraid to report and don't let the fear of mistakes keep you from participating, but tolerance for bad behavior is not and will never be high.
 
 ## Enforcement Guidelines
 
