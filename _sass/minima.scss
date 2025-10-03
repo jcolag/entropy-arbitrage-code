@@ -346,6 +346,12 @@ blockquote img {
   margin-block-start: 0.33em;
 }
 
+video {
+  left: 50%;
+  position: relative;
+  transform: translateX(-50%);
+}
+
 .quote-author {
   color: $brand-color;
   font-family: $header-font-family;
