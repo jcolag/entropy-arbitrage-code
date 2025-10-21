@@ -7,8 +7,11 @@ class PullInlineTag < Liquid::Tag
     @text = text
   end
 
-  def render(_context)
+  def render(context)
+    site = context.registers[:site]
+    converter = site.find_converter_instance ::Jekyll::Converters::Markdown
     text, place = params @text
+    text = converter.convert text
     "<aside class=\"pull-quote pull-quote-#{place}\">" \
       "#{text}</aside>"
   end
