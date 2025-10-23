@@ -353,6 +353,23 @@ video {
   transform: translateX(-50%);
 }
 
+fieldset {
+	border: 1px solid $brand-color;
+	border-radius: 1em;
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+legend {
+	border-left: 1px solid;
+	border-radius: 1em;
+	border-right: 1px solid;
+	border-top: 1px solid;
+	color: $brand-color;
+	font-family: Vollkorn;
+	padding: 0.25em;
+}
+
 .quote-author {
   color: $brand-color;
   font-family: $header-font-family;
