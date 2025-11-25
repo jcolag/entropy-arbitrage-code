@@ -188,6 +188,10 @@ a[href*="localhost:"]::after,
   content: none !important;
 }
 
+.to-github > i {
+	font-style: normal;
+}
+
 @include meta.load-css("minima/simpleicons");
 @include meta.load-css("minima/fontawesome");
 
@@ -976,6 +980,7 @@ a.tag-name {
   font-weight: bold;
   padding: 0.25em;
   text-decoration: none;
+  white-space: nowrap;
 }
 
 a.tag-name:visited {
