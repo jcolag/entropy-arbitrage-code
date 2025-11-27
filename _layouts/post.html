@@ -191,7 +191,9 @@ layout: default
       title="View on Codeberg"
     ><i class="si si-codeberg"></i></a>
     &nbsp;Tags:
-    {%- for tag in page.tags -%}
+    {%- assign labels = page.labels | join: ';' | prepend: ';' -%}
+    {%- assign tags = page.tags | join: ';' | append: labels | split: ';' | sort_natural -%}
+    {%- for tag in tags -%}
       {%- capture tag_name -%}{{ tag }}{%- endcapture -%}
       &nbsp;
       <a
