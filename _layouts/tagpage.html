@@ -4,7 +4,9 @@ layout: default
 <div class="post">
 {%- assign variants = page.tag -%}
 {%- for post in site.posts -%}
-  {%- for tag in post.tags -%}
+  {%- assign labels = post.labels | join: "&" | prepend: "&" -%}
+  {%- assign tags = post.tags | join: "&" | append: labels | split: "&" -%}
+  {%- for tag in tags -%}
     {%- assign tt = tag | remove: '-' -%}
     {%- unless variants contains tag or page.tag != tt -%}
       {%- assign variants = variants | append: ',' | append: tag -%}
@@ -22,7 +24,7 @@ layout: default
 <ul>
 {%- for post in site.posts -%}
   {%- for tag in tags -%}
-    {%- if post.tags contains tag -%}
+    {%- if post.tags contains tag or post.labels contains tag -%}
       <li>
         <a href="/blog{{ post.url }}">{{ post.title }}</a>
         ({{ post.date | date_to_string }}), {{ post.content
