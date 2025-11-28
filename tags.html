@@ -14,7 +14,9 @@ layout: default
         {%- assign count = 0 -%}
         {%- assign tag = title[1] | remove: ',' -%}
         {%- for post in posts -%}
-          {%- for t in post.tags -%}
+          {%- assign labels = post.labels | join: "&" | prepend: "&" -%}
+          {%- assign tags = post.tags | join: "&" | append: labels | split: "&" -%}
+          {%- for t in tags -%}
             {%- assign tt = t | remove: '-' -%}
             {%- if tt == tag -%}
               {%- assign count = count | plus: 1 -%}
