@@ -43,7 +43,7 @@ rm -f tag/*.md
 # Generate tags from released posts
 #  NB: $files is unquoted, because it's a list to be split
 # shellcheck disable=SC2086
-for tag in $(grep '^tags:' $files | cut -f2- -d'[' | cut -f1 -d']' | tr -d ' ' | tr ',' '\n' | sort -u | tr -s ' ' | tr ' ' ':')
+for tag in $(grep -E '^(tags|labels):' $files | cut -f2- -d'[' | cut -f1 -d']' | tr -d ' ' | tr ',' '\n' | sort -u | tr -s ' ' | tr ' ' ':')
 do
   if [[ "${tag}" =~ "-" ]]
   then
