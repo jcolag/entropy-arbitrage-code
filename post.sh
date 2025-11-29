@@ -39,7 +39,7 @@ else
 fi
 
 summary=$(grep '^summary: ' "${file}" | head -1 | cut -f2- -d':' | sed 's/<[^>]*>//g;s/^ *//g')
-tags=$(grep '^tags: ' "${file}" | head -1 | cut -f2 -d'[' | cut -f1 -d']' | sed 's/, / #/g' | tr -d '-')
+tags=$(grep '^tags: ' "${file}" | head -1 | cut -f2 -d'[' | cut -f1 -d']' | sed 's/, / #/g;s/-\([a-z]\)/\U&/g;s/-//g')
 teaser=$(grep '^description: ' "${file}" | head -1 | cut -f2- -d':' | sed 's/^ *//g')
 title=$(grep '^title: ' "${file}" | head -1 | cut -f2- -d':' | sed 's/^ *//g')
 cat=$(grep '^categories:' "${file}" | head -1 | cut -f2- -d':' | sed 's/^ *//g')
