@@ -1,0 +1,113 @@
+---
+permalink: /calendar/
+layout: default
+---
+
+<h1>Find Posts by Date</h1>
+
+{%- assign posts = site.posts | reverse -%}
+{%- assign year = 0 -%}
+{%- assign month = "" -%}
+{%- assign count = 0 -%}
+{%- assign dd = 0 -%}
+
+<div class="calendar-grid">
+{%- for post in posts -%}
+  {%- assign yy = post.date | date: "%Y" | plus: 0 -%}
+  {%- assign mm = post.date | date: "%m" | plus: 0 -%}
+  {%- assign dow = post.date | date: "%w" | plus: 0 -%}
+  {%- if post.draft or post.hidden -%}
+    {%- continue -%}
+  {%- endif -%}
+  {%- if mm != month and month != "" -%}
+    {%- for i in (count..6) -%}
+      <div class="date"></div>
+    {%- endfor -%}
+    </div>
+  {%- endif -%}
+  {%- if yy != year -%}
+    {%- if year != 0 -%}
+      </div>
+    {%- endif -%}
+    <h2>{{yy}}</h2>
+    <div class="cal-year">
+    {%- assign year = yy -%}
+  {%- endif -%}
+  {%- if mm != month -%}
+    <h3>{{ post.date | date: "%B" }}</h3>
+    {%- capture current_month %}{{ post.date | date: '%m' }}{% endcapture -%}
+    {%- capture future_date %}{{ post.date | date: '%Y' }}-{% if current_month == 12 %}01{% else %}{{ current_month | plus: 1 }}{% endif %}-01{% endcapture -%}
+    {%- capture epoc_end_month_date %}{{ future_date | date: '%s' }}{% endcapture -%}
+    {%- assign eom = epoc_end_month_date | minus: 86400 | date: "%-d" | plus: 0 -%}
+    <div class="cal-month">
+    {%- assign month = mm -%}
+    {%- assign count = 0 -%}
+  {%- endif -%}
+  {%- assign count = count | plus: 1 | modulo: 7 -%}
+  {%- if count > 0 -%}
+    {%- assign dow2 = dow | plus: 1 -%}
+    {%- if count > dow2 -%}
+      {%- for i in (count..7) -%}
+        <div class="date">
+          {%- if dd <= eom -%}
+            {{dd}}
+          {%- endif -%}
+        </div>
+        {%- assign count = count | plus: 1 | modulo: 7 -%}
+        {%- assign dd = dd | plus: 1 -%}
+      {%- endfor -%}
+    {%- endif -%}
+    {%- for i in (count..dow) -%}
+      <div class="date">
+        {%- if dd <= eom -%}
+          {{dd}}
+        {%- endif -%}
+      </div>
+      {%- assign count = count | plus: 1 | modulo: 7 -%}
+      {%- assign dd = dd | plus: 1 -%}
+    {%- endfor -%}
+  {%- endif -%}
+  <div class="date">
+    {{ post.date | date: "%d" | plus: 0 }}
+    <br>
+    {%- assign title = post.title
+      | remove: "Real Life in Star Trek, "
+      | remove: "Free Culture Book Club — "
+      | remove: "Developer Journal, "
+      | remove: "Developer Diary, "
+    -%}
+    {%- assign labels = post.labels | join: ';' | prepend: ';' -%}
+    {%- assign tags = post.tags
+      | join: ';'
+      | append: labels
+      | split: ';'
+      | sort_natural
+    -%}
+    {%- if post.description -%}
+      {%- assign desc = post.description | prepend: " (" | append: ")" -%}
+    {%- else -%}
+      {%- assign desc = "" -%}
+    {%- endif -%}
+    <a
+      class="date-link"
+      href="{{ post.url | relative_url }}"
+      title="{{ title }}{{ desc }}"
+    >
+      {{ title }}
+    </a>
+    <br>
+    {%- for tag in tags -%}
+      {{ " " }}
+      <a
+        class="tag-link"
+        href="/blog/tag/{{ tag | strip | replace: '-', '' }}/"
+        title="{{ tag }}"
+      >
+        <i class="fas fa-tag"></i>
+      </a>
+    {%- endfor -%}
+    {%- assign dd = post.date | date: "%d" | plus: 1 -%}
+  </div>
+{%- endfor -%}
+</div>
+
