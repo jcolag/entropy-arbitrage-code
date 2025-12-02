@@ -1551,6 +1551,31 @@ a.preview::after {
   width: 67%;
 }
 
+.cal-month {
+  background-color: $text-color;
+  border: 1px solid $text-color;
+  display: grid;
+  grid-gap: 1px;
+  grid-template: "a a a a a a a";
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+}
+
+.cal-month .date {
+  background-color: $background-color;
+  overflow: hidden;
+  text-align: center;
+  text-overflow: ellipsis;
+}
+
+.date-link {
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.tag-link::after {
+	content: none !important;
+}
+
 @media (prefers-color-scheme: dark) {
   .steno-keyboard {
     filter: invert(1.0);
