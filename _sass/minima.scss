@@ -267,6 +267,10 @@ h6,
   margin-inline-end: 1em;
 }
 
+.site-nav .page-link a .si::after {
+  vertical-align: sub;
+}
+
 .site-nav a i {
   color: $brand-color;
   -moz-transition: color 2s;
