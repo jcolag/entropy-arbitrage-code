@@ -8,6 +8,29 @@
 
 // Define defaults for each variable.
 
+@view-transition {
+  navigation: auto;
+}
+
+@keyframes slide-to-right {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(100vw);
+  }
+}
+
+::view-transition-old(root) {
+  animation: slide-to-right 0.3s;
+  z-index: 2;
+}
+
+::view-transition-new(root) {
+  animation: none;
+}
+
 @font-face {
   font-display: swap;
   font-family: 'Exo 2';
