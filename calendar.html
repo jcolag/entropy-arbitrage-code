@@ -3,13 +3,35 @@ permalink: /calendar/
 layout: default
 ---
 
-<h1>Find Posts by Date</h1>
-
 {%- assign posts = site.posts | reverse -%}
 {%- assign year = 0 -%}
 {%- assign month = "" -%}
 {%- assign count = 0 -%}
 {%- assign dd = 0 -%}
+
+<ul id="markdown-toc">
+{%- for post in posts -%}
+  {%- assign yy = post.date | date: "%Y" | plus: 0 -%}
+  {%- assign mm = post.date | date: "%m" | plus: 0 -%}
+  {%- if year != yy -%}
+    {%- if year != 0 -%}
+    </ul>
+    {%- endif -%}
+    <li><a href="#{{yy}}">{{yy}}</a></li>
+    <ul>
+    {%- assign year = yy -%}
+  {%- endif -%}
+  {%- if month != mm -%}
+    <li><a href="#{{yy}}-{{mm}}">{{ post.date | date: "%B" }}</a></li>
+    {%- assign month = mm -%}
+  {%- endif -%}
+{%- endfor -%}
+</ul></ul>
+
+<h1>Find Posts by Date</h1>
+
+{%- assign year = 0 -%}
+{%- assign month = "" -%}
 
 <div class="calendar-grid">
 {%- for post in posts -%}
@@ -29,12 +51,12 @@ layout: default
     {%- if year != 0 -%}
       </div>
     {%- endif -%}
-    <h2>{{yy}}</h2>
+    <h2 id="{{yy}}">{{yy}}</h2>
     <div class="cal-year">
     {%- assign year = yy -%}
   {%- endif -%}
   {%- if mm != month -%}
-    <h3>{{ post.date | date: "%B" }}</h3>
+    <h3 id="{{yy}}-{{mm}}">{{ post.date | date: "%B" }}</h3>
     {%- capture current_month %}{{ post.date | date: '%m' }}{% endcapture -%}
     {%- capture future_date %}{{ post.date | date: '%Y' }}-{% if current_month == 12 %}01{% else %}{{ current_month | plus: 1 }}{% endif %}-01{% endcapture -%}
     {%- capture epoc_end_month_date %}{{ future_date | date: '%s' }}{% endcapture -%}
