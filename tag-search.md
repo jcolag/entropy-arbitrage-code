@@ -81,6 +81,10 @@ function visibility(el, visible) {
   }
 
   parent.style['display'] = visible ? '' : 'none';
+  parent.style['pointer-events'] = visible ? 1.0 : 0.33;
+  parent.style['pointer-events'] = visible ? '' : 'none';
+  el.disabled = !visible;
+  parent.disabled = !visible;
 }
 function unHTML(html) {
   const txt = document.createElement('textarea');
