@@ -43,9 +43,10 @@ layout: default
   {%- endif -%}
   {%- if mm != month and month != "" -%}
     {%- for i in (count..6) -%}
-      <div class="date"></div>
       <div class="date">
+        {%- if dd <= eom and dd > 0 -%}
           {{ dd }}
+        {%- endif -%}
         {%- assign dd = dd | plus: 1 -%}
       </div>
     {%- endfor -%}
@@ -65,6 +66,7 @@ layout: default
     {%- capture future_date %}{{ post.date | date: '%Y' }}-{% if current_month == 12 %}01{% else %}{{ current_month | plus: 1 }}{% endif %}-01{% endcapture -%}
     {%- capture epoc_end_month_date %}{{ future_date | date: '%s' }}{% endcapture -%}
     {%- assign eom = epoc_end_month_date | minus: 86400 | date: "%-d" | plus: 0 -%}
+    {%- assign dd = post.date | date: "%e" | minus: dow -%}
     <div class="cal-month">
     {%- assign month = mm -%}
     {%- assign count = 0 -%}
@@ -75,7 +77,7 @@ layout: default
     {%- if count > dow2 -%}
       {%- for i in (count..7) -%}
         <div class="date">
-          {%- if dd <= eom -%}
+          {%- if dd <= eom and dd > 0 -%}
             {{dd}}
           {%- endif -%}
         </div>
@@ -85,7 +87,7 @@ layout: default
     {%- endif -%}
     {%- for i in (count..dow) -%}
       <div class="date">
-        {%- if dd <= eom -%}
+        {%- if dd <= eom and dd > 0 -%}
           {{dd}}
         {%- endif -%}
       </div>
