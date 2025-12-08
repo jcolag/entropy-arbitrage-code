@@ -44,6 +44,10 @@ layout: default
   {%- if mm != month and month != "" -%}
     {%- for i in (count..6) -%}
       <div class="date"></div>
+      <div class="date">
+          {{ dd }}
+        {%- assign dd = dd | plus: 1 -%}
+      </div>
     {%- endfor -%}
     </div>
   {%- endif -%}
