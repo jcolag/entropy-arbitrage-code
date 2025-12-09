@@ -61,7 +61,8 @@ layout: default
     {%- assign year = yy -%}
   {%- endif -%}
   {%- if mm != month -%}
-    <h3 id="{{yy}}-{{mm}}">{{ post.date | date: "%B" }}</h3>
+    {%- assign mon = post.date | date: "%B" -%}
+    <h3 id="{{yy}}-{{mm}}" title="{{mon}} {{year}}">{{ mon }}</h3>
     {%- capture current_month %}{{ post.date | date: '%m' }}{% endcapture -%}
     {%- capture future_date %}{{ post.date | date: '%Y' }}-{% if current_month == 12 %}01{% else %}{{ current_month | plus: 1 }}{% endif %}-01{% endcapture -%}
     {%- capture epoc_end_month_date %}{{ future_date | date: '%s' }}{% endcapture -%}
