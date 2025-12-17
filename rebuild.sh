@@ -160,5 +160,5 @@ echo "Current count of published posts: ${count}"
 # bundle exec jekyll webmention
 
 # Kick off the local server
-bundle exec jekyll serve --future --drafts --unpublished --trace --incremental
+bundle exec jekyll serve --future --drafts --unpublished --trace --incremental --livereload
 
