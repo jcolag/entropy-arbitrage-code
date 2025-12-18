@@ -147,6 +147,11 @@ a[href*="fontawesome.com"]::after {
   content: '\edec';
   font-family: 'Simple Icons';
 }
+a[href*="fontforge.org"]::after {
+  color: #F2712B;
+  content: '\edee';
+  font-family: 'Simple Icons';
+}
 a[href*="forgejo.org"]::after,
 a[href*="git.disroot.org"]::after {
   color: #FB923C;
@@ -235,6 +240,11 @@ a[href*="imdb.com"]::after {
   content: '\ef49';
   font-family: 'Simple Icons';
   text-shadow: 1px 1px light-dark(black, white), -1px -1px light-dark(black, white);
+}
+a[href*="inkscape.org"]::after {
+  color: #000000;
+  content: '\ef5f';
+  font-family: 'Simple Icons';
 }
 a[href*="instagram.com"]::after {
   color: #FF0069;
