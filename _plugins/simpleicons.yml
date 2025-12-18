@@ -194,6 +194,10 @@ jekyll:
   type: link
   urls:
   - jekyllrb.com
+inkscape:
+  type: link
+  urls:
+  - inkscape.org
 htmx:
   type: link
   urls:
@@ -246,6 +250,10 @@ forgejo:
   urls:
   - forgejo.org
   - git.disroot.org
+fontforge:
+  type: link
+  urls:
+  - fontforge.org
 express:
   type: link
   urls:
