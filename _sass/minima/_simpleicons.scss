@@ -308,6 +308,11 @@ a[href*="libreoffice.org"]::after {
   content: '\f03f';
   font-family: 'Simple Icons';
 }
+a[href*="libretranslate.com"]::after {
+  color: #1565C0;
+  content: '\f046';
+  font-family: 'Simple Icons';
+}
 a[href*="campaign-archive.com"]::after,
 a[href*="mailchimpsites.com"]::after {
   color: #FFE01B;
@@ -389,6 +394,11 @@ a[href*="imsglobal.org"]::after,
 a[href*="openbadges.org"]::after {
   color: #073B5A;
   content: '\f1c3';
+  font-family: 'Simple Icons';
+}
+a[href*="ollama.com"]::after {
+  color: #000000;
+  content: '\f1ba';
   font-family: 'Simple Icons';
 }
 a[href*="opensource.org"]::after {
@@ -528,6 +538,11 @@ a[href*="theguardian.com"]::after {
 a[href*="thingiverse.com"]::after {
   color: #248BFB;
   content: '\f51f';
+  font-family: 'Simple Icons';
+}
+a[href*="thunderbird.net"]::after {
+  color: #0A84FF;
+  content: '\f527';
   font-family: 'Simple Icons';
 }
 a[href*="tumblr.com"]::after {
