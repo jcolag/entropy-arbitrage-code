@@ -66,6 +66,10 @@ ubuntu:
   type: link
   urls:
   - ubuntu.com
+thunderbird:
+  type: link
+  urls:
+  - thunderbird.net
 thingiverse:
   type: link
   urls:
@@ -140,6 +144,10 @@ openbadges:
   urls:
   - imsglobal.org
   - openbadges.org
+ollama:
+  type: link
+  urls:
+  - ollama.com
 npm:
   type: link
   urls:
@@ -170,6 +178,10 @@ markdown:
   type: link
   urls:
   - markdownguide.org
+libretranslate:
+  type: link
+  urls:
+  - libretranslate.com
 libreoffice:
   type: link
   urls:
