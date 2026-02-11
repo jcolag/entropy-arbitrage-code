@@ -15,7 +15,7 @@ class EmojiInlineTag < Liquid::Tag
     candidates = []
 
     @emoji.each do |k, v|
-      candidates.push k if v.include? @text || v.include?(@text.gsub ' ', '_')
+      candidates.push k if v.include? @text or v.include?(@text.gsub ' ', '_')
     end
 
     choice = candidates.sample 1
