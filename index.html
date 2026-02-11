@@ -90,7 +90,9 @@ pagination:
             }}-ish words
           </p>
           <p class="index-tags">
-          {%- for tag in post.tags -%}
+          {%- assign labels = post.labels | join: ';' | prepend: ';' -%}
+          {%- assign tags = post.tags | join: ';' | append: labels | split: ';' | sort_natural -%}
+          {%- for tag in tags -%}
             {%- capture tag_name -%}{{ tag }}{%- endcapture -%}
             &nbsp;
             <a
