@@ -907,9 +907,11 @@ div.webmentions {
 }
 
 .index-tags {
+  line-height: 1.75;
   margin-left: auto;
   margin-right: auto;
   max-width: fit-content;
+  text-align: center;
 }
 
 .index-tags .tag-name {
