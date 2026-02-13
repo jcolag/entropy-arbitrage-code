@@ -57,7 +57,7 @@ end
 def process_link(icon_name, sites)
   ld, urls = split_url_list sites[icon_name]
   shadow = nil
-  unless ld.nil? || ld.empty?
+  unless ld.nil? or ld.empty?
     l = color ld, 'l', 'black'
     d = color ld, 'd', 'white'
     shadow = "  text-shadow: 1px 1px light-dark(#{l}, #{d}), -1px -1px light-dark(#{l}, #{d});\n"
@@ -69,7 +69,7 @@ end
 def process_language(content, icon_name, sites)
   lang = sites[icon_name]
 
-  return { names: nil } if lang.nil? || lang['type'] != 'language'
+  return { names: nil } if lang.nil? or lang['type'] != 'language'
 
   { content:, name: icon_name, names: lang['names'] }
 end
