@@ -555,7 +555,8 @@ a[href*="ubuntu.com"]::after {
   content: '\f595';
   font-family: 'Simple Icons';
 }
-a[href*="un.org"]::after,
+a[href*="/un.org"]::after,
+a[href*=".un.org"]::after,
 a[href*="unesco.org"]::after,
 a[href*="who.int"]::after {
   color: #009EDB;
