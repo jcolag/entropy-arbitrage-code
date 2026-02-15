@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 Jekyll::Hooks.register [:posts, :pages], :pre_render do |doc|
-  if doc.extname == '.md' || doc.extname == '.markdown'
+  if doc.extname == '.md' or doc.extname == '.markdown'
     doc.content = doc.content.gsub(/!\[([^\]]*)\]\(([^ )]+)(?:\s+"([^"]*)")?\)/) do |match|
       alt_text = Regexp.last_match 1
       src = Regexp.last_match 2
