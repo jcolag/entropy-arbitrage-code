@@ -74,7 +74,7 @@ heritage_history () {
 }
 
 days=(mon tue wed thu fri)
-captions=( \
+division_captions=( \
   "Just what the world needed:  A calendar that flips the bird." \
   "And over here, we have...the Roman numeral for four, I guess." \
   "Some champion eye-rolling, there." \
@@ -85,7 +85,18 @@ captions=( \
   "I don't know, it seems to have turned into all cowlicks." \
   "What do you think, too much rouge for a monk?" \
 )
-cap=$(rand -M "${#captions[@]}")
+abundance_captions=(\
+  "I count four color schemes, right...?" \
+  "Impressive to synchronize fouling up the pull-the-tablecloth trick with four Cupids..." \
+  "The Sunday crowd should get themselves some of those eclipse glasses..." \
+  "Note Monday's reenactment of pursuit of Diana as among the cowardly and superstitous lot..." \
+  "Surf's up on Tuesday, everyone..." \
+  "Dancing through Wednesdays" \
+  "The Thursday crew wonders why they didn't ride the eagles to Mount Doom..." \
+  "Friday on a half-shell" \
+  "Saturday goes to the half-communists, I guess" \
+)
+cap=$(rand -M "${#abundance_captions[@]}")
 maxidx=$((${#days[@]} - 1))
 first="next ${days[0]}"
 last="next ${days[$maxidx]}"
