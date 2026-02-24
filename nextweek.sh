@@ -26,6 +26,53 @@ fi
 # For handing search-and-replace without invoking sed
 shopt -s extglob
 
+heritage_history () {
+  mm="$1"
+  dd="$2"
+
+  case $mm in
+    2)
+      echo " #BlackHistory"
+      ;;
+    3)
+      echo " #WomensHistory"
+      ;;
+    4)
+      echo " #AsianAmericanHeritage"
+      ;;
+    5)
+      echo " #AAPIHeritage"
+      ;;
+    6)
+      echo " #LGBTPride"
+      ;;
+    7)
+      echo " #DisabilityPride"
+      ;;
+    9)
+      if [ "$dd" -gt 15 ]
+      then
+        echo " #HispanicHeritage"
+      fi
+      ;;
+    10)
+      if [ "$dd" -le 15 ]
+      then
+        echo " #HispanicHeritage"
+      fi
+      ;;
+    10)
+      echo " #FilipinoAmericanHistory"
+      ;;
+    11)
+      echo " #NativeAmericanHeritage"
+      ;;
+    *)
+      echo ""
+  esac
+  return 0
+}
+
 days=(mon tue wed thu fri)
 captions=( \
   "Just what the world needed:  A calendar that flips the bird." \
@@ -98,6 +145,9 @@ for i in $(seq 0 $maxidx)
 do
   day="next ${days[$i]}"
   dd=$(date +"%a %d %B %Y" -d "$day")
+  mm=$(date +%m | sed 's/^0*//g')
+  date=$(date +%d | sed 's/^0*//g')
+  qtag=$(heritage_history "$mm" "$dd")
   cat >> "${filename}" <<HERE
 ## 9:0${linkmins[$i]} -- ${dd}
 
@@ -120,7 +170,7 @@ Hashtags:
 
 {% cite  %}
 
-Hashtags:  #Quotes
+Hashtags:  #Quotes$qtag
 
 HERE
 done
