@@ -137,7 +137,7 @@ tags: [link-dump, social-media, quotes, week]
 summary: Toots for the Week of ${longmon}
 thumbnail: /blog/assets/Elihu-Vedder-Abundance-Days-Week-1926.png
 description: This week, we have .
-spell: 
+spell: Elihu Vedder 
 ---
 
 * Ignore for ToC
