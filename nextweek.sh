@@ -165,9 +165,9 @@ do
 {% cw  %}
 {% embed ||false| %}
 
-[<i class="fab fa-mastodon"></i>]() []() from
+[<i class="fab fa-mastodon"></i>]() 
 
- >
+> 
 
 Hashtags:  
 
@@ -177,7 +177,7 @@ Hashtags:
 
 [<i class="fab fa-mastodon"></i> Quoted on Mastodon]()
 
- >
+> 
 
 {% cite  %}
 
@@ -194,9 +194,9 @@ Because it accidentally became a tradition early on in the life of the blog, I d
 {% cw  %}
 {% embed ||false| %}
 
-<i class="fas fa-square"></i> []() from
+<i class="fas fa-square"></i> 
 
- >
+> 
 
 
 
