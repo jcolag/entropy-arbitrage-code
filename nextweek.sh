@@ -135,7 +135,7 @@ date: ${pubdate} ${HH}:${MM}:${SS}${TZ}
 categories:
 tags: [link-dump, social-media, quotes, week]
 summary: Toots for the Week of ${longmon}
-thumbnail: /blog/assets/CLM_14456_71r_detail.png
+thumbnail: /blog/assets/Elihu-Vedder-Abundance-Days-Week-1926.png
 description: This week, we have .
 spell: 
 ---
@@ -145,7 +145,7 @@ spell:
 
 As [discussed previously]({% post_url 2019-12-31-new-year %}), on Fridays, I present my weekly social media roundups.  Note that toots of articles generally include header images from the articles, which I don't include here unless their creators *happen* to have released them for use under a free license, and I notice.  Most have not, or I don't notice.  But I now add my commentary here, where I don't feel restricted by message length.
 
-![diagrams showing the division of the day and of the week](/blog/assets/CLM_14456_71r_detail.png "${captions[cap]}")
+![A painting with eleven inset scenes, the corners and central seven depicting the gods that give their names to the days of the week](/blog/assets/Elihu-Vedder-Abundance-Days-Week-1926.png "${abundance_captions[cap]}")
 
 Also, I don't generally attach pictures to posts with quotations.
 
@@ -204,7 +204,7 @@ Because it accidentally became a tradition early on in the life of the blog, I d
 
 * * *
 
-**Credits**:  Header image is [Circular diagrams showing the division of the day and of the week](https://commons.wikimedia.org/wiki/File:CLM_14456_71r_detail.jpg) from a manuscript drafted during the Carolingian Dynasty.
+**Credits**:  Header image is [Abundance of The Days of the Week](https://artgallery.yale.edu/collections/objects/2806) by Elihu Vedder, long in the public domain due to an expired copyright.
 HERE
 
 gedit "${filename}"
