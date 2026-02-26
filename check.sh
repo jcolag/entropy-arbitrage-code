@@ -28,8 +28,24 @@ for file in ${files}
 do
   outfile=$(mktemp).json
   spelling="${HOME}/bin/LanguageTool-6.6/org/languagetool/resource/en/hunspell/spelling_custom.txt"
+  rawdate=$(awk '/^---/{inblock=!inblock;next} inblock && /^date:/ {print $2,$3; exit}' "$file")
+
+  # Check time zone
+  if [ ! -z "${rawdate}" ]
+  then
+    tz="${rawdate#${rawdate%?????}}"
+    sys_off=$(date -d "${rawdate}" +%z)
+
+    if [ "${tz}" != "${sys_off}" ]
+    then
+      printf '{"file":"%s","date":"%s","expected_tz":"%s"}\n' \
+        "${file}" "${rawdate}" "${sys_off}" | jq . >> "${outfile}"
+    fi
+  fi
+
   proselint --json "${file}" | jq .data.errors >> "${outfile}"
   grep --silent "# Temporary" "${spelling}"
+
   if [ "$?" = 1 ]
   then
     cp "${spelling}" "${HOME}/spelling_custom.txt"
