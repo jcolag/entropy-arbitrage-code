@@ -7,25 +7,87 @@ $base-line-height: 1.5 !default;
 
 $spacing-unit:     30px !default;
 
+:root {
+  --text-color: light-dark(oklch(0.3 0.04 var(--blue)), oklch(0.9 0.04 var(--yellow)));
+  --bg-color: light-dark(oklch(0.85 0.06 var(--yellow)), oklch(0.3 0.055 var(--blue)));
+  --brand-color: light-dark(oklch(0.2 0.2 var(--red)), oklch(0.7 0.1 var(--red)));
+  --grey: oklch(0.5 0 0);
+}
 
-$background-color: light-dark(hsl(var(--yellow),45.7%,74.7%), hsl(var(--blue),45.7%,16.3%)) !default;
-$text-color:       light-dark(hsl(var(--blue),39.4%,12.9%), hsl(var(--yellow),39.4%,87.1%)) !default;
-$brand-color:      light-dark(hsl(var(--red),46%,19.6%), hsl(var(--red),66%,70.4%)) !default;
-$grey-color:       hsl(0,0%,51%) !default;
+$text-color: var(--text-color) !default;
+$background-color: var(--bg-color) !default;
+$brand-color: var(--brand-color) !default;
 
-$badge-blue:       hsl(var(--blue),99.4%,74.9%) !default;
+$badge-blue: light-dark(
+  oklch(0.5 0.8 var(--blue)),
+  oklch(0.95 0.05 var(--yellow))
+) !default;
 
-$light-bg:         light-dark(hsl(var(--yellow),45.7%,84.7%), hsl(var(--blue),45.7%,6.3%)) !default;
-$dark-bg:          light-dark(hsl(var(--yellow),45.7%,59.7%), hsl(var(--blue),45.7%,31.3%)) !default;
-$bg-xp:            light-dark(hsl(var(--yellow),45.7%,74.7%,0.0), hsl(var(--blue),45.7%,16.3%,0.0)) !default;
-$light-text:       light-dark(hsl(var(--blue),39.4%,27.9%), hsl(var(--yellow),39.4%,60.1%)) !default;
-$light-text-x:     light-dark(hsl(var(--blue),39.4%,62.9%), hsl(var(--yellow),39.4%,37.1%)) !default;
-$dark-text:        light-dark(hsl(var(--blue),39.4%,0.9%), hsl(var(--yellow),39.4%,99.1%)) !default;
-$light-brand-color:light-dark(hsl(var(--red),56%,29.6%), hsl(var(--red),76%,60.4%)) !default;
-$dark-brand-color: light-dark(hsl(var(--red),56%,4.6%), hsl(var(--red),76%,80.4%)) !default;
-$brand-xp:         light-dark(hsla(var(--red),46%,19.6%,0.05), hsla(var(--red),46%,80.4%,0.05)) !default;
-$grey-color-light: light-dark(hsl(0,0%,91%), hsl(0,0%,11%)) !default;
-$grey-color-dark:  light-dark(hsl(0,0%,76%), hsl(0,0%,26%)) !default;
+$dark-text: light-dark(
+  oklch(from var(--text-color) calc(l*0.75) calc(c*4) h),
+  oklch(from var(--text-color) calc(l*1.25) calc(c*2) h)
+) !default;
+$light-text: light-dark(
+  oklch(from var(--text-color) calc(l*1.1) calc(c/2) h),
+  oklch(from var(--text-color) calc(l/2) calc(c/2) h)
+) !default;
+$light-text-x: light-dark(
+  oklch(from var(--text-color) calc(2) calc(c/3) h),
+  oklch(from var(--text-color) calc(l/2) calc(c/2) h)
+) !default;
+
+$link: light-dark(
+  oklch(0.5 0.1 var(--blue)),
+  oklch(0.75 0.08 var(--blue))
+) !default;
+$link-visited: light-dark(
+  oklch(0.5 0.3 var(--purple)),
+  oklch(0.75 0.25 var(--purple))
+) !default;
+$link-active: light-dark(
+  oklch(0.5 0.3 var(--red)),
+  oklch(0.75 0.25 var(--red))
+) !default;
+
+$dark-bg: light-dark(
+  oklch(from var(--bg-color) calc(l*0.85) c h),
+  oklch(from var(--bg-color) calc(l*1.25) c h)
+) !default;
+$light-bg: light-dark(
+  oklch(from var(--bg-color) calc(l*1.5) c h),
+  oklch(from var(--bg-color) calc(l*0.85) c h)
+) !default;
+$bg-xp: light-dark(
+  oklch(from var(--bg-color) l c h 0.0),
+  oklch(from var(--bg-color) l c h 0.0)
+) !default;
+
+$dark-brand-color: light-dark(
+  oklch(from var(--brand-color) calc(l/2) c h)
+  oklch(from var(--brand-color) calc(l*1.5) c h)
+) !default;
+$light-brand-color: light-dark(
+  oklch(from var(--brand-color) calc(l*2) c h)
+  oklch(from var(--brand-color) calc(l*0.8) c h)
+) !default;
+$brand-xp: light-dark(
+  oklch(from var(--brand-color) calc(l*2) c h 0.05)
+  oklch(from var(--brand-color) calc(l*0.8) c h 0.05)
+) !default;
+
+$grey-color: var(--grey) !default;
+$grey-color-light: light-dark(
+  oklch(from var(--grey) calc(l*1.75) c h),
+  oklch(from var(--grey) calc(l*1.25) c h)
+) !default;
+$grey-color-dark: light-dark(
+  oklch(from var(--grey) calc(l*0.5) c h),
+  oklch(from var(--grey) calc(l*1.5) c h)
+) !default;
+$grey-xp: light-dark(
+  oklch(from var(--grey) calc(l*1.75) c h / 0.90),
+  oklch(from var(--grey) calc(l*1.25) c h / 0.90)
+) !default;
 
 $table-text-align: left !default;
 

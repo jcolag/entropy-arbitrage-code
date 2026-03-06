@@ -109,11 +109,18 @@
   }
 }
 
+/* Updated OKLCH hues, expanded */
 :root {
   color-scheme: light dark;
-  --blue: 200.8;
-  --red: 17;
-  --yellow: 45.8;
+  --red: 36;
+  --orange: 66;
+  --yellow: 96;
+  --green: 156;
+  --cyan: 186;
+  --blue: 246;
+  --indigo: 276;
+  --purple: 306;
+  --magenta: 336;
   pre::after {
     opacity: 0.5;
   }
