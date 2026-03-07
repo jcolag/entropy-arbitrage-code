@@ -282,14 +282,23 @@ h2,
 h3,
 h4,
 h5,
-h6,
-.wrapper a {
+h6 {
   clear: both;
   color: $brand-color !important;
 }
 
+.wrapper a {
+  clear: both;
+  color: $link;
+}
+
 .wrapper a:visited {
-  color: $light-brand-color !important;
+  color: $link-visited;
+}
+
+.wrapper a:active,
+.wrapper a:hover {
+  color: $link-active;
 }
 
 .site-nav .page-link:not(:last-child) {
@@ -621,7 +630,7 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 }
 
 b, em, i, strong {
-  color: $light-text;
+  color: $dark-text;
 }
 
 h1 b, h1 em, h1 i, h1 strong,
@@ -667,7 +676,9 @@ blockquote i, blockquote em {
   margin-inline-end: auto;
 }
 
-.post-link {
+.post-link,
+.post-link:visited {
+  color: $brand-color !important;
   text-decoration: none;
 }
 
@@ -1012,15 +1023,21 @@ a.tag-name {
   background-color: $dark-bg;
   border: 1px solid $text-color;
   border-radius: 0.75em;
-  color: $light-text !important;
+  color: $text-color !important;
   font-weight: bold;
   padding: 0.25em;
   text-decoration: none;
   white-space: nowrap;
 }
 
+.fas,
+.fab,
+.far {
+  color: $text-color;
+}
+
 a.tag-name:visited {
-  color: $light-text !important;
+  color: $text-color !important;
 }
 
 .tag-grid a::after,
@@ -1236,7 +1253,7 @@ a.tag-name:visited {
 }
 
 #search-modal {
-  background-color: light-dark(hsla(0, 0%, 75%, 0.95), hsla(0, 0%, 25%, 0.95));
+  background-color: $grey-xp;
   height: 100%;
   left: 0;
   position: absolute;
@@ -1272,7 +1289,6 @@ a.tag-name:visited {
 .draft-mode {
   background-color: $light-bg;
   background-image: url('/blog/assets/square_bg.png.avif');
-  color: $dark-text;
 }
 
 .handwritten {
@@ -1452,7 +1468,7 @@ a.preview::after {
   background-color: $light-text-x;
   border: 2px solid $light-brand-color;
   border-radius: 0.5em;
-  color: $light-brand-color;
+  color: $brand-color;
   margin-bottom: 0.75em;
   padding: 0.5em;
 }
