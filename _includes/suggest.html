@@ -14,9 +14,9 @@
             <a href={{ post.url | prepend: "/blog" }}>
               {{ post.title }}
             </a>
-            <i>
+            <span class="reason">
               {{ post.recommend }}
-            </i>
+            </span>
           </li>
         {%- endif -%}
       {%- endfor -%}
