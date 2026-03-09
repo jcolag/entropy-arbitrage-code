@@ -89,7 +89,7 @@ abundance_captions=(\
   "I count four color schemes, right...?" \
   "Impressive to synchronize fouling up the pull-the-tablecloth trick with four Cupids..." \
   "The Sunday crowd should get themselves some of those eclipse glasses..." \
-  "Note Monday's reenactment of pursuit of Diana as among the cowardly and superstitous lot..." \
+  "Note Monday's reenactment of pursuit of Diana as among the cowardly and superstitious lot..." \
   "Surf's up on Tuesday, everyone..." \
   "Dancing through Wednesdays" \
   "The Thursday crew wonders why they didn't ride the eagles to Mount Doom..." \
