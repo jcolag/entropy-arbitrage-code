@@ -156,8 +156,8 @@ for i in $(seq 0 $maxidx)
 do
   day="next ${days[$i]}"
   dd=$(date +"%a %d %B %Y" -d "$day")
-  mm=$(date +%m | sed 's/^0*//g')
-  date=$(date +%d | sed 's/^0*//g')
+  mm=$(date -d "$day" +%m | sed 's/^0*//g')
+  date=$(date -d "$day" +%d | sed 's/^0*//g')
   qtag=$(heritage_history "$mm" "$dd")
   cat >> "${filename}" <<HERE
 ## 9:0${linkmins[$i]} -- ${dd}
