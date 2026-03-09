@@ -507,11 +507,14 @@ mastodon:
   - gamerplus.org
   - channel.org
   - comicscamp.club
+  - dice.camp
   - newsmast.community
   - fe.disroot.org
   - joinmastodon.org
   - mastodon.social
   - mastodon.art
+  - mstdn.social
+  - beige.party
 mailchimp:
   type: link
   urls:

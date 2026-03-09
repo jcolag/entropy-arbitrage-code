@@ -319,14 +319,17 @@ a[href*="mailchimpsites.com"]::after {
   content: '\f095';
   font-family: 'Simple Icons';
 }
+a[href*="beige.party"]::after,
 a[href*="channel.org"]::after,
 a[href*="comicscamp.club"]::after,
+a[href*="dice.camp"]::after,
 a[href*="fe.disroot.org"]::after,
 a[href*="gamerplus.org"]::after,
 a[href*="joinmastodon.org"]::after,
 a[href*="kind.social"]::after,
 a[href*="mastodon.art"]::after,
 a[href*="mastodon.social"]::after,
+a[href*="mstdn.social"]::after,
 a[href*="newsmast.community"]::after,
 a[href*="theres.life"]::after,
 a[href*="turtleisland.social"]::after {
