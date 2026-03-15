@@ -32,6 +32,15 @@ Examples of unacceptable behavior by participants include:
  * Public or private harassment
  * Publishing others' private information, such as a physical or electronic address, without explicit permission
  * Other conduct which could reasonably be considered inappropriate in a professional setting
+ * Use of generative artificial intelligence, such as large language models
+
+### Expanding on Generative AI Use
+
+We consider generative AI unacceptable for the same reason that we find the other examples unacceptable:  They show a lack of respect for the community's time and effort.
+
+Specifically, asking a machine to think for you says that you don't care.  If you don't care, then don't ask us to care.  You shouldn't ask us to understand and fix what you wouldn't, no matter your source, but generative AI tools have become a sufficiently widespread problem to single them out.
+
+In addition to the respect issues, these tools consistently return substandard work, often seemingly deliberately in an effort to boost engagement, and that work may infringe other people's copyrights.  And the well-documented skill degradation also shows a lack of respect for yourself.
 
 ## Enforcement Responsibilities
 
@@ -82,6 +91,8 @@ Community leaders will follow these Community Impact Guidelines in determining t
 ## Attribution
 
 This Code of Conduct is adapted from the [Contributor Covenant](https://www.contributor-covenant.org/), version 1.4, available at <https://www.contributor-covenant.org/version/1/4/code-of-conduct.html> with some material borrowed from version 2.1, available at <https://www.contributor-covenant.org/version/2/1/code_of_conduct/>, both made available under the terms of the [Creative Commons Attribution 4.0 Generic](https://creativecommons.org/licenses/by/4.0/) license.
+
+The section on generative artificial intelligence also loosely adapts the [GNOME Project's ban](https://discourse.gnome.org/t/loupe-no-longer-allows-generative-ai-contributions/27327) on using the output of such tools, by Sophie Herold and made available under the terms of the [Creative Commons CC0 1.0 Universal Public Domain Dedication](https://creativecommons.org/publicdomain/zero/1.0/deed.en).
 
 The header image is from [WOCinTech Chat](https://www.flickr.com/photos/wocintechchat/25900843762/), made available under the terms of the [Creative Commons Attribution 2.0 Generic](https://creativecommons.org/licenses/by/2.0/) license.
 
