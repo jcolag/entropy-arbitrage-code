@@ -647,7 +647,7 @@ table {
 }
 
 th {
-  background-color: $light-brand-color !important;
+  background-color: $brand-color !important;
   color: $dark-bg;
 }
 
@@ -661,7 +661,7 @@ tr:nth-child(even) {
 
 td {
   border-color: $light-text !important;
-  color: $light-text !important;
+  color: $text-color !important;
 }
 
 blockquote i, blockquote em {
