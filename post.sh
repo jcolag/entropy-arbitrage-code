@@ -73,7 +73,7 @@ if grep -q 'buymeacoffee.com' <<< "${tabs}"
 then
   echo Already open!
 else
-  xdg-open https://www.buymeacoffee.com/app/dashboard
+  xdg-open https://studio.buymeacoffee.com/posts
 fi
 
 xdg-open https://nota.404.mn/stream
