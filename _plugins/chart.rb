@@ -6,9 +6,10 @@ class ChartInlineTag < Liquid::Tag
     super
     params = text.split '|'
     @chart_name = params[0]
+    @alt_text = params[1]
     @chart_x = 740
-    @chart_y = params[1]
-    @chart_config = params[2]
+    @chart_y = params[2]
+    @chart_config = params[3]
   end
 
   def render(_context)
@@ -17,7 +18,9 @@ class ChartInlineTag < Liquid::Tag
 
     return p <<HERE
 <div width="#{@chart_x}" height="#{@chart_y}">
-  <canvas id="#{@chart_name}" border="2px" width="#{@chart_x}" height="#{@chart_y}"></canvas>
+  <canvas id="#{@chart_name}" border="2px" width="#{@chart_x}" height="#{@chart_y}">
+    #{@alt_text}
+  </canvas>
 </div>
 
 <script>
