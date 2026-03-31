@@ -316,7 +316,7 @@ h6 {
   -webkit-transition: color 2s;
   -o-transition: color 2s;
   -ms-transition: color 2s;
-  -transition: color 2s;
+  transition: color 2s;
 }
 
 .site-nav a i:hover {
@@ -638,7 +638,7 @@ h2 b, h2 em, h2 i, h2 strong,
 h3 b, h3 em, h3 i, h3 strong,
 h4 b, h4 em, h4 i, h4 strong,
 h5 b, h5 em, h5 i, h5 strong,
-h6 b, h6 em, h6 i, h6 strong, {
+h6 b, h6 em, h6 i, h6 strong {
   color: $light-brand-color;
 }
 
@@ -755,7 +755,7 @@ i.si-codeberg:after {
   -webkit-transition: opacity 2s;
   -o-transition: opacity 2s;
   -ms-transition: opacity 2s;
-  -transition: opacity 2s;
+  transition: opacity 2s;
 }
 
 .thumbnail-image img:hover {
@@ -1333,7 +1333,9 @@ a.tag-name:visited {
   overflow: hidden;
   text-overflow: ellipsis;
   -webkit-box-orient: vertical;
+  box-orient: vertical;
   -webkit-line-clamp: 4;
+  line-clamp: 4;
 }
 
 .codeberg hr {
