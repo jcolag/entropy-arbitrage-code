@@ -244,6 +244,10 @@ a[href*=".gov/"]::after {
   font-family: 'Font Awesome';
 }
 
+a[href^="http"]:has(img)::after {
+  content: none;
+}
+
 article,
 .post {
   font-size: calc($content-width / 90 * 2);
