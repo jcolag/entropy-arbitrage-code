@@ -49,9 +49,14 @@ do
   ff=$(echo "$file" | cut -f2 -d'/')
   git add "$ff"
 done
-git commit -m "Automated updates: $(date '+%Y-%m-%d')"
-git push
-git push disroot
+
+if ! git diff --quiet || ! git diff --cached --quiet
+then
+  git commit -m "Automated updates: $(date '+%Y-%m-%d')"
+  git push
+  git push disroot
+fi
+
 cd ..
 
 ./tags.sh
