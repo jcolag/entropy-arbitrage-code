@@ -38,7 +38,7 @@ heritage_history () {
       echo " #WomensHistory"
       ;;
     4)
-      echo " #AsianAmericanHeritage"
+      echo " #ArabAmericanHeritage"
       ;;
     5)
       echo " #AAPIHeritage"
