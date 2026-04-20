@@ -1648,3 +1648,14 @@ li h3 {
   margin-right: -2em;
   white-space: nowrap;
 }
+
+.mock-ui {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.mock-ui svg {
+  height: auto !important;
+  min-width: 67%;
+}
