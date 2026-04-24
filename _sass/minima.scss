@@ -515,7 +515,12 @@ pre::after {
   right: 0.5em;
   top: 50%;
   transform: translateY(-50%);
+  transition: opacity 1s;
   z-index: 0;
+}
+
+pre:hover::after {
+	opacity: 0.1 !important;
 }
 
 pre.language-bash::after,
