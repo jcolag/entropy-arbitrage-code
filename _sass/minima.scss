@@ -1664,3 +1664,14 @@ li h3 {
   height: auto !important;
   min-width: 67%;
 }
+
+.mock-ui svg text {
+  fill: light-dark(black, white) !important;
+}
+
+.mock-ui svg line,
+.mock-ui svg polygon,
+.mock-ui svg rect {
+  fill: transparent !important;
+  stroke: light-dark(black, white) !important;
+}
