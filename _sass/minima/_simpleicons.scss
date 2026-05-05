@@ -609,7 +609,8 @@ a[href*="commons.wikimedia.org"]::after {
 }
 a[href*="wikimedia.org"]::after,
 a[href*="wikinews.org"]::after,
-a[href*="wikisource.org"]::after {
+a[href*="wikisource.org"]::after,
+a[href*="wikitravel.org"]::after {
   color: #000000;
   content: '\f64d';
   font-family: 'Simple Icons';

@@ -359,6 +359,7 @@ wikimediafoundation:
   - wikimedia.org
   - wikisource.org
   - wikinews.org
+  - wikitravel.org
 wikidata:
   type: link
   urls:
