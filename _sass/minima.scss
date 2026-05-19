@@ -978,19 +978,6 @@ div.webmentions {
   color: $brand-color !important;
 }
 
-.page-link {
-  -moz-transition: all 0.5s;
-  -webkit-transition: all 0.5s;
-  -o-transition: all 0.5s;
-  -ms-transition: all 0.5s;
-  transition: all 0.5s;
-}
-
-.page-link:hover {
-  font-size: 1.2em;
-  margin-inline-end: 0.75em !important;
-}
-
 .post-update {
   background: linear-gradient(
     to bottom right,
@@ -1021,11 +1008,6 @@ div.webmentions {
 
 #tootpick {
   height: 11em;
-}
-
-a .page-link:hover {
-  left: 0.1em;
-  margin-inline-end: -0.05em !important;
 }
 
 a.tag-name {
