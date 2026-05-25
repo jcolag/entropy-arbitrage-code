@@ -113,14 +113,14 @@
 :root {
   color-scheme: light dark;
   --red: 36;
-  --orange: 66;
-  --yellow: 96;
-  --green: 156;
-  --cyan: 186;
-  --blue: 246;
-  --indigo: 276;
-  --purple: 306;
-  --magenta: 336;
+  --orange: calc(var(--red) + 30);
+  --yellow: calc(var(--red) + 60);
+  --green: calc(var(--red) + 120);
+  --cyan: calc(var(--red) + 150);
+  --blue: calc(var(--red) + 210);
+  --indigo: calc(var(--red) + 240);
+  --purple: calc(var(--red) + 270);
+  --magenta: calc(var(--red) + 300);
   pre::after {
     opacity: 0.5;
   }
