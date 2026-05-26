@@ -78,7 +78,6 @@ fi
 
 xdg-open https://nota.404.mn/stream
 xdg-open https://spoutible.com/
-xdg-open https://pinkary.com/
 xdg-open https://sez.us/
 xdg-open https://fe.disroot.org/
 
