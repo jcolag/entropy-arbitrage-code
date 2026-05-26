@@ -105,5 +105,12 @@
     })();
   </script>
   <!-- End Matomo Code -->
+  {%- if page.red_color -%}
+  <style type="text/css">
+  :root {
+    --red: {{- page.red_color -}};
+  }
+  </style>
+  {%- endif -%}
   {%- webmentions_head -%}
 </head>
