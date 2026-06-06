@@ -32,7 +32,7 @@ $light-text: light-dark(
   oklch(from var(--text-color) calc(l/2) calc(c/2) h)
 ) !default;
 $light-text-x: light-dark(
-  oklch(from var(--text-color) calc(2) calc(c/3) h),
+  oklch(from var(--text-color) calc(l*3) calc(c/1.5) h),
   oklch(from var(--text-color) calc(l/2) calc(c/2) h)
 ) !default;
 
@@ -63,15 +63,15 @@ $bg-xp: light-dark(
 ) !default;
 
 $dark-brand-color: light-dark(
-  oklch(from var(--brand-color) calc(l/2) c h)
+  oklch(from var(--brand-color) calc(l/2) c h),
   oklch(from var(--brand-color) calc(l*1.5) c h)
 ) !default;
 $light-brand-color: light-dark(
-  oklch(from var(--brand-color) calc(l*2) c h)
+  oklch(from var(--brand-color) calc(l*2) c h),
   oklch(from var(--brand-color) calc(l*0.8) c h)
 ) !default;
 $brand-xp: light-dark(
-  oklch(from var(--brand-color) calc(l*2) c h 0.05)
+  oklch(from var(--brand-color) calc(l*2) c h 0.05),
   oklch(from var(--brand-color) calc(l*0.8) c h 0.05)
 ) !default;
 
