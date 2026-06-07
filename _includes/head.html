@@ -17,7 +17,10 @@
   <link rel="human-json" href="/human.json">
   <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
   <link rel="stylesheet" href="/blog/assets/prism.css">
-  <link rel="shortcut icon" href="/blog/assets/jc.ico">
+  <link rel="shortcut icon" href="/blog/assets/favicon.svg" type="image/svg+xml">
+  <link rel="shortcut icon" href="/blog/assets/jc.ico" sizes="32x32">
+  <link rel="apple-touch-icon" href="/blog/assets/favicon-180.png.avif" />
+  <link rel="manifest" href="/blog/assets/site.webmanifest" />
   <link rel="authorization_endpoint" href="https://john.colagioia.net/selfauth/">
   {%- feed_meta -%}
   {%- if jekyll.environment == 'production' and site.google_analytics -%}
