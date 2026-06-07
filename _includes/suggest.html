@@ -11,7 +11,7 @@
       {%- for post in site.posts -%}
         {%- if post.recommend -%}
           <li>
-            <a href={{ post.url | prepend: "/blog" }}>
+            <a href="{{ post.url | prepend: site.baseurl }}">
               {{ post.title }}
             </a>
             <span class="reason">
