@@ -3,6 +3,7 @@ layout: page
 title: Code of Conduct
 permalink: /coc/
 show_page: true
+icon: far fa-handshake
 ---
 
 Short version?  If your comment on a post exists to rehash stereotypes or show how important you think you are, don't waste your or the community's time.  Just accept that you probably have things wrong and walk away.  Tolerance does not and will not extend to tolerance of bad actors or obnoxious ideas.  The [Paradox of Tolerance](https://en.wikipedia.org/wiki/Paradox_of_tolerance) warns us not to tolerate the intolerant, rather than suggesting a loophole *for* the intolerant.

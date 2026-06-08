@@ -3,6 +3,7 @@ layout: page
 title: About
 permalink: /about/
 show_page: true
+icon: far fa-address-card
 ---
 
 Welcome to **Entropy Arbitrage**, John Colagioia's blog!  This serves as an irregular series of posts that try to centralize things that I work on or have written.  For more details, you'll probably want to read my [introductory post]({% post_url 2019-12-08-greetings %}).
