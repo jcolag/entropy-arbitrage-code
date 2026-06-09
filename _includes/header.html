@@ -29,6 +29,9 @@
             {%- assign my_page = site.pages | where: "path", path | first -%}
             {%- if my_page.title -%}
               <a
+                {% if my_page.icon -%}
+                  aria-label="{{ my_page.title }}"
+                {%- endif %}
                 class="page-link"
                 href="{{ my_page.url | relative_url }}"
                 title="{{ my_page.title }}"
@@ -42,7 +45,7 @@
             {%- endif -%}
           {%- endfor -%}
           <span class="page-link">
-            <a href="/blog/tags/" title="Tags">
+            <a aria-label="Tags" href="/blog/tags/" title="Tags">
               <i class="fas fa-tags"></i>
             </a>
           </span>
@@ -59,6 +62,7 @@
           </span>
           <span class="page-link">
             <a
+              aria-label="Search Entropy Arbitrage"
               href="/blog/search/"
               title="Search Entropy Arbitrage"
             >
@@ -66,20 +70,26 @@
             </a>
           </span>
           <span class="page-link">
-            <a href="/blog/calendar/" title="Calendar">
+            <a
+              aria-label="Calendar of Posts"
+              href="/blog/calendar/"
+              title="Calendar of Posts"
+            >
               <i class="far fa-calendar-alt"></i>
             </a>
           </span>
           <span class="page-link">
             <a
+              aria-label="Entropy Arbitrage posts on Codeberg"
               href="https://codeberg.org/jcolag/entropy-arbitrage-posts"
-              title="Fork Entropy Arbitrage on Codeberg"
+              title="Entropy Arbitrage posts on Codeberg"
             >
               <i class="si si-codeberg"></i>
             </a>
           </span>
           <span class="page-link in-progress">
             <a
+              aria-label="Check Saved Pages"
               href="/blog/saved"
               title="Check Saved Pages"
             >
