@@ -136,7 +136,13 @@ layout: default
   {%- endif -%}
 
   <div class="post-content e-content line-numbers match-braces {{ devClass }}" itemprop="articleBody">
-    {%- include anchor_headings.html html=content anchorBody="🔗" anchorClass="heading-anchor" anchorTitle="direct link to the %heading% section" -%}
+    {%- include anchor_headings.html
+      html=content
+      anchorAttrs="aria-label='direct link to the %heading% section'"
+      anchorBody="🔗"
+      anchorClass="heading-anchor"
+      anchorTitle="direct link to the %heading% section"
+    -%}
   </div>
 
   <hr>
@@ -182,8 +188,9 @@ layout: default
     <div>No comments available under a development build!</div>
     <br>
   {%- endif -%}
-  <span>
+  <span class="post-tag-list">
     <a
+      aria-label="Original post Markdown on Codeberg"
       class="to-github"
       href="{{ page.path | replace: '_posts', 'https://codeberg.org/jcolag/entropy-arbitrage-posts/raw/branch/main' }}"
       style="font-family: 'Simple Icons'"
