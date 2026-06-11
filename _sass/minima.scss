@@ -291,6 +291,22 @@ h6 {
   color: $brand-color !important;
 }
 
+.skip-link {
+  background: #000;
+  border-radius: 4px;
+  color: #fff;
+  inset-block-start: -3rem;
+  inset-inline-start: 1rem;
+  padding: 0.5rem 1rem;
+  position: absolute;
+  transition: inset-block-start 0.15s;
+  z-index: 1000;
+}
+
+.skip-link:focus {
+  inset-block-start: 1rem;
+}
+
 .wrapper a {
   clear: both;
   color: $link;
