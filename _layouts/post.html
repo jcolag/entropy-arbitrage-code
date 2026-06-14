@@ -212,18 +212,22 @@ layout: default
     {%- endfor -%}
   </span>
 
-  <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
+  <a class="u-url" href="{{ page.url | relative_url }}" hidden style="display: none">
+    {{ page.title }}
+  </a>
   <a
     class="h-syndication"
     href="."
     rel="syndication"
     style="display: none"
   >None</a>
+  {%- for tag in tags -%}
   <a
     class="p-category"
-    href="."
+    href="/blog/tag/{{ tag | strip | replace: '-', '' }}/"
     style="display: none"
-  ></a>
+  >{{ tag_name | strip }}</a>
+  {%- endfor -%}
 </article>
 {%- include mlist.html -%}
 {%- webmentions_js -%}
