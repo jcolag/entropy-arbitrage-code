@@ -17,96 +17,10 @@
     {%- if page_paths -%}
       <nav class="site-nav">
         <div class="trigger">
-          {%- for path in page_paths -%}
-            {%- assign my_page = site.pages | where: "path", path | first -%}
-            {%- if my_page.title -%}
-              <a
-                {% if my_page.icon -%}
-                  aria-label="{{ my_page.title }}"
-                {%- endif %}
-                class="page-link"
-                href="{{ my_page.url | relative_url }}"
-                title="{{ my_page.title }}"
-              >
-                {%- if my_page.icon -%}
-                  <i class="{{- my_page.icon -}}"></i>
-                {%- else -%}
-                  {{ my_page.title | escape }}
-                {%- endif -%}
-              </a>
-            {%- endif -%}
-          {%- endfor -%}
-          <span class="page-link">
-            <a aria-label="Tags" href="/blog/tags/" title="Tags">
-              <i class="fas fa-tags"></i>
-            </a>
-          </span>
-          <span class="page-link">
-            <a href="/blog/tag-search/">
-              <img
-                alt="Tag Search"
-                class="page-link"
-                src="/blog/assets/fa-tag-search.svg"
-                style="height: 1em; margin-bottom: 0.25em;"
-                title="Search by tags"
-              >
-            </a>
-          </span>
-          <span class="page-link">
-            <a
-              aria-label="Search Entropy Arbitrage"
-              href="/blog/search/"
-              title="Search Entropy Arbitrage"
-            >
-              <i class="fas fa-search"></i>
-            </a>
-          </span>
-          <span class="page-link">
-            <a
-              aria-label="Calendar of Posts"
-              href="/blog/calendar/"
-              title="Calendar of Posts"
-            >
-              <i class="far fa-calendar-alt"></i>
-            </a>
-          </span>
-          <span class="page-link">
-            <a
-              aria-label="Entropy Arbitrage posts on Codeberg"
-              href="https://codeberg.org/jcolag/entropy-arbitrage-posts"
-              title="Entropy Arbitrage posts on Codeberg"
-            >
-              <i class="si si-codeberg"></i>
-            </a>
-          </span>
-          <span class="page-link in-progress">
-            <a
-              aria-label="Check Saved Pages"
-              href="/blog/saved"
-              title="Check Saved Pages"
-            >
-              <i class="far fa-bookmark"></i>
-            </a>
-          </span>
-          <span class="rss-subscribe page-link">
-            <a
-              href="{{ "/feed.xml" | relative_url }}"
-              title="Blog RSS Feed"
-            >
-              <i class="fas fa-rss"></i>
-            </a>
-          </span>
-          <span class="page-link">
-            <a href="/">
-              <img
-                alt="Home"
-                class="page-link"
-                src="/blog/assets/jc.svg"
-                style="height: 1em; margin-bottom: 0.25em;"
-                title="Back to John's home page"
-              >
-            </a>
-          </span>
+          {%- include topmenu.html
+            default_paths=default_paths
+            page_paths=page_paths
+          -%}
         </div>
       </nav>
     {%- endif -%}
