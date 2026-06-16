@@ -26,7 +26,7 @@ module Jekyll
       day1 = Date.new date.year, date.month + 1, 1
       wday = day1.wday
 
-      wday == (dow + 1) % 7 ? day1 - 1 : (day1 + dow + 7 - wday) % 7
+      wday == (dow + 1) % 7 ? day1 - 1 : (day1 + dow + 7 - wday)
     end
 
     # Convert 2 to "second," etc.
