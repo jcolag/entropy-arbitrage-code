@@ -17,6 +17,7 @@ permalink: /search/
     </noscript>
   </div>
 </div>
+<h1 id="headline">Search</h1>
 <div id="search-container">
   <input
     autofocus
