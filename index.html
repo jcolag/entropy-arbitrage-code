@@ -28,7 +28,11 @@ pagination:
           {%- assign offset = '-11%' %}
         {%- endif %}
         {%- if post.thumbnail -%}
-          <a class="post-link" href="{{ post.url | relative_url }}">
+          <a
+            class="post-link"
+            href="{{ post.url | relative_url }}"
+            title="{{ post.title | escape }}"
+          >
             <div class="thumbnail-image">
               {%- assign thumb = post.thumbnail %}
               {%- assign tlen = post.thumbnail | size %}
@@ -143,4 +147,4 @@ pagination:
 {%- for post in paginator.posts %}
 {%- endfor %}
 {%- include suggest.html %}
-<a rel="me" href="https://mastodon.social/@jcolag"></a>
+<a aria-label="Follow me on Mastodon" rel="me" href="https://mastodon.social/@jcolag"></a>
