@@ -29,7 +29,7 @@ class CodebergInlineTag < Liquid::Tag
     wd = (user.length + 1) * 8.65 + name.length * 4.75
 
     "<a class='preview' href='#{repo['url']}'>" \
-      "<span class='caption' title='#{caption}'>" \
+      "<span class='caption' title='Fork #{caption} on Codeberg'>" \
       "<i class='si si-codeberg'></i>" \
       "&nbsp;#{caption}" \
       "</span>" \
@@ -38,7 +38,7 @@ class CodebergInlineTag < Liquid::Tag
       " class='github'" \
       " loading='lazy'" \
       " src='#{image_url}'" \
-      " title='#{title}'" \
+      " title='See #{title} on Codeberg'" \
       ">" \
       "</a>"
   end

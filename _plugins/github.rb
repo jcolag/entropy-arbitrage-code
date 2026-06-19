@@ -25,7 +25,7 @@ class GithubInlineTag < Liquid::Tag
     title = repo['title'].force_encoding('UTF-8')
 
     "<a class='preview' href='#{repo['url']}'>" \
-      "<span class='caption' title='#{caption}'>" \
+      "<span class='caption' title='Fork #{caption} on GitHub'>" \
       "<i class='fab fa-github'></i>" \
       " #{caption}" \
       "</span>" \
@@ -34,7 +34,7 @@ class GithubInlineTag < Liquid::Tag
       " class='github'" \
       " loading='lazy'" \
       " src='#{image_url}'" \
-      " title='#{title}'" \
+      " title='See #{title} on GitHub'" \
       ">" \
       "</a>"
   end
