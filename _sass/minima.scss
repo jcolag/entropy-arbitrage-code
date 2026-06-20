@@ -666,6 +666,10 @@ b, em, i, strong {
   color: $dark-text;
 }
 
+b, strong {
+  font-weight: 500;
+}
+
 h1 b, h1 em, h1 i, h1 strong,
 h2 b, h2 em, h2 i, h2 strong,
 h3 b, h3 em, h3 i, h3 strong,
@@ -742,7 +746,6 @@ a.site-title:visited, a.page-link:visited {
 
 .post-meta {
   display: inline-block;
-  font-size: x-small;
   text-align: center;
   width: 100%;
 }
@@ -968,6 +971,11 @@ div.webmentions {
 .index-tags .tag-name {
   background-color: transparent;
   border: 1px solid $brand-color;
+  font-weight: 400;
+}
+
+.post-tag-list {
+  line-height: 2em;
 }
 
 .tag-grid {
@@ -1039,7 +1047,7 @@ a.tag-name {
   border: 1px solid $text-color;
   border-radius: 0.75em;
   color: $text-color !important;
-  font-weight: bold;
+  font-weight: 400;
   padding: 0.25em;
   text-decoration: none;
   white-space: nowrap;
