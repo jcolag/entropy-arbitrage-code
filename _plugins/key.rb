@@ -8,7 +8,7 @@ class KeyInlineTag < Liquid::Tag
   end
 
   def render(_context)
-    "<span class=\"kbd\">#{@text}</span>"
+    "<kbd class=\"kbd\">#{@text}</kbd>"
   end
 end
 Liquid::Template.register_tag('key', KeyInlineTag)
