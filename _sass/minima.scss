@@ -165,9 +165,13 @@
 }
 
 @media (prefers-reduced-motion) {
-  *, *::before, *::after {
+  *,
+  *::before,
+  *::after {
     animation-duration: 0s !important;
+    animation-iteration-count: 1 !important;
     transition: none !important;
+    transition-duration: 0 !important;
     scroll-behavior: auto !important;
   }
 }
