@@ -1223,9 +1223,14 @@ a.tag-name:visited {
 }
 
 .tray-panel .tray-contents {
+  background-color: $light-bg;
+  border-radius: 1em;
+  margin: 1em;
   display: none;
+  padding-bottom: 0.5em;
   padding-left: 2em;
   padding-right: 2em;
+  padding-top: 0.5em;
   transition: all 1s;
 }
 
