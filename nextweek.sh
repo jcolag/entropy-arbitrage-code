@@ -59,10 +59,9 @@ heritage_history () {
       if [ "$dd" -le 15 ]
       then
         echo " #HispanicHeritage"
+      else
+        echo " #FilipinoAmericanHistory"
       fi
-      ;;
-    10)
-      echo " #FilipinoAmericanHistory"
       ;;
     11)
       echo " #NativeAmericanHeritage"
@@ -158,14 +157,16 @@ do
   dd=$(date +"%a %d %B %Y" -d "$day")
   mm=$(date -d "$day" +%m | sed 's/^0*//g')
   date=$(date -d "$day" +%d | sed 's/^0*//g')
-  qtag=$(heritage_history "$mm" "$dd")
+  dow=$(date -d "$day" +%A)
+  qtag=$(heritage_history "$mm" "$date")
   cat >> "${filename}" <<HERE
 ## 9:0${linkmins[$i]} -- ${dd}
 
 {% cw  %}
 {% embed ||false| %}
 
-[<i class="fab fa-mastodon"></i>]() 
+[<i class="fab fa-mastodon"></i>]() {: aria-label="${dow} morning's post on Mastodon with this article" }
+
 
 > 
 
@@ -175,7 +176,7 @@ Hashtags:
 
 ## 12:0${quotemins[$i]} -- ${dd}
 
-[<i class="fab fa-mastodon"></i> Quoted on Mastodon]()
+[<i class="fab fa-mastodon"></i> ${dow}'s quote on Mastodon]()
 
 > 
 
