@@ -328,6 +328,7 @@ amazon:
   - goodreads.com
   - amzn.to
   - amazon.com
+  - amazon.it
 youtube:
   type: link
   urls:
