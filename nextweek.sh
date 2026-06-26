@@ -165,7 +165,7 @@ do
 {% cw  %}
 {% embed ||false| %}
 
-[<i class="fab fa-mastodon"></i>]() {: aria-label="${dow} morning's post on Mastodon with this article" }
+[<i class="fab fa-mastodon"></i>](){: aria-label="${dow} morning's post on Mastodon with this article" }
 
 
 > 
