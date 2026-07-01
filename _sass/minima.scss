@@ -727,8 +727,12 @@ a.site-title:visited, a.page-link:visited {
 }
 
 .site-header {
+  background-color: $background-color;
+  background-image: url('/blog/assets/square_bg.png.avif');
   border-bottom: 1px solid $light-brand-color;
   border-top: 5px solid $brand-color;
+  top: 0;
+  z-index: 5;
 }
 
 .site-header a {
