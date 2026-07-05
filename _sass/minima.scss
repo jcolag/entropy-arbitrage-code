@@ -731,6 +731,7 @@ a.site-title:visited, a.page-link:visited {
   background-image: url('/blog/assets/square_bg.png.avif');
   border-bottom: 1px solid $light-brand-color;
   border-top: 5px solid $brand-color;
+  position: sticky;
   top: 0;
   z-index: 5;
 }
