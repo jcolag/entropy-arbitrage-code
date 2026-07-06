@@ -1,66 +1,66 @@
 ---
 layout: default
 ---
+<header class="post-header">
+  <h1
+    class="post-title p-name"
+    id="headline"
+    itemprop="name headline"
+    tabindex="-1"
+  >
+    {%- if jekyll.environment == "development" and page.proofed != true -%}
+      {%- assign devClass = "draft-mode" -%}
+      DRAFT:&nbsp;
+    {%- endif -%}
+    {{ page.title | escape }}
+  </h1>
+  <p class="post-meta">
+    <time
+      class="dt-published"
+      datetime="{{ page.date | date_to_xmlschema }}"
+      itemprop="datePublished"
+    >
+      {%- assign date_format = site.minima.date_format |
+        default: "%b %-d, %Y, %l:%M%P"
+      -%}
+      {{ page.date | date: date_format }}
+    </time>
+    <a
+      class="p-author h-card"
+      href="https://john.colagioia.net"
+      rel="author"
+      style="display: none;"
+    >
+      <img
+        alt="John's face"
+        class="u-photo"
+        src="/blog/assets/d29181b871b001b0.png.avif"
+      >
+      {%- if page.author -%}
+        {{ page.author }}
+      {%- else -%}
+        John Colagioia
+      {%- endif -%}
+    </a>
+    {%- if page.author -%}
+      •
+      <span
+        itemprop="author"
+        itemscope
+        itemtype="http://schema.org/Person"
+      >
+        <span class="p-author h-card" itemprop="name">
+          {{ page.author }}
+        </span>
+      </span>
+    {%- endif -%}</p>
+</header>
+
 <article
   class="post h-entry"
   itemscope
   itemtype="http://schema.org/BlogPosting"
 >
-  <header class="post-header">
-    <h1
-      class="post-title p-name"
-      id="headline"
-      itemprop="name headline"
-      tabindex="-1"
-    >
-      {%- if jekyll.environment == "development" and page.proofed != true -%}
-        {%- assign devClass = "draft-mode" -%}
-        DRAFT:&nbsp;
-      {%- endif -%}
-      {{ page.title | escape }}
-    </h1>
-    <p class="post-meta">
-      <time
-        class="dt-published"
-        datetime="{{ page.date | date_to_xmlschema }}"
-        itemprop="datePublished"
-      >
-        {%- assign date_format = site.minima.date_format |
-          default: "%b %-d, %Y, %l:%M%P"
-        -%}
-        {{ page.date | date: date_format }}
-      </time>
-      <a
-        class="p-author h-card"
-        href="https://john.colagioia.net"
-        rel="author"
-        style="display: none;"
-      >
-        <img
-          alt="John's face"
-          class="u-photo"
-          src="/blog/assets/d29181b871b001b0.png.avif"
-        >
-        {%- if page.author -%}
-          {{ page.author }}
-        {%- else -%}
-          John Colagioia
-        {%- endif -%}
-      </a>
-      {%- if page.author -%}
-        •
-        <span
-          itemprop="author"
-          itemscope
-          itemtype="http://schema.org/Person"
-        >
-          <span class="p-author h-card" itemprop="name">
-            {{ page.author }}
-          </span>
-        </span>
-      {%- endif -%}</p>
-  </header>
-
   <div class="bookmark in-progress js-required">
     No time to read this post now?
     <br>
