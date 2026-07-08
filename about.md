@@ -1,6 +1,6 @@
 ---
 layout: page
-title: About
+title: About Entropy Arbitrage
 permalink: /about/
 show_page: true
 icon: far fa-address-card
