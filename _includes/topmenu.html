@@ -80,13 +80,25 @@
 </span>
 <span class="page-link in-progress">
   <a
-    aria-label="Check Saved Pages"
+    aria-label="Save Post for Later"
     href="/blog/saved"
-    title="Check Saved Pages"
+    title="Save Post for Later"
   >
     <i class="far fa-bookmark"></i>
     {% if include.use_text -%}
-      Saved Pages
+      Saved Posts
+    {%- endif -%}
+  </a>
+</span>
+<span class="page-link in-progress">
+  <a
+    aria-label="Read For-Later Posts"
+    href="/blog/saved"
+    title="Read For-Later Posts"
+  >
+    <i class="fas fa-book-reader"></i>
+    {% if include.use_text -%}
+      Show Saved Posts
     {%- endif -%}
   </a>
 </span>
