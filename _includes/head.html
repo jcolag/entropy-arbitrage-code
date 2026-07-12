@@ -35,7 +35,7 @@
   </noscript>
   <script async src="/blog/assets/prism.js"></script>
   <script async src="/blog/assets/redirect.js"></script>
-  <script>
+  <script type="text/javascript">
     let headings = null;
     let tocEntries = null;
     window.addEventListener('load', (e) => {
@@ -93,6 +93,9 @@
         url: url,
       });
       localStorage.setItem('savedPages', JSON.stringify(pages));
+    }
+    function noPopover() {
+      return !HTMLElement.prototype.hasOwnProperty('popover');
     }
   </script>
   <!-- Matomo -->
