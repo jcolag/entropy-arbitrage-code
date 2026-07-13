@@ -76,6 +76,7 @@ EOF
 # bundle exec jekyll clean
 JEKYLL_ENV=production bundle exec jekyll build
 ## Push to the server
+mplayer /usr/share/sounds/gnome/default/alerts/drip.ogg
 rsync --checksum --itemize-changes --recursive --compress --times --delete-delay \
     _site/ "$target"
 JEKYLL_ENV=
