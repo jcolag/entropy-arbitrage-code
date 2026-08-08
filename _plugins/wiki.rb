@@ -4,14 +4,18 @@
 class WikiInlineTag < Liquid::Tag
   def initialize(tag_name, text, parse_context)
     super
-    parts = text.split '|'
-    @page = parts[0]
-    @text = parts[1]
-    @lang = parts.length > 2 ? parts[2] : 'en'
+    @page, @text, @lang = parse text
   end
 
   def render(_context)
     "<a href='https://#{@lang}.wikipedia.org/wiki/#{@page}'>#{@text}</a>"
+  end
+
+  def parse(text)
+    page, text, lang = text.split '|'
+
+    lang ||= 'en'
+    [page, text, lang]
   end
 end
 Liquid::Template.register_tag('wiki', WikiInlineTag)
