@@ -4,7 +4,7 @@
 class KeyInlineTag < Liquid::Tag
   def initialize(tag_name, text, parse_context)
     super
-    @text = text
+    @text = text.strip
   end
 
   def render(_context)
