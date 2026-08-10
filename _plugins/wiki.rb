@@ -15,7 +15,7 @@ class WikiInlineTag < Liquid::Tag
     page, text, lang = text.split '|'
 
     lang ||= 'en'
-    [page, text, lang]
+    [CGI.escape(CGI.unescape(page)), text, lang.strip]
   end
 end
 Liquid::Template.register_tag('wiki', WikiInlineTag)
