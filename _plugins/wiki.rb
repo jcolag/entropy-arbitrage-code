@@ -14,6 +14,11 @@ class WikiInlineTag < Liquid::Tag
   def parse(text)
     page, text, lang = text.split '|'
 
+    unless text
+      text = page.strip
+      page = page.strip.gsub(' ', '_')
+    end
+
     lang ||= 'en'
     [CGI.escape(CGI.unescape(page)), text, lang.strip]
   end
