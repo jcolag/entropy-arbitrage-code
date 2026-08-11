@@ -12,6 +12,8 @@ class WikiInlineTag < Liquid::Tag
   end
 
   def parse(text)
+    return unless text.is_a? String
+
     page, text, lang = text.split '|'
 
     unless text
