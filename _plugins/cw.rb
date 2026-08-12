@@ -11,9 +11,9 @@ class ContentWarningTag < Liquid::Tag
   def render(context)
     site = context.registers[:site]
     converter = site.find_converter_instance(::Jekyll::Converters::Markdown)
-    @html = converter.convert(@text)
-    "<div class='content-warning'><i class='fas fa-exclamation-triangle'></i>" \
-      " <b>Content Warning</b>:  #{@html}</div>"
+    html = converter.convert(@text)
+    "<div class='#{@klass}'><i class='#{@icon}'></i>" \
+      " <b>#{@msg}</b>:  #{html}</div>"
   end
 
   def params(text)
