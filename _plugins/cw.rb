@@ -4,7 +4,7 @@
 class ContentWarningTag < Liquid::Tag
   def initialize(tag_name, text, parse_context)
     super
-    @text = text
+    @text, kind, msg = params text
   end
 
   def render(context)
@@ -13,6 +13,13 @@ class ContentWarningTag < Liquid::Tag
     @html = converter.convert(@text)
     "<div class='content-warning'><i class='fas fa-exclamation-triangle'></i>" \
       " <b>Content Warning</b>:  #{@html}</div>"
+  end
+
+  def params(text)
+    parts = text.split '|'
+    parts << 'warning' if parts.length < 2
+    parts << nil if parts.length < 3
+    parts
   end
 end
 Liquid::Template.register_tag('cw', ContentWarningTag)
