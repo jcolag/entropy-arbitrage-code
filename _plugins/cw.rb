@@ -25,10 +25,29 @@ class ContentWarningTag < Liquid::Tag
 
   def specify(kind, msg)
     case kind.strip
+    when 'info'
+      klass, icon, message = info
     when 'warning'
       klass, icon, message = warn
+    when 'question'
+      klass, icon, message = question
+    else
+      klass, icon, message = misc
     end
+    message = msg if msg
     [klass, icon, message]
+  end
+
+  def info
+    ['content-info', 'fas fa-info-circle', 'Information']
+  end
+
+  def misc
+    ['content-box', 'fas fa-square-full', 'Something']
+  end
+
+  def question
+    ['content-question', 'far fa-question-circle', 'Question']
   end
 
   def warn
