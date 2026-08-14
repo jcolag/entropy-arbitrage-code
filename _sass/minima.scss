@@ -1552,6 +1552,23 @@ a.preview::after {
   display: inline;
 }
 
+.content-question {
+  background-color: $light-brand-color;
+  border: 2px solid $brand-color;
+  border-radius: 0.5em;
+  color: $light-text-x;
+  margin-bottom: 0.75em;
+  padding: 0.5em;
+}
+
+.content-question i, .content-question b {
+  color: $light-text-x;
+}
+
+.content-question p {
+  display: inline;
+}
+
 .embedded {
   border: 1px dotted $light-text;
   width: calc($content-width - 65px);
