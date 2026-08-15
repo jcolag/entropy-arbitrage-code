@@ -1569,6 +1569,23 @@ a.preview::after {
   display: inline;
 }
 
+.content-box {
+  background-color: $grey-color-light;
+  border: 2px solid $grey-color-dark;
+  border-radius: 0.5em;
+  color: $grey-color-dark;
+  margin-bottom: 0.75em;
+  padding: 0.5em;
+}
+
+.content-box i, .content-box b {
+  color: $grey-color-dark;
+}
+
+.content-box p {
+  display: inline;
+}
+
 .embedded {
   border: 1px dotted $light-text;
   width: calc($content-width - 65px);
