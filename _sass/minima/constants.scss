@@ -25,10 +25,10 @@ $badge-blue: light-dark(
 
 $dark-text: light-dark(
   oklch(from var(--text-color) calc(l*0.75) calc(c*4) h),
-  oklch(from var(--text-color) calc(l*1.25) calc(c*2) h)
+  oklch(from var(--text-color) calc(l*2) calc(c*2) h)
 ) !default;
 $light-text: light-dark(
-  oklch(from var(--text-color) calc(l*1.1) calc(c/2) h),
+  oklch(from var(--text-color) calc(l*2) calc(c/2) h),
   oklch(from var(--text-color) calc(l/2) calc(c/2) h)
 ) !default;
 $light-text-x: light-dark(
