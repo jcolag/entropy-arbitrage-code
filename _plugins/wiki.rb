@@ -22,7 +22,7 @@ class WikiInlineTag < Liquid::Tag
     end
 
     lang ||= 'en'
-    [CGI.escape(CGI.unescape(page)), text, lang.strip]
+    [CGI.escape(CGI.unescape(page)).gsub('+', ' '), text, lang.strip]
   end
 end
 Liquid::Template.register_tag('wiki', WikiInlineTag)
