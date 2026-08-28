@@ -20,9 +20,9 @@ class GithubInlineTag < Liquid::Tag
     @cache[@text] = repo
     save_yaml @cache_file, @cache
     fallback =
-    image_alt = repo['image_alt'].force_encoding('UTF-8')
-    image_url = repo['image_url'].force_encoding('UTF-8')
-    title = repo['title'].force_encoding('UTF-8')
+    image_alt = repo['image_alt'].dup.force_encoding('UTF-8')
+    image_url = repo['image_url'].dup.force_encoding('UTF-8')
+    title = repo['title'].dup.force_encoding('UTF-8')
 
     "<a class='preview' href='#{repo['url']}'>" \
       "<span class='caption' title='Fork #{caption} on GitHub'>" \
@@ -57,6 +57,17 @@ class GithubInlineTag < Liquid::Tag
       repo = extract_from_head response.body
     end
 
+    repo
+  rescue Socket::ResolutionError
+    fake_extract key.strip
+  end
+
+  def fake_extract(key)
+    repo = {}
+    repo['image_url'] = ''
+    repo['image_alt'] = 'Image unavailable'
+    repo['title'] = key
+    repo['url'] = "https://github.com/#{key}"
     repo
   end
 
