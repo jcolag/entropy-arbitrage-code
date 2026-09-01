@@ -12,6 +12,8 @@ The title refers to the idea that disorder has uses in some situations, but show
 
 If you made it this far and have concerns about the irregular schedule, you may want to <span class="rss-subscribe"><a href="{{ "/feed.xml" | relative_url }}">Subscribe <i class="fas fa-rss"></i></a></span> to the RSS feed or follow me on one of the independent social media sites.  And if you find yourself wanting to support the various projects described in here, then you might want to check out the [store](/store), which admittedly mostly points you to other sites, because who actually wants to develop the software to do this right?
 
+## John
+
 A bio?  Sure, if we must...
 
  > A born and bred Long Islander who doesn't have an accent that you expect, John (he/him) has been programming since the BASIC cartridge on the Atari 400 and used a Commodore 64 from around its release until high school made forty-column printouts an untenable plan.  He has been programming professionally long enough that some of his colleagues weren't born when he started out, and feels pleased to see a generation of programmers who learned with a community.  He has worked in telecommunications, medicine, productivity, research, home automation, transit, e-commerce, and other spaces, and tried to bring the lessons of each field to the others.  He has also used a wide variety of technologies in these jobs, and has gotten a laugh seeing most of them horribly misused.
@@ -22,4 +24,12 @@ A bio?  Sure, if we must...
 
 And now I tire of looking at third-person prose, so scram.  Go read something else or play outside or something...
 
+## More Information
+
 Oh, if you''ve come here looking for something like my résumé, I generally keep [this copy](/resume.html) up to date and [my main homepage](/) has links to most of the networks where you can find my digital footprint, including archives of activity on platforms that I no longer use or that no longer exist.
+
+## AI Disclosures and the Like
+
+From back when the technology seemed novel and amusing, a few posts use AI-generated images as filler, which I (John) have reduced to three by replacing them since, and continue to look for replacements when I have the opportunity.  I wrote all text unless attributed otherwise.
+
+As I have written a few times in the blog, after giving the technology a fair shake, I don't see much value in it.
