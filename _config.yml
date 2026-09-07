@@ -102,7 +102,9 @@ webmentions:
     name: John Colagioia
     url: https://john.colagioia.net
     photo: /blog/assets/d29181b871b001b0.png
-  debug: true
+  debug: false
+  js:
+    deploy: true
   throttle_lookups:
     last_week: daily
     last_month: weekly
