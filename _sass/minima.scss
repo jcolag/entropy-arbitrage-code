@@ -96,6 +96,12 @@
                  u+1f16d-1f16f;
 }
 
+@font-face {
+  font-display: swap;
+  font-family: Datatype;
+  src: url(/blog/assets/Datatype/Datatype.woff2);
+}
+
 @media(prefers-color-scheme: dark) {
   article img {
     filter: saturate(0.3) brightness(0.5);
@@ -330,6 +336,10 @@ h6 {
 .wrapper a:active,
 .wrapper a:hover {
   color: $link-active;
+}
+
+.site-nav .page-link {
+  position: relative;
 }
 
 .site-nav .page-link:not(:last-child) {
@@ -1518,6 +1528,10 @@ a.preview::after {
   width: 100%;
 }
 
+.bookmark {
+  margin: 1em;
+}
+
 .content-warning {
   background-color: $light-text-x;
   border: 2px solid $light-brand-color;
@@ -1584,6 +1598,19 @@ a.preview::after {
 
 .content-box p {
   display: inline;
+}
+
+.counter-badge {
+  background-color: oklch(0.5 0.8 var(--green));
+  border-radius: 1em;
+  color: white;
+  font-size: 0.5em;
+  padding-left: 0.25em;
+  padding-right: 0.25em;
+  position: absolute;
+  right: -0.5em;
+  top: -0.5em;
+  z-index: 100;
 }
 
 .embedded {
@@ -1767,4 +1794,152 @@ li h3 {
 .mock-ui svg rect {
   fill: transparent !important;
   stroke: light-dark(black, white) !important;
+}
+
+:popover-open {
+	accent-color: light-dark(oklch(from var(--text-color) calc(l * 3) calc(c / 1.5) h), oklch(from var(--text-color) calc(l / 2) calc(c / 2) h));
+	animation: slide-in-left 1s;
+  background-color: $dark-bg;
+  border: 5px solid $brand-color;
+  border-bottom-right-radius: 2em;
+  border-left: 0;
+  border-top-right-radius: 2em;
+	color: var(--text-color);
+	font: 300 16px / 1.5 LiberaMarks, "Exo 2", "Noto Color Emoji";
+  font-size: calc($content-width / 90 * 2);
+  font-style: normal;
+  left: 0;
+  margin-left: 0;
+	max-height: 75vh;
+	max-width: 370px;
+	overflow: scroll;
+	padding: 2em;
+  position: absolute;
+}
+
+:popover-open button {
+  background-color: $dark-bg;
+  border: none;
+	color: var(--text-color);
+	font: 300 16px / 1.5 LiberaMarks, "Exo 2", "Noto Color Emoji";
+  left: 50%;
+  position: relative;
+  transform: translateX(-50%);
+}
+
+[popovertarget]:hover,
+:popover-open button:hover {
+  border: 2px solid $brand-color !important;
+  margin-top: -1px;
+}
+
+:popover-open .menu {
+  display: flex;
+  flex-direction: column;
+  font-size: 2.5em;
+  text-decoration: none;
+  max-width: 50%;
+}
+
+:popover-open .menu a,
+:popover-open .menu i {
+  border: 0;
+  color: $dark-brand-color;
+  font-style: normal;
+  text-decoration: none;
+}
+
+:popover-open .menu i,
+:popover-open .menu img {
+  display: inline-block;
+  object-fit: contain;
+  width: 1.5em;
+}
+
+:popover-open::backdrop {
+  backdrop-filter: blur(10px);
+}
+
+:popover-open .tray-contents {
+  background-color: $light-bg;
+  border-radius: 1em;
+  margin: 1em;
+  padding-bottom: 0.5em;
+  padding-left: 2em;
+  padding-right: 2em;
+  padding-top: 0.5em;
+}
+
+@keyframes slide-in-left {
+  0% {
+    transform: scale(0.5) translateX(-100%);
+  }
+  100% {
+    transform: scale(1.0) translateX(0);
+  }
+}
+
+.tray-button {
+  background-color: $dark-bg;
+  border: 5px solid $brand-color;
+  border-bottom-right-radius: 2em;
+  border-left: 0;
+  border-top-right-radius: 2em;
+  font-size: 3em;
+  height: 2em;
+  left: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1.5em;
+}
+
+#open-menu {
+  background-color: $background-color;
+  border: 0;
+  color: $brand-color;
+  font-size: 1.625em;
+}
+
+#open-menu i {
+  color: $brand-color;
+}
+
+#top-menu {
+	animation: slide-in-top 1s;
+  border: 5px solid $brand-color;
+  border-bottom-left-radius: 2em;
+  border-top: 0;
+  border-top-right-radius: 0;
+  left: 50%;
+  margin-top: 0;
+  max-width: 50%;
+  top: 0;
+  transform: translateX(-50%);
+}
+
+#top-menu a,
+#top-menu span {
+	font-family: LiberaMarks, "Exo 2", "Noto Color Emoji";
+	font-weight: 450;
+  text-align: left;
+  white-space: nowrap;
+}
+
+#top-menu a:hover {
+  background-color: $background-color;
+  text-decoration: underline;
+}
+
+#top-menu img {
+	display: inline;
+}
+
+@keyframes slide-in-top {
+  from {
+    transform: translate(-50%, -100%);
+  }
+  to {
+    transform: translate(-50%, 0);
+  }
 }

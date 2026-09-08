@@ -64,6 +64,7 @@ a[href*="creativecommons.org"]::after {
   content: '\ec94';
   font-family: 'Simple Icons';
 }
+a[href*="cryptpad.fr"]::after,
 a[href*="cryptpad.org"]::after {
   color: #0087FF;
   content: '\eca1';
@@ -257,6 +258,37 @@ a[href*="archive.org"]::after {
   content: '\ef71';
   font-family: 'Simple Icons';
 }
+a[href*="debian.org"]::after {
+  color: #A81D33;
+  content: '\ecd8';
+  font-family: 'Simple Icons';
+}
+a[href*="elementary.io"]::after {
+  color: #64BAFF;
+  content: '\ed5b';
+  font-family: 'Simple Icons';
+}
+a[href*="fedoraproject.org"]::after {
+  color: #51A2DA;
+  content: '\edb4';
+  font-family: 'Simple Icons';
+}
+a[href*="gentoo.org"]::after {
+  color: #54487A;
+  content: '\ee2e';
+  font-family: 'Simple Icons';
+}
+a[href*="gnome.org"]::after {
+  color: #4A86CF;
+  content: '\ee54';
+  font-family: 'Simple Icons';
+}
+a[href*="graphite.art"]::after,
+a[href*="graphite.rs"]::after {
+  color: #000000;
+  content: '\eea8';
+  font-family: 'Simple Icons';
+}
 a[href*="itch.io"]::after {
   color: #FA5C5C;
   content: '\ef82';
@@ -277,6 +309,11 @@ a[href*="jwt.io"]::after {
   content: '\efb0';
   font-family: 'Simple Icons';
 }
+a[href*="kde.org"]::after {
+  color: #1D99F3;
+  content: '\efcd';
+  font-family: 'Simple Icons';
+}
 a[href*="kickstarter.com"]::after {
   color: #05CE78;
   content: '\efe3';
@@ -285,6 +322,11 @@ a[href*="kickstarter.com"]::after {
 a[href*="ko-fi.com"]::after {
   color: #FF6433;
   content: '\eff5';
+  font-family: 'Simple Icons';
+}
+a[href*="krita.org"]::after {
+  color: #3BABFF;
+  content: '\f003';
   font-family: 'Simple Icons';
 }
 a[href*="laravel.com"]::after {
@@ -313,6 +355,12 @@ a[href*="libretranslate.com"]::after {
   color: #1565C0;
   content: '\f046';
   font-family: 'Simple Icons';
+}
+a[href*="kernel.org"]::after {
+  color: #FCC624;
+  content: '\f05a';
+  font-family: 'Simple Icons';
+  text-shadow: 1px 1px light-dark(black, white), -1px -1px light-dark(black, white);
 }
 a[href*="campaign-archive.com"]::after,
 a[href*="mailchimpsites.com"]::after {
@@ -359,6 +407,11 @@ a[href*="mermaid.js.org"]::after {
   content: '\f0d9';
   font-family: 'Simple Icons';
 }
+a[href*="mojeek.com"]::after {
+  color: #7AB93C;
+  content: '\f10b';
+  font-family: 'Simple Icons';
+}
 a[href*="mozilla.com"]::after,
 a[href*="mozilla.org"]::after {
   color: #000000;
@@ -376,6 +429,16 @@ a[href*="nbcnews.com"]::after {
 a[href*="nytimes.com"]::after {
   color: #000000;
   content: '\f164';
+  font-family: 'Simple Icons';
+}
+a[href*="netbsd.org"]::after {
+  color: #FF6600;
+  content: '\f157';
+  font-family: 'Simple Icons';
+}
+a[href*="nixos.org"]::after {
+  color: #5277C3;
+  content: '\f17d';
   font-family: 'Simple Icons';
 }
 a[href*="nextcloud.com"]::after {
@@ -432,6 +495,11 @@ a[href*="pixelfed.org"]::after {
   content: '\f263';
   font-family: 'Simple Icons';
 }
+a[href*="system76.com/pop"]::after {
+  color: #48B9C7;
+  content: '\f293';
+  font-family: 'Simple Icons';
+}
 a[href*="python.org"]::after {
   color: #3776AB;
   content: '\f2e3';
@@ -442,6 +510,11 @@ a[href*="quora.com"]::after {
   content: '\f306';
   font-family: 'Simple Icons';
 }
+a[href*="reactos.org"]::after {
+  color: #0088CC;
+  content: '\f32b';
+  font-family: 'Simple Icons';
+}
 a[href*="reddit.com"]::after {
   color: #FF4500;
   content: '\f339';
@@ -450,6 +523,11 @@ a[href*="reddit.com"]::after {
 a[href*="redis.com"]::after {
   color: #FF4438;
   content: '\f33a';
+  font-family: 'Simple Icons';
+}
+a[href*="redox-os.org"]::after {
+  color: #000000;
+  content: '\f33c';
   font-family: 'Simple Icons';
 }
 a[href*="redux.js.org"]::after {
@@ -480,6 +558,16 @@ a[href*="scpwiki.com"]::after {
   font-family: 'Simple Icons';
   text-shadow: 1px 1px light-dark(black, white), -1px -1px light-dark(black, white);
 }
+a[href*="searxng.org"]::after {
+  color: #3050FF;
+  content: '\f3d3';
+  font-family: 'Simple Icons';
+}
+a[href*="simpleicons.org"]::after {
+  color: #111111;
+  content: '\f40c';
+  font-family: 'Simple Icons';
+}
 a[href*="signal.me"]::after,
 a[href*="signal.org"]::after {
   color: #3B45FD;
@@ -489,6 +577,11 @@ a[href*="signal.org"]::after {
 a[href*="simpleicons.org"]::after {
   color: #111111;
   content: '\f40c';
+  font-family: 'Simple Icons';
+}
+a[href*="getsol.us"]::after {
+  color: #5294E2;
+  content: '\f43d';
   font-family: 'Simple Icons';
 }
 a[href*="soundcloud.com"]::after {
@@ -517,6 +610,11 @@ a[href*="stackoverflow.com"]::after {
   content: '\f477';
   font-family: 'Simple Icons';
   text-shadow: 1px 1px light-dark(black, white), -1px -1px light-dark(black, white);
+}
+a[href*="startpage.com"]::after {
+  color: #6563FF;
+  content: '\f488';
+  font-family: 'Simple Icons';
 }
 a[href*="stripe.com"]::after {
   color: #635BFF;
@@ -552,6 +650,11 @@ a[href*="thunderbird.net"]::after {
 a[href*="tumblr.com"]::after {
   color: #36465D;
   content: '\f57b';
+  font-family: 'Simple Icons';
+}
+a[href*="typst.app"]::after {
+  color: #239DAD;
+  content: '\f58e';
   font-family: 'Simple Icons';
 }
 a[href*="ubuntu.com"]::after {
