@@ -66,6 +66,10 @@ ubuntu:
   type: link
   urls:
   - ubuntu.com
+typst:
+  type: link
+  urls:
+  - typst.app
 thunderbird:
   type: link
   urls:
@@ -74,6 +78,10 @@ thingiverse:
   type: link
   urls:
   - thingiverse.com
+solus:
+  type: link
+  urls:
+  - getsol.us
 sqlite:
   type: link
   urls:
@@ -83,11 +91,19 @@ stackoverflow:
   shadow: ld
   urls:
   - stackoverflow.com
+startpage:
+  type: link
+  urls:
+  - startpage.com
 sourceforge:
   type: link
   urls:
   - sourceforge.net
   - sourceforge.com
+searxng:
+  type: link
+  urls:
+  - searxng.org
 rust:
   type: link
   urls:
@@ -117,10 +133,18 @@ redux:
   type: link
   urls:
   - redux.js.org
+redox:
+  type: link
+  urls:
+  - redox-os.org
 redis:
   type: link
   urls:
   - redis.com
+reactos:
+  type: link
+  urls:
+  - reactos.org
 react:
   type: link
   shadow: ld
@@ -130,6 +154,10 @@ python:
   type: link
   urls:
   - python.org
+popos:
+  type: link
+  urls:
+  - system76.com/pop
 openssl:
   type: link
   urls:
@@ -157,15 +185,27 @@ nodedotjs:
   urls:
   - nodejs.org
   - nodejs.com
+nixos:
+  type: link
+  urls:
+  - nixos.org
 nextcloud:
   type: link
   urls:
   - nextcloud.com
+netbsd:
+  type: link
+  urls:
+  - netbsd.org
 mozilla:
   type: link
   urls:
   - mozilla.org
   - mozilla.com
+mojeek:
+  type: link
+  urls:
+  - mojeek.com
 mercurial:
   type: link
   urls:
@@ -178,6 +218,10 @@ markdown:
   type: link
   urls:
   - markdownguide.org
+linux:
+  type: link
+  urls:
+  - kernel.org
 libretranslate:
   type: link
   urls:
@@ -190,6 +234,14 @@ laravel:
   type: link
   urls:
   - laravel.com
+krita:
+  type: link
+  urls:
+  - krita.org
+kde:
+  type: link
+  urls:
+  - kde.org
 jsonwebtokens:
   type: link
   urls:
@@ -222,10 +274,19 @@ handlebarsdotjs:
   type: link
   urls:
   - handlebarsjs.com
+graphite:
+  type: link
+  urls:
+  - graphite.art
+  - graphite.rs
 go:
   type: link
   urls:
   - golang.org
+gnome:
+  type: link
+  urls:
+  - gnome.org
 gitpod:
   type: link
   shadow: ld
@@ -252,6 +313,10 @@ gitea:
   type: link
   urls:
   - gitea.com
+gentoo:
+  type: link
+  urls:
+  - gentoo.org
 freecad:
   type: link
   shadow: ld
@@ -266,6 +331,10 @@ fontforge:
   type: link
   urls:
   - fontforge.org
+fedora:
+  type: link
+  urls:
+  - fedora.org
 express:
   type: link
   urls:
@@ -278,6 +347,10 @@ emby:
   type: link
   urls:
   - emby.media
+elementary:
+  type: link
+  urls:
+  - elementary.io
 electron:
   type: link
   shadow: ld
@@ -291,6 +364,10 @@ devdotto:
   type: link
   urls:
   - dev.to
+debian:
+  type: link
+  urls:
+  - debian.org
 d3:
   type: link
   shadow: ld
@@ -300,6 +377,7 @@ cryptpad:
   type: link
   urls:
   - cryptpad.org
+  - cryptpad.fr
 codeberg:
   type: link
   urls:
