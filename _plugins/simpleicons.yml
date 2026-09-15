@@ -395,6 +395,10 @@ bitbucket:
   type: link
   urls:
   - bitbucket.org
+archlinux:
+  type: link
+  urls:
+  - archlinux.org
 apache:
   type: link
   urls:
@@ -436,6 +440,7 @@ wikimediafoundation:
   type: link
   urls:
   - wikimedia.org
+  - wikimediafoundation.org
   - wikisource.org
   - wikinews.org
   - wikitravel.org

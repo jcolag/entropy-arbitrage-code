@@ -12,6 +12,11 @@ a[href*="apache.org"]::after {
   content: '\eab1';
   font-family: 'Simple Icons';
 }
+a[href*="archlinux.org"]::after {
+  color: #1793D1;
+  content: '\eaeb';
+  font-family: 'Simple Icons';
+}
 a[href*="archiveofourown.org"]::after {
   color: #990000;
   content: '\eaed';
@@ -712,6 +717,7 @@ a[href*="commons.wikimedia.org"]::after {
   font-family: 'Simple Icons';
 }
 a[href*="wikimedia.org"]::after,
+a[href*="wikimediafoundation.org"]::after,
 a[href*="wikinews.org"]::after,
 a[href*="wikisource.org"]::after,
 a[href*="wikitravel.org"]::after {
