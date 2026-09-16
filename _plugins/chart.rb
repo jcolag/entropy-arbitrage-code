@@ -16,7 +16,7 @@ class ChartInlineTag < Liquid::Tag
     cid = @chart_name
     cid.gsub!('-', '')
 
-    return p <<HERE
+    return <<HERE
 <div width="#{@chart_x}" height="#{@chart_y}">
   <canvas id="#{@chart_name}" border="2px" width="#{@chart_x}" height="#{@chart_y}">
     #{@alt_text}
