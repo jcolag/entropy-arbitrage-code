@@ -129,4 +129,11 @@
     {%- endif -%}
   </a>
 </span>
+<script>
+  window.addEventListener('load', (e) => {
+    const badge = document.getElementById('later-count');
+    const pages = localStorage.getItem('savedPages');
 
+    badge.innerHTML = pages && pages.length > 0 ? pages.length : '';
+  });
+</script>
