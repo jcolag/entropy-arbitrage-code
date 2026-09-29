@@ -30,6 +30,6 @@ Oh, if you''ve come here looking for something like my résumé, I generally kee
 
 ## AI Disclosures and the Like
 
-From back when the technology seemed novel and amusing, a few posts use AI-generated images as filler, which I (John) have reduced to three by replacing them since, and continue to look for replacements when I have the opportunity.  I wrote all text unless attributed otherwise.
+From back when the technology seemed novel and amusing, a few posts use AI-generated images as filler, which I (John) have reduced to one post---and one musical riff in another post retained for posterity---by replacing them since, and continue to look for replacements when I have the opportunity.  I wrote all text and code unless attributed otherwise for illustrative purposes.
 
-As I have written a few times in the blog, after giving the technology a fair shake, I don't see much value in it.
+As I have written a few times in the blog, after giving the technology a fair shake, I don't see much value in it, and its value appears to decline every few months.
