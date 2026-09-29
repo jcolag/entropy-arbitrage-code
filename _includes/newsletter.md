@@ -27,7 +27,7 @@ If you'd like it delivered, head to that link, click the <i class="fas fa-ellips
 What will you find inside?  As always, you'll find links to all the articles that I found interesting in my RSS feed or web pages that I bookmarked, plus some analysis of blog traffic.  For {{ month }}, I wrote
 {% if topic_array.size == 1 -%}
   a piece
-{% else -%}
+{%- else -%}
   pieces
 {%- endif %}
 on {{ topics }}, discussed my media consumption
