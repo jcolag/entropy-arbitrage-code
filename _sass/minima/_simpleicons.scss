@@ -7,6 +7,11 @@ a[href*="goodreads.com"]::after {
   font-family: 'Simple Icons';
   text-shadow: 1px 1px light-dark(black, white), -1px -1px light-dark(black, white);
 }
+a[href*="alpinelinux.org"]::after {
+  color: #0D597F;
+  content: '\ea71';
+  font-family: 'Simple Icons';
+}
 a[href*="apache.org"]::after {
   color: #D22128;
   content: '\eab1';
