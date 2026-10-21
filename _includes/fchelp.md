@@ -1,1 +1,7 @@
+<!--
+SPDX-FileCopyrightText: 2020 John Colagioia <john@colagioia.net>
+
+SPDX-License-Identifier: AGPL-3.0-or-later
+-->
+
 As mentioned previously, by the way, nobody has a complete list of Free Culture works.  Therefore, while we do have some large repositories (I could probably cover Free Culture music forever), I would like to solicit the community's help.  If you know of any works that fit these posts---fictional, contains some narrative, Free Culture, available to the public, not by creators who we've already discussed, and by actual human creators---please tell me about them.  I'll at least credit you, and for significant projects, I'll throw in a free membership on [my Buy Me a Coffee page](https://buymeacoffee.com/jcolag).  Promote your own work if relevant, or create something under an appropriate license for the *purpose* of promoting your own work.

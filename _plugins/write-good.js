@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: 2020 John Colagioia <john@colagioia.net>
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 // This exists to format write-good's colon-separated output to
 // more sensible JSON.
 

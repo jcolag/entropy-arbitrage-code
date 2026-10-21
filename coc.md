@@ -6,6 +6,12 @@ show_page: true
 icon: far fa-handshake
 ---
 
+<!--
+SPDX-FileCopyrightText: 2020 John Colagioia <john@colagioia.net>
+
+SPDX-License-Identifier: AGPL-3.0-or-later
+-->
+
 Short version?  If your comment on a post exists to rehash stereotypes or show how important you think you are, don't waste your or the community's time.  Just accept that you probably have things wrong and walk away.  Tolerance does not and will not extend to tolerance of bad actors or obnoxious ideas.  The [Paradox of Tolerance](https://en.wikipedia.org/wiki/Paradox_of_tolerance) warns us not to tolerate the intolerant, rather than suggesting a loophole *for* the intolerant.
 
 ![People sitting around a conference room table](/blog/assets/25900843762_10681cb9f9_k.jpg "Community")

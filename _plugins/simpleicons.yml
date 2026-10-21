@@ -1,3 +1,7 @@
+# SPDX-FileCopyrightText: 2020 John Colagioia <john@colagioia.net>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 # Each entry must have the Simple Icons si-XXX icon name without the prefix,
 # Followed by a list of domains (or other URL fragments) that should use
 # that icon.

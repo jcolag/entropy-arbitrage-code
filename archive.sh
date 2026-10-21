@@ -1,4 +1,9 @@
 #!/bin/sh
+
+# SPDX-FileCopyrightText: 2020 John Colagioia <john@colagioia.net>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 dom=$(date +%_d)
 if [ "${dom}" -gt 7 ] || [ ".$(date +%a)." != .Sat. ]
 then

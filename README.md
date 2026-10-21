@@ -1,3 +1,9 @@
+<!--
+SPDX-FileCopyrightText: 2020 John Colagioia <john@colagioia.net>
+
+SPDX-License-Identifier: AGPL-3.0-or-later
+-->
+
 # entropy-arbitrage-code
 
 This repository holds the Jekyll side of the posts found in [entropy-arbitrage](https://github.com/jcolag/entropy-arbitrage).

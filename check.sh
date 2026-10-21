@@ -1,5 +1,9 @@
 #!/bin/sh
 
+# SPDX-FileCopyrightText: 2020 John Colagioia <john@colagioia.net>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 # Get the date or other prefix
 day=$(date +'%Y-%m-%d')
 files=$(ls -1 "${HOME}"/code/entropy-arbitrage-code/_posts/"${day}"*.md 2> /dev/null)

@@ -3,6 +3,12 @@ layout: page
 permalink: /search/
 ---
 
+<!--
+SPDX-FileCopyrightText: 2020 John Colagioia <john@colagioia.net>
+
+SPDX-License-Identifier: AGPL-3.0-or-later
+-->
+
 <div id="search-modal">
   <div>
     <img class="fa-spin spinner" src="/blog/assets/jc.svg">

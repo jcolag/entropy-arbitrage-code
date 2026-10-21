@@ -3,6 +3,13 @@ layout: webmention
 permalink: /socialish/
 title: Social-ish Posts
 ---
+
+<!--
+SPDX-FileCopyrightText: 2020 John Colagioia <john@colagioia.net>
+
+SPDX-License-Identifier: AGPL-3.0-or-later
+-->
+
 {% assign social_posts = site.posts | where: "hidden", true %}
 <h1 id="headline">Social-ish, for {{ site.webmention.author.name }}</h1>
 <div class="home">

@@ -1,3 +1,9 @@
+<!--
+SPDX-FileCopyrightText: 2020 John Colagioia <john@colagioia.net>
+
+SPDX-License-Identifier: AGPL-3.0-or-later
+-->
+
 {%- for path in page_paths -%}
   {%- assign my_page = site.pages | where: "path", path | first -%}
   {%- if my_page.title -%}

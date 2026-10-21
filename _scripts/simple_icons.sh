@@ -1,4 +1,9 @@
 #!/bin/sh
+
+# SPDX-FileCopyrightText: 2020 John Colagioia <john@colagioia.net>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 script=$(readlink -f "${0}")
 here=$(dirname "${script}")
 repo=simple-icons/simple-icons-font

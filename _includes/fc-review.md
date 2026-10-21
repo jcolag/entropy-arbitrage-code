@@ -1,1 +1,7 @@
+<!--
+SPDX-FileCopyrightText: 2020 John Colagioia <john@colagioia.net>
+
+SPDX-License-Identifier: AGPL-3.0-or-later
+-->
+
 {% cw You can best think of these posts like their titles suggest, as the seed of a discussion group ("book club") to spark conversation about a Free Culture work.  Thinking of it like a review or other form of literary criticism will only end in disappointment for everybody.  You might want to skim through my [post detailing the structure and reasons](/blog/2026/07/26/book-club.html) for a deeper explanation.  Take it as given that you should investigate this work further, regardless of quality, because Free Culture needs the support...|info|For Clarity %}

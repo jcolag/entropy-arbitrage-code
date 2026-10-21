@@ -6,6 +6,12 @@ show_page: true
 icon: far fa-address-card
 ---
 
+<!--
+SPDX-FileCopyrightText: 2020 John Colagioia <john@colagioia.net>
+
+SPDX-License-Identifier: AGPL-3.0-or-later
+-->
+
 Welcome to **Entropy Arbitrage**, John Colagioia's blog!  This serves as an irregular series of posts that try to centralize things that I work on or have written.  For more details, you'll probably want to read my [introductory post]({% post_url 2019-12-08-greetings %}).
 
 The title refers to the idea that disorder has uses in some situations, but shows in abundance in other situations.  That balance and exchange between ordered and disordered systems have grown into something of an obsession for me for many years.  Some systems need more order, some less.

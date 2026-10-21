@@ -1,3 +1,8 @@
+// Copyright 2015-2018, Christian Fei
+// SPDX-FileCopyrightText: 2020 Christian Fei
+//
+// SPDX-License-Identifier: MIT
+
 /*!
   * Simple-Jekyll-Search v1.7.2 (https://github.com/christian-fei/Simple-Jekyll-Search)
   * Copyright 2015-2018, Christian Fei
