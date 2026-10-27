@@ -462,10 +462,10 @@ SPDX-License-Identifier: AGPL-3.0-or-later
 
 			let baseUrl;
 			if (window.location.protocol === 'file:') {
-				For local files, use the full file path
+				// For local files, use the full file path
 				baseUrl = window.location.href.split('#')[0];
 			} else {
-				For web URLs, use origin + pathname
+				// For web URLs, use origin + pathname
 				baseUrl = window.location.origin + window.location.pathname;
 			}
 
